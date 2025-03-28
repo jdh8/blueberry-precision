@@ -5,6 +5,7 @@
 # Strawberry Polish Club
 
 - [Overview](wj/README.md)
+- [Polish 1♣](wj/1C.md)
 
 # Blueberry Cottontail Club
 

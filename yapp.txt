@@ -10,11 +10,32 @@
 ♣
 <span class="♣">♣</span>
 
+<BAL>
+<abbr title="balanced">BAL</abbr>
+
 <BTU>
 <abbr title="Bridge Taiwan University">BTU</abbr>
 
+<CONST>
+<abbr title="constructive">CONST</abbr>
+
+<INV>
+<abbr title="invitational">INV</abbr>
+
 <F>
 <abbr title="forcing">F</abbr>
+
+<FG>
+<abbr title="forcing to game (3NT)">FG</abbr>
+
+<NEG>
+<abbr title="negative">NEG</abbr>
+
+<NF>
+<abbr title="non-forcing">NF</abbr>
+
+<P/C>
+<abbr title="pass or correct">P/C</abbr>
 
 <PRE>
 <abbr title="preemptive">PRE</abbr>
