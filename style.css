@@ -2,3 +2,16 @@
 .♦ {
 	color: #d33;
 }
+
+ol.variants {
+	counter-reset: list;
+}
+
+ol.variants > li {
+	list-style: none;
+}
+
+ol.variants > li:before {
+	content: "(" counter(list, lower-alpha) ") ";
+	counter-increment: list;
+}

@@ -12,3 +12,24 @@
 
 <BTU>
 <abbr title="Bridge Taiwan University">BTU</abbr>
+
+<F>
+<abbr title="forcing">F</abbr>
+
+<PRE>
+<abbr title="preemptive">PRE</abbr>
+
+<SOL>
+<abbr title="solid">SOL</abbr>
+
+<S-SOL>
+<abbr title="semi-solid">S-SOL</abbr>
+
+<UNBAL>
+<abbr title="unbalanced">UNBAL</abbr>
+
+<UNT>
+<abbr title="unusual notrump">UNT</abbr>
+
+<VUL>
+<abbr title="vulnerable">VUL</abbr>

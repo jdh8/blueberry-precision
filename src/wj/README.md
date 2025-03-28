@@ -1,0 +1,32 @@
+# Strawberry Polish Club
+
+Our Polish Club opening contains minimum clubs like *Polish Club 2020:
+Expert*.  We adjust the 1♦ opening to contain 18--20 HCP unbalanced diamonds
+with no 4-card major.  This method makes 1♣-1♦-3m limited enough (21--23
+HCP) for their level.
+
+|  -   |   |
+|------|---|
+| 1♣!  | <F>, Polish Club:<ol class="variants"> <li>12--14 HCP, 2--4♠, 2--4♥, 2--4♦, 2--4♣</li> <li>11--17 HCP, 5+♣ or 4414</li> <li>18+ HCP, not qualified for 1♦</li> </ol> |
+| 1♦   | <div>11--20 HCP, 5+♦ or 4♦(441).</div><div>If 18--20 HCP: <UNBAL>, 0--3♠, 0--3♥.</div> |
+| 1♥   | 11--17 HCP, 5+♥ |
+| 1♠   | 11--17 HCP, 5+♠ |
+| 1NT  | 15--17 HCP, 2--4♠, 2--4♥, 2--6♦, 2--6♣ |
+| 2♣!  | <PRE>, 4+♠, 4+♥, not 44(32) if <VUL> |
+| 2♦!  | <PRE>, 6+M |
+| 2M!  | <PRE>, 5=#, 4+m |
+| 2NT! | <UNT>, 5+♦, 5+♣ |
+| 3X   | <PRE>, 7+# |
+| 3NT! | Gambling, <SOL> 7+m, 0--1 outside A/K |
+| 4♣!  | <PRE>, <S-SOL> 8+M, 0--1 outside A/K |
+| 4♦!  | <PRE>, <SOL> 8+M, no outside A/K |
+| 4M   | <PRE>, 8+# |
+| 4NT! | <UNT>, 6+♦, 6+♣ |
+
+## The notrump ladder
+
+- **12--14**: 1♣-1♦-1M
+- **15--17**: 1NT
+- **18--20**: 1♣-1♦-1NT
+- **21--23**: 1♣-1♦-2♦
+- **24+**: 1♣-1♦-2NT
