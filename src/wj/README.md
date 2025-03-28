@@ -1,17 +1,16 @@
 # Strawberry Polish Club
 
-Our Polish Club opening contains minimum clubs like *Polish Club 2020:
-Expert*.  We adjust the 1♦ opening to contain 18--20 HCP unbalanced diamonds
-with no 4-card major.  This method makes 1♣-1♦-3m limited enough (21--23
-HCP) for their level.
+Our Polish Club opening contains minimum clubs like *Polish Club 2020: Expert*.
+We adjust the 1♦ opening to contain 18--20 unbalanced diamonds with no 4-card
+major.  This method makes 1♣-1♦-3m limited enough (21--23) for their level.
 
 |  -   |   |
 |------|---|
-| 1♣!  | <F>, Polish Club:<ol class="variants"> <li>12--14 HCP, 2--4♠, 2--4♥, 2--4♦, 2--4♣</li> <li>11--17 HCP, 5+♣ or 4414</li> <li>18+ HCP, not qualified for 1♦</li> </ol> |
-| 1♦   | <div>11--20 HCP, 5+♦ or 4♦(441).</div><div>If 18--20 HCP: <UNBAL>, 0--3♠, 0--3♥.</div> |
-| 1♥   | 11--17 HCP, 5+♥ |
-| 1♠   | 11--17 HCP, 5+♠ |
-| 1NT  | 15--17 HCP, 2--4♠, 2--4♥, 2--6♦, 2--6♣ |
+| 1♣!  | <F>, Polish Club:<ol class="variants"> <li>12--14, 2--4♠, 2--4♥, 2--4♦, 2--4♣</li> <li>12--17, 5+♣ or 4414</li> <li>18+, not suitable for 1♦</li> </ol> |
+| 1♦   | <div>12--20, 5+♦ or 4♦(441).</div><div>If 18+: <UNBAL>, 0--3♠, 0--3♥.</div> |
+| 1♥   | 12--17, 5+♥ |
+| 1♠   | 12--17, 5+♠ |
+| 1NT  | 15--17, 2--4♠, 2--4♥, 2--6♦, 2--6♣ |
 | 2♣!  | <PRE>, 4+♠, 4+♥, not 44(32) if <VUL> |
 | 2♦!  | <PRE>, 6+M |
 | 2M!  | <PRE>, 5=#, 4+m |
