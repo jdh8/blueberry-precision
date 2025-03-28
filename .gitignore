@@ -1,3 +1,4 @@
 *.bss
 *.htm
 /.vscode/
+/book/

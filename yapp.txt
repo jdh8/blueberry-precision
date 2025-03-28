@@ -1,0 +1,14 @@
+♠
+<span class="♠">♠</span>
+
+♥
+<span class="♥">♥</span>
+
+♦
+<span class="♦">♦</span>
+
+♣
+<span class="♣">♣</span>
+
+<BTU>
+<abbr title="Bridge Taiwan University">BTU</abbr>
