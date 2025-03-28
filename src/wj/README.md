@@ -1,7 +1,7 @@
 # Strawberry Polish Club
 
 Our Polish Club opening contains minimum clubs like *Polish Club 2020: Expert*.
-We adjust the 1♦ opening to contain 18--20 unbalanced diamonds with no 4-card
+I adjust the 1♦ opening to contain 18--20 unbalanced diamonds with no 4-card
 major.  This method makes 1♣-1♦-3m limited enough (21--23) for their level.
 
 |  -   |   |

@@ -37,7 +37,7 @@ that topic.
 
 ### Stopper
 
-We evaluate stopper quality as [GIB] does.
+I evaluate stopper quality as [GIB] does.
 
 - **Partial stop**: length + HCP = 4
 - **Likely stop**: length + HCP = 5
