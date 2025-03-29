@@ -1,21 +1,21 @@
+html {
+	hyphens: auto;
+}
+
 .♥,
 .♦ {
 	color: #d33;
 }
 
-ol.variants {
-	counter-reset: list;
+.variants {
+	counter-reset: variant;
 }
 
-ol.variants > li {
+.variants > li {
 	list-style: none;
 }
 
-ol.variants > li:before {
-	content: "(" counter(list, lower-alpha) ") ";
-	counter-increment: list;
-}
-
-html {
-	hyphens: auto;
+.variants > li:before {
+	content: "(" counter(variant, lower-alpha) ") ";
+	counter-increment: variant;
 }
