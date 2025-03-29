@@ -9,3 +9,6 @@
 
 ♣
 <span class="♣">♣</span>
+
+(R)
+<abbr title="relay">(R)</abbr>
