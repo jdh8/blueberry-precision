@@ -15,3 +15,7 @@ ol.variants > li:before {
 	content: "(" counter(list, lower-alpha) ") ";
 	counter-increment: list;
 }
+
+html {
+	hyphens: auto;
+}
