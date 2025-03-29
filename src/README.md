@@ -5,14 +5,14 @@ club systems since reading *Good, Better, Best* by Jan Eric Larsson, whose
 simulations show that forcing club systems tend to outperform other systems.
 I believe opening 1♣ for all strong hands is a superior treatment.
 
-Strawberry Polish Club is a <BTU>-flavored Polish Club largely based on *Polish
+Strawberry Polish Club is a BTU-flavored Polish Club largely based on *Polish
 Club 2020: Expert*.  Polish Club serves as a gateway to the world of forcing
 clubs.  It is 5-card major.  Its main opening range is 12--17. Sharing these
 properties, it has similar bidding structure to 2/1, the lingua franca of modern
 bridge.
 
 Blueberry Cottontail Club is a modernized mix of Blue Club and Cottontail Club
-along with new ideas from <BTU>.  It is a 4-card major strong club system with a
+along with new ideas from BTU.  It is a 4-card major strong club system with a
 moderately strong notrump.  It is highly experimental and subject to change
 without notice.
 
@@ -26,7 +26,7 @@ without notice.
 - [**Fifths**](https://bridge.thomasoandrews.com/valuations/cardvaluesfor3nt.html):
   4.0--2.8--1.8--1.0--0.4, adjusted HCP for notrump contracts especially 3NT
 - **BUM-RAP**: 4.5--3--1.5--0.75--0.25, adjusted HCP for suit contracts
-- **<abbr title="New Losing Trick Count">NLTC</abbr>**: Count 1.5--1.0--0.5
+- **NLTC**: Count 1.5--1.0--0.5
   losers for each missing AKQ
 
 NLTC is a good single hand evaluator but not very additive.  It suits preemptive
