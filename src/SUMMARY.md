@@ -4,7 +4,7 @@
 
 # Strawberry Polish Club
 
-- [Overview](wj/README.md)
+- [Overview](wj.md)
 - [Polish 1♣](wj/1C.md)
 	- [Negative 1♦](wj/1C/1D.md)
 	- [Positive 1M](wj/1C/1M.md)
