@@ -28,3 +28,8 @@ html {
 	content: "(" counter(variant, lower-alpha) ") ";
 	counter-increment: variant;
 }
+
+.table-wrapper {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
