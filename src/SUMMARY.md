@@ -9,6 +9,7 @@
 	- [Negative 1♦](wj/1C/1D.md)
 	- [Positive 1M](wj/1C/1M.md)
 	- [Positive 1NT, 2♠, 2NT](wj/1C/1NT.md)
+	- [Game-forcing 2♣♦](wj/1C/2m.md)
 
 # Blueberry Cottontail Club
 
