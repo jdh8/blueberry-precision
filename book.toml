@@ -10,6 +10,10 @@ additional-css = ["style.css"]
 git-repository-url = "https://github.com/jdh8/bridge-systems"
 smart-punctuation = true
 
+[output.html.redirect]
+"blue.htm" = "blue.html"
+"wj.htm" = "wj.html"
+
 [preprocessor.yapp]
 
 [preprocessor.abbr]
