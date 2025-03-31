@@ -7,6 +7,7 @@
 - [Overview](wj/README.md)
 - [Polish 1♣](wj/1C.md)
 	- [Negative 1♦](wj/1C/1D.md)
+	- [Positive 1M](wj/1C/1M.md)
 
 # Blueberry Cottontail Club
 
