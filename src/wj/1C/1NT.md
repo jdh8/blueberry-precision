@@ -18,14 +18,14 @@ descriptive and passable.
 
 | 1♣-1NT- | BAL 8--10 |
 |---------|-----------|
-| 2♣      | To play, 12--14, 6+♣
+| 2♣      | S/O, 12--14, 6+♣
 | 2♦      | S/T, 18+, 4+♦
 | 2M      | S/T, 18+, 5+#
 | 2NT     | INV, 14--15
 | 3♣      | S/T, 18+, 5+♣
 | 3♦      | S/T, 18+, 6+♦
 | 3M      | S/T, 18+, 7+#
-| 3NT     | To play, 16+
+| 3NT     | S/O, 16+
 | 4♣♦     | S/T, SOL 7+#
 
 ## 1♣-2♠! { #1C-2S }
@@ -35,19 +35,19 @@ so 1♣-2♠ need not be balanced.
 
 | 1♣-2♠- | INV 10--11 |
 |--------|------------|
-| 2NT    | To play, 12--13
-| 3♣     | To play, 12--13, 6+♣
+| 2NT    | S/O, 12--13
+| 3♣     | S/O, 12--13, 6+♣
 | 3♦!    | S/T, 18+, 0--4♠, 0--4♥
 | 3M     | S/T, 18+, 5+#
-| 3NT    | To play, good 13+
+| 3NT    | S/O
 | 4♣♦♥♠  | S/T, SOL 7+#
 
 P-1♣-2♠ only contains unbalanced hands of both minors.  Hence, 3♦ becomes a
-reasonable choice of contract.
+reasonable signoff.
 
 | P-1♣-2♠- | INV, 4--5♦, 4--5♣ |
 |----------|-------------------|
-| 3♦       | To play, 12--13, 4+♦
+| 3♦       | S/O, 12--13, 4+♦
 
 ## 1♣-2NT { #1C-2NT }
 
@@ -73,8 +73,8 @@ unpassed 1♣-2♠.  I import continuations from 1♣-2♠ as a natural conseque
 
 | P-1♣-2NT- | BAL INV |
 |-----------|---------|
-| 3♣        | To play, 12--13, 6+♣
+| 3♣        | S/O, 12--13, 6+♣
 | 3♦!       | S/T, 18+, 0--4♠, 0--4♥
 | 3M        | S/T, 18+, 5+#
-| 3NT       | To play, good 13+
+| 3NT       | S/O
 | 4♣♦♥♠     | S/T, SOL 7+#
