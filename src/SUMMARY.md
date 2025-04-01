@@ -17,7 +17,7 @@
 
 # Common conventions
 
-- [Multi 2♦]()
+- [Multi 2♦](2D-Multi.md)
 - [Muiderberg 2M]()
 - [Unusual 2NT opening]()
 - [BTU 4-level preempts]()
