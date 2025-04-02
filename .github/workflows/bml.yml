@@ -22,7 +22,7 @@ jobs:
     - name: Set up mdbook
       uses: taiki-e/cache-cargo-install-action@v2
       with:
-        tool: mdbook mdbook-abbr mdbook-yapp
+        tool: mdbook, mdbook-abbr, mdbook-yapp
 
     - name: Build
       run: |
