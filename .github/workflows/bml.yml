@@ -20,7 +20,7 @@ jobs:
       uses: actions/setup-python@v3
 
     - name: Set up mdbook
-    - uses: taiki-e/cache-cargo-install-action@v2
+      uses: taiki-e/cache-cargo-install-action@v2
       with:
         tool: mdbook mdbook-abbr mdbook-yapp
 
