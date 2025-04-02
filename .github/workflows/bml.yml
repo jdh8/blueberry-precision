@@ -16,15 +16,19 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Python 3.10
+    - name: Set up Python 3
       uses: actions/setup-python@v3
+
+    - name: Set up mdbook
+      uses: actions-rust-lang/setup-rust-toolchain@v1
       with:
-        python-version: "3.10"
+        components: mdbook mdbook-abbr mdbook-yapp
 
     - name: Build
       run: |
         pip install git+https://github.com/jdh8/bml.git
         make -j$(nproc)
+        mdbook build
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v4
