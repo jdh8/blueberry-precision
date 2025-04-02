@@ -17,19 +17,23 @@ jobs:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v5
     
-    - uses: taiki-e/cache-cargo-install-action@v2
+    - name: Install mdbook
+      uses: taiki-e/cache-cargo-install-action@v2
       with:
         tool: mdbook
 
-    - uses: taiki-e/cache-cargo-install-action@v2
+    - name: Install mdbook-abbr
+      uses: taiki-e/cache-cargo-install-action@v2
       with:
         tool: mdbook-abbr
 
-    - uses: taiki-e/cache-cargo-install-action@v2
+    - name: Install mdbook-yapp
+      uses: taiki-e/cache-cargo-install-action@v2
       with:
         tool: mdbook-yapp
 
-    - run: |
+    - name: Build web pages
+      run: |
         pip install git+https://github.com/jdh8/bml.git
         make -j$(nproc)
         mdbook build
