@@ -12,6 +12,7 @@
 	- [Game-forcing 2♣♦](wj/1C/2CD.md)
 	- [Flannery 2♥](wj/1C/2H.md)
 - [Natural 1♦](wj/1D.md)
+- [Ekren 2♣](wj/2C.md)
 
 # Blueberry Cottontail Club
 

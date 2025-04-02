@@ -28,14 +28,14 @@ There are two kinds of choice of games:
 Such distinction helps judging how to react to interference.  Besides, 4♣ lets
 the strong hand declare.  On the other hand, 4♦ closes the auction ASAP.
 
-| 2♦-4♣ | STR choice of games |
-|-------|---------------------|
-| 4♦!   | TRF, 6+♥            |
-| 4♥!   | TRF, 6+♠            |
+| 2♦-4♣- | STR choice of games |
+|--------|---------------------|
+| 4♦!    | TRF, 6+♥            |
+| 4♥!    | TRF, 6+♠            |
 
-| 2♦-4♦ | PRE choice of games |
-|-------|---------------------|
-| 4M    | To play, 6+#        |
+| 2♦-4♦- | PRE choice of games |
+|--------|---------------------|
+| 4M     | To play, 6+#        |
 
 ## Suggested defense: [Multi vs Multi](https://chrisryall.net/bridge/multi-v-multi-2d.htm)
 
