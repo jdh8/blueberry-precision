@@ -1,10 +1,16 @@
 Chen-Pang He (jdh8)'s bridge bidding systems
 ============================================
+
+**Note:** This project is undergoing transition to [mdBook].  The new pages are
+available at [/book/][book].  They will become default when complete.
+
 This repository contains my bidding systems.  These documents are in the Bridge
 Bidding Markup Language (BML).  Please use [my fork][fork] for now until
 gpaulissen/bml#21 gets fixes.
 
+[book]: https://jdh8.github.io/bridge-systems/book/
 [fork]: https://github.com/jdh8/bml
+[mdBook]: https://github.com/rust-lang/mdBook
 
 The below are my pet forcing club bidding systems.  I believe bidding 1♣ for
 all strong hands is a superior treatment.
