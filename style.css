@@ -1,7 +1,7 @@
 /* Subset of Source Han Sans JP for suits */
 @font-face {
 	font-family: "Source Han Suits";
-	font-weight: 0 2000;
+	font-weight: 1 1000;
 	font-style: oblique 0deg 90deg;
 	src: url("fonts/suits.woff2") format("woff2");
 }
