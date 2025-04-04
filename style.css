@@ -11,6 +11,11 @@ html {
 	hyphens: auto;
 }
 
+.♠,
+.♣ {
+	color: var(--fg);
+}
+
 .♥,
 .♦ {
 	color: #d33;
