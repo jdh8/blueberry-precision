@@ -2,7 +2,7 @@
 @font-face {
 	font-family: "Source Han Suits";
 	font-weight: 1 1000;
-	font-style: oblique 0deg 90deg;
+	font-style: oblique -90deg 90deg;
 	src: url("fonts/suits.woff2") format("woff2");
 }
 
