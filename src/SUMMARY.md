@@ -13,6 +13,7 @@
 	- [Flannery 2♥](wj/1C/2H.md)
 - [Natural 1♦](wj/1D.md)
 	- [Natural 1M](wj/1D/1M.md)
+	- [Game-forcing 2♣](wj/1D/2C.md)
 	- [Flannery 2♥](wj/1D/2H.md)
 	- [Unbalanced 2♠](wj/1D/2S.md)
 - [Ekren 2♣](wj/2C.md)
