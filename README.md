@@ -1,8 +1,8 @@
 Chen-Pang He (jdh8)'s bridge bidding systems
 ============================================
 
-**Note:** This project is undergoing transition to [mdBook].  The new pages are
-available at [/book/][book].  They will become default when complete.
+**Note:** This project is undergoing [transition to mdBook][book].  It becomes
+default when complete.
 
 This repository contains my bidding systems.  These documents are in the Bridge
 Bidding Markup Language (BML).  Please use [my fork][fork] for now until
