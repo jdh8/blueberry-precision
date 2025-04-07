@@ -11,8 +11,9 @@ git-repository-url = "https://github.com/jdh8/bridge-systems"
 smart-punctuation = true
 
 [output.html.redirect]
-"blue.htm" = "blue.html"
-"wj.htm" = "wj.html"
+"blue.htm" = "legacy/blue.html"
+"defense.htm" = "legacy/defense.html"
+"wj.htm" = "legacy/wj.html"
 
 [preprocessor.yapp]
 

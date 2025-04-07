@@ -22,8 +22,6 @@
 	- [BTU 2♠](wj/1NT/2S.md)
 - [Ekren 2♣](wj/2C.md)
 
-# Blueberry Cottontail Club
-
 # Common conventions
 
 - [Multi 2♦](2D-Multi.md)
@@ -31,4 +29,8 @@
 - [Unusual 2NT opening](2NT-UNT.md)
 - [BTU Namyats](4X-BTU.md)
 
-# Defensive bidding
+# Legacy system notes
+
+- [Strawberry Polish Club](legacy/wj.html)
+- [Blueberry (Cottontail) Club](legacy/blue.html)
+- [Defensive bidding](legacy/defense.html)
