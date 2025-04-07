@@ -1,40 +1,61 @@
-Chen-Pang He (jdh8)'s bridge bidding systems
-============================================
+# [Taipei Forcing Club System Notes](https://jdh8.github.io/bridge-systems/)
 
-**Note:** This project is undergoing [transition to mdBook][book].  It becomes
-default when complete.
+This book is a collection of my bidding systems.  I have been studying forcing
+club systems since reading *Good, Better, Best* by Jan Eric Larsson, whose
+simulations show that forcing club systems tend to outperform other systems.
+I believe opening 1♣ for all strong hands is a superior treatment.
 
-This repository contains my bidding systems.  These documents are in the Bridge
-Bidding Markup Language (BML).  Please use [my fork][fork] for now until
-gpaulissen/bml#21 gets fixes.
+Strawberry Polish Club is a BTU-flavored Polish Club largely based on *Polish
+Club 2020: Expert*.  Polish Club serves as a gateway to the world of forcing
+clubs.  It is 5-card major.  Its main opening range is 12--17. Sharing these
+properties, it has similar bidding structure to 2/1, the lingua franca of modern
+bridge.
 
-[book]: https://jdh8.github.io/bridge-systems/book/
-[fork]: https://github.com/jdh8/bml
-[mdBook]: https://github.com/rust-lang/mdBook
+Blueberry Cottontail Club is a modernized mix of Blue Club and Cottontail Club
+along with new ideas from BTU.  It is a 4-card major strong club system with a
+moderately strong notrump.  It is highly experimental and subject to change
+without notice.
 
-The below are my pet forcing club bidding systems.  I believe bidding 1♣ for
-all strong hands is a superior treatment.
+## Legacy system notes
 
-- [Strawberry Polish Club](https://jdh8.github.io/bridge-systems/wj.htm)
-- [Blueberry Club](https://jdh8.github.io/bridge-systems/blue.htm)
-- [Defensive bidding system](https://jdh8.github.io/bridge-systems/defense.htm)
+- [Strawberry Polish Club](https://jdh8.github.io/bridge-systems/legacy/wj.html)
+- [Blueberry Club](https://jdh8.github.io/bridge-systems/legacy/blue.html)
+- [Defensive bidding system](https://jdh8.github.io/bridge-systems/legacy/defense.html)
 
-The [distribution syntax and abbreviations][syntax] are provided by WBF.
+## References
 
-[syntax]: http://www.worldbridge.org/wp-content/uploads/2017/04/Guidetocompletion.pdf
+### General methods
 
-Building HTML and BSS files
----------------------------
+- Jan Eric Larsson.  *Good, Better, Best: A comparison of bridge bidding
+  systems and conventions by computer simulation*.  ISBN 978-1771402415
+- Thomas Andrews.  [Thomas's Bridge Fantasia](https://bridge.thomasoandrews.com/valuations/)
+- Bridge Base.  [GIB Bid Descriptions][GIB]
 
-First, install the BML converters.
+### Polish Club
 
-```sh
-git clone https://github.com/jdh8/bml.git
-pip install .
-```
+- Krzysztof Jassem & Tomek Brus.  *Polish Club 2020: Expert*.  ISBN 978-1771402248
+- Krzysztof Jassem & Tomek Brus.  *Polish Club 2020: Standard*.  ISBN 978-1771402231
+- Krzysztof Jassem.
+  [Wspólny Język 2020 Standard](https://jassem.pl/wp-content/uploads/2019/12/wj2020-25-59.pdf)
+- Piotr Cegielski.
+  [Wspólny Język DUCE](https://iccs.pl/wp-content/uploads/2020/11/Wspolny-Jezyk-DUCE-wersja-Q1.2021.pdf)
+- Krzysztof Jassem.
+  [Polish Club International 2010](https://jassem.pl/wp-content/uploads/2016/08/Polish_Club-2010.html)
+- Krzysztof Jassem.
+  [Wspólny Język 2005 (Polish Standard)](https://par.cse.nsysu.edu.tw/~kbc/class/Polish_Club/WJ2005Full_original.pdf)
 
-Then, `make` whenever you want to generate or update files.
+### Precision Club
 
-```sh
-make -j8
-```
+- Daniel Neill.  *Standard Modern Precision: Getting from Here to There*.  ISBN
+  978-1771401791
+- Edward Piwowar.
+  [PC - Meckwell Lite Precision Club](https://sites.google.com/view/bbaenglish/description-of-systems/pc-meckwell-lite-precision-club)
+
+### Other strong clubs
+
+- Arturo Franco, Marco Pancotti, and Daniel J. Neill.
+  [Blue Team Club](https://bridgewithdan.com/wp-content/uploads/2019/07/BTC2000_gmeier.pdf)
+- Jan Eric Larsson, Anu Uus, and George Wang.
+  [Kaninklöver / Cottontail Club: A Cheatsheet (2022)](https://github.com/Egroegw/Kaninklover)
+- Bo-Yin Yang.
+  [Terrorist's Moscito, or Major-Oriented Strong Club, with Interpid Two Openers](https://bridgewithdan.com/wp-content/uploads/2022/01/terr_mosc.pdf)
