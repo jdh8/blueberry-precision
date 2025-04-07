@@ -17,6 +17,7 @@
 	- [Flannery 2♥](wj/1D/2H.md)
 	- [Unbalanced 2♠](wj/1D/2S.md)
 - [BTU 1NT](wj/1NT.md)
+	- [BTU Stayman 2♣](wj/1NT/2C.md)
 - [Ekren 2♣](wj/2C.md)
 
 # Blueberry Cottontail Club
