@@ -19,6 +19,7 @@
 - [BTU 1NT](wj/1NT.md)
 	- [BTU Stayman 2♣](wj/1NT/2C.md)
 	- [BTU transfers 2♦♥](wj/1NT/2R.md)
+	- [BTU 2♠](wj/1NT/2S.md)
 - [Ekren 2♣](wj/2C.md)
 
 # Blueberry Cottontail Club
