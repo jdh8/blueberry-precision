@@ -1,5 +1,7 @@
 # Introduction
 
+![&spades; &hearts; &diams; &clubs;](favicon.svg)
+
 This book is a collection of my bidding systems.  I have been studying forcing
 club systems since reading *Good, Better, Best* by Jan Eric Larsson, whose
 simulations show that forcing club systems tend to outperform other systems.
