@@ -57,10 +57,10 @@ method better than fit reverse at the 3-level due to 3451 hands.  We cannot excl
 3S = INV, 15--17 HCP, 4+!s
 3N = SOL 7+!d, partial stops in !h and !c
 
-*** BTU XYZ or three-way checkback
+*** BTU 3-way checkback
 
 We use BTU-style 3-way checkback to an XYZ auction.  There are 3 artificial
-relays in the three-way checkback:
+relays in the 3-way checkback:
 
 - *2!c*: ...
 - *2!d*: game-forcing checkback, usually a choice of games

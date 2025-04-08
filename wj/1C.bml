@@ -179,10 +179,10 @@ suiter to alleviate the burden on 2NT.
 4D = !SPL, 0--1!d, 4+!s
 4H = !SPL, 0--1!h, 4+!s
 
-*** BTU XYZ or three-way checkback
+*** BTU 3-way checkback
 
 We use BTU-style 3-way checkback to an XYZ auction.  There are 3 artificial
-relays in the three-way checkback:
+relays in the 3-way checkback:
 
 - *2!c*: ...
 - *2!d*: game-forcing checkback, usually a choice of games
