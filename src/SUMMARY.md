@@ -19,6 +19,7 @@
 	- [Unbalanced 2♠](wj/1D/2S.md)
 - [Natural 1♥](wj/1H.md)
 	- [Natural 1♠](wj/1H/1S.md)
+	- [Unbalanced 2♠](wj/1H/2S.md)
 - [BTU 1NT](wj/1NT.md)
 	- [BTU Stayman 2♣](wj/1NT/2C.md)
 	- [BTU transfers 2♦♥](wj/1NT/2R.md)
