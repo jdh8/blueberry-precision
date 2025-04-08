@@ -1,6 +1,7 @@
 # Summary
 
 [Introduction](README.md)
+[Legacy system notes](legacy.md)
 
 # Strawberry Polish Club
 
@@ -28,9 +29,3 @@
 - [Muiderberg 2M](2M-Muiderberg.md)
 - [Unusual 2NT opening](2NT-UNT.md)
 - [BTU Namyats](4X-BTU.md)
-
-# Legacy system notes
-
-- [Strawberry Polish Club](legacy/wj.html)
-- [Blueberry (Cottontail) Club](legacy/blue.html)
-- [Defensive bidding](legacy/defense.html)

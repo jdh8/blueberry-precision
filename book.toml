@@ -21,6 +21,7 @@ smart-punctuation = true
 
 [preprocessor.abbr.list]
 BTU = "Bridge Taiwan University"
+BML = "Bridge Bidding Markup Language"
 NLTC = "New Losing Trick Count"
 AGG = "aggressor"
 ADV = "advancer"
