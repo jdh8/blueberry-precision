@@ -7,7 +7,6 @@ Therefore, we import responses from Stenberg AKA Swedish Jacoby 2NT.
 | 1♠-2NT- | FG, 4+♠ |
 |---------|---------|
 | 3♣!     | MIN
-| 3♣-3♦!  | Ask for distribution
 | 3♦!     | MAX, no SPL
 | 3♥!     | MAX FRAG, 0--1♣
 | 3♠!     | MAX FRAG, 0--1♦
@@ -17,10 +16,18 @@ Therefore, we import responses from Stenberg AKA Swedish Jacoby 2NT.
 | 4♥      | MAX, 5+♥
 | 4♠!     | MIN, 5+♥
 
+| 1♠-2NT-3♣- | MIN |
+|------------|-----|
+| 3♦!        | Ask for distribution
+| 3♠         | S/T
+| 3NT        | BAL choice of games
+
 | 1♠-2NT; 3♣-3♦- | Ask for distribution |
 |----------------|----------------------|
-| 3♥!            | SPL, 0--1♥           |
-| 3♠             | No SPL, not BAL      |
-| 3NT            | BAL                  |
-| 4♣!            | SPL, 0--1♣           |
-| 4♦!            | SPL, 0--1♦           |
+| 3♥!            | FRAG, 0--1♣          |
+| 3♠!            | FRAG, 0--1♦          |
+| 3NT!           | FRAG, 0--1♥          |
+| 4♣             | 5+♣                  |
+| 4♦             | 5+♦                  |
+| 4♥             | 5+♥                  |
+| 4♠             | Nearly BAL           |
