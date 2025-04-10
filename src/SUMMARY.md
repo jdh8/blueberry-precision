@@ -22,6 +22,7 @@
 	- [Unbalanced 2♠](wj/1H/2S.md)
 	- [Modified Stenberg 2NT](wj/1H/2NT.md)
 - [Natural 1♠](wj/1S.md)
+	- [Forcing 1NT](wj/1S/1NT.md)
 	- [Maggie 2♣](wj/1S/2C.md)
 	- [Modified Stenberg 2NT](wj/1S/2NT.md)
 - [BTU 1NT](wj/1NT.md)
