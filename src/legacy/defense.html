@@ -1,1 +1,3667 @@
-../../defense.htm
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Defensive bidding
+  </title>
+  <style type="text/css">
+   div.start {
+    display: inline-block;
+    vertical-align: top;
+    width: 60px;
+}
+    
+div.bidtable {
+    width:700px;
+    padding-bottom: 20px;
+}    
+
+div.bidtable ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.bidtable li ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 60px;
+}
+
+div.tree {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+div.tree ul {
+    list-style-type: none;
+    /* vline.png */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAKAQMAAABPHKYJAAAAA1BMVEWIiIhYZW6zAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1ggGExMZBky19AAAAAtJREFUCNdjYMAEAAAUAAHlhrBKAAAAAElFTkSuQmCC);
+    background-size: 2px;
+    background-repeat: repeat-y;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+
+div.tree li.node {
+    margin: 0;
+    padding: 0 12px;
+    line-height: 20px;
+    /* node.png */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAUAQMAAACK1e4oAAAABlBMVEUAAwCIiIgd2JB2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9YIBhQIJYVaFGwAAAARSURBVAjXY2hgQIf/GTDFGgDSkwqATqpCHAAAAABJRU5ErkJggg==);
+    background-size: 12px;
+    background-repeat: no-repeat;
+}
+
+div.tree td.node {
+    vertical-align: top;
+    width: 60px;
+}
+
+div.tree li.last {
+    /* lastnode.png */
+    background-color: #fff;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAUAQMAAACK1e4oAAAABlBMVEUAAwCIiIgd2JB2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9YIBhQIIhs+gc8AAAAQSURBVAjXY2hgQIf/GbAAAKCTBYBUjWvCAAAAAElFTkSuQmCC) ;
+    background-size: 12px;
+    backrgound-repeat: no-repeat;
+}
+
+div.tree li.root {
+    background-color: #fff;
+    background-image: none;
+    backrgound-repeat: no-repeat;
+}
+
+.ccolor{color:Green}
+.dcolor{color:Orange}
+.hcolor{color:Red}
+.scolor{color:Black}
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+				color-adjust: exact !important;                 /* Firefox */
+		}
+    div.tree ul {
+        background-size: 1px;
+    }
+}
+  </style>
+ </head>
+ <body>
+  <h1>
+   Defensive bidding system
+  </h1>
+  <p>
+   Welcome to Chen-Pang He (jdh8)'s defensive bidding system!  This bidding system
+is based on
+   <em>
+    Good, Better, Best
+   </em>
+   by Jan Eric Larsson and my improvisation.
+  </p>
+  <h2>
+   Hand evaluation
+  </h2>
+  <ul>
+   <li>
+    <strong>
+     High card points (HCP)
+    </strong>
+    : the well-known Milton Work's 4321 count
+   </li>
+   <li>
+    <strong>
+     Total points
+    </strong>
+    : HCP + distribution points (void = 3, singleton = 2, doubleton
+  = 1, subtract 1 for each short suit with HCP)
+   </li>
+   <li>
+    <strong>
+     Zar points (ZP)
+    </strong>
+    : 6-4-2-1 + Zar distribution points (a + b + a - d, where the
+  letters are the number of cards from the longest to the shortest suit)
+   </li>
+   <li>
+    <strong>
+     Fifths
+    </strong>
+    : 4.0&ndash;2.8&ndash;1.8&ndash;1.0&ndash;0.4, adjusted HCP for notrump contracts
+  especially 3NT
+   </li>
+   <li>
+    <strong>
+     BUM-RAP
+    </strong>
+    : 4.5&ndash;3&ndash;1.5&ndash;0.75&ndash;0.25, adjusted HCP for suit contracts
+   </li>
+   <li>
+    <strong>
+     NLTC
+    </strong>
+    : Count 1.5&ndash;1.0&ndash;0.5 losers for each missing AKQ
+   </li>
+  </ul>
+  <p>
+   NLTC is a good single hand evaluator but not very additive.  It suits
+preemptive initial actions but not for showing supports.  I have a blog article
+on that topic.
+  </p>
+  <p>
+   https://jdh8.org/nltc-a-good-single-hand-evaluator/
+  </p>
+  <h3>
+   Stopper
+  </h3>
+  <p>
+   We evaluate stopper quality as GIB does.
+  </p>
+  <ul>
+   <li>
+    <strong>
+     Partial stop
+    </strong>
+    : length + HCP = 4
+   </li>
+   <li>
+    <strong>
+     Likely stop
+    </strong>
+    : length + HCP = 5
+   </li>
+   <li>
+    <strong>
+     Stop
+    </strong>
+    : A, QJx, or length + HCP at least 7
+   </li>
+   <li>
+    <strong>
+     Two stops
+    </strong>
+    : length + HCP at least 8
+   </li>
+  </ul>
+  <h3>
+   References
+  </h3>
+  <ul>
+   <li>
+    Thomas Andrews.  [Thomas's Bridge Fantasia](https://bridge.thomasoandrews.com/valuations/)
+   </li>
+   <li>
+    Bridge Base.  [GIB Bid Descriptions](https://www.bridgebase.com/doc/gib_descriptions.php)
+   </li>
+  </ul>
+  <h1>
+   Over natural (1X)
+  </h1>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1Y)
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          Dbl
+         </td>
+         <td>
+          T/O, 13+ points
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1Z
+         </td>
+         <td>
+          NAT, 9&ndash;17 points, usually 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1NT
+         </td>
+         <td>
+          NAT, 15&ndash;17 HCP with stopper
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2X
+         </td>
+         <td>
+          NAT, 12&ndash;17 points, 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Z
+         </td>
+         <td>
+          PRE, 4&ndash;10 HCP, 6+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          !UNT, 5+ 5+ in lowest two unbid suits
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3X
+         </td>
+         <td>
+          PRE, 5&ndash;9 HCP, usually 7+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3Y
+         </td>
+         <td>
+          !Gambling, SOL 7+ suit without stopper
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3Z
+         </td>
+         <td>
+          PRE, 5&ndash;9 HCP, usually 7+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3NT
+         </td>
+         <td>
+          !Gambling, SOL 7+ suit with stopper
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1
+     <span class="ccolor">
+      &clubs;
+     </span>
+     )
+     <ul>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          !Landy, 4+
+          <span class="scolor">
+           &spades;
+          </span>
+          , 4+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            !Equal preference
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1
+     <span class="dcolor">
+      &diams;
+     </span>
+     )
+     <ul>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="dcolor">
+           &diams;
+          </span>
+         </td>
+         <td>
+          !Michaels, 4+
+          <span class="scolor">
+           &spades;
+          </span>
+          , 5+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1
+     <span class="hcolor">
+      &hearts;
+     </span>
+     )
+     <ul>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          !Michaels, 5+
+          <span class="scolor">
+           &spades;
+          </span>
+          , 4+m
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1
+     <span class="scolor">
+      &spades;
+     </span>
+     )
+     <ul>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          !Michaels, 5+
+          <span class="hcolor">
+           &hearts;
+          </span>
+          , 5+m
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <p>
+   Due to insufficient strength, 1NT by passed hand becomes unusual.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1X)
+     <ul>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1NT
+         </td>
+         <td>
+          !UNT, 4+ 4+ in lowest two unbid suits
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   Balancing overcall
+  </h2>
+  <p>
+   Different from a direct overcall, a simple balancing overcall is tentative,
+while a jump overcall is sound.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1Y)-Pass
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          Dbl
+         </td>
+         <td>
+          T/O, 8+ HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1Z
+         </td>
+         <td>
+          NAT, 8&ndash;15 HCP, 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2X
+         </td>
+         <td>
+          NAT, 8&ndash;15 HCP, 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Z
+         </td>
+         <td>
+          NAT, 11&ndash;15 HCP, 6+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3X
+         </td>
+         <td>
+          NAT, 11&ndash;15 HCP, 6+#
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h3>
+   Notrump overcalls
+  </h3>
+  <p>
+   By unpassed hand, notrump overcalls are natural because we want a sound 2NT.
+  </p>
+  <ul>
+   <li>
+    13&ndash;15 HCP: 1NT
+   </li>
+   <li>
+    16&ndash;18 HCP: X, then notrump
+   </li>
+   <li>
+    19&ndash;21 HCP: 2NT
+   </li>
+  </ul>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1X)-Pass
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1NT
+         </td>
+         <td>
+          13&ndash;15 HCP with stopper
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          19&ndash;21 HCP with stopper
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <p>
+   Like a direct overcall, 1NT by passed hand is unusual.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1X)-Pass
+     <ul>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1NT
+         </td>
+         <td>
+          !UNT, 4+ 4+ in lowest two unbid suits
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   Advances to (1X)-1Y
+  </h2>
+  <h3>
+   High strains
+  </h3>
+  <p>
+   Raises are natural and non-forcing.  Note that the overcall occasionally
+contains only 4 cards.  We always raise to the 3-level with 4+ trumps.
+  </p>
+  <p>
+   Z, a suit higher than Y, is always a major suit.  Bidding 1Z is forcing for
+constructiveness. Jump advances in Z are preemptive.
+  </p>
+  <p>
+   Notrump advances are natural in the sense of showing length or a stopper in the
+adverse suit.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1X)-1Y
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1Z
+         </td>
+         <td>
+          F, 4+#, usually 8+ HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1NT
+         </td>
+         <td>
+          NAT, 9&ndash;12 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Y
+         </td>
+         <td>
+          CONST, 3+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Z
+         </td>
+         <td>
+          PRE, 6+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          NAT INV, 13&ndash;15 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3Y
+         </td>
+         <td>
+          PRE, 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <p>
+   As 1Z is pretty similar to a direct overcall, aggressor somehow mirrors the
+auction but without Rubens advances.  Aggressor does not have a weak hand with
+6+# because they would have jumped in the first place.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1m)-1Y-1M
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1NT
+         </td>
+         <td>
+          NAT, at most 12 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2m
+         </td>
+         <td>
+          LIM+, 3+ SUPP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2X
+         </td>
+         <td>
+          NAT, 9&ndash;14 points, 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Y
+         </td>
+         <td>
+          NAT, 12&ndash;14 points, 6+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Z
+         </td>
+         <td>
+          NAT, 12&ndash;17 points, 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2M
+         </td>
+         <td>
+          CONST, 3+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          NAT INV, 13&ndash;15 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3m
+         </td>
+         <td>
+          CONST, 4+ SUPP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3X
+         </td>
+         <td>
+          NAT, 15&ndash;17 points, 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3Y
+         </td>
+         <td>
+          NAT, 15&ndash;17 points, 6+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3M
+         </td>
+         <td>
+          PRE, 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h3>
+   Low strains
+  </h3>
+  <p>
+   Let's reword the auction as (1Y)-1Z to discuss X, a suit lower than Y. X is
+always a minor suit.  We are more interested in 3NT than a minor suit game.
+Therefore, we bear the presence of a stopper in mind.  Sometimes we have to bid
+a 4-card 2X because we lack a stopper to bid notrump.
+  </p>
+  <p>
+   Aggressor still has the chance to query a stopper with a cuebid.  That is why we
+can bid fairly naturally here.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1Y)-1Z
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2X
+         </td>
+         <td>
+          F unless by PH, 9+ HCP, usually 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3X
+         </td>
+         <td>
+          INV, 6+#
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <p>
+   Rebidding to a lower strain is similar to 2/1 or Drury.  Returning to the own
+suit is the weakest action.  If advancer has passed, it is also good to pass
+with a balanced minimum.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1Y)-1M-2m
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Y
+         </td>
+         <td>
+          F, 12&ndash;17 points
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2M
+         </td>
+         <td>
+          MIN, 9&ndash;11 points, 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          NAT INV, 12&ndash;14 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3m
+         </td>
+         <td>
+          MIN, 9&ndash;11 points, usually 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3M
+         </td>
+         <td>
+          NAT, 15&ndash;17 points, 6+#
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h3>
+   Middle strains
+  </h3>
+  <p>
+   The other suits are Rubens advances.  Cuebids and suits in between are
+transfers.  After rephrasing the auction as (1X)-1Z, Y is a suit in between.
+There is no distinction between X and Y.  Transfer supports are special
+nevertheless.
+  </p>
+  <ul>
+   <li>
+    <strong>
+     4steps = 2Z &minus; 1
+    </strong>
+    : limit raise or better, 3+ support
+   </li>
+   <li>
+    <strong>
+     9steps = 3Z &minus; 1
+    </strong>
+    : mixed raise, 4+ support
+   </li>
+   <li>
+    <strong>
+     Other 2XY
+    </strong>
+    : 9+ HCP, usually 5+ cards
+   </li>
+   <li>
+    <strong>
+     Other 3XY
+    </strong>
+    : Game try with 6+ cards
+   </li>
+  </ul>
+  <p>
+   Despite that we have skipped the cuebid, aggressor can dissuade further
+investigation by simply accepting the transfer.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1X)-1Z
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4steps
+         </td>
+         <td>
+          !TRF LIM+, 3+ support
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          9steps
+         </td>
+         <td>
+          !TRF CONST, 4+ support
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2X
+         </td>
+         <td>
+          !TRF, 9+ HCP, usually 5+ cards
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Y
+         </td>
+         <td>
+          !TRF, 9+ HCP, usually 5+ cards
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3X
+         </td>
+         <td>
+          !TRF G/T, 6+ cards
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3Y
+         </td>
+         <td>
+          !TRF G/T, 6+ cards
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   Advances to (1X)-X
+  </h2>
+  <p>
+   Transfer advances are active from 3Q on.  This way, we can separate paths to
+suit games by strength and by length.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1Y)-Dbl
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1Z
+         </td>
+         <td>
+          NEG, 0&ndash;7 HCP, usually 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1NT
+         </td>
+         <td>
+          CONST, 8&ndash;10 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2X
+         </td>
+         <td>
+          NEG, 0&ndash;9 HCP, usually 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Y
+         </td>
+         <td>
+          !ART: RESP, INV 4= suit with stopper, or FG
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Z
+         </td>
+         <td>
+          Mild INV, 8&ndash;12 HCP, 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          INV, 11&ndash;12 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3X
+         </td>
+         <td>
+          INV, 10&ndash;12 HCP, 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          !Ask for stopper
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3Y
+         </td>
+         <td>
+          !TRF INV+, 10+ HCP, 5+ next suit
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3Z
+         </td>
+         <td>
+          !TRF INV+, 10+ HCP, 5+ next suit
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1M)-Dbl
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4m
+         </td>
+         <td>
+          !Leaping Michaels, 5+
+          <span class="hcolor">
+           &hearts;
+          </span>
+          , usually 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4M
+         </td>
+         <td>
+          !Leaping Michaels, 5+
+          <span class="dcolor">
+           &diams;
+          </span>
+          , 5+
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4oM
+         </td>
+         <td>
+          PRE, usually 7+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          5m
+         </td>
+         <td>
+          PRE, 7+#
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1m)-Dbl
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4m
+         </td>
+         <td>
+          !Leaping Michaels, 5+
+          <span class="scolor">
+           &spades;
+          </span>
+          , 5+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4om
+         </td>
+         <td>
+          !Leaping Michaels, 5+
+          <span class="hcolor">
+           &hearts;
+          </span>
+          , usually 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4M
+         </td>
+         <td>
+          PRE, usually 7+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          5om
+         </td>
+         <td>
+          PRE, 7+#
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   Advances to (1X)-1NT
+  </h2>
+  <p>
+   We play Gladiator at (1M)-1NT, which is more effective against a major suit
+opening, especially 1
+   <span class="scolor">
+    &spades;
+   </span>
+   .  Aggressor can have 5 hearts at (1
+   <span class="scolor">
+    &spades;
+   </span>
+   )-1NT because 2
+   <span class="hcolor">
+    &hearts;
+   </span>
+   would be an underbid.  We get an additional cuebid to invite with 3 hearts,
+roughly equivalent to Puppet Stayman.  There is also an indirect 3NT for choice
+of games with 3 hearts.
+  </p>
+  <p>
+   This version of Gladiator originates from a BTU gadget:
+  </p>
+  <p>
+   https://www.ptt.cc/man/BridgeClub/D6D1/D49B/M.983965409.A.html
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1
+     <span class="scolor">
+      &spades;
+     </span>
+     )-1NT
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          !(R), Gladiator
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            !P/C
+           </td>
+          </tr>
+         </table>
+         <ul>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              Pass
+             </td>
+             <td>
+              S/O, 5+
+              <span class="dcolor">
+               &diams;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              2
+              <span class="hcolor">
+               &hearts;
+              </span>
+             </td>
+             <td>
+              S/O, 5+
+              <span class="hcolor">
+               &hearts;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              2
+              <span class="scolor">
+               &spades;
+              </span>
+             </td>
+             <td>
+              !INV, 3=
+              <span class="hcolor">
+               &hearts;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              2NT
+             </td>
+             <td>
+              BAL INV
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3
+              <span class="ccolor">
+               &clubs;
+              </span>
+             </td>
+             <td>
+              S/O, 6+
+              <span class="ccolor">
+               &clubs;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3
+              <span class="dcolor">
+               &diams;
+              </span>
+             </td>
+             <td>
+              INV, 6+
+              <span class="dcolor">
+               &diams;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3
+              <span class="hcolor">
+               &hearts;
+              </span>
+             </td>
+             <td>
+              INV, 6+
+              <span class="hcolor">
+               &hearts;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3
+              <span class="scolor">
+               &spades;
+              </span>
+             </td>
+             <td>
+              !SPL, 0&ndash;1
+              <span class="scolor">
+               &spades;
+              </span>
+              , 0&ndash;3
+              <span class="hcolor">
+               &hearts;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="last node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3NT
+             </td>
+             <td>
+              !Choice of games, 3=
+              <span class="hcolor">
+               &hearts;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+         </ul>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+           <td>
+            !P/C, 5+
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+           <td>
+            !P/C, MAX, 4=
+            <span class="hcolor">
+             &hearts;
+            </span>
+            , 4+
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2X
+         </td>
+         <td>
+          INV, 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          !STAY, INV+ 4=
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+           <td>
+            !Choice of games, e.g. MAX 3433
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          !NF INV, 5+
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3X
+         </td>
+         <td>
+          !FG, 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          !SPL, 0&ndash;1
+          <span class="scolor">
+           &spades;
+          </span>
+          , 4=
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4m
+         </td>
+         <td>
+          !Leaping Michaels, 5+
+          <span class="hcolor">
+           &hearts;
+          </span>
+          , usually 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          S/O, 6+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          !Leaping Michaels, 5+
+          <span class="dcolor">
+           &diams;
+          </span>
+          , 5+
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <p>
+   Our agreement that slow 3NT has 3= hearts persists if RHO bids up to 2NT.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1
+     <span class="scolor">
+      &spades;
+     </span>
+     )-1NT-(2
+     <span class="scolor">
+      &spades;
+     </span>
+     )
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          !TRF Lebensohl
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            !P/C
+           </td>
+          </tr>
+         </table>
+         <ul>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3
+              <span class="dcolor">
+               &diams;
+              </span>
+              <span class="hcolor">
+               &hearts;
+              </span>
+             </td>
+             <td>
+              S/O
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3
+              <span class="scolor">
+               &spades;
+              </span>
+             </td>
+             <td>
+              !SPL, 0&ndash;1
+              <span class="scolor">
+               &spades;
+              </span>
+              , 0&ndash;3
+              <span class="hcolor">
+               &hearts;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="last node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3NT
+             </td>
+             <td>
+              !Choice of games, 3=
+              <span class="hcolor">
+               &hearts;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+         </ul>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            !P/C, 5+
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+           <td>
+            !P/C, MAX, 4+
+            <span class="dcolor">
+             &diams;
+            </span>
+            , 4+
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          !TRF INV+, 5+
+          <span class="dcolor">
+           &diams;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="dcolor">
+           &diams;
+          </span>
+         </td>
+         <td>
+          !TRF INV+, 5+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          !FG STAY, 4=
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          !SPL, 0&ndash;1
+          <span class="scolor">
+           &spades;
+          </span>
+          , 4=
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1
+     <span class="scolor">
+      &spades;
+     </span>
+     )-1NT-(2NT)-(3
+     <span class="scolor">
+      &spades;
+     </span>
+     )-Pass
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          Dbl
+         </td>
+         <td>
+          PEN, 3=
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3NT
+         </td>
+         <td>
+          !Choice of games, 3=
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <p>
+   I have not yet come up with how we utilize the slow cuebid.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1
+     <span class="hcolor">
+      &hearts;
+     </span>
+     )-1NT
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          !(R), Gladiator
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            !P/C
+           </td>
+          </tr>
+         </table>
+         <ul>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              Pass
+             </td>
+             <td>
+              S/O, 5+
+              <span class="dcolor">
+               &diams;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              2
+              <span class="scolor">
+               &spades;
+              </span>
+             </td>
+             <td>
+              S/O, 5+
+              <span class="scolor">
+               &spades;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              2NT
+             </td>
+             <td>
+              BAL INV
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3
+              <span class="ccolor">
+               &clubs;
+              </span>
+             </td>
+             <td>
+              S/O, 6+
+              <span class="ccolor">
+               &clubs;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3
+              <span class="dcolor">
+               &diams;
+              </span>
+             </td>
+             <td>
+              INV, 6+
+              <span class="dcolor">
+               &diams;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3
+              <span class="hcolor">
+               &hearts;
+              </span>
+             </td>
+             <td>
+              !SPL, 0&ndash;1
+              <span class="hcolor">
+               &hearts;
+              </span>
+              , 0&ndash;3
+              <span class="scolor">
+               &spades;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="last node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3
+              <span class="scolor">
+               &spades;
+              </span>
+             </td>
+             <td>
+              INV, 6+
+              <span class="scolor">
+               &spades;
+              </span>
+             </td>
+            </tr>
+           </table>
+          </li>
+         </ul>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+           <td>
+            !P/C, 5+
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+           <td>
+            !P/C, MAX, 4=
+            <span class="scolor">
+             &spades;
+            </span>
+            , 4+
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2X
+         </td>
+         <td>
+          INV, 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          !STAY, INV+ 4=
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+           <td>
+            !Choice of games, e.g. MAX 4333
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          !NF INV, 5+
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3X
+         </td>
+         <td>
+          !FG, 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          !SPL, 0&ndash;1
+          <span class="hcolor">
+           &hearts;
+          </span>
+          , 4=
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4m
+         </td>
+         <td>
+          !Leaping Michaels, 5+
+          <span class="scolor">
+           &spades;
+          </span>
+          , usually 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          !Leaping Michaels, 5+
+          <span class="dcolor">
+           &diams;
+          </span>
+          , 5+
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          S/O, 6+
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <p>
+   Otherwise, we simply ignore the opening.  Take the 1NT overcall as an opening.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1X)-1NT
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          !STAY, Garbage STAY, or INV 5=
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="dcolor">
+           &diams;
+          </span>
+         </td>
+         <td>
+          !TRF, 5+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          !TRF, 5+
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          !Minor suit Multi/STAY, 6+m or FG 4+
+          <span class="dcolor">
+           &diams;
+          </span>
+          4+
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          NAT INV
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          INV, 6+
+          <span class="ccolor">
+           &clubs;
+          </span>
+          , KQxxxx or better, usually 6&ndash;7 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="dcolor">
+           &diams;
+          </span>
+         </td>
+         <td>
+          INV, 6+
+          <span class="dcolor">
+           &diams;
+          </span>
+          , KQxxxx or better, usually 6&ndash;7 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          !INV, 5+
+          <span class="scolor">
+           &spades;
+          </span>
+          , 5+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          !Choice of games, 5+
+          <span class="scolor">
+           &spades;
+          </span>
+          , 5+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          !Gerber BW
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4
+          <span class="dcolor">
+           &diams;
+          </span>
+         </td>
+         <td>
+          !Texas TRF, 6+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          !Texas TRF, 6+
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          !F QUANT
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            4NT
+           </td>
+           <td>
+            !NF, 15&ndash;16 HCP
+           </td>
+          </tr>
+         </table>
+         <ul>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              5NT
+             </td>
+             <td>
+              !F to a 5-card suit or 6NT
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="last node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              7
+              <span class="ccolor">
+               &clubs;
+              </span>
+             </td>
+             <td>
+              !P/C to a 5-card suit or 7NT
+             </td>
+            </tr>
+           </table>
+          </li>
+         </ul>
+        </li>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            5NT
+           </td>
+           <td>
+            !F, 17 HCP
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4NT
+         </td>
+         <td>
+          QUANT INV to 6NT, NF
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            6NT
+           </td>
+           <td>
+            S/O, 16&ndash;17 HCP
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          5NT
+         </td>
+         <td>
+          QUANT INV to 7NT, F
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            6NT
+           </td>
+           <td>
+            S/O, 15 HCP
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            7NT
+           </td>
+           <td>
+            S/O, 16&ndash;17 HCP
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h1>
+   Over strong notrump
+  </h1>
+  <p>
+   <em>
+    Good, Better, Best
+   </em>
+   recommends using conventional double over a strong
+notrump.  We play Woolsey in all seats.  We consider a natural notrump opening
+strong if at least half of the hands contain 15+ HCP. For instance, 14&ndash;16 is
+considered strong but 13&ndash;15 is not.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1NT)
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          Dbl
+         </td>
+         <td>
+          !CONST, 4+M, 5+m
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            !P/C
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            !Ask for the major suit
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          !UNBAL PRE, 4+
+          <span class="scolor">
+           &spades;
+          </span>
+          , 4+
+          <span class="hcolor">
+           &hearts;
+          </span>
+          , usually (54)(xx)
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            !Equal preference
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2NT
+           </td>
+           <td>
+            !INV+
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            !INV+, 3+
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            !INV+, 3+
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="dcolor">
+           &diams;
+          </span>
+         </td>
+         <td>
+          !PRE, 6+M
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2M
+         </td>
+         <td>
+          !PRE, 5+#, 4+m
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          !UNT, 5+
+          <span class="dcolor">
+           &diams;
+          </span>
+          , 5+
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h1>
+   Over weak notrump
+  </h1>
+  <p>
+   We play Landy against a weak notrump.  We consider a natural notrump opening
+weak if more than half of the hands contain 14 or fewer HCP.  This simple
+defense undermines their
+   <em>
+    systems on
+   </em>
+   approach over (1NT)-2
+   <span class="ccolor">
+    &clubs;
+   </span>
+   .  Meanwhile, we
+still threat to stop in our natural 2
+   <span class="dcolor">
+    &diams;
+   </span>
+   .
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (1NT)
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          Dbl
+         </td>
+         <td>
+          PEN, 14+ HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          !Landy, 4+
+          <span class="scolor">
+           &spades;
+          </span>
+          , 4+
+          <span class="hcolor">
+           &hearts;
+          </span>
+          , 12&ndash;17 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2X
+         </td>
+         <td>
+          5+#, 12&ndash;17 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <p>
+   By passed hand, we play the defense against a strong notrump.
+  </p>
+  <h1>
+   Over natural (2X)
+  </h1>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (2Y)
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          Dbl
+         </td>
+         <td>
+          T/O, 13+ points
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Z
+         </td>
+         <td>
+          NAT, 13&ndash;18 points, 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          NAT, 16&ndash;18 HCP
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3X
+         </td>
+         <td>
+          NAT, 14&ndash;17 HCP, often 6+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3Y
+         </td>
+         <td>
+          !Ask for stopper, SOL 7+ suit or STR T/O
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3Z
+         </td>
+         <td>
+          NAT, 15&ndash;17 HCP, 6+#
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (2m)
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4m
+         </td>
+         <td>
+          !Leaping Michaels, 5+
+          <span class="scolor">
+           &spades;
+          </span>
+          , 5+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4om
+         </td>
+         <td>
+          !Leaping Michaels, 5+M, usually 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4NT
+         </td>
+         <td>
+          !NF S/T in om
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (2M)
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3M
+         </td>
+         <td>
+          !Ask for stopper, SOL 7+ suit or STR 4+
+          <span class="dcolor">
+           &diams;
+          </span>
+          4+
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4m
+         </td>
+         <td>
+          !Leaping Michaels, 5+oM, usually 5+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4M
+         </td>
+         <td>
+          !Leaping Michaels, 5+
+          <span class="dcolor">
+           &diams;
+          </span>
+          , 5+
+          <span class="ccolor">
+           &clubs;
+          </span>
+          , usually unstopped
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          4NT
+         </td>
+         <td>
+          !NF UNT with stopper, 5+
+          <span class="dcolor">
+           &diams;
+          </span>
+          , 5+
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <h2>
+   Reverse Lebensohl
+  </h2>
+  <p>
+   Though usually treated the same, there is a significant difference between
+(2X)-Dbl and 1NT-(2X): we cannot pass boring hands in the former situation!
+After a long discussion, we came to a conclusion that reverse Lebensohl with
+Rubens advances is a better alternative than transfer or standard counterparts.
+  </p>
+  <p>
+   As opposed to the standard/original Lebensohl, this 2NT relay handles
+constructive hands (8+ HCP or 7+ HCP by passed hand) while directly bidding a
+suit below 3X is weak.  Since an in-shape takeout is short in the adverse suit,
+advancer is more likely to have a stopper.  Inviting with 2NT right-sides the
+contract more often than not.
+  </p>
+  <p>
+   I put special cases before general rules to generate correct BSS files.
+  </p>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (2
+     <span class="scolor">
+      &spades;
+     </span>
+     )-Dbl-2NT
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="dcolor">
+           &diams;
+          </span>
+         </td>
+         <td>
+          !FG, 3=
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          FG, 4+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          !FG, 0&ndash;2
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (2
+     <span class="ccolor">
+      &clubs;
+     </span>
+     )-Dbl-2NT-3
+     <span class="ccolor">
+      &clubs;
+     </span>
+     <ul>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3X
+         </td>
+         <td>
+          MIN INV, usually 4=#
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (2
+     <span class="ccolor">
+      &clubs;
+     </span>
+     )-Dbl
+     <ul>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          !FG STAY
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     (2Y)-Dbl
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2Z
+         </td>
+         <td>
+          COMP, 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          !INV+ (R)
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            !MIN P/C
+           </td>
+          </tr>
+         </table>
+         <ul>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3X
+             </td>
+             <td>
+              S/O
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3Y
+             </td>
+             <td>
+              !TRF, 4= next suit
+             </td>
+            </tr>
+           </table>
+          </li>
+          <li class="last node">
+           <table>
+            <tr>
+             <td class="node" rowspan="1">
+              3Z
+             </td>
+             <td>
+              !TRF, 4= next suit
+             </td>
+            </tr>
+           </table>
+          </li>
+         </ul>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3X
+           </td>
+           <td>
+            FG, 4+#
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3Y
+           </td>
+           <td>
+            !FG, 4+
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3Z
+           </td>
+           <td>
+            FG, 4+#
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3NT
+           </td>
+           <td>
+            MAX BAL
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3X
+         </td>
+         <td>
+          COMP, 4+#
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          !Ask for stopper, usually a long minor suit
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3Y
+         </td>
+         <td>
+          !TRF INV+, 5+ next suit
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3Z
+         </td>
+         <td>
+          !TRF INV+, 5+ next suit
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+ </body>
+</html>
