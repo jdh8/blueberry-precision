@@ -20,9 +20,9 @@ without notice.
 
 ## Legacy system notes
 
-- [Strawberry Polish Club](https://jdh8.github.io/bridge-systems/legacy/wj.html)
-- [Blueberry Club](https://jdh8.github.io/bridge-systems/legacy/blue.html)
-- [Defensive bidding system](https://jdh8.github.io/bridge-systems/legacy/defense.html)
+- [Strawberry Polish Club](https://jdh8.github.io/bridge-systems-1.0/wj.htm)
+- [Blueberry Club](https://jdh8.github.io/bridge-systems-1.0/blue.htm)
+- [Defensive bidding system](https://jdh8.github.io/bridge-systems-1.0/defense.htm)
 
 ## References
 

@@ -11,6 +11,6 @@ The below are my legacy system notes built with BML.  I keep them here for now
 because I have not yet fully covered them in this book.  I will eventually
 remove them when the migration is complete.
 
-- [Strawberry Polish Club](legacy/wj.html)
-- [Blueberry (Cottontail) Club](legacy/blue.html)
-- [Defensive bidding](legacy/defense.html)
+- [Strawberry Polish Club](https://jdh8.github.io/bridge-systems-1.0/wj.htm)
+- [Blueberry Club](https://jdh8.github.io/bridge-systems-1.0/blue.htm)
+- [Defensive bidding system](https://jdh8.github.io/bridge-systems-1.0/defense.htm)
