@@ -19,6 +19,7 @@
 	- [Unbalanced 2♠](wj/1D/2S.md)
 - [Natural 1♥](wj/1H.md)
 	- [Natural 1♠](wj/1H/1S.md)
+	- [Non-forcing 1NT](wj/1H/1NT.md)
 	- [Unbalanced 2♠](wj/1H/2S.md)
 	- [Modified Stenberg 2NT](wj/1H/2NT.md)
 - [Natural 1♠](wj/1S.md)
