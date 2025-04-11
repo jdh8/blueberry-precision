@@ -40,3 +40,7 @@
 - [Muiderberg 2M](2M-Muiderberg.md)
 - [Unusual 2NT opening](2NT-UNT.md)
 - [BTU Namyats](4X-BTU.md)
+
+# Defensive bidding
+
+- [Suit variables](defense/suit-variables.md)
