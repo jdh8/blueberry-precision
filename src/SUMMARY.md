@@ -44,4 +44,5 @@
 # Defensive bidding
 
 - [Suit variables](defense/suit-variables.md)
-- [Natural (1X)](defense/1X.md)
+- [Natural (1Y)](defense/1Y.md)
+	- [(1Y)-1Z](defense/1Y/1Z.md)
