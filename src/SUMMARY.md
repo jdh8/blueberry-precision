@@ -47,3 +47,4 @@
 - [Natural (1Y)](defense/1Y.md)
 	- [(1Y)-X](defense/1Y/X.md)
 	- [(1Y)-1Z](defense/1Y/1Z.md)
+	- [(1Y)-1NT](defense/1Y/1NT.md)
