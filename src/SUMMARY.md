@@ -49,3 +49,4 @@
 	- [(1Y)-1Z](defense/1Y/1Z.md)
 	- [(1Y)-1NT](defense/1Y/1NT.md)
 - [Natural (1NT)](defense/1NT.md)
+- [Natural (2X)](defense/2X.md)
