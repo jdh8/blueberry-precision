@@ -34,6 +34,10 @@
 	- [BTU 2♠](wj/1NT/2S.md)
 - [Ekren 2♣](wj/2C.md)
 
+# Blueberry Cottontail Club
+
+- [Overview](blue.md)
+
 # Common conventions
 
 - [Multi 2♦](2D-Multi.md)
