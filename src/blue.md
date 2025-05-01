@@ -1,5 +1,22 @@
 # Blueberry Cottontail Club
 
+This bidding system is a hybrid between a modernized Blue Club and Larsson's
+[Cottontail Club][cotton].  To make 3-card major raises safer, major suit
+openings promise 5+ cards or unbalanced 4 cards.
+
+[cotton]: https://github.com/Egroegw/Kaninklover
+
+Canapé sometimes happens in this bidding system.  Between a 4-card major and a
+longer minor, we open the major suit unlike most natural systems.  On the other
+hand, we hide a balanced 4-card major with possibly shorter 1♦.  This system
+tries to strike a balance between constructiveness and preemption.  Note that
+**canapé does not occur between major suits**.  The opened major suit is no
+shorter than the other major suit.  Responder then makes better choice between
+major suit games.
+
+Despite of the strong club opening, this system has a strong notrump as suggested
+by [Cottontail Club][cotton] and *Good, Better, Best* by Jan Eric Larsson.
+
 |  -   |   |
 |------|---|
 | 1♣!  | STR ART, 16+
