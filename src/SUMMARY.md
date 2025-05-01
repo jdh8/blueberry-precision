@@ -28,10 +28,6 @@
 	- [Maggie 2♣](wj/1S/2C.md)
 	- [Game-forcing 2♦♥](wj/1S/2R.md)
 	- [Modified Stenberg 2NT](wj/1S/2NT.md)
-- [BTU 1NT](wj/1NT.md)
-	- [BTU Stayman 2♣](wj/1NT/2C.md)
-	- [BTU transfers 2♦♥](wj/1NT/2R.md)
-	- [BTU 2♠](wj/1NT/2S.md)
 - [Ekren 2♣](wj/2C.md)
 
 # Blueberry Cottontail Club
@@ -40,6 +36,10 @@
 
 # Common conventions
 
+- [BTU 1NT](1NT-BTU.md)
+	- [BTU Stayman 2♣](1NT-BTU/2C.md)
+	- [BTU transfers 2♦♥](1NT-BTU/2R.md)
+	- [BTU 2♠](1NT-BTU/2S.md)
 - [Multi 2♦](2D-Multi.md)
 - [Muiderberg 2M](2M-Muiderberg.md)
 - [Unusual 2NT opening](2NT-UNT.md)

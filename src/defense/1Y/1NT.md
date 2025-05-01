@@ -100,4 +100,4 @@ I have not yet come up with how we utilize the slow cuebid.
 ## (1♣♦)-1NT { #(1m)-1NT }
 
 Otherwise, I suggest ignoring the minor suit opening.  Take the 1NT overcall as
-[a strong notrump opening](../../wj/1NT.md).
+[a strong notrump opening](../../1NT-BTU.md).
