@@ -33,6 +33,7 @@
 # Blueberry Cottontail Club
 
 - [Overview](blue.md)
+- [Natural 1♠](blue/1S.md)
 
 # Common conventions
 
