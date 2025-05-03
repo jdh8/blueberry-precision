@@ -46,7 +46,7 @@ unbid (minor) suits.
 
 | (2♦)- | PRE, 6+M |
 |-------|----------|
-| X!    | OPT, 12+ and 5+M, or BAL 19+
+| X!    | OPT: 12+ and 5+M, or BAL 19+
 | 2♥!   | BAL, 16--18
 | 2♠!   | TRF, 14+, 5+♣
 | 2NT!  | TRF, 14+, 5+♦
@@ -57,8 +57,8 @@ unbid (minor) suits.
 We frequently pass 2♦x with 4+ diamonds to ease slam exploration, especially
 for minor suit slams.
 
-| (2♦)-X- | OPT, 12+ and 5+M, or BAL 19+ |
-|---------|------------------------------|
+| (2♦)-X- | 12+, 5+M \| BAL 19+ |
+|---------|---------------------|
 | 2M!     | P/C
 | 2NT!    | INV+, REV LEB
 | 3♣      | PRE, usually 5+♣
