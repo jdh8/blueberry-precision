@@ -6,14 +6,6 @@ openings promise 5+ cards or unbalanced 4 cards.
 
 [cotton]: https://github.com/Egroegw/Kaninklover
 
-Canapé sometimes happens in this bidding system.  Between a 4-card major and a
-longer minor, we open the major suit unlike most natural systems.  On the other
-hand, we hide a balanced 4-card major with possibly shorter 1♦.  This system
-tries to strike a balance between constructiveness and preemption.  Note that
-**canapé does not occur between major suits**.  The opened major suit is no
-shorter than the other major suit.  Responder then makes better choice between
-major suit games.
-
 Despite of the strong club opening, this system has a strong notrump as suggested
 by [Cottontail Club][cotton] and *Good, Better, Best* by Jan Eric Larsson.
 
@@ -43,3 +35,13 @@ by [Cottontail Club][cotton] and *Good, Better, Best* by Jan Eric Larsson.
 - **20--22**: 1♣-1♦; 1♥-1♠; 1NT
 - **23--24**: 1♣-1♦; 1♥-1♠; 2NT
 - **25+**: 1♣-1♦; 2NT
+
+## Canapé
+
+In contract bridge, canapé stand for bidding a shorter suit first.  This
+treatment is common in strong club systems.
+
+- We systematically bid a 4-card major despite of a longer minor in many cases.
+- Canapé does not occur between major suits.  This helps choosing between major
+  suit games.
+- Opener bids 1♦ with 14--15 points, 5=M, and 4+♦.
