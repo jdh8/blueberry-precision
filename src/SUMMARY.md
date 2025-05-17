@@ -35,6 +35,7 @@
 - [Overview](blue.md)
 - [Strong 1♣](blue/1C.md)
 	- [Negative 1♦](blue/1C/1D.md)
+- [Quasi-natural 1♦](blue/1D.md)
 - [Natural 1♥](blue/1H.md)
 - [Natural 1♠](blue/1S.md)
 
