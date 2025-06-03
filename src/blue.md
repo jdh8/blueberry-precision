@@ -45,3 +45,18 @@ treatment is common in strong club systems.
 - Canapé does not occur between major suits.  This helps choosing between major
   suit games.
 - Opener bids 1♦ with 14--15 points, 5=M, and 4+♦.
+
+## Lauria-like Gazzilli
+
+Another recurring pattern in this bidding system is a generalization of
+Lorenzo Lauria's Gazzilli.
+
+- Our last two bids are 1M-1NT or 1♥-1♠ (Kaplan interchange), a natural major
+  suit followed by a suitless response.
+- Rebidding the major suit does not show extra length.  It shows a predefined
+  side suit instead (not necessarily clubs).
+- A low rebid (1NT or 2♣) becomes a relay:
+  - Extra length in the major suit is possible.
+  - Extra strength is possible.
+  - The relay can be non-forcing because many bids in this system are fairly
+    limited.
