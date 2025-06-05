@@ -39,7 +39,6 @@ the strong hand declare.  On the other hand, 4♦ closes the auction ASAP.
 
 ## Suggested defense: [Multi vs Multi](https://chrisryall.net/bridge/multi-v-multi-2d.htm)
 
-
 I regard Multi vs Multi as a specialized version of Unusual vs Unusual.  X
 remains "penalizing" either suit but longer.  Cuebids are reordered and show
 unbid (minor) suits.

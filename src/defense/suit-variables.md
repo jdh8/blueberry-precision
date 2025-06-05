@@ -53,5 +53,5 @@ expands to multiple rules instead of one.  For example:
 
 The most specific rule applies.  If there are multiple rules with the same
 specificity, compare specificity lexicographically.  For example, 1M-2X > 1X-1R
-because 1M is more specific than 1X.  If there are still multiple rules with the same
-specificity, the last rule applies, like CSS and laws but not BML.
+because 1M is more specific than 1X.  If there are still multiple rules with the
+same specificity, the last rule applies, like CSS and laws but not BML.

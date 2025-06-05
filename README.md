@@ -31,7 +31,7 @@ without notice.
 - Jan Eric Larsson.  *Good, Better, Best: A comparison of bridge bidding
   systems and conventions by computer simulation*.  ISBN 978-1771402415
 - Thomas Andrews.  [Thomas's Bridge Fantasia](https://bridge.thomasoandrews.com/valuations/)
-- Bridge Base.  [GIB Bid Descriptions][GIB]
+- Bridge Base.  [GIB Bid Descriptions](https://www.bridgebase.com/doc/gib_descriptions.php)
 
 ### Polish Club
 
