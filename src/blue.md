@@ -46,10 +46,10 @@ treatment is common in strong club systems.
   suit games.
 - Opener bids 1♦ with 14--15 points, 5=M, and 4+♦.
 
-## Lauria-like Gazzilli
+## Blueberry Gazzilli
 
-Another recurring pattern in this bidding system is a generalization of
-Lorenzo Lauria's Gazzilli.
+Another recurring pattern in this bidding system is generalized Lauria-style
+Gazzilli.
 
 - Our last two bids are 1M-1NT or 1♥-1♠ (Kaplan interchange), a natural major
   suit followed by a suitless response.
