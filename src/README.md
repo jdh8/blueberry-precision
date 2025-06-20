@@ -47,6 +47,21 @@ I evaluate stopper quality as [GIB] does.
 
 [GIB]: https://www.bridgebase.com/doc/gib_descriptions.php
 
+## Punctuations
+
+Descriptions in bidding tables are dense in information.  To make them concise,
+I use [abbreviations suggested by WBF][abbr].  Besides, for natural reading
+flow, I use usual punctuation marks to connect conditions.  Their meanings are
+usually self-explanatory in a bidding table.
+
+[abbr]: http://www.worldbridge.org/wp-content/uploads/2017/04/Guidetocompletion.pdf
+
+- **The comma (,)** works as **AND**.
+- **The period (.)** works as **OR**.
+- **The colon (:)** follows general description of the call.
+
+A notable example is the 1♣ opening in [Strawberry Polish Club](wj.md).
+
 ## References
 
 ### General methods
