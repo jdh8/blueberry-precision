@@ -13,7 +13,7 @@ by [Cottontail Club][cotton] and *Good, Better, Best* by Jan Eric Larsson.
 |------|---|
 | 1♣!  | STR ART, 16+
 | 1♦   | Quasi-NAT, 11--15, 2+♦
-| 1♥   | 11--15: 5+♥, 44(xx), or UNBAL 4=♥
+| 1♥   | 11--15: 5+♥. 44(xx). UNBAL 4=♥
 | 1♠   | 11--15, 5+♠ or UNBAL 4=♠
 | 1NT  | 14--16, 2--4♠, 2--4♥, 2--6♦, 2--6♣
 | 2♣   | 11--15, usually 6+♣

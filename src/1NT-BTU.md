@@ -6,7 +6,7 @@ of invitation with 5+ spades.
 
 | 1NT- | BAL 15--17 |
 |------|------------|
-| 2♣!  | STAY, Garbage STAY, or INV 5=♠
+| 2♣!  | STAY. Garbage STAY. INV 5=♠
 | 2♦!  | TRF, 5+♥
 | 2♥!  | TRF, 5+♠
 | 2♠!  | Minor suit Multi/STAY, 6+m or FG 4+♦ 4+♣

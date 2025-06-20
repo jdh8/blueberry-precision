@@ -21,19 +21,6 @@ html {
 	color: #d33;
 }
 
-.variants {
-	counter-reset: variant;
-}
-
-.variants > li {
-	list-style: none;
-}
-
-.variants > li:before {
-	content: "(" counter(variant, lower-alpha) ") ";
-	counter-increment: variant;
-}
-
 .table-wrapper {
 	margin-top: 1em;
 	margin-bottom: 1em;
