@@ -51,6 +51,10 @@
 - [Unusual 2NT opening](2NT-UNT.md)
 - [BTU Namyats](4X-BTU.md)
 
+# Slam bidding
+
+- [Overview](slam.md)
+
 # Defensive bidding
 
 - [Suit variables](defense/suit-variables.md)
