@@ -1,6 +1,7 @@
 # Slam bidding
 
-I list suggested slam-seeking conventions here.
+Slam bidding involves a stack of conventions for various situations.  I list
+them from the general to the specific.
 
 - Italian control bids, which promise 2nd round controls
 - Non-serious 3NT
