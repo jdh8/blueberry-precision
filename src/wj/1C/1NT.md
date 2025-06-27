@@ -68,7 +68,7 @@ makes 3♣♦ inclusive like relays.
 | 3NT     | S/T, 15--17, 4414
 | 4♣♦♥♠   | S/T, SOL 7+#
 
-P-1♣-2NT degenerates to a balanced invitation, which is in turn similar to
+P-1♣-2NT simplifies to a balanced invitation, which is in turn similar to
 unpassed 1♣-2♠.  I import continuations from 1♣-2♠ as a natural consequence.
 
 | P-1♣-2NT- | BAL INV |
