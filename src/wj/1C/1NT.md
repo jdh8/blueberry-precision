@@ -13,20 +13,31 @@ reference because it takes precedence over 1♣-2NT.
 
 ## 1♣-1NT { #1C-1NT }
 
-I make 2♣ and 2NT weaker than in *Polish Club 2020: Expert* to be more
-descriptive and passable.
+I took the artificial 2♦ relay from [FunBridge](https://funbridge.com).  I found
+it better than most Polish Club literature.
 
 | 1♣-1NT- | BAL 8--10 |
 |---------|-----------|
 | 2♣      | S/O, 12--14, 6+♣
-| 2♦      | S/T, 18+, 4+♦
+| 2♦!     | INV+ (R)
 | 2M      | S/T, 18+, 5+#
 | 2NT     | INV, 14--15
-| 3♣      | S/T, 18+, 5+♣
+| 3♣      | S/T, 18+, 6+♣
 | 3♦      | S/T, 18+, 6+♦
 | 3M      | S/T, 18+, 7+#
 | 3NT     | S/O, 16+
 | 4♣♦     | S/T, SOL 7+#
+
+| 1♣-1NT-2♦- | INV+ (R) |
+|------------|----------|
+| 2♥!        | 5--6♣
+| 2♠!        | 5--6♦
+| 2NT        | MIN, 2--4♦, 2--4♣
+| 3♣!        | MAX, 2245
+| 3♦!        | MAX, 2254
+| 3♥!        | MAX, 6=♣
+| 3♠!        | MAX, 6=♦
+| 3NT        | MAX, 2--4♦, 2--4♣
 
 ## 1♣-2♠! { #1C-2S }
 
