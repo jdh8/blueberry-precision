@@ -82,14 +82,10 @@ there are some quirks about cuebids:
 As the 1♦ opening takes care of some strong diamond hands, rebidding 2♦ here is
 not very useful.  Reverse transfer to clubs seems better.
 
-| 1♣-(1♥)-P- | - |
+| 1♣-(1M)-P- | - |
 |------------|---|
 | 2♦!        | 18--20, 5+♣
-
-| 1♣-(1♠)-P- | - |
-|------------|---|
-| 2♦!        | 18--20, 5+♣
-| 2♥         | 20--23, 5+♥
+| 2oM        | 20--23, 5+#
 
 ## Transfer Walsh
 
