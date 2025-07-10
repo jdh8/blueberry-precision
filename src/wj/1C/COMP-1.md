@@ -1,4 +1,3 @@
-
 # Competing at the 1-level
 
 The design of the responses already bears competitive bidding in mind.  We
