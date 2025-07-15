@@ -67,6 +67,7 @@ there are some quirks about cuebids:
 
 - Responder's cuebid (not to a X) is natural.
 - Opener's cuebid after X is natural.
+- Opener's 2NT is unusual because X includes 21+ "penalty".
 
 | 1♣-(1Y)-P- | - |
 |------------|---|
@@ -74,18 +75,15 @@ there are some quirks about cuebids:
 | X!         | 12--20, T/O.  21+, PEN
 | 1Z         | 15--20, 4+#
 | 1NT        | 18--20, usually likely stop
-| 2♣         | 12--17, 5+♣
+| 2♣         | 12--20, 5+♣
+| 2X         | 20--23, usually 5+#
 | 2Y!        | 21+, ask for stopper
 | 2Z         | 20--23, 5+#
-| 2NT        | 21--23 with stopper
-
-As the 1♦ opening takes care of some strong diamond hands, rebidding 2♦ here is
-not very useful.  Reverse transfer to clubs seems better.
-
-| 1♣-(1M)-P- | - |
-|------------|---|
-| 2♦!        | 18--20, 5+♣
-| 2oM        | 20--23, 5+#
+| 2NT!       | UNT, 18+, 5+ 5+ two lowest non-adverse suits
+| 3♣, 3X     | 21--23, 6+#
+| 3Y!        | Gambling, SOL 7+♣, ask for stopper
+| 3Z         | 21--23, 7+#
+| 3NT        | Gambling, SOL 7+♣ with stopper
 
 ## Transfer Walsh
 
