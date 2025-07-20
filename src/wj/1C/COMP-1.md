@@ -53,12 +53,14 @@ the contract.
 
 Of course 1♣-(1♠)-X is a negative double.  Therefore, 2♥ becomes negative free
 bid.  This modern adjunct finds more marginal 4♥ and puts pressure on the
-opponents by threatening to play 2♥.
+opponents by threatening to play 2♥.  Moreover, we lose 1♠ that asks for
+stopper.  The direct cuebid 2♠ has to take care of that.
 
 | 1♣-(1♠)- | - |
 |----------|---|
 | X!       | TRF, 7+, 4+♥
 | 2♥       | NF, 7--11, 5+♥
+| 2♠!      | TRF, PRE 7+♣ or FG, ask for stopper
 
 ## Responder passes
 
@@ -151,3 +153,15 @@ stopper.  It can also be a natural bid like 4SF.
 | 1♣-(1M)-1♠NT- | Direct and TRF to 1NT |
 |---------------|-----------------------|
 | 2M!           | INV+, ask for stopper.  FG, 5+#
+
+## Bidding hearts over (1♠)
+
+There is a debate whether free bids are forcing.  I prefer negative free bids
+for major suits and standard forcing free bids for minor suits.  I believe this
+set of agreements maximizes our chances to reach 4♥ and 3NT.
+
+|        | 4=♥ | Bad 5=♥ | Good 5+♥ |
+|:------:|:---:|:-------:|:--------:|
+|  7--9  |  X  |    X    |    2♥    |
+| 10--11 |  X  |   2♥    |    2♥    |
+|   FG   |  X  |    X    |     X    |
