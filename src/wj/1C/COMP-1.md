@@ -166,6 +166,12 @@ set of agreements maximizes our chances to reach 4♥ and 3NT.
 | 10--11 |  X  |  2♥   | 2♥  | 4♥  |
 |   FG   |  X  |   X   | 3♦  | 3♦  |
 
+1. Invitation is suspectible to interference.  Therefore, invitation requires
+   quick actions.
+2. To make best use of non-forcing 2♥, include weaker hands with longer or
+   better suit.
+3. The direct 4♥ not only deters inferference but also splits the range of 3♦.
+
 | 1♣-(1♠)-3♦- | PRE 7+♥ or FG 6+♥ |
 |-------------|-------------------|
 | 3♥, 3NT     | P/C, 0--2♥
