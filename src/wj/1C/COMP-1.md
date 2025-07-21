@@ -160,8 +160,8 @@ There is a debate whether free bids are forcing.  I prefer negative free bids
 for major suits and standard forcing free bids for minor suits.  I believe this
 set of agreements maximizes our chances to reach 4♥ and 3NT.
 
-|        | 4=♥ | Bad 5=♥ | Good 5+♥ |
-|:------:|:---:|:-------:|:--------:|
-|  7--9  |  X  |    X    |    2♥    |
-| 10--11 |  X  |   2♥    |    2♥    |
-|   FG   |  X  |    X    |     X    |
+|        | 4=♥ |  5=♥  | 6=♥ | 7+♥ |
+|:------:|:---:|:-----:|:---:|:---:|
+|  7--9  |  X  | X/2♥  | 2♥  | 3♦  |
+| 10--11 |  X  |  2♥   | 2♥  | 4♥  |
+|   FG   |  X  |   X   | 3♦  | 3♦  |
