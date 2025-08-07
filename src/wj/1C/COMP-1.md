@@ -165,3 +165,11 @@ set of agreements maximizes our chances to reach 4♥ and 3NT.
 |  7--9  |  X  | X/2♥  | 2♥  | 3♦  |
 | 10--11 |  X  |  2♥   | 2♥  | 4♥  |
 |   FG   |  X  |   X   | 3♦  | 3♦  |
+
+| 1♣-(1♠)-3♦- | PRE 7+♥ or FG 6+♥ |
+|-------------|-------------------|
+| 3♥, 3NT     | P/C, 0--2♥
+| 3♠!         | F, NAT or ask for CTRL
+| 4♣♦!        | F, NAT or CTRL
+| 4♥          | To play
+| 5♥!         | Ask for ♠ CTRL
