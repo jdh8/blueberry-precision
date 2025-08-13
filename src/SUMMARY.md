@@ -14,6 +14,7 @@
   - [Game-forcing 2♣♦](wj/1C/2CD.md)
   - [Flannery 2♥](wj/1C/2H.md)
   - [Competing at the 1-level](wj/1C/COMP-1.md)
+  - [Competing at the 2-level](wj/1C/COMP-2.md)
 - [Natural 1♦](wj/1D.md)
   - [Natural 1M](wj/1D/1M.md)
   - [Game-forcing 2♣](wj/1D/2C.md)
