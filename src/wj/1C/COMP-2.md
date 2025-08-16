@@ -59,3 +59,21 @@ is the same as the *systems on* approach at 1NT-(2♣︎).
 | 3NT!     | Gambling, SOL 7+ suit with one stopper outside
 
 ## Rubinsohl over (2♦♥♠)
+
+| 1♣-(2♦)- | - |
+|----------|---|
+| 2M       | NF, 5+M
+| 2NT!     | TRF, 5+♣
+| 3♣!      | STAY
+| 3♦!      | TRF, 5+♥
+| 3♥!      | TRF, 5+♠
+| 3♠!      | Ask for ♦ stopper
+
+| 1♣-(2♥)- | - |
+|----------|---|
+| 2♠       | NF, 5+♠
+| 2NT!     | TRF, 5+♣
+| 3♣!      | TRF, 5+♦
+| 3♦!      | STAY, 4+♠
+| 3♥!      | TRF, 5+♠
+| 3♠!      | Ask for ♥ stopper
