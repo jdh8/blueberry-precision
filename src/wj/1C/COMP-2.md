@@ -67,7 +67,7 @@ is the same as the *systems on* approach at 1NT-(2♣︎).
 | 3♣!      | STAY
 | 3♦!      | TRF, 5+♥
 | 3♥!      | TRF, 5+♠
-| 3♠!      | Ask for ♦ stopper
+| 3♠!      | TRF, usually 6+♣
 
 | 1♣-(2♥)- | - |
 |----------|---|
@@ -76,4 +76,16 @@ is the same as the *systems on* approach at 1NT-(2♣︎).
 | 3♣!      | TRF, 5+♦
 | 3♦!      | STAY, 4+♠
 | 3♥!      | TRF, 5+♠
-| 3♠!      | Ask for ♥ stopper
+| 3♠!      | TRF, usually 6+♦
+
+Swap 3♥♠ against (2♠) like [Larry Cohen][larryco] to avoid declaring hearts.
+
+[larryco]: https://www.larryco.com/bridge-articles/transfer-lebensohl
+
+| 1♣-(2♠)- | - |
+|----------|---|
+| 2NT!     | TRF, 5+♣
+| 3♣!      | TRF, 5+♦
+| 3♦!      | TRF, 5+♥
+| 3♥!      | TRF, usually 6+♣
+| 3♠!      | FG STAY
