@@ -1,14 +1,12 @@
-# Generalized Lebensohl
+# Rubinsohl
 
-Lebensohl is a bidding convention aiming for competition at the 2-level.
-Originally, for auctions such as 1NT-(2♦♥♠) and (2♦♥♠)-X, use 2NT and possibly
+Rubinsohl is a bidding convention aiming for competition at the 2-level.
+Originally, for auctions such as 1NT-(2♦♥♠) and (2♦♥♠)-X, use 2NT and
 some steps above to convey conventional meanings.  I am generalizing onset
 conditions as follows:
 
 1. Partner has ever bid a non-pass.
 2. Moreover, the last bid is (2♦♥♠) by either opponent.
-
-## Rubinsohl for most cases { #rubinsohl }
 
 Rubinsohl is superior to standard Lebensohl in most cases.  Similar to Rubens
 advances, the transfer structure helps saving bidding space.  Showing the suit

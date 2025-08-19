@@ -60,4 +60,4 @@ is the same as the *systems on* approach at 1NT-(2♣︎).
 
 ## 1♣-(2♦♥♠)-
 
-[Rubinsohl](../../&#x4C;EB.md#rubinsohl) covers these auctions.
+[Rubinsohl](../../Rubinsohl.md) covers these auctions.
