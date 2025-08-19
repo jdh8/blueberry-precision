@@ -58,34 +58,6 @@ is the same as the *systems on* approach at 1NT-(2♣︎).
 | 3♠!      | Gambling, SOL 7+ suit with no stopper outside
 | 3NT!     | Gambling, SOL 7+ suit with one stopper outside
 
-## Rubinsohl over (2♦♥♠)
+## 1♣-(2♦♥♠)-
 
-| 1♣-(2♦)- | - |
-|----------|---|
-| 2M       | NF, 5+M
-| 2NT!     | TRF, 5+♣
-| 3♣!      | STAY
-| 3♦!      | TRF, 5+♥
-| 3♥!      | TRF, 5+♠
-| 3♠!      | TRF, usually 6+♣
-
-| 1♣-(2♥)- | - |
-|----------|---|
-| 2♠       | NF, 5+♠
-| 2NT!     | TRF, 5+♣
-| 3♣!      | TRF, 5+♦
-| 3♦!      | STAY, 4+♠
-| 3♥!      | TRF, 5+♠
-| 3♠!      | TRF, usually 6+♦
-
-Swap 3♥♠ against (2♠) like [Larry Cohen][larryco] to avoid declaring hearts.
-
-[larryco]: https://www.larryco.com/bridge-articles/transfer-lebensohl
-
-| 1♣-(2♠)- | - |
-|----------|---|
-| 2NT!     | TRF, 5+♣
-| 3♣!      | TRF, 5+♦
-| 3♦!      | TRF, 5+♥
-| 3♥!      | TRF, usually 6+♣
-| 3♠!      | FG STAY
+[Rubinsohl](../../&#x4C;EB.md#rubinsohl) covers these auctions.

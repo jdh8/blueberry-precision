@@ -8,7 +8,7 @@ conditions as follows:
 1. Partner has ever bid a non-pass.
 2. Moreover, the last bid is (2♦♥♠) by either opponent.
 
-## Rubinsohl for most cases
+## Rubinsohl for most cases { #rubinsohl }
 
 Rubinsohl is superior to standard Lebensohl in most cases.  Similar to Rubens
 advances, the transfer structure helps saving bidding space.  Showing the suit
