@@ -2,7 +2,7 @@
 # Summary
 
 [Introduction](README.md)
-[Legacy system notes](legacy.md)
+[Legacy system notes](Legacy.md)
 
 # Strawberry Polish Club
 
@@ -55,14 +55,14 @@
 
 # Slam bidding
 
-- [Overview](slam.md)
+- [Overview](Slam.md)
 
 # Defensive bidding
 
-- [Suit variables](defense/suit-variables.md)
-- [Natural (1Y)](defense/1Y.md)
-  - [(1Y)-X](defense/1Y/X.md)
-  - [(1Y)-1Z](defense/1Y/1Z.md)
-  - [(1Y)-1NT](defense/1Y/1NT.md)
-- [Natural (1NT)](defense/1NT.md)
-- [Natural (2X)](defense/2X.md)
+- [Suit variables](Defense/SuitVariables.md)
+- [Natural (1Y)](Defense/1Y.md)
+  - [(1Y)-X](Defense/1Y/X.md)
+  - [(1Y)-1Z](Defense/1Y/1Z.md)
+  - [(1Y)-1NT](Defense/1Y/1NT.md)
+- [Natural (1NT)](Defense/1NT.md)
+- [Natural (2X)](Defense/2X.md)
