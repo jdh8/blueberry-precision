@@ -60,7 +60,7 @@ usually self-explanatory in a bidding table.
 - **The period (.)** works as **OR**.
 - **The colon (:)** follows general description of the call.
 
-A notable example is the 1♣ opening in [Strawberry Polish Club](wj.md).
+A notable example is the 1♣ opening in [Strawberry Polish Club](WJ.md).
 
 ## References
 
