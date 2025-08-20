@@ -2,10 +2,10 @@
 
 Competition at 1♣-(*) share properties of the following auctions:
 
-- (*)-, as opener shows no suit yet
-- 1NT-(*)-, as opener shows only strength
+- (*), as opener shows no suit yet
+- 1NT-(*), as opener shows only strength
 
-## 1♣-(1NT)-
+## 1♣-(1NT)
 
 I recommend a transfer system below 3NT.  Since X frees up 2NT, 2NT and above
 become transfers (cf. Rubens advances).  Below 2NT, continuations to
@@ -26,7 +26,7 @@ allows bidding a 5-card major regardless of strength.
 | 3♠!       | Gambling, SOL 7+ suit with no stopper outside
 | 3NT!      | Gambling, SOL 7+ suit with one stopper outside
 
-## 1♣-(2♣)-
+## 1♣-(2♣)
 
 Similar to 1NT-(2♣︎), some 1♣︎-(2♣︎) show both major suits, e.g. Landy,
 Michaels.  This kind of 2♣︎ requires extra care.  I recommend reverse unusual
@@ -58,6 +58,6 @@ is the same as the *systems on* approach at 1NT-(2♣︎).
 | 3♠!      | Gambling, SOL 7+ suit with no stopper outside
 | 3NT!     | Gambling, SOL 7+ suit with one stopper outside
 
-## 1♣-(2♦♥♠)-
+## 1♣-(2♦♥♠)
 
 [Rubinsohl](../../Rubinsohl.md) covers these auctions.
