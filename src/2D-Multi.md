@@ -118,3 +118,19 @@ Partner is limited and balanced like the 1NT opening.  I suggest playing like
 | 3♦!      | TRF, INV+, 5+♥
 | 3♥!      | TRF, INV+, 5+♠
 | 3♠!      | TRF, FG, 6+♣
+
+### Transfer to minors
+
+The two-under transfers have a non-forcing Herbert negative step as escape.
+
+| (2♦)-2♠- | 14+, 5+♣ |
+|----------|----------|
+| 2NT!     | NF NEG, 0--2♣
+| 3♣       | To play
+| 3♦♥♠     | NAT F
+
+| (2♦)-2NT- | 14+, 5+♦ |
+|-----------|----------|
+| 3♣!       | NF NEG, 0--2♦
+| 3♦        | To play
+| 3♥♠, 4♣   | NAT F
