@@ -55,8 +55,9 @@ unbid (minor) suits.
 
 ### (2♦)-X
 
-We frequently pass 2♦x with 4+ diamonds to ease slam exploration, especially
-for minor suit slams.
+Here I recommend a modified version of [Rumpelsohl](Rubinsohl.md#rumpelsohl).
+Frequently pass 2♦x with 4+ diamonds to ease slam exploration, especially for
+minor suit slams.
 
 | (2♦)-X- | OPT: either major or 19+ |
 |---------|--------------------------|
@@ -106,7 +107,7 @@ holding the other major.
 ### (2♦)-2♥
 
 Partner is limited and balanced like the 1NT opening.  I suggest playing like
-Rumpelsohl here.
+[Rumpelsohl](Rubinsohl.md#rumpelsohl) at 2♥x.
 
 | (2♦)-2♥- | BAL 16--18 |
 |----------|------------|
