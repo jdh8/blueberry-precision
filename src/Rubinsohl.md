@@ -16,7 +16,7 @@ Showing the suit faster also helps competition.
 | *-(2♦)- | - |
 |---------|---|
 | X       | OPT
-| 2M      | NF NAT
+| 2M      | NAT NF
 | 2NT!    | TRF to 3♣
 | 3♣!     | STAY
 | 3♦!     | INV+ TRF to 3♥
@@ -26,7 +26,7 @@ Showing the suit faster also helps competition.
 | *-(2♥)- | - |
 |---------|---|
 | X       | OPT
-| 2♠      | NF NAT
+| 2♠      | NAT NF
 | 2NT!    | TRF to 3♣
 | 3♣!     | TRF to 3♦
 | 3♦!     | STAY
@@ -66,7 +66,7 @@ Therefore, 2NT includes NF clubs and constructive-invitational hands.
 
 | (2♦)-X- | T/O |
 |---------|-----|
-| 2M      | NF NAT
+| 2M      | NAT NF
 | 2NT!    | LEB: 4+♣ or CONST--INV
 | 3♣!     | STAY
 | 3♦!     | INV+, 5+♥
@@ -75,7 +75,7 @@ Therefore, 2NT includes NF clubs and constructive-invitational hands.
 
 | (2♥)-X- | T/O |
 |---------|-----|
-| 2♠      | NF NAT
+| 2♠      | NAT NF
 | 2NT!    | LEB: 4+♣ or CONST--INV
 | 3♣!     | TRF, 4+♦
 | 3♦!     | STAY, 4=♠
