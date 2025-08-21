@@ -45,7 +45,7 @@ unbid (minor) suits.
 
 | (2♦)- | PRE, 6+M |
 |-------|----------|
-| X!    | OPT: 5+M, 12+. BAL 19+.
+| X!    | OPT: 12+, 5+M.  15+, (41)44.  19+, 1--4♠, 1--4♥, 1--4♦, 1--4♣.
 | 2♥!   | BAL, 16--18
 | 2♠!   | TRF, 14+, 5+♣
 | 2NT!  | TRF, 14+, 5+♦
@@ -53,11 +53,13 @@ unbid (minor) suits.
 | 3♦    | NAT, 8--13, 6+♦
 | 3M!   | NF Michaels, 5+#, usually 5+m
 
+### (2♦)-X
+
 We frequently pass 2♦x with 4+ diamonds to ease slam exploration, especially
 for minor suit slams.
 
-| (2♦)-X- | 12+, 5+M.  BAL 19+ |
-|---------|--------------------|
+| (2♦)-X- | OPT: either major or 19+ |
+|---------|--------------------------|
 | 2M!     | P/C
 | 2NT!    | INV+, REV LEB
 | 3♣      | PRE, usually 5+♣
@@ -100,3 +102,18 @@ holding the other major.
 
 - (2♦)-X-(2♠); (3♥)-X = Usually hearts
 - (2♦)-X-(2♠); (3♥)-P = Spades!
+
+### (2♦)-2♥
+
+Partner is limited and balanced like the 1NT opening.  I suggest playing like
+Rumpelsohl here.
+
+| (2♦)-2♥- | BAL 16--18 |
+|----------|------------|
+| P        | S/O, 4+♥
+| 2♠       | S/O, 4+♠
+| 2NT      | LEB, 3+♣ or STAY
+| 3♣!      | TRF, 5+♦
+| 3♦!      | TRF, INV+, 5+♥
+| 3♥!      | TRF, INV+, 5+♠
+| 3♠!      | TRF, FG, 6+♣
