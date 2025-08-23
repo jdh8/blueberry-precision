@@ -20,6 +20,7 @@
   - [Game-forcing 2♣](WJ/1D/2C.md)
   - [Flannery 2♥](WJ/1D/2H.md)
   - [Unbalanced 2♠](WJ/1D/2S.md)
+  - [Competing at the 1-level](WJ/1D/COMP-1.md)
 - [Natural 1♥](WJ/1H.md)
   - [Natural 1♥-1♠](WJ/1H/1S.md)
   - [Non-forcing 1NT](WJ/1H/1NT.md)
