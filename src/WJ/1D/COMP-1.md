@@ -1,7 +1,11 @@
 # Competing at the 1-level
 
+This part shares similarities with [the 1♣ opening](../1C/&#x43;OMP-1.md).
+There are also differences since 1♦ shows a long suit that allows further
+preempts.
+
 Like 1♣-(X), natural 1NT is not very useful after a double.  Transfer to clubs
-instead.
+instead.  Unlike 1♣-(X), there is no space for Transfer Walsh here.
 
 | 1♦-(X)-  | - |
 |----------|---|
@@ -17,7 +21,8 @@ instead.
 | 3M!, 4♣! | SPL, 0--1#, 4+♦
 
 When RHO bids a major suit, natural notrump from [Polish Club 2005][wj05]
-right-sides the contract.
+right-sides the contract.  Spades below 3NT are transfer cuebids.  Hearts below
+3NT show the unbid major.
 
 [wj05]: https://bridgewithdan.com/wp-content/uploads/2019/07/WJ2005webpage.htm
 
@@ -32,6 +37,10 @@ right-sides the contract.
 | 3♦       | PRE, 4--6, 4+♦
 | 3♠!      | Gambling, SOL 7+♣ without stopper
 | 3NT!     | Gambling, SOL 7+♣ with stopper
+| 4oM      | To play
+| 4M!      | S/T, ask for CTRL
+
+Transfer Walsh only applies to 1♦-(1♥), the only 1-level red suit.
 
 | 1♦-(1♥)- | - |
 |----------|---|
