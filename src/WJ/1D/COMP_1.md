@@ -21,8 +21,7 @@ instead.  Unlike 1♣-(X), there is no space for Transfer Walsh here.
 | 3M!, 4♣! | SPL, 0--1#, 4+♦
 
 When RHO bids a major suit, natural notrump from [Polish Club 2005][wj05]
-right-sides the contract.  Spades below 3NT are transfer cuebids.  Hearts below
-3NT show the unbid major.
+right-sides the contract.  Spades below 3NT are transfer cuebids.
 
 [wj05]: https://bridgewithdan.com/wp-content/uploads/2019/07/WJ2005webpage.htm
 
@@ -48,6 +47,8 @@ Transfer Walsh only applies to 1♦-(1♥), the only 1-level red suit.
 | 1♠!      | TRF to 1NT, 6+
 | 2♥!      | TRF, PRE or INV+, 6+♠
 | 3♥!      | TRF, PRE 7+♠ or FG 6+♠
+
+Hearts to 1♦-(1♠) are natural.
 
 | 1♦-(1♠)- | - |
 |----------|---|
