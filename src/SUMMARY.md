@@ -44,10 +44,10 @@
 
 # Common conventions
 
-- [BTU 1NT](1NT-BTU.md)
-  - [BTU Stayman 2♣](1NT-BTU/2C.md)
-  - [BTU transfers 2♦♥](1NT-BTU/2R.md)
-  - [BTU 2♠](1NT-BTU/2S.md)
+- [BTU 1NT](1NT_BTU.md)
+  - [BTU Stayman 2♣](1NT_BTU/2C.md)
+  - [BTU transfers 2♦♥](1NT_BTU/2R.md)
+  - [BTU 2♠](1NT_BTU/2S.md)
 - [Multi 2♦](2D-Multi.md)
 - [Muiderberg 2M](2M-Muiderberg.md)
 - [Unusual 2NT opening](2NT-UNT.md)
