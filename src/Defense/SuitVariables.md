@@ -6,7 +6,7 @@ brings computation to a higher level.
 
 This book usually follows principles introduced in BML and [CSS][css].
 
-[css]: https://developer.mozilla.org/en-US/docs/Web/&#x43;SS
+[css]: https://developer.mozilla.org/en-US/docs/Web/CSS
 
 ## Ordered suit variables
 
@@ -47,7 +47,7 @@ expands to multiple rules instead of one.  For example:
     - 1M-2X = 1X-1R
     - 1NT-2X > 1X-1R
 
-[specificity]: https://developer.mozilla.org/en-US/docs/Web/&#x43;SS/Specificity
+[specificity]: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
 
 ### Precedence of rules
 
