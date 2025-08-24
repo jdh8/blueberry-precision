@@ -48,10 +48,10 @@
   - [BTU Stayman 2♣](1NT_BTU/2C.md)
   - [BTU transfers 2♦♥](1NT_BTU/2R.md)
   - [BTU 2♠](1NT_BTU/2S.md)
-- [Multi 2♦](2D-Multi.md)
-- [Muiderberg 2M](2M-Muiderberg.md)
-- [Unusual 2NT opening](2NT-UNT.md)
-- [BTU Namyats](4X-BTU.md)
+- [Multi 2♦](2D_Multi.md)
+- [Muiderberg 2M](2M_Muiderberg.md)
+- [Unusual 2NT opening](2NT_UNT.md)
+- [BTU Namyats](4X_BTU.md)
 - [Rubinsohl](Rubinsohl.md)
 
 # Slam bidding
