@@ -58,6 +58,23 @@ is the same as the *systems on* approach at 1NT-(2♣︎).
 | 3♠!      | Gambling, SOL 7+ suit with no stopper outside
 | 3NT!     | Gambling, SOL 7+ suit with one stopper outside
 
-## 1♣-(2♦♥♠)
+## 1♣-(2♦♥♠) { #strawberry-adjunct }
 
-[Rubinsohl](../../Rubinsohl.md) covers these auctions.
+[Rubinsohl](../../Rubinsohl.md) covers these auctions.  FunBridge also inspires
+the **Strawberry adjunct** over 1m-(2M):
+
+| 1♣-(2M)- | - |
+|----------|---|
+| 3♥!      | FG, 5=oM
+| 3♥-3♠!   | Ask for stopper
+| 3♠!      | FG, 6+oM
+
+<figure>
+    <img src="funbridge-spec.png" alt="">
+    <figcaption>
+        The screenshot from
+        <a href="https://play.funbridge.com/settings/engine">
+            FunBridge game engine specifications (requires login)
+        </a>
+    </figcaption>
+</figure>
