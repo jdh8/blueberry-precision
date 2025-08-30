@@ -29,17 +29,19 @@ allows bidding a 5-card major regardless of strength.
 ## 1♣-(2♣)
 
 Similar to 1NT-(2♣︎), some 1♣︎-(2♣︎) show both major suits, e.g. Landy,
-Michaels.  This kind of 2♣︎ requires extra care.  I recommend reverse unusual
-vs. unusual.
+Michaels.  This kind of 2♣︎ requires extra care.  I recommend
+[lower-lower unusual vs. unusual][uvu].
+
+[uvu]: https://www.acblunit390.org/Simon/unusvunus.htm
 
 | 1♣-(2♣)- | Both majors |
 |----------|-------------|
 | X        | PEN for either major
 | 2♦       | NF, 5+♦
-| 2♥!      | INV+, 5+♦
-| 2♠!      | INV+, 5+♣
-| 2NT!     | INV+, 4+♦, 5+♣
-| 3♣♦      | NF, 6+#
+| 2♥!      | INV+, 5+♣
+| 2♠!      | FG, 5+♦
+| 2NT!     | LEB, PRE or FG 6+♣
+| 3♣♦      | INV, 6+#
 | 3♥♠!     | Ask for stopper in this suit
 
 Otherwise, keep using the major-oriented system at 1♣︎-(1NT).  This treatment
