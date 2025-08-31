@@ -53,7 +53,11 @@
 - [Muiderberg 2M](2M_Muiderberg.md)
 - [Unusual 2NT opening](2NT_UNT.md)
 - [BTU Namyats](4X_BTU.md)
+
+# Competitive conventions
+
 - [Rubinsohl](Rubinsohl.md)
+- [BTU vs Unusual](BTU_v_U.md)
 
 # Slam bidding
 
