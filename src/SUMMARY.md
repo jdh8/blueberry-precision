@@ -38,10 +38,6 @@
 
 - [Overview](Blue.md)
 - [Strong 1♣](Blue/1C.md)
-  - [Negative 1♦](Blue/1C/1D.md)
-- [Quasi-natural 1♦](Blue/1D.md)
-- [Natural 1♥](Blue/1H.md)
-- [Natural 1♠](Blue/1S.md)
 
 # Common conventions
 

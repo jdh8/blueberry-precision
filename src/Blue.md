@@ -1,22 +1,18 @@
 # Blueberry Cottontail Club
 
 This bidding system is a hybrid between a modernized Blue Club and Larsson's
-[Cottontail Club][cotton].  To make 3-card major raises safer, major suit
-openings promise 5+ cards or unbalanced 4 cards.
+[Cottontail Club][cotton].
 
 [cotton]: https://github.com/Egroegw/Kaninklover
-
-Despite of the strong club opening, this system has a strong notrump as suggested
-by [Cottontail Club][cotton] and *Good, Better, Best* by Jan Eric Larsson.
 
 |  -   |   |
 |------|---|
 | 1♣!  | STR ART, 16+
-| 1♦   | Quasi-NAT, 11--15, 2+♦
-| 1♥   | 11--15: 5+♥. 44(xx). UNBAL 4=♥
-| 1♠   | 11--15, 5+♠ or UNBAL 4=♠
-| 1NT  | 14--16, 2--4♠, 2--4♥, 2--6♦, 2--6♣
-| 2♣   | 11--15, usually 6+♣
+| 1♦!  | NF, 11--15, 2+♦
+| 1♥   | 11--15, 4+♥, no BAL MAX 4=♥
+| 1♠   | 11--15, 4+♠, no BAL MAX 4=♠
+| 1NT  | 11--13:<div>2--3♠, 2--3♥, 2--6♦, 2--6♣.</div><div>(4333).</div>
+| 2♣   | 11--15, 6+♣ or MIN 4M5♣
 | 2♦!  | PRE, 6+M
 | 2M!  | PRE, 5=#, 4+m
 | 2NT! | UNT, 5+♦, 5+♣
@@ -29,12 +25,12 @@ by [Cottontail Club][cotton] and *Good, Better, Best* by Jan Eric Larsson.
 
 ## The notrump ladder
 
-- **11--13**: 1♦♥♠
-- **14--16**: 1NT
-- **17--19**: 1♣-1♦; 1NT
-- **20--22**: 1♣-1♦; 1♥-1♠; 1NT
-- **23--24**: 1♣-1♦; 1♥-1♠; 2NT
-- **25+**: 1♣-1♦; 2NT
+- **11--13**: 1NT
+- **14--15**: 1♦-1♥♠; 1NT
+- **16--18**: 1♣-1♦; 1NT
+- **19--21**: 1♣-1♦; 1♥-1♠; 1NT
+- **22--23**: 1♣-1♦; 1♥-1♠; 2NT
+- **24+**: 1♣-1♦; 2NT
 
 ## Canapé
 
