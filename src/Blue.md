@@ -32,16 +32,6 @@ This bidding system is a hybrid between a modernized Blue Club and Larsson's
 - **22--23**: 1♣-1♦; 1♥-1♠; 2NT
 - **24+**: 1♣-1♦; 2NT
 
-## Canapé
-
-In contract bridge, canapé stand for bidding a shorter suit first.  This
-treatment is common in strong club systems.
-
-- We systematically bid a 4-card major despite of a longer minor in many cases.
-- Canapé does not occur between major suits.  This helps choosing between major
-  suit games.
-- Opener bids 1♦ with 14--15 points, 5=M, and 4+♦.
-
 ## Blueberry Gazzilli
 
 Another recurring pattern in this bidding system is generalized Lauria-style
