@@ -38,6 +38,8 @@
 
 - [Overview](Blue.md)
 - [Strong 1♣](Blue/1C.md)
+  - [Waiting 1♦](Blue/1C/1D.md)
+  - [Negative 1♥](Blue/1C/1H.md)
 
 # Common conventions
 
