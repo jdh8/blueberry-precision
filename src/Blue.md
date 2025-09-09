@@ -45,11 +45,10 @@ This bidding system is a hybrid between a modernized Blue Club and Larsson's
 Another recurring pattern in this bidding system is generalized Lauria-style
 Gazzilli.
 
-- Our last two bids are 1M-1NT or 1♥-1♠ (Kaplan interchange), a natural major
-  suit followed by a suitless response.
+- Our last two bids are natural 1M-1NT.
 - Rebidding the major suit does not show extra length.  It shows a predefined
-  side suit instead (not necessarily clubs).
-- A low rebid (1NT or 2♣) becomes a relay:
+  side suit instead (usually clubs).
+- The lowest rebid 2♣ becomes a relay:
   - Extra length in the major suit is possible.
   - Extra strength is possible.
   - The relay can be non-forcing because many bids in this system are fairly
