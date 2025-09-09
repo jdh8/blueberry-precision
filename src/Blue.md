@@ -27,10 +27,18 @@ This bidding system is a hybrid between a modernized Blue Club and Larsson's
 
 - **11--13**: 1NT
 - **14--15**: 1♦-1M; 1NT
+
+### 1♣-1♦ = waiting
+
 - **16--18**: 1♣-1♦; 1NT
 - **19--21**: 1♣-1♦; 1♥
 - **22--24**: 1♣-1♦; 2NT
 - **FG**: 1♣-1♦; 1♥
+
+### 1♣-1♥ = double negative (0--4)
+
+- **16--21**: 1♣-1♥; 1NT
+- **22--24**: 1♣-1♥; 2NT
 
 ## Blueberry Gazzilli
 
