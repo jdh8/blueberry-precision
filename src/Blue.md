@@ -1,9 +1,11 @@
-# Blueberry Cottontail Club
+# Blueberry Precision Club
 
-This bidding system is a hybrid between a modernized Blue Club and Larsson's
-[Cottontail Club][cotton].
+This bidding system is a modernized mix of Blue Club and Precision Club.
+Blueberry Precision Club also gets idea from:
 
-[cotton]: https://github.com/Egroegw/Kaninklover
+- [Cottontail Club](https://github.com/Egroegw/Kaninklover) by Eric Larsson
+- [Strawberry Polish Club](WJ.md)
+- BTU 2/1
 
 |  -   |   |
 |------|---|
@@ -11,7 +13,7 @@ This bidding system is a hybrid between a modernized Blue Club and Larsson's
 | 1♦!  | NF, 11--15, 2+♦
 | 1♥   | 11--15, 4+♥, no BAL MAX 4=♥
 | 1♠   | 11--15, 4+♠, no BAL MAX 4=♠
-| 1NT  | 11--13:<div>2--3♠, 2--3♥, 2--6♦, 2--6♣.</div><div>(4333).</div>
+| 1NT  | <div>11--13, 2--3♠, 2--3♥, 2--6♦, 2--6♣.</div><div>11--13, (4333).</div>
 | 2♣   | 11--15, 6+♣ or MIN 4M5♣
 | 2♦!  | PRE, 6+M
 | 2M!  | PRE, 5=#, 4+m

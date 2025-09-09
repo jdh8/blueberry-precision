@@ -13,10 +13,10 @@ clubs.  It is 5-card major.  Its main opening range is 12--17. Sharing these
 properties, it has similar bidding structure to 2/1, the lingua franca of modern
 bridge.
 
-Blueberry Cottontail Club is a modernized mix of Blue Club and Cottontail Club
-along with new ideas from BTU.  It is a 4-card major strong club system with a
-moderately strong notrump.  It is highly experimental and subject to change
-without notice.
+Blueberry Precision Club is a modernized mix of Blue Club, Precision Club,
+Cottontail Club, and new ideas from BTU.  It is a 4-card major strong club
+system.  The weak notrump denies 4-card majors but (43)33.  It is highly
+experimental and subject to change without notice.
 
 ## Legacy system notes
 

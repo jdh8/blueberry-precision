@@ -34,7 +34,7 @@
   - [Modified Stenberg 2NT](WJ/1S/2NT.md)
 - [Ekren 2♣](WJ/2C.md)
 
-# Blueberry Cottontail Club
+# Blueberry Precision Club
 
 - [Overview](Blue.md)
 - [Strong 1♣](Blue/1C.md)
