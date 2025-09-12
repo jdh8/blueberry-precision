@@ -71,21 +71,21 @@ there are some quirks about cuebids:
 - Opener's cuebid after X is natural.
 - Opener's 2NT is unusual because X includes 21+ "penalty".
 
-| 1♣ (1Y) P- | - |
-|------------|---|
-| P          | 12--17
-| X!         | 12--20, T/O.  21+, PEN
-| 1Z         | 15--20, 4+#
-| 1NT        | 18--20, usually likely stop
-| 2♣         | 12--20, 5+♣
-| 2X         | 20--23, usually 5+#
-| 2Y!        | 21+, ask for stopper
-| 2Z         | 20--23, 5+#
-| 2NT!       | UNT, 18+, 5+ 5+ two lowest non-adverse suits
-| 3♣, 3X     | 21--23, 6+#
-| 3Y!        | Gambling, SOL 7+♣, ask for stopper
-| 3Z         | 21--23, 7+#
-| 3NT        | Gambling, SOL 7+♣ with stopper
+| 1♣ (1Y) P | - |
+|-----------|---|
+| P         | 12--17
+| X!        | 12--20, T/O.  21+, PEN
+| 1Z        | 15--20, 4+#
+| 1NT       | 18--20, usually likely stop
+| 2♣        | 12--20, 5+♣
+| 2X        | 20--23, usually 5+#
+| 2Y!       | 21+, ask for stopper
+| 2Z        | 20--23, 5+#
+| 2NT!      | UNT, 18+, 5+ 5+ two lowest non-adverse suits
+| 3♣, 3X    | 21--23, 6+#
+| 3Y!       | Gambling, SOL 7+♣, ask for stopper
+| 3Z        | 21--23, 7+#
+| 3NT       | Gambling, SOL 7+♣ with stopper
 
 ## Transfer Walsh
 
@@ -97,12 +97,12 @@ double when advancer passes.
 Here I only list support rebids for brevity.  The complete set of responses is
 at [1♣-1M](../1C/1M.md).
 
-| 1♣ (1♦) X- | 7+, 4+♥ |
-|------------|---------|
-| 1♥         | SUPP, 12--17, 3=♥
-| 2♦!        | FG, 3+♥
-| 2♥         | MIN, 12--14, 4=♥
-| 3♥         | INV, 15--17, 4+♥
+| 1♣ (1♦) X | 7+, 4+♥ |
+|-----------|---------|
+| 1♥        | SUPP, 12--17, 3=♥
+| 2♦!       | FG, 3+♥
+| 2♥        | MIN, 12--14, 4=♥
+| 3♥        | INV, 15--17, 4+♥
 
 | <div>1♣ (1♦) 1♥-</div><div>1♣ (1♥) X-</div> | 7+, 4+♠ |
 |:----|-------------------|
@@ -115,44 +115,44 @@ The cuebid is a useful tool to ask for stopper by ceding notrump declaration. I
 decide to have a dual meaning 2♥, similar to 4SF.  It asks for a stopper by
 default.  Rebidding the suit shows a natural suit.
 
-| 1♣ (1♥) X- | 7+, 4+♠ |
-|------------|---------|
-| 2♥!        | INV+, ask for stopper.  FG, 5+♥
-| 3♥!        | FG, 5+♦, 5+♣
+| 1♣ (1♥) X | 7+, 4+♠ |
+|-----------|---------|
+| 2♥!       | INV+, ask for stopper.  FG, 5+♥
+| 3♥!       | FG, 5+♦, 5+♣
 
 ## Direct and transfer to 1NT
 
-| 1♣ (*) 1♠- | TRF to 1NT, 7+ |
-|------------|----------------|
-| 1NT        | BAL MIN, 12--14
+| 1♣ (*) 1♠ | TRF to 1NT, 7+ |
+|-----------|----------------|
+| 1NT       | BAL MIN, 12--14
 
-| 1♣ (*) 1♠NT- | Direct and TRF to 1NT |
-|--------------|-----------------------|
-| 2♣           | MIN, 12--14, 6+♣
-| 2♦!          | INV+ (R), ask for minor suit
-| 2♥♠          | FG, 5+#
-| 2NT          | BAL INV
-| 3♣♦          | FG, 6+#
+| 1♣ (*) 1♠NT | Direct and TRF to 1NT |
+|-------------|-----------------------|
+| 2♣          | MIN, 12--14, 6+♣
+| 2♦!         | INV+ (R), ask for minor suit
+| 2♥♠         | FG, 5+#
+| 2NT         | BAL INV
+| 3♣♦         | FG, 6+#
 
 The 2♦ relay here is nothing more than 1♣-1NT-2♦.
 
-| 1♣ (*) 1♠; 2♦- | INV+ (R) |
-|----------------|----------|
-| 2♥!            | 5--6♣
-| 2♠!            | 5--6♦
-| 2NT            | MIN, 2--4♦, 2--4♣
-| 3♣!            | MAX, 2245
-| 3♦!            | MAX, 2254
-| 3♥!            | MAX, 6=♣
-| 3♠!            | MAX, 6=♦
-| 3NT            | MAX, 2--4♦, 2--4♣
+| 1♣ (*) 1♠ - 2♦- | INV+ (R) |
+|-----------------|----------|
+| 2♥!             | 5--6♣
+| 2♠!             | 5--6♦
+| 2NT             | MIN, 2--4♦, 2--4♣
+| 3♣!             | MAX, 2245
+| 3♦!             | MAX, 2254
+| 3♥!             | MAX, 6=♣
+| 3♠!             | MAX, 6=♦
+| 3NT             | MAX, 2--4♦, 2--4♣
 
 When opponents bid a major suit, we gain another cuebid to ask for a
 stopper.  It can also be a natural bid like 4SF.
 
-| 1♣ (1M) 1♠NT- | Direct and TRF to 1NT |
-|---------------|-----------------------|
-| 2M!           | INV+, ask for stopper.  FG, 5+#
+| 1♣ (1M) 1♠NT | Direct and TRF to 1NT |
+|--------------|-----------------------|
+| 2M!          | INV+, ask for stopper.  FG, 5+#
 
 ## Bidding hearts over (1♠)
 
@@ -172,24 +172,24 @@ set of agreements maximizes our chances to reach 4♥ and 3NT.
    better suit.
 3. The direct 4♥ not only deters inferference but also splits the range of 3♦.
 
-| 1♣ (1♠) X- | NEG, 4+♥ |
-|------------|----------|
-| 2♦!        | INV+, 3+♥
-| 2♥         | MIN, 4+♥
-| 3♥         | INV, 4+♥
+| 1♣ (1♠) X | NEG, 4+♥ |
+|-----------|----------|
+| 2♦!       | INV+, 3+♥
+| 2♥        | MIN, 4+♥
+| 3♥        | INV, 4+♥
 
-| 1♣ (1♠) 2♥- | NF, 5+♥ |
-|-------------|---------|
-| 2♠!         | FG, ask for stopper
-| 2NT, 3♥     | NAT INV
-| 3♣♦         | FG, usually 6+#
-| 3♠!         | S/T CAB, ask for CTRL
-| 3NT, 4♥     | To play, no slam interest
+| 1♣ (1♠) 2♥ | NF, 5+♥ |
+|------------|---------|
+| 2♠!        | FG, ask for stopper
+| 2NT, 3♥    | NAT INV
+| 3♣♦        | FG, usually 6+#
+| 3♠!        | S/T CAB, ask for CTRL
+| 3NT, 4♥    | To play, no slam interest
 
-| 1♣ (1♠) 3♦- | PRE 7+♥ or FG 6+♥ |
-|-------------|-------------------|
-| 3♥, 3NT     | P/C, 0--2♥
-| 3♠!         | F, NAT or ask for CTRL
-| 4♣♦!        | F, NAT or CTRL
-| 4♥          | To play, no slam interest
-| 5♥!         | Ask for ♠ CTRL
+| 1♣ (1♠) 3♦ | PRE 7+♥ or FG 6+♥ |
+|------------|-------------------|
+| 3♥, 3NT    | P/C, 0--2♥
+| 3♠!        | F, NAT or ask for CTRL
+| 4♣♦!       | F, NAT or CTRL
+| 4♥         | To play, no slam interest
+| 5♥!        | Ask for ♠ CTRL
