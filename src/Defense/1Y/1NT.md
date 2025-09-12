@@ -31,16 +31,16 @@ This version of Gladiator originates from a [BTU gadget][gadget].
 | 2♥!          | P/C, 5+♦
 | 2♠!          | MAX, 4=♥, 4+♦
 
-| (1♠) 1NT-2♣; 2♦- | P/C |
-|------------------|-----|
-| P                | S/O, 5+♦
-| 2♥               | S/O, 5+♥
-| 2♠!              | INV, 3=♥
-| 2NT              | BAL INV
-| 3♣               | S/O, 6+♣
-| 3♦♥              | INV, 6+#
-| 3♠!              | SPL, 0--1♠, 0--3♥
-| 3NT!             | Choice of games, 3=♥
+| (1♠) 1NT-2♣-2♦- | P/C |
+|-----------------|-----|
+| P               | S/O, 5+♦
+| 2♥              | S/O, 5+♥
+| 2♠!             | INV, 3=♥
+| 2NT             | BAL INV
+| 3♣              | S/O, 6+♣
+| 3♦♥             | INV, 6+#
+| 3♠!             | SPL, 0--1♠, 0--3♥
+| 3NT!            | Choice of games, 3=♥
 
 Slow 3NT still has 3=♥ if RHO bids up to 2NT.
 
@@ -60,7 +60,7 @@ Slow 3NT still has 3=♥ if RHO bids up to 2NT.
 | 3♦!                   | P/C, 5+♣
 | 3♥!                   | P/C, MAX, 4+♦, 4+♣
 
-| (1♠) 1NT (2NT); (3♠) P- | - |
+| (1♠) 1NT (2NT) - (3♠-P) | - |
 |-------------------------|---|
 | X                       | PEN, 3=♥
 | 3NT!                    | Choice of games, 3=♥
@@ -88,14 +88,14 @@ I have not yet come up with how we utilize the slow cuebid.
 | 2♥!          | P/C, 5+♦
 | 2♠!          | P/C, MAX, 4=♠, 4+♦
 
-| (1♥) 1NT-2♣; 2♦- | P/C |
-|------------------|-----|
-| P                | S/O, 5+♦
-| 2♠!              | S/O, 5+♠
-| 2NT              | BAL INV
-| 3♣               | S/O, 6+♣
-| 3♦♠              | INV, 6+#
-| 3♥!              | SPL, 0--1♥, 0--3♠
+| (1♥) 1NT-2♣-2♦- | P/C |
+|-----------------|-----|
+| P               | S/O, 5+♦
+| 2♠!             | S/O, 5+♠
+| 2NT             | BAL INV
+| 3♣              | S/O, 6+♣
+| 3♦♠             | INV, 6+#
+| 3♥!             | SPL, 0--1♥, 0--3♠
 
 ## (1♣♦) 1NT { #(1m) 1NT }
 
