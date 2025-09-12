@@ -10,7 +10,7 @@ We play [Woolsey], Multi-Landy with a conventional double, in all seats.
 
 [Woolsey]: https://www.bridgebum.com/multi_landy.php
 
-| (1NT)- | STR, usually 15+ |
+| (1NT)  | STR, usually 15+ |
 |--------|------------------|
 | X!     | CONST, 5+m, usually 4+M
 | 2♣!    | UNBAL PRE, 4+♠, 4+♥, usually (54)(xx)
@@ -19,25 +19,25 @@ We play [Woolsey], Multi-Landy with a conventional double, in all seats.
 | 2♠!    | PRE, 5+♠, 4+m
 | 2NT!   | UNT, 5+♦, 5+♣
 
-| (1NT)-X- | CONST, 5+m, usually 4+M |
+| (1NT) X- | CONST, 5+m, usually 4+M |
 |----------|-------------------------|
 | 2♣!      | P/C                     |
 | 2♦!      | Ask for the major suit  |
 
 The other overcalls already correspond to preemptive openings in this book.
 
-- (1NT)-2♣: [Ekren 2♣](../WJ/2C.md)
-- (1NT)-2♦: [Multi 2♦](../2D_Multi.md)
-- (1NT)-2M: [Muiderberg](../2M_Muiderberg.md)
-- (1NT)-2NT: [Unusual notrump opening](../2NT-&#x55;NT.md)
+- (1NT) 2♣: [Ekren 2♣](../WJ/2C.md)
+- (1NT) 2♦: [Multi 2♦](../2D_Multi.md)
+- (1NT) 2M: [Muiderberg](../2M_Muiderberg.md)
+- (1NT) 2NT: [Unusual notrump opening](../2NT-&#x55;NT.md)
 
 ## Over weak notrump
 
 We play plain Landy against a weak notrump.  This simple defense undermines
-their *systems on* approach over (1NT)-2♣.  Meanwhile, we still threat to stop
+their *systems on* approach over (1NT) 2♣.  Meanwhile, we still threat to stop
 in our natural 2♦.
 
-| (1NT)- | WEAK, usually 12--14 |
+| (1NT)  | WEAK, usually 12--14 |
 |--------|----------------------|
 | X      | PEN, 14+
 | 2♣!    | UNBAL, 4+♠, 4+♥, usually (54)(xx)

@@ -13,9 +13,9 @@ This book usually follows principles introduced in BML and [CSS][css].
 X, Y, Z are suit variables that satisfy X < Y < Z.  They are also distinct from
 the other suits in the same auction.  For example:
 
-- (1Y)-2X matches (1♥)-2♣ but not (1♥)-2♠.
-- (1Y)-2Z matches (1♥)-2♠ but not (1♥)-2♣ or (1♥)-2NT.
-- (1M)-2X matches (1♥)-2♣ but not (1♥)-2♥.
+- (1Y) 2X matches (1♥) 2♣ but not (1♥) 2♠.
+- (1Y) 2Z matches (1♥) 2♠ but not (1♥) 2♣ or (1♥) 2NT.
+- (1M) 2X matches (1♥) 2♣ but not (1♥) 2♥.
 
 ## Precedence
 
