@@ -29,16 +29,16 @@ BTU reuses 4♠ for QUANT.  This fills the blank that Gerber and Texas leave.
 Standard QUANT usually invites the upper 1/2 to 2/3 of the opening range.  This
 4♠ serves as a narrower QUANT than 4NT or 5NT by only inviting the top 1/3.
 
-| 1NT-4NT- | QUANT INV to 6NT |
-|----------|------------------|
-| 6NT      | S/O, 16--17 HCP  |
+| 1NT-4NT | QUANT INV to 6NT |
+|---------|------------------|
+| 6NT     | S/O, 16--17 HCP  |
 
-| 1NT-5NT- | QUANT INV to 7NT |
-|----------|------------------|
-| 6NT      | S/O, 15 HCP      |
-| 7NT      | S/O, 16--17 HCP  |
+| 1NT-5NT | QUANT INV to 7NT |
+|---------|------------------|
+| 6NT     | S/O, 15 HCP      |
+| 7NT     | S/O, 16--17 HCP  |
 
-| 1NT-4♠-  | F QUANT |
+| 1NT-4♠   | F QUANT |
 |----------|---------|
 | 4NT      | 15--16 HCP
 | 4NT-5NT! | F to a 5-card suit or 6NT

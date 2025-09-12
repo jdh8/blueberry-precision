@@ -12,24 +12,24 @@ Namyats.
 | 4NT! | RKCB      |
 | 5m!  | CTRL ASK  |
 
-| 4X-5m- | CTRL ASK |
-|--------|----------|
-| +1     | No CTRL
-| +2     | K or singleton
-| +3     | A or void
+| 4X-5m | CTRL ASK |
+|-------|----------|
+| +1    | No CTRL
+| +2    | K or singleton
+| +3    | A or void
 
 | 4♣♦-       | (S-)SOL PRE in 4M |
 |------------|-------------------|
 | 4♦!        | S/T (R)           |
 | 4M, 5M, 6M | P/C               |
 
-| 4♣-4♦- | S/T (R) |
-|--------|---------|
-| 4M     | NAT MIN
-| 4NT!   | MAX, CTRL in every side suit
-| 5♣!    | MAX, no CTRL in ♣
-| 5♦!    | MAX, no CTRL in ♦
-| 5M!    | MAX, no CTRL in oM
+| 4♣-4♦ | S/T (R) |
+|-------|---------|
+| 4M    | NAT MIN
+| 4NT!  | MAX, CTRL in every side suit
+| 5♣!   | MAX, no CTRL in ♣
+| 5♦!   | MAX, no CTRL in ♦
+| 5M!   | MAX, no CTRL in oM
 
 | 4♥- | PRE, non-SOL |
 |-----|--------------|

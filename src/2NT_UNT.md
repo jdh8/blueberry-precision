@@ -13,20 +13,20 @@ I advise not opening 2NT for (30)55 in the first two seats.
 | 3NT, 4X | S/O
 | 4NT!    | Equal preference between 5♣♦
 
-| 2NT-3♥- | FG (R) |
-|---------|--------|
-| 3♠!     | SPL, 0--1♠
-| 3NT!    | SPL, 0--1♥
-| 4♣      | MAX 1156
-| 4♦      | MAX 1165
+| 2NT-3♥ | FG (R) |
+|--------|--------|
+| 3♠!    | SPL, 0--1♠
+| 3NT!   | SPL, 0--1♥
+| 4♣     | MAX 1156
+| 4♦     | MAX 1165
 
-| 2NT-3♥-4♣♦- | MAX 11(65) |
+| 2NT-3♥ 4♣♦- | MAX 11(65) |
 |-------------|------------|
 | 4♥!         | RKCB in ♣
 | 4♠!         | RKCB in ♦
 | 4NT         | S/O
 
-| 2NT-3♠-3NT- | (R) |
+| 2NT-3♠ 3NT- | (R) |
 |-------------|-----|
 | 4♣          | INV, 3+♣
 | 4♦          | INV, 3+♦

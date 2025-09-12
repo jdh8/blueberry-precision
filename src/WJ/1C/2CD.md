@@ -15,28 +15,28 @@ have a game, we want to play in a major suit despite of a better minor fit.
 However, we play the best fit in a slam to maximize our chances, especially at
 IMPs.
 
-| 1♣-2♣- | FG, 5+♣ |
-|--------|---------|
-| 2♦!    | S/T (R), 15+, 4+♣
-| 2♥     | S/T, 15+, 4+♥
-| 2♠     | S/T, 15+, 4+♠
-| 2NT    | Nearly BAL, 12--14 or 18+
-| 3♣     | NAT, 12--14 or 18+, 4+♣
-| 3♦     | S/T, 18+, 6+♦
-| 3♥     | S/T, 18+, 6+♥
-| 3♠     | S/T, 18+, 6+♠
-| 3NT    | NAT, 12--14, 3343
+| 1♣-2♣ | FG, 5+♣ |
+|-------|---------|
+| 2♦!   | S/T (R), 15+, 4+♣
+| 2♥    | S/T, 15+, 4+♥
+| 2♠    | S/T, 15+, 4+♠
+| 2NT   | Nearly BAL, 12--14 or 18+
+| 3♣    | NAT, 12--14 or 18+, 4+♣
+| 3♦    | S/T, 18+, 6+♦
+| 3♥    | S/T, 18+, 6+♥
+| 3♠    | S/T, 18+, 6+♠
+| 3NT   | NAT, 12--14, 3343
 
-| 1♣-2♦- | FG, 5+♦ |
-|--------|---------|
-| 2♥     | S/T, 15+, 4+♥
-| 2♠     | S/T, 15+, 4+♠
-| 2NT    | Nearly BAL, 12--14 or 18+
-| 3♣     | NAT, 12--14 or 18+, 5+♣
-| 3♦     | S/T, 15+, 4+♦
-| 3♥     | S/T, 18+, 6+♥
-| 3♠     | S/T, 18+, 6+♠
-| 3NT!   | S/T, 15--17, 5+♣
+| 1♣-2♦ | FG, 5+♦ |
+|-------|---------|
+| 2♥    | S/T, 15+, 4+♥
+| 2♠    | S/T, 15+, 4+♠
+| 2NT   | Nearly BAL, 12--14 or 18+
+| 3♣    | NAT, 12--14 or 18+, 5+♣
+| 3♦    | S/T, 15+, 4+♦
+| 3♥    | S/T, 18+, 6+♥
+| 3♠    | S/T, 18+, 6+♠
+| 3NT!  | S/T, 15--17, 5+♣
 
 I make 1♣-2♦-3NT so because otherwise it would be hard to show these hands.
 Grouping 12--14 and 18+ together is usually OK because 18+ can explore slams
