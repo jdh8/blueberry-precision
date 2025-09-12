@@ -20,7 +20,7 @@ Let me provide some examples for clarity.
 | 1♠-(2NT = ♦ + ♣)- | 3♣, 3♦, 4♣   |
 | 1♠-(3♣ = ♥ + ♦)-  | 3♦, 3♥, 4♣   |
 | 2♥-(4♦ = ♠ + ♦)-  | 4♠, 4NT, 5♦  |
-| (1♦)-(1♠)-        | 2♦, 2♠, 2NT  |
+| (1♦-1♠)-          | 2♦, 2♠, 2NT  |
 | (1♦)-1♥-(X = ♠)   | 1♠, 2♦, 2♠   |
 
 The BTU v U bids are abbreviated as **Q1, Q2, Q3** to facilitate discussion.  If
