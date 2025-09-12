@@ -101,8 +101,8 @@ suit.  This action is mostly safe because doubler sits behind the opener.  More
 importantly, this treatment creates a negative inference that a pass implies
 holding the other major.
 
-- (2♦) X (2♠); (3♥) X = Usually hearts
-- (2♦) X (2♠); (3♥) P = Spades!
+- (2♦) X (2♠) - (3♥) X = Usually hearts
+- (2♦) X (2♠) - (3♥) P = Spades!
 
 ### (2♦) 2♥
 

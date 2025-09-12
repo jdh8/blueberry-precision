@@ -21,11 +21,11 @@ Therefore, we import responses from Stenberg AKA Swedish Jacoby 2NT.
 | 3♥         | S/T
 | 3NT        | BAL choice of games
 
-| 1♥-2NT; 3♣-3♦- | Ask for distribution |
-|----------------|----------------------|
-| 3♥!            | FRAG, 0--1♣          |
-| 3♠!            | FRAG, 0--1♦          |
-| 3NT!           | FRAG, 0--1♠          |
-| 4♣             | 5+♣                  |
-| 4♦             | 5+♦                  |
-| 4♥             | Nearly BAL           |
+| 1♥-2NT-3♣-3♦- | Ask for distribution |
+|---------------|----------------------|
+| 3♥!           | FRAG, 0--1♣          |
+| 3♠!           | FRAG, 0--1♦          |
+| 3NT!          | FRAG, 0--1♠          |
+| 4♣            | 5+♣                  |
+| 4♦            | 5+♦                  |
+| 4♥            | Nearly BAL           |
