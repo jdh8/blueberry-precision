@@ -55,3 +55,30 @@ consistency.
 | 2M    | INV, 5--6#
 | 2NT!  | PRE, 5+ 4+ minors
 | 3M    | STR INV, 6+#
+
+## Competitive bidding
+
+I suggest a slightly constrained version of [Terrorist's runout][terr].
+
+| 1NT (X) | Usually PEN |
+|---------|-------------|
+| P, XX   | NAT, to play
+| 2♣!     | NF, 5+♣ or 4=M 4+♦
+| 2♦!     | NF, 5+♦ or 4+♠ 4+♥
+| 2M      | NF, 5+#
+| 2NT!    | STR UNBAL
+| 3X      | PRE
+
+| 1NT (X) P | NAT |
+|-----------|-----|
+| XX!       | SOS, a long suit
+| 2♣!       | 4+♣, 4+X
+
+Flint 2♦ is essentially Multi.  Since opener cannot hold a long major suit, XX
+simply asks for the held major suit.
+
+| 1NT-2♦ (X) | - |
+|------------|---|
+| P          | 4+♦
+| XX         | Ask for the major suit
+| 2M         | P/C
