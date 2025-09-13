@@ -74,6 +74,35 @@ I suggest a slightly constrained version of [Terrorist's runout][terr].
 | XX!       | SOS, a long suit
 | 2♣!       | 4+♣, 4+X
 
+When 1NT (2♣) shows both major suits (e.g. Landy, Michaels), I recommend BTU vs
+Unusual.
+
+| 1NT (2♣) | Both majors |
+|----------|-------------|
+| X        | PEN for either major
+| 2♦       | NF, 5+♦
+| 2♥!      | FG, 5+♦
+| 2♠!      | INV+, 5+♣
+| 2NT!     | LEB, PRE 6+♣ or FG (xx)45
+| 3♣♦      | INV, 6+#
+| 3♥♠!     | Ask for stopper in this suit
+
+Otherwise, keep the essence of major suit oriented bidding.
+
+| 1NT (2♣) | Other cases |
+|----------|-------------|
+| X!       | OPT
+| 2♦!      | NF T/O
+| 2M       | COMP, 5+M
+| 2NT!     | FG PUP STAY with stopper
+| 3♣!      | FG PUP STAY without stopper
+| 3♦!      | INV+ TRF, 5+♥, usually without stopper
+| 3♥!      | INV+ TRF, 5+♠, usually without stopper
+| 3♠!      | FG, 6+♦, ask for stopper
+| 3NT, 4M  | S/O
+| 4♣!      | Choice of games, 5+M, 5+♦
+| 4♦!      | Choice of games, 5+♠, 5+♥
+
 Flint 2♦ is essentially Multi.  Since opener cannot hold a long major suit, XX
 simply asks for the held major suit.
 
@@ -81,4 +110,4 @@ simply asks for the held major suit.
 |------------|---|
 | P          | 4+♦
 | XX         | Ask for the major suit
-| 2M         | P/C
+| 2M         | P/C, usually 3+oM
