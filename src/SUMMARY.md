@@ -40,6 +40,9 @@
 - [Strong 1♣](Blue/1C.md)
   - [Waiting 1♦](Blue/1C/1D.md)
   - [Negative 1♥](Blue/1C/1H.md)
+- [Natural 1♦](Blue/1D.md)
+- [Natural 1♥](Blue/1H.md)
+- [Natural 1♠](Blue/1S.md)
 - [Weak 1NT](Blue/1NT.md)
 
 # Common conventions
