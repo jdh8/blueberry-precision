@@ -4,7 +4,7 @@ Blueberry Precision Club features a weak notrump that denies 4-card majors but
 (43)33.  The responses are derived from [Terrorist's weak notrump][terr] by
 courtesy of Ting-Yu Ye (TpKotoba).
 
-[terr]: https://www.ptt.cc/man/BridgeClub/D6D1/D49B/D823/DD4E/&#x4D;.1160796412.A.8E9.html
+[terr]: https://www.ptt.cc/man/BridgeClub/D6D1/D49B/D823/DD4E/M.1160796412.A.8E9.html
 
 | 1NT-    | BAL 11--13 |
 |---------|------------|

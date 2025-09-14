@@ -8,7 +8,7 @@ of games with 3 hearts.
 
 This version of Gladiator originates from a [BTU gadget][gadget].
 
-[gadget]: https://www.ptt.cc/man/BridgeClub/D6D1/D49B/&#x4D;.983965409.A.html
+[gadget]: https://www.ptt.cc/man/BridgeClub/D6D1/D49B/M.983965409.A.html
 
 ## (1♠) 1NT { #(1S) 1NT }
 
