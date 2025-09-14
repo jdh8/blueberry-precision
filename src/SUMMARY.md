@@ -42,6 +42,7 @@
   - [Negative 1♥](Blue/1C/1H.md)
 - [Natural 1♦](Blue/1D.md)
 - [Natural 1♥](Blue/1H.md)
+  - [Modified Stenberg 2NT](Blue/1H/2NT.md)
 - [Natural 1♠](Blue/1S.md)
 - [Weak 1NT](Blue/1NT.md)
 
