@@ -29,7 +29,7 @@ The other overcalls already correspond to preemptive openings in this book.
 - (1NT) 2♣: [Ekren 2♣](../WJ/2C.md)
 - (1NT) 2♦: [Multi 2♦](../2D_Multi.md)
 - (1NT) 2M: [Muiderberg](../2M_Muiderberg.md)
-- (1NT) 2NT: [Unusual notrump opening](../2NT-&#x55;NT.md)
+- (1NT) 2NT: [Unusual notrump opening](../2NT_UNT.md)
 
 ## Over weak notrump
 
