@@ -110,4 +110,4 @@ simply asks for the held major suit.
 |------------|---|
 | P          | 4+♦
 | XX         | Ask for the major suit
-| 2M         | P/C, usually 3+oM
+| 2M         | P/C, usually 3+OM

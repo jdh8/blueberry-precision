@@ -54,7 +54,7 @@ than setting their doubled partscore.
 | 2♠!          | P/C
 | 2NT!         | TRF, 5+♣
 | 3♣!          | TRF, 5+♦
-| 3♦!          | TRF, 5+oM
+| 3♦!          | TRF, 5+OM
 | 3♥!          | P/C, INV in ♥, INV+ in ♠
 | 3♠!          | P/C, INV in ♠, FG in ♥
 

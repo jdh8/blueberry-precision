@@ -40,6 +40,6 @@ Strawberry adjunct](../1C/COMP_2.md#strawberry-adjunct) applies here just like
 | 2NT!     | TRF, 5+♣
 | 3♣!      | INV+, 3+♦
 | 3♦       | PRE, 4+♦
-| 3♥!      | FG, 5=oM
+| 3♥!      | FG, 5=OM
 | 3♥-3♠!   | Ask for stopper
-| 3♠!      | FG, 6+oM
+| 3♠!      | FG, 6+OM

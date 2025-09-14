@@ -64,9 +64,9 @@ the **Strawberry adjunct** over 1m (2M):
 
 | 1♣ (2M)  | - |
 |----------|---|
-| 3♥!      | FG, 5=oM
+| 3♥!      | FG, 5=OM
 | 3♥-3♠!   | Ask for stopper
-| 3♠!      | FG, 6+oM
+| 3♠!      | FG, 6+OM
 
 <figure>
     <img src="funbridge-spec.png" alt="">

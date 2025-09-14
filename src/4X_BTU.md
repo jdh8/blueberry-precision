@@ -29,7 +29,7 @@ Namyats.
 | 4NT!  | MAX, CTRL in every side suit
 | 5♣!   | MAX, no CTRL in ♣
 | 5♦!   | MAX, no CTRL in ♦
-| 5M!   | MAX, no CTRL in oM
+| 5M!   | MAX, no CTRL in OM
 
 | 4♥- | PRE, non-SOL |
 |-----|--------------|

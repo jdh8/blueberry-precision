@@ -36,7 +36,7 @@ right-sides the contract.  Spades below 3NT are transfer cuebids.
 | 3♦       | PRE, 4--6, 4+♦
 | 3♠!      | Gambling, SOL 7+♣ without stopper
 | 3NT!     | Gambling, SOL 7+♣ with stopper
-| 4oM      | To play
+| 4OM      | To play
 | 4M!      | S/T, ask for CTRL
 
 Transfer Walsh only applies to 1♦ (1♥), the only 1-level red suit.
