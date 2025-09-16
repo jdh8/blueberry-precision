@@ -44,6 +44,7 @@
 - [Natural 1♥](Blue/1H.md)
   - [Modified Stenberg 2NT](Blue/1H/2NT.md)
 - [Natural 1♠](Blue/1S.md)
+  - [Modified Stenberg 2NT](Blue/1S/2NT.md)
 - [Weak 1NT](Blue/1NT.md)
 
 # Common conventions
