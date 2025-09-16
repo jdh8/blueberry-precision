@@ -11,8 +11,8 @@ Blueberry Precision Club also gets idea from:
 |------|---|
 | 1♣!  | STR ART, 16+
 | 1♦!  | NF, 11--15, 2+♦
-| 1♥   | 11--15, 4+♥, no BAL MAX 4=♥
-| 1♠   | 11--15, 4+♠, no BAL MAX 4=♠
+| 1♥   | 11--15, 4+♥, no BAL 13--15 4=♥
+| 1♠   | 11--15, 4+♠, no BAL 13--15 4=♠
 | 1NT  | <div>11--13, 2--3♠, 2--3♥, 2--6♦, 2--6♣.</div><div>11--13, (4333).</div>
 | 2♣   | 11--15, 6+♣ or MIN 4M5♣
 | 2♦!  | PRE, 6+M
@@ -28,7 +28,7 @@ Blueberry Precision Club also gets idea from:
 ## The notrump ladder
 
 - **11--13**: 1NT
-- **14--15**: 1♦-1M-1NT
+- **13--15**: 1♦-1M-1NT
 
 ### 1♣-1♦ = waiting
 
