@@ -19,7 +19,9 @@ Therefore, I import responses from Stenberg AKA Swedish Jacoby 2NT.
 | 1♠-2NT 3♣- | MIN |
 |------------|-----|
 | 3♦!        | Ask for distribution
+| 3♥!        | INV SPL, 0--1♥
 | 3♠         | S/T
+| 4♥!        | S/T SPL, 0--1♥
 | 3NT        | BAL choice of games
 
 | 1♠-2NT 3♣-3♦ | Ask for distribution |
