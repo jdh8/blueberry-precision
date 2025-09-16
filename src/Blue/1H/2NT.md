@@ -2,7 +2,7 @@
 
 The principle of fast arrival should not apply to an unlimited Jacoby 2NT.
 The weaker opener is, the more likely responder has something to say.
-Therefore, we import responses from Stenberg AKA Swedish Jacoby 2NT.
+Therefore, I import responses from Stenberg AKA Swedish Jacoby 2NT.
 
 | 1♥-2NT | FG, 4+♥ |
 |--------|---------|
