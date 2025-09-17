@@ -26,12 +26,12 @@
   - [Natural 1♥-1♠](WJ/1H/1S.md)
   - [Non-forcing 1NT](WJ/1H/1NT.md)
   - [Game-forcing 2♣♦](WJ/1H/2CD.md)
-  - [Modified Stenberg 2NT](WJ/1H/2NT.md)
+  - [Strawberry Stenberg 2NT](WJ/1H/2NT.md)
 - [Natural 1♠](WJ/1S.md)
   - [Forcing 1NT](WJ/1S/1NT.md)
   - [Maggie 2♣](WJ/1S/2C.md)
   - [Game-forcing 2♦♥](WJ/1S/2R.md)
-  - [Modified Stenberg 2NT](WJ/1S/2NT.md)
+  - [Strawberry Stenberg 2NT](WJ/1S/2NT.md)
 - [Ekren 2♣](WJ/2C.md)
 
 # Blueberry Precision Club
@@ -42,10 +42,10 @@
   - [Negative 1♥](Blue/1C/1H.md)
 - [Natural 1♦](Blue/1D.md)
 - [Natural 1♥](Blue/1H.md)
-  - [Modified Stenberg 2NT](Blue/1H/2NT.md)
+  - [Blueberry Stenberg 2NT](Blue/1H/2NT.md)
 - [Natural 1♠](Blue/1S.md)
   - [Non-forcing 1NT](Blue/1S/1NT.md)
-  - [Modified Stenberg 2NT](Blue/1S/2NT.md)
+  - [Blueberry Stenberg 2NT](Blue/1S/2NT.md)
 - [Weak 1NT](Blue/1NT.md)
 
 # Common conventions

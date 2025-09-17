@@ -1,4 +1,4 @@
-# Modified Stenberg 2NT
+# Strawberry Stenberg 2NT
 
 The principle of fast arrival should not apply to an unlimited Jacoby 2NT.
 The weaker opener is, the more likely responder has something to say.
