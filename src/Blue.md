@@ -41,17 +41,3 @@ Blueberry Precision Club also gets idea from:
 
 - **16--21**: 1♣-1♥-1NT
 - **22--24**: 1♣-1♥-2NT
-
-## Blueberry Gazzilli
-
-Another recurring pattern in this bidding system is generalized Lauria-style
-Gazzilli.
-
-- Our last two bids are natural 1M-1NT.
-- Rebidding the major suit does not show extra length.  It shows a predefined
-  side suit instead (usually clubs).
-- The lowest rebid 2♣ becomes a relay:
-  - Extra length in the major suit is possible.
-  - Extra strength is possible.
-  - The relay can be non-forcing because many bids in this system are fairly
-    limited.
