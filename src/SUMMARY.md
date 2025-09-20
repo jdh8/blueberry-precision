@@ -46,6 +46,7 @@
   - [Blueberry Stenberg 2NT](Blue/1H/2NT.md)
 - [Natural 1♠](Blue/1S.md)
   - [Non-forcing 1NT](Blue/1S/1NT.md)
+  - [Swapped 2/1](Blue/1S/2X.md)
   - [Blueberry Stenberg 2NT](Blue/1S/2NT.md)
 - [Weak 1NT](Blue/1NT.md)
 
