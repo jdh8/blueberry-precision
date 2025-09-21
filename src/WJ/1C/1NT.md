@@ -56,9 +56,9 @@ so 1♣-2♠ need not be balanced.
 P-1♣-2♠ only contains unbalanced hands of both minors.  Hence, 3♦ becomes a
 reasonable signoff.
 
-| P-1♣ 2♠- | INV, 4--5♦, 4--5♣ |
-|----------|-------------------|
-| 3♦       | S/O, 12--13, 4+♦
+| P-1♣-2♠ | INV, 4--5♦, 4--5♣ |
+|---------|-------------------|
+| 3♦      | S/O, 12--13, 4+♦
 
 ## 1♣-2NT { #1C-2NT }
 
@@ -82,10 +82,10 @@ makes 3♣♦ inclusive like relays.
 P-1♣-2NT simplifies to a balanced invitation, which is in turn similar to
 unpassed 1♣-2♠.  I import continuations from 1♣-2♠ as a natural consequence.
 
-| P-1♣ 2NT- | BAL INV |
-|-----------|---------|
-| 3♣        | S/O, 12--13, 6+♣
-| 3♦!       | S/T, 18+, 0--4♠, 0--4♥
-| 3M        | S/T, 18+, 5+#
-| 3NT       | S/O
-| 4♣♦♥♠     | S/T, SOL 7+#
+| P-1♣-2NT | BAL INV |
+|----------|---------|
+| 3♣       | S/O, 12--13, 6+♣
+| 3♦!      | S/T, 18+, 0--4♠, 0--4♥
+| 3M       | S/T, 18+, 5+#
+| 3NT      | S/O
+| 4♣♦♥♠    | S/T, SOL 7+#

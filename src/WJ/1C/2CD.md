@@ -51,29 +51,29 @@ There is still an important difference between 2♣ and 2♦.  Opener can always
 sign off by passing 2♣ due to a sure 7-card club fit.  This is not the case for
 2♦.
 
-| P-1♣-2♣- | INV, 5+♣ |
-|----------|----------|
-| 2♦       | S/T, 4+♦ |
-| 2♥       | S/T, 5+♥ |
-| 2♠       | S/T, 5+♠ |
-| 2NT      | BAL S/T  |
-| 3♣       | S/T, 4+♣ |
-| 3♦       | S/T, 6+♦ |
-| 3♥       | S/T, 7+♥ |
-| 3♠       | S/T, 7+♠ |
+| P-1♣-2♣ | INV, 5+♣ |
+|---------|----------|
+| 2♦      | S/T, 4+♦ |
+| 2♥      | S/T, 5+♥ |
+| 2♠      | S/T, 5+♠ |
+| 2NT     | BAL S/T  |
+| 3♣      | S/T, 4+♣ |
+| 3♦      | S/T, 6+♦ |
+| 3♥      | S/T, 7+♥ |
+| 3♠      | S/T, 7+♠ |
 
-| P-1♣-2♦- | INV, 5+♦ |
-|----------|----------|
-| 2♥       | S/T, 5+♥
-| 2♠       | S/T, 5+♠
-| 2NT      | To play
-| 3♣       | To play, 6+♣
-| 3♦       | S/T, 3+♦
-| 3♥       | S/T SPL, 0--1♥, 5+♣
-| 3♠       | S/T SPL, 0--1♠, 5+♣
-| 3NT      | To play
-| 4♣       | S/T, S-SOL 6+♣
-| 4♦       | S/T, UNBAL 4+♦
-| 4♥       | S/T, SOL 7+♥
-| 4♠       | S/T, SOL 7+♠
-| 4NT      | QUANT INV to 6NT
+| P-1♣-2♦ | INV, 5+♦ |
+|---------|----------|
+| 2♥      | S/T, 5+♥
+| 2♠      | S/T, 5+♠
+| 2NT     | To play
+| 3♣      | To play, 6+♣
+| 3♦      | S/T, 3+♦
+| 3♥      | S/T SPL, 0--1♥, 5+♣
+| 3♠      | S/T SPL, 0--1♠, 5+♣
+| 3NT     | To play
+| 4♣      | S/T, S-SOL 6+♣
+| 4♦      | S/T, UNBAL 4+♦
+| 4♥      | S/T, SOL 7+♥
+| 4♠      | S/T, SOL 7+♠
+| 4NT     | QUANT INV to 6NT

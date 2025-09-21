@@ -50,11 +50,11 @@ consistency.
 
 ## P-1NT
 
-| P-1NT | BAL 11--13 |
-|-------|------------|
-| 2M    | INV, 5--6#
-| 2NT!  | PRE, 5+ 4+ minors
-| 3M    | STR INV, 6+#
+| P-1NT- | BAL 11--13 |
+|--------|------------|
+| 2M     | INV, 5--6#
+| 2NT!   | PRE, 5+ 4+ minors
+| 3M     | STR INV, 6+#
 
 ## Competitive bidding
 
