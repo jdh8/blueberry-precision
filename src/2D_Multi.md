@@ -2,8 +2,8 @@
 
 Multi 2♦ shows a 6-card weak two of either major.
 
-| 2♦-  | PRE, 6+M |
-|------|----------|
+| 2♦-  | PRE, 6+♠♥ |
+|------|-----------|
 | 2M   | P/C
 | 2NT! | INV+ (R)
 | 3♣♦  | NAT F

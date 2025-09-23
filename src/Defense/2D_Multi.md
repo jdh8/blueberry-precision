@@ -6,15 +6,15 @@ unbid (minor) suits.
 
 [mvm]: https://chrisryall.net/bridge/multi-v-multi-2d.htm
 
-| (2♦)  | PRE, 6+M |
+| (2♦)  | PRE, 6+♠♥ |
 |-------|----------|
-| X!    | OPT: 12+, 5+M.  15+, (41)44.  19+, 1--4♠, 1--4♥, 1--4♦, 1--4♣.
+| X!    | OPT: 12+, 5+♠♥.  15+, (41)44.  19+, 1--4♠, 1--4♥, 1--4♦, 1--4♣.
 | 2♥!   | BAL, 16--18
 | 2♠!   | TRF, 14+, 5+♣
 | 2NT!  | TRF, 14+, 5+♦
 | 3♣    | NAT, 8--13, 6+♣
 | 3♦    | NAT, 8--13, 6+♦
-| 3M!   | NF Michaels, 5+#, usually 5+m
+| 3M!   | NF Michaels, 5+#, usually 5+♦♣
 
 Different from [BTU vs Unusual](BTU_v_U.md), 2♠ and 2NT are two-under transfers.
 The non-forcing Herbert negative step serves as an escape.

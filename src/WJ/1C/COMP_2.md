@@ -18,7 +18,7 @@ allows bidding a 5-card major regardless of strength.
 | 2♣!       | STAY. Garbage STAY. INV 5=♠
 | 2♦!       | TRF, 5+♥
 | 2♥!       | TRF, 5+♠
-| 2♠!       | Minor suit Multi/STAY, 6+m or FG 4+♦ 4+♣
+| 2♠!       | Minor suit Multi/STAY, 6+♦♣ or FG 4+♦ 4+♣
 | 2NT!      | TRF, PRE 7+♣ or FG 6+♣
 | 3♣!       | TRF, PRE 7+♦ or FG 6+♦
 | 3♦!       | TRF, PRE 7+♥ or FG 6+♥
@@ -49,7 +49,7 @@ is the same as the *systems on* approach at 1NT (2♣︎).
 | X!       | INV+ STAY or INV 5=♠
 | 2♦!      | TRF, 5+♥
 | 2♥!      | TRF, 5+♠
-| 2♠!      | Minor suit Multi/STAY, 6+m or FG 4+♦ 4+♣
+| 2♠!      | Minor suit Multi/STAY, 6+♦♣ or FG 4+♦ 4+♣
 | 2NT!     | TRF, PRE 7+♣ or FG 6+♣
 | 3♣!      | TRF, PRE 7+♦ or FG 6+♦
 | 3♦!      | TRF, PRE 7+♥ or FG 6+♥

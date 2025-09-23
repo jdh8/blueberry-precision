@@ -8,9 +8,9 @@ courtesy of Ting-Yu Ye (TpKotoba).
 
 | 1NT-    | BAL 11--13 |
 |---------|------------|
-| 2♣!     | NF STAY, INV or 6+m
-| 2♦!     | PRE, 5+M
-| 2M      | INV, 6+M
+| 2♣!     | NF STAY, INV or 6+♦♣
+| 2♦!     | PRE, 5+♠♥
+| 2M      | INV, 6+#
 | 2NT!    | FG PUP STAY
 | 3m      | INV, 6+#
 | 3M      | PRE, usually 7+#
@@ -31,7 +31,7 @@ Opener bids major suits [paradoxically][paradox] to 2♣♦ for safety.
 | 2NT!   | 6=♦
 | 3♣     | MAX, 6=♣
 
-| 1NT-2♦ | PRE, 5+M |
+| 1NT-2♦ | PRE, 5+♠♥ |
 |--------|----------|
 | P      | 6+♦
 | 2♥!    | (R)
@@ -63,7 +63,7 @@ I suggest a slightly constrained version of [Terrorist's runout][terr].
 | 1NT (X) | Usually PEN |
 |---------|-------------|
 | P, XX   | NAT, to play
-| 2♣!     | NF, 5+♣ or 4=M 4+♦
+| 2♣!     | NF, 5+♣ or 4=♠♥ 4+♦
 | 2♦!     | NF, 5+♦ or 4+♠ 4+♥
 | 2M      | NF, 5+#
 | 2NT!    | STR UNBAL
@@ -93,14 +93,14 @@ Otherwise, keep the essence of major suit oriented bidding.
 |----------|-------------|
 | X!       | OPT
 | 2♦!      | NF T/O
-| 2M       | COMP, 5+M
+| 2M       | COMP, 5+#
 | 2NT!     | FG PUP STAY with stopper
 | 3♣!      | FG PUP STAY without stopper
 | 3♦!      | INV+ TRF, 5+♥, usually without stopper
 | 3♥!      | INV+ TRF, 5+♠, usually without stopper
 | 3♠!      | FG, 6+♦, ask for stopper
 | 3NT, 4M  | S/O
-| 4♣!      | Choice of games, 5+M, 5+♦
+| 4♣!      | Choice of games, 5+♠♥, 5+♦
 | 4♦!      | Choice of games, 5+♠, 5+♥
 
 Flint 2♦ is essentially Multi.  Since opener cannot hold a long major suit, XX

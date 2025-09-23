@@ -12,13 +12,13 @@ major.  This method makes 1♣-1♦-3m limited enough (21--23) for their level.
 | 1♠   | 12--17, 5+♠
 | 1NT  | 15--17, 2--4♠, 2--4♥, 2--6♦, 2--6♣
 | 2♣!  | PRE, 4+♠, 4+♥, not 44(32) if VUL
-| 2♦!  | PRE, 6+M
-| 2M!  | PRE, 5=#, 4+m
+| 2♦!  | PRE, 6+♠♥
+| 2M!  | PRE, 5=#, 4+♦♣
 | 2NT! | UNT, 5+♦, 5+♣
 | 3X   | PRE, 7+#
-| 3NT! | Gambling, SOL 7+m, 0--1 outside A/K
-| 4♣!  | PRE, S-SOL 8+M, 0--1 outside A/K
-| 4♦!  | PRE, SOL 8+M, no outside A/K
+| 3NT! | Gambling, SOL 7+♦♣, 0--1 outside A/K
+| 4♣!  | PRE, S-SOL 8+♠♥, 0--1 outside A/K
+| 4♦!  | PRE, SOL 8+♠♥, no outside A/K
 | 4M   | PRE, 8+#
 | 4NT! | UNT, 6+♦, 6+♣
 

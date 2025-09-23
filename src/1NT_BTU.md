@@ -9,7 +9,7 @@ of invitation with 5+ spades.
 | 2♣!  | STAY. Garbage STAY. INV 5=♠
 | 2♦!  | TRF, 5+♥
 | 2♥!  | TRF, 5+♠
-| 2♠!  | Minor suit Multi/STAY, 6+m or FG 4+♦ 4+♣
+| 2♠!  | Minor suit Multi/STAY, 6+♦♣ or FG 4+♦ 4+♣
 | 2NT  | NAT INV
 | 3♣   | INV, 6+♣, KQxxxx or better, usually 6--7 HCP
 | 3♦   | INV, 6+♦, KQxxxx or better, usually 6--7 HCP

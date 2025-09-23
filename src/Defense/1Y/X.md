@@ -26,6 +26,6 @@ separate paths to suit games by strength and by length.
 | (1m) X | T/O |
 |--------|-----|
 | 4m!    | Leaping Michaels, 5+♠, 5+♥
-| 4om!   | Leaping Michaels, 5+M, usually 5+#
+| 4om!   | Leaping Michaels, 5+♠♥, usually 5+#
 | 4M     | PRE, usually 7+#
 | 5om    | PRE, 7+#

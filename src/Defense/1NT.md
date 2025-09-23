@@ -12,17 +12,17 @@ We play [Woolsey], Multi-Landy with a conventional double, in all seats.
 
 | (1NT)  | STR, usually 15+ |
 |--------|------------------|
-| X!     | CONST, 5+m, usually 4+M
+| X!     | CONST, 5+♦♣, usually 4+♠♥
 | 2♣!    | UNBAL PRE, 4+♠, 4+♥, usually (54)(xx)
-| 2♦!    | PRE, 6+M
-| 2♥!    | PRE, 5+♥, 4+m
-| 2♠!    | PRE, 5+♠, 4+m
+| 2♦!    | PRE, 6+♠♥
+| 2♥!    | PRE, 5+♥, 4+♦♣
+| 2♠!    | PRE, 5+♠, 4+♦♣
 | 2NT!   | UNT, 5+♦, 5+♣
 
-| (1NT) X- | CONST, 5+m, usually 4+M |
-|----------|-------------------------|
-| 2♣!      | P/C                     |
-| 2♦!      | Ask for the major suit  |
+| (1NT) X- | CONST, 5+♦♣, usually 4+♠♥ |
+|----------|---------------------------|
+| 2♣!      | P/C                       |
+| 2♦!      | Ask for the major suit    |
 
 The other overcalls already correspond to preemptive openings in this book.
 
