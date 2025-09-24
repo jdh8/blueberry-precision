@@ -12,7 +12,7 @@ Therefore, I import responses from Stenberg AKA Swedish Jacoby 2NT.
 | 3♠!    | MAX FRAG, 0--1♦
 | 3NT!   | MAX FRAG, 0--1♥
 | 4♣     | MAX, 5+♣
-| 4♦     | MAX, 5+♦
+| 4♦     | MAX, 5+♦, 5+♠
 | 4♥     | MAX, 5+♥, 5+♠
 | 4♠!    | MIN, 5+♥, 5+♠
 
@@ -30,6 +30,6 @@ Therefore, I import responses from Stenberg AKA Swedish Jacoby 2NT.
 | 3♠!          | FRAG, 0--1♦          |
 | 3NT!         | FRAG, 0--1♥          |
 | 4♣!          | SPL, 0--1♣           |
-| 4♦           | 5+♦                  |
-| 4♥           | 5+♥                  |
+| 4♦           | 5+♦, 5+♠             |
+| 4♥           | 5+♥, 5+♠             |
 | 4♠!          | 5+♣                  |
