@@ -1,4 +1,4 @@
-# Positive 1NT, 2♠, and 2NT
+# Positive 1NT, 2NT
 
 I group these suitless positive responses together for simplicity. These
 responses deny 4-card majors and 6-card minors.  I also list 1♣-3NT here as
@@ -39,53 +39,12 @@ it better than most Polish Club literature.
 | 3♠!        | MAX, 6=♦
 | 3NT        | MAX, 2--4♦, 2--4♣
 
-## 1♣-2♠! { #1C-2S }
-
-I move unbalanced invitations here from 1♣-1♦.  Opener declares notrump anyway,
-so 1♣-2♠ need not be balanced.
-
-| 1♣-2♠ | INV 10--11 |
-|-------|------------|
-| 2NT   | S/O, 12--13
-| 3♣    | S/O, 12--13, 6+♣
-| 3♦!   | S/T, 18+, 0--4♠, 0--4♥
-| 3M    | S/T, 18+, 5+#
-| 3NT   | S/O
-| 4♣♦♥♠ | S/T, SOL 7+#
-
-P-1♣-2♠ only contains unbalanced hands of both minors.  Hence, 3♦ becomes a
-reasonable signoff.
-
-| P-1♣-2♠ | INV, 4--5♦, 4--5♣ |
-|---------|-------------------|
-| 3♦      | S/O, 12--13, 4+♦
-
 ## 1♣-2NT { #1C-2NT }
 
-Moving balanced game force from 3NT to 2NT was a brilliant idea from
-[Polish Club 2005][wj05].  It is difficult to search for a major suit slam after
-1♣-3NT.  Therefore, 1♣-3NT is restricted to a flat minimum game force.
-
-[wj05]: https://bridgewithdan.com/wp-content/uploads/2019/07/WJ2005webpage.htm
-
-I make 1♣-2NT-3NT highly descriptive here to help slam exploration.  This method
-makes 3♣♦ inclusive like relays.
-
-| 1♣-2NT | BAL FG |
-|--------|--------|
-| 3♣     | 5+♣
-| 3♦!    | 0--4♣
-| 3M     | S/T, 5+#
-| 3NT    | S/T, 15--17, 4414
+| 1♣-2NT | INV 10--11 |
+|--------|------------|
+| 3♣     | S/O, 12--13, 6+♣
+| 3♦!    | S/T, 18+, 0--4♠, 0--4♥
+| 3M     | S/T, 18+, 5+#
+| 3NT    | S/O
 | 4♣♦♥♠  | S/T, SOL 7+#
-
-P-1♣-2NT simplifies to a balanced invitation, which is in turn similar to
-unpassed 1♣-2♠.  I import continuations from 1♣-2♠ as a natural consequence.
-
-| P-1♣-2NT | BAL INV |
-|----------|---------|
-| 3♣       | S/O, 12--13, 6+♣
-| 3♦!      | S/T, 18+, 0--4♠, 0--4♥
-| 3M       | S/T, 18+, 5+#
-| 3NT      | S/O
-| 4♣♦♥♠    | S/T, SOL 7+#

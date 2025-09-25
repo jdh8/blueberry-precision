@@ -10,7 +10,7 @@
 - [Polish 1♣](WJ/1C.md)
   - [Negative 1♦](WJ/1C/1D.md)
   - [Positive 1M](WJ/1C/1M.md)
-  - [Positive 1NT, 2♠, 2NT](WJ/1C/1NT.md)
+  - [Positive 1NT, 2NT](WJ/1C/1NT.md)
   - [Game-forcing 2♣♦](WJ/1C/2CD.md)
   - [Flannery 2♥](WJ/1C/2H.md)
   - [Competing at the 1-level](WJ/1C/COMP_1.md)
