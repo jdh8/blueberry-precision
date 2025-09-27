@@ -16,7 +16,8 @@ Blueberry Precision Club also gets idea from:
 | 1NT  | 13--15, 2--4♠, 2--4♥, 2--5♦, 2--5♣
 | 2♣   | 11--15, 6+♣.  11--13, 4M5♣.
 | 2♦!  | PRE, 6+♠♥
-| 2M!  | PRE, 5=#, 4+♦♣
+| 2♥!  | PRE, 4--5♠, 4--5♥
+| 2♠!  | PRE, 5=♠, 4+♦♣
 | 2NT! | UNT, 5+♦, 5+♣
 | 3X   | PRE, 7+#
 | 3NT! | Gambling, SOL 7+♦♣, 0--1 outside A/K
