@@ -10,7 +10,7 @@ Opener may rebid a 3-card minor due to protection from the impossible 2♠.
 | 2♠      | 14--15, 4+♠, 5+♥
 | 2NT     | 14--15, 6=♥, ≤ ♥AJ9
 | 3♣♦     | 14--15, 5+#, 4+♥
-| 3♥      | 14--15, 6+♥, ♥AJT+ or 7+♥
+| 3♥      | 14--15, 6+♥, AJT+ or 7+♥
 | 3NT!    | MAX P/C, 6+♦♣, 4=♥
 | 3♠, 4♣♦ | MAX, 5+#, 6+♥
 
