@@ -23,15 +23,20 @@ of invitation with 5+ spades.
 | 4NT  | QUANT INV to 6NT, NF
 | 5NT  | QUANT INV to 7NT, F
 
+## Minor suit transfers
+
 | 1NT-2♠ | INV or 6+♣.  S/T, 5+♣, 5+♦. |
 |--------|-----------------------------|
 | 2NT    | MIN
-| 3♣!    | MAX
+| 3♣!    | MAX, 1--3♣
+| 3♦♥♠!  | MAX, 4--6♣, good stopper
 
 | 1NT-2NT | 5+♦, 5+♣ or 6+♦ |
 |---------|-----------------|
-| 3♣!     | 0--2♦
-| 3♦      | 3+♦
+| 3♣!     | 1--2♦
+| 3♦      | 3--4♦
+| 3♥♠!    | 5--6♦, good stopper
+| 3NT!    | 5--6♦, good ♣ stopper
 
 ## BTU QUANT scheme
 
