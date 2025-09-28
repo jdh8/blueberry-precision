@@ -10,7 +10,7 @@ of invitation with 5+ spades.
 | 2♦!  | TRF, 5+♥
 | 2♥!  | TRF, 5+♠
 | 2♠!  | PRE or FG, 6+♣.  BAL INV.  S/T, 5+♣, 5+♦.
-| 2NT! | 6+♦.  PRE, 5+♦, 5+♣
+| 2NT! | 5+♦, 5+♣ or 6+♦
 | 3♣   | INV, 6+♣, KQxxxx or better, usually 6--7 HCP
 | 3♦!  | S/T, (31)(54)
 | 3♥!  | INV, 5+♠, 5+♥
@@ -22,6 +22,16 @@ of invitation with 5+ spades.
 | 4♠!  | F QUANT
 | 4NT  | QUANT INV to 6NT, NF
 | 5NT  | QUANT INV to 7NT, F
+
+| 1NT-2♠ | PRE or FG, 6+♣.  BAL INV.  S/T, 5+♣, 5+♦. |
+|--------|-------------------------------------------|
+| 2NT    | MIN
+| 3♣!    | MAX
+
+| 1NT-2NT | 5+♦, 5+♣ or 6+♦ |
+|---------|-----------------|
+| 3♣!     | 0--2♦
+| 3♦      | 3+♦
 
 ## BTU QUANT scheme
 
