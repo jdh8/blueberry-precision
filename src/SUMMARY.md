@@ -41,6 +41,7 @@
   - [Waiting 1♦](Blue/1C/1D.md)
   - [Negative 1♥](Blue/1C/1H.md)
 - [Natural 1♦](Blue/1D.md)
+  - [Natural 1M](Blue/1D/1M.md)
 - [Natural 1♥](Blue/1H.md)
   - [Non-forcing 1NT](Blue/1H/1NT.md)
   - [Drury-like 2♣](Blue/1H/2C.md)
