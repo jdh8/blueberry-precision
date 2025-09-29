@@ -49,6 +49,7 @@
   - [Non-forcing 1NT](Blue/1S/1NT.md)
   - [Swapped 2/1](Blue/1S/2X.md)
   - [Blueberry Stenberg 2NT](Blue/1S/2NT.md)
+- [Precision 2♣](Blue/2C.md)
 - [Lyric 2♥](Blue/2H.md)
 
 # Common conventions
