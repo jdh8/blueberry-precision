@@ -29,7 +29,7 @@ Blueberry Precision Club also gets idea from:
 ## Reserved distributions
 
 - **(4333)**: [JDH8's curse][curse], originally found by [Richard Pavlicek][rpbridge]
-- **3325**: Italian nightmare
+- **(332)5**: Italian nightmare
 
 [curse]: https://jdh8.com/curse-of-4333/
 [rpbridge]: http://www.rpbridge.net/8j05.htm
@@ -37,8 +37,8 @@ Blueberry Precision Club also gets idea from:
 The first two seats do not open these balanced minimum (11--12).  The third seat
 always does.  The fourth seat chooses between 1♦ and pass ad libitum.
 
-| Seat | 11--12, (4333) or 3325 |
-|------|------------------------|
+| Seat | 11--12, (4333) or (332)5 |
+|------|--------------------------|
 | 1st  | P
 | 2nd  | P
 | 3rd  | 1♦
