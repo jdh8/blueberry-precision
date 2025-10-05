@@ -45,11 +45,11 @@
   - [Natural 1M](Blue/1D/1M.md)
 - [Natural 1♥](Blue/1H.md)
   - [Non-forcing 1NT](Blue/1H/1NT.md)
-  - [Blueberry Stenberg 2NT](Blue/1H/2NT.md)
+  - [Blueberry Jacoby 2NT](Blue/1H/2NT.md)
 - [Natural 1♠](Blue/1S.md)
   - [Non-forcing 1NT](Blue/1S/1NT.md)
   - [Swapped 2/1](Blue/1S/2X.md)
-  - [Blueberry Stenberg 2NT](Blue/1S/2NT.md)
+  - [Blueberry Jacoby 2NT](Blue/1S/2NT.md)
 - [Precision 2♣](Blue/2C.md)
 - [Lyric 2♥](Blue/2H.md)
 
