@@ -129,14 +129,14 @@ default.  Rebidding the suit shows a natural suit.
 | 1♣ (*) 1♠NT | Direct and TRF to 1NT |
 |-------------|-----------------------|
 | 2♣          | MIN, 12--14, 6+♣
-| 2♦!         | INV+ (R), ask for minor suit
+| 2♦!         | (R) INV+, ask for minor suit
 | 2♥♠         | FG, 5+#
 | 2NT         | BAL INV
 | 3♣♦         | FG, 6+#
 
 The 2♦ relay here is nothing more than 1♣-1NT-2♦.
 
-| 1♣ (*) 1♠ - 2♦- | INV+ (R) |
+| 1♣ (*) 1♠ - 2♦- | (R) INV+ |
 |-----------------|----------|
 | 2♥!             | 5--6♣
 | 2♠!             | 5--6♦

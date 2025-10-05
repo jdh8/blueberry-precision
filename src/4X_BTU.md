@@ -20,10 +20,10 @@ Namyats.
 
 | 4♣♦-       | (S-)SOL PRE in 4M |
 |------------|-------------------|
-| 4♦!        | S/T (R)           |
+| 4♦!        | (R) S/T           |
 | 4M, 5M, 6M | P/C               |
 
-| 4♣-4♦ | S/T (R) |
+| 4♣-4♦ | (R) S/T |
 |-------|---------|
 | 4M    | NAT MIN
 | 4NT!  | MAX, CTRL in every side suit
