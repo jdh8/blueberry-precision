@@ -28,34 +28,7 @@ allows bidding a 5-card major regardless of strength.
 
 ## 1♣ (2♣)
 
-Similar to 1NT (2♣︎), some 1♣︎ (2♣︎) show both major suits, e.g. Landy,
-Michaels.  This kind of 2♣︎ requires extra care.  I recommend BTU vs Unusual.
-
-| 1♣ (2♣)  | Both majors |
-|----------|-------------|
-| X        | PEN for either major
-| 2♦       | NF, 5+♦
-| 2♥!      | FG, 5+♦
-| 2♠!      | INV+, 5+♣
-| 2NT!     | LEB, PRE 6+♣ or FG (xx)45
-| 3♣♦      | INV, 6+#
-| 3♥♠!     | Ask for stopper in this suit
-
-Otherwise, keep using the major-oriented system at 1♣︎ (1NT).  This treatment
-is the same as the *systems on* approach at 1NT (2♣︎).
-
-| 1♣ (2♣)  | Other cases |
-|----------|-------------|
-| X!       | INV+ STAY or INV 5=♠
-| 2♦!      | TRF, 5+♥
-| 2♥!      | TRF, 5+♠
-| 2♠!      | Minor suit Multi/STAY, 6+♦♣ or FG 4+♦ 4+♣
-| 2NT!     | TRF, PRE 7+♣ or FG 6+♣
-| 3♣!      | TRF, PRE 7+♦ or FG 6+♦
-| 3♦!      | TRF, PRE 7+♥ or FG 6+♥
-| 3♥!      | TRF, PRE 7+♠ or FG 6+♠
-| 3♠!      | Gambling, SOL 7+ suit with no stopper outside
-| 3NT!     | Gambling, SOL 7+ suit with one stopper outside
+Deem this situation as [1NT (2♣)](../../1NT_BTU/COMP_2.md#1NT(2C)).
 
 ## 1♣ (2♦♥♠) { #strawberry-adjunct }
 

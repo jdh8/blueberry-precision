@@ -59,6 +59,7 @@
 - [BTU 1NT](1NT_BTU.md)
   - [BTU Stayman 2♣](1NT_BTU/2C.md)
   - [BTU transfers 2♦♥](1NT_BTU/2R.md)
+  - [Competitive bidding](1NT_BTU/COMP_2.md)
 - [Multi 2♦](2D_Multi.md)
 - [Muiderberg 2M](2M_Muiderberg.md)
 - [Unusual 2NT opening](2NT_UNT.md)
