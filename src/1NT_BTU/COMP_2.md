@@ -1,5 +1,25 @@
 # Competitive bidding
 
+## 1NT (X)
+
+I suggest [Terrorist's runout][run] regardless of what (X) means.
+
+[run]: https://www.ptt.cc/man/BridgeClub/D6D1/D49B/D823/DD4E/M.1160796412.A.8E9.html
+
+| 1NT (X) | - |
+|---------|---|
+| XX      | PEN
+| 2♣!     | P/C, 5+♣ or 4+♦ 4+♠♥
+| 2♦!     | P/C, 5+♦ or 4+♠ 4+♥
+| 2M      | NF, 5+#
+| 2NT!    | CUE, good unbalanced hand
+| 3X      | PRE, 6+#
+
+| 1NT (X) P | - |
+|-----------|---|
+| XX        | 5+ suit
+| 2♣!       | 4+♣, 4+ another suit
+
 ## 1NT (2♣) { #1NT(2C) }
 
 *Systems on* is a decent approach over 1NT (2♣︎).  The overcall is somewhat
