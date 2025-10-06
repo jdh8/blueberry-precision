@@ -2,7 +2,9 @@
 
 ## 1NT (X)
 
-I suggest [Terrorist's runout][run] regardless of what (X) means.
+I suggest [Terrorist's runout][run] regardless of what (X) means.  This runout
+also applies to a conventional double, yet responder can also pass balanced
+hands more often.
 
 [run]: https://www.ptt.cc/man/BridgeClub/D6D1/D49B/D823/DD4E/M.1160796412.A.8E9.html
 
@@ -14,6 +16,8 @@ I suggest [Terrorist's runout][run] regardless of what (X) means.
 | 2M      | NF, 5+#
 | 2NT!    | CUE, good unbalanced hand
 | 3X      | PRE, 6+#
+
+Opener often runs with clubs because it is hard for responder to do so.
 
 | 1NT (X) P | - |
 |-----------|---|
