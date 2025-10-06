@@ -52,3 +52,16 @@ Ignore the (2♣) overcall.  X replaces the Stayman 2♣ as usual.
 ## 1NT (2♦♥♠)
 
 [Rubinsohl](../../Rubinsohl.md) covers these auctions.
+
+## 1NT (2NT)
+
+[BTU vs Unusual](../BTU_v_U.md) suffices.
+
+| 1NT (2NT) | 5+♦, 5+♣ |
+|-----------|----------|
+| X         | PEN
+| 3♣!       | INV+, 5+♠
+| 3♦!       | INV+, 5+♥
+| 3♥♠       | NF, 5+#
+| 3NT       | S/O
+| 4♣!       | Choice of games, 4+♠, 5+♥
