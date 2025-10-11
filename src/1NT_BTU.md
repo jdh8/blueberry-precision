@@ -11,7 +11,7 @@ of invitation with 5+ spades.
 | 2♥!  | TRF, 5+♠
 | 2♠!  | INV or 6+♣.  S/T, 5+♣, 5+♦.
 | 2NT! | 5+♦, 5+♣ or 6+♦
-| 3♣   | INV, 6+♣, KQxxxx or better, usually 6--7 HCP
+| 3♣!  | INV, 6+♣, KQxxxx or better, usually 6--7 HCP
 | 3♦!  | FG FRAG, (31)(54)
 | 3♥!  | INV, 5+♠, 5+♥
 | 3♠!  | Choice of games, 5+♠, 5+♥
