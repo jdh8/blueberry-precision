@@ -6,10 +6,10 @@ major.  This method makes 1♣-1♦-3m limited enough (21--23) for their level.
 
 |  -   |   |
 |------|---|
-| 1♣!  | F, Polish Club:<div>12--14, 2--4♠, 2--4♥, 2--4♦, 2--4♣.</div><div>12--17, 5+♣ or 4414.</div><div>18+, BAL or unsuitable for 1♦.</div>
-| 1♦   | 12--20, 5+♦ or UNBAL 4=♦ 1--5♣
-| 1♥   | 12--17, 5+♥
-| 1♠   | 12--17, 5+♠
+| 1♣!  | F, Polish Club:<div>12--14, 2--4♠, 2--4♥, 2--4♦, 2--4♣.</div><div>11--17, 5+♣ or 4414.</div><div>18+, BAL or unsuitable for 1♦.</div>
+| 1♦   | 11--20, 5+♦ or UNBAL 4=♦ 1--5♣
+| 1♥   | 11--17, 5+♥
+| 1♠   | 11--17, 5+♠
 | 1NT  | 15--17, 2--4♠, 2--4♥, 2--6♦, 2--6♣
 | 2♣!  | PRE, 4+♠, 4+♥, not 44(32) if VUL
 | 2♦!  | PRE, 6+♠♥
