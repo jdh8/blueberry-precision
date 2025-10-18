@@ -24,11 +24,11 @@ major.  This method makes 1♣-1♦-3m limited enough (21--23) for their level.
 
 ## The notrump ladder
 
-- **12--14**: 1♣-1♦-1M
-- **15--17**: 1NT
-- **18--20**: 1♣-1♦-1NT
-- **21--23**: 1♣-1♦-2♦
-- **24+**: 1♣-1♦-2NT
+- **12--14:** 1♣-1♦-1M
+- **15--17:** 1NT
+- **18--20:** 1♣-1♦-1NT
+- **21--23:** 1♣-1♦-2♦
+- **24+:** 1♣-1♦-2NT
 
 ## Choosing the minor suit with (xx)45
 

@@ -28,8 +28,8 @@ Blueberry Precision Club also gets idea from:
 
 ## Reserved distributions
 
-- **(4333)**: [JDH8's curse][curse], originally found by [Richard Pavlicek][rpbridge]
-- **(332)5**: Italian nightmare
+- **(4333):** [JDH8's curse][curse], originally found by [Richard Pavlicek][rpbridge]
+- **(332)5:** Italian nightmare
 
 [curse]: https://jdh8.com/curse-of-4333/
 [rpbridge]: http://www.rpbridge.net/8j05.htm
@@ -48,9 +48,9 @@ always does.  The fourth seat chooses between 1♦ and pass ad libitum.
 
 The most descriptive 1NT takes priority over all suit openings.
 
-- **5+♠♥, 5+♦♣**: Always open the major suit
-- **Other 5+ 4+**: Open the longer eligible suit (MAX 2♣ must contain 6+♣)
-- **Between 4-card suits**:
+- **5+♠♥, 5+♦♣:** Always open the major suit
+- **Other 5+ 4+:** Open the longer eligible suit (MAX 2♣ must contain 6+♣)
+- **Between 4-card suits:**
   - ♦ > ♥ > ♠ for the first two seats
   - ♥ > ♠ > ♦ for the last two seats
 
@@ -59,17 +59,17 @@ The precedence of 4=♦ depends on the seat.  If the seat never opens 1♦ for
 
 ## The notrump ladder
 
-- **11--12**: 1♦♥♠
-- **13--15**: 1NT
+- **11--12:** 1♦♥♠
+- **13--15:** 1NT
 
 ### 1♣-1♦ = waiting
 
-- **16--18**: 1♣-1♦-1NT
-- **19--21**: 1♣-1♦-1♥
-- **22--24**: 1♣-1♦-2NT
-- **FG**: 1♣-1♦-1♥
+- **16--18:** 1♣-1♦-1NT
+- **19--21:** 1♣-1♦-1♥
+- **22--24:** 1♣-1♦-2NT
+- **FG:** 1♣-1♦-1♥
 
 ### 1♣-1♥ = double negative (0--4)
 
-- **16--21**: 1♣-1♥-1NT
-- **22--24**: 1♣-1♥-2NT
+- **16--21:** 1♣-1♥-1NT
+- **22--24:** 1♣-1♥-2NT

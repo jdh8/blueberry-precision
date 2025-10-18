@@ -3,9 +3,9 @@
 BTU uses a 4X scheme that conveys ~0.58 more bits than traditional or Meckwell
 Namyats.
 
-- **4♣**: solid major suit without any outside A/K
-- **4♦**: semi-solid major suit with 0--1 outside A/K
-- **4M**: non-solid (1.5+ NLTC) major suit
+- **4♣:** solid major suit without any outside A/K
+- **4♦:** semi-solid major suit with 0--1 outside A/K
+- **4M:** non-solid (1.5+ NLTC) major suit
 
 | 4X-  | PRE in 4M |
 |------|-----------|

@@ -79,14 +79,14 @@ step.
 There are 4 levels of 5-5 majors: weak, invitational, choice of games, and slam
 try.
 
-- **Weak**: transfer to the better major and pass.  Give up on the other one.
-- **Invitational**: anything goes except 3♠.
-- **FG+**: anything goes.
+- **Weak:** transfer to the better major and pass.  Give up on the other one.
+- **Invitational:** anything goes except 3♠.
+- **FG+:** anything goes.
 
 Hands around the game level are prone to interference.  On the other hand,
 leaking opener's shape can be helpful in slam bidding.  As a result, I
 recommend the following bidding structure:
 
-- **Invitational**: 3♥
-- **Choice of games**: 3♠
-- **Slam try**: 2♥ and then 3♥
+- **Invitational:** 3♥
+- **Choice of games:** 3♠
+- **Slam try:** 2♥ and then 3♥
