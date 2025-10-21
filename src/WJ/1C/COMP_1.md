@@ -52,7 +52,7 @@ to 3♣.
 | 3YZ     | INV+ TRF, 6+ next suit
 | 3♠!     | FG, 6+♣
 
-Of course (1♠) X is a negative double.  [In *An Overview of the Use of Transfers
+Of course (1♠) X is a negative double.  In [*An Overview of the Use of Transfers
 in and out of Competition*][smith], Marc Smith suggests swapping the unbid
 suits.  I second this.  The 2♦ transfer ends the debate if free bids are
 forcing.
