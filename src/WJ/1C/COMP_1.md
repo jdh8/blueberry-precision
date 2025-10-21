@@ -5,6 +5,8 @@ somehow ignore the meaning of overcalls to deal with artificial and psychic
 bids.  We reorder major suit bids with Transfer Walsh to get a "support double"
 by accepting the transfer.
 
+## Over a double
+
 We treat 1♣ as a weak notrump more than a club opening.  Club support is not
 very effective.  We have a transfer scheme for all levels below 3NT.
 
@@ -15,52 +17,60 @@ very effective.  We have a transfer scheme for all levels below 3NT.
 
 Natural 1NT is not very useful after a double.  Rebrand it as transfer.
 
-| 1♣ (X)  | - |
+| 1♣ (X) | - |
+|--------|---|
+| XX     | NF BAL G/T, 10+
+| 1♦!    | TRF, 7+, 4+♥
+| 1♥!    | TRF, 7+, 4+♠
+| 1♠!    | TRF, 7+, 5+♣
+| 1NT!   | TRF, 7+, 5+♦
+| 2♣     | PRE, 0--9, 5+♣
+| 2X     | PRE, 0--9, 6+#
+| 2NT!   | TRF, PRE 7+♣ or FG 6+♣
+| 3♣!    | TRF, PRE 7+♦ or FG 6+♦
+| 3♦!    | TRF, PRE 7+♥ or FG 6+♥
+| 3♥!    | TRF, PRE 7+♠ or FG 6+♠
+| 3♠!    | Gambling, SOL 7+ suit with no stopper outside
+| 3NT!   | Gambling, SOL 7+ suit with one stopper outside
+
+## Over a suit
+
+Bidding clubs here is more important than (X) because we often need to compete
+to 3♣.
+
+| 1♣ (1Y) | - |
 |---------|---|
-| XX      | NF BAL G/T, 10+
-| 1♦!     | TRF, 7+, 4+♥
+| X!      | TRF, 7+, 4+ next suit
 | 1♥!     | TRF, 7+, 4+♠
-| 1♠!     | TRF, 7+, 5+♣
-| 1NT!    | TRF, 7+, 5+♦
-| 2♣♦♥♠   | PRE, 0--7, 6+#
-| 2NT!    | TRF, PRE 7+♣ or FG 6+♣
-| 3♣!     | TRF, PRE 7+♦ or FG 6+♦
-| 3♦!     | TRF, PRE 7+♥ or FG 6+♥
-| 3♥!     | TRF, PRE 7+♠ or FG 6+♠
-| 3♠!     | Gambling, SOL 7+ suit with no stopper outside
-| 3NT!    | Gambling, SOL 7+ suit with one stopper outside
+| 1♠!     | TRF to 1NT, 7+
+| 1NT     | NAT, 8--10
+| 2X      | NF, 7--11, 5+#
+| 2YZ!    | TRF, 6+ next suit
+| 2♠!     | INV+, 5+♣
+| 2NT     | NAT INV
+| 3X      | INV, 6+#
+| 3YZ     | INV+ TRF, 6+ next suit
+| 3♠!     | FG, 6+♣
 
-When RHO bids a suit, natural notrump from [Polish Club 2005][wj05] right-sides
-the contract.
+Of course (1♠) X is a negative double.  [In *An Overview of the Use of Transfers
+in and out of Competition*][smith], Marc Smith suggests swapping the unbid
+suits.  I second this.  The 2♦ transfer ends the debate if free bids are
+forcing.
 
-[wj05]: https://bridgewithdan.com/wp-content/uploads/2019/07/WJ2005webpage.htm
+[smith]: https://3nt.xyz/bridge/articles/SmithTransfers.pdf
 
-| 1♣ (1Y)  | - |
-|----------|---|
-| X!       | TRF, 7+, 4+ next suit
-| 1♥!      | TRF, 7+, 4+♠
-| 1♠!      | TRF to 1NT, 7+
-| 1NT      | BAL INV, 9–11, 2–3♠, 2–3♥, 2–5♦, 2–5♣
-| 2X       | INV+, 10+, 5+#
-| 2YZ!     | TRF, PRE or INV+, 6+ next suit
-| 2♠!      | TRF, PRE 7+♣ or FG 6+♣
-| 2NT      | FG with stopper
-| 3♣!      | TRF, PRE 7+♦ or FG 6+♦
-| 3♦!      | TRF, PRE 7+♥ or FG 6+♥
-| 3♥!      | TRF, PRE 7+♠ or FG 6+♠
-| 3♠!      | Gambling, SOL 7+ suit without stopper
-| 3NT!     | Gambling, SOL 7+ suit with stopper
+| 1♣ (1♠) | - |
+|---------|---|
+| X!      | TRF, 7+, 4+♥
+| 2♦!     | TRF, 7+, 5+♥
+| 2♥!     | INV+ TRF, 5+♦
 
-Of course 1♣ (1♠) X is a negative double.  Therefore, 2♥ becomes negative free
-bid.  This modern adjunct finds more marginal 4♥ and puts pressure on the
-opponents by threatening to play 2♥.  Moreover, we lose 1♠ that asks for
-stopper.  The direct cuebid 2♠ has to take care of that.
+Similarly, the negative free bid of diamonds is not that useful.  I'd make it
+forcing over (1♥).
 
-| 1♣ (1♠)  | - |
-|----------|---|
-| X!       | TRF, 7+, 4+♥
-| 2♥       | NF, 7--11, 5+♥
-| 2♠!      | TRF, PRE 7+♣ or FG, ask for stopper
+| 1♣ (1♥) | - |
+|---------|---|
+| 2♦      | INV+, 5+♦
 
 ## Responder passes
 
@@ -96,6 +106,8 @@ double when advancer passes.
 
 Here I only list support rebids for brevity.  The complete set of responses is
 at [1♣-1M](../1C/1M.md).
+
+Transfer Walsh in competition is also called Cachalot in French.
 
 | 1♣ (1♦) X | 7+, 4+♥ |
 |-----------|---------|
@@ -153,43 +165,3 @@ stopper.  It can also be a natural bid like 4SF.
 | 1♣ (1M) 1♠NT | Direct and TRF to 1NT |
 |--------------|-----------------------|
 | 2M!          | INV+, ask for stopper.  FG, 5+#
-
-## Bidding hearts over (1♠)
-
-There is a debate whether free bids are forcing.  I prefer negative free bids
-for major suits and standard forcing free bids for minor suits.  I believe this
-set of agreements maximizes our chances to reach 4♥ and 3NT.
-
-|        | 4=♥ |  5=♥  | 6=♥ | 7+♥ |
-|:------:|:---:|:-----:|:---:|:---:|
-|  7--9  |  X  | X/2♥  | 2♥  | 3♦  |
-| 10--11 |  X  |  2♥   | 2♥  | 4♥  |
-|   FG   |  X  |   X   | 3♦  | 3♦  |
-
-1. Invitation is suspectible to interference.  Therefore, invitation requires
-   quick actions.
-2. To make best use of non-forcing 2♥, include weaker hands with longer or
-   better suit.
-3. The direct 4♥ not only deters inferference but also splits the range of 3♦.
-
-| 1♣ (1♠) X | NEG, 4+♥ |
-|-----------|----------|
-| 2♦!       | INV+, 3+♥
-| 2♥        | MIN, 4+♥
-| 3♥        | INV, 4+♥
-
-| 1♣ (1♠) 2♥ | NF, 5+♥ |
-|------------|---------|
-| 2♠!        | FG, ask for stopper
-| 2NT, 3♥    | NAT INV
-| 3♣♦        | FG, usually 6+#
-| 3♠!        | S/T CAB, ask for CTRL
-| 3NT, 4♥    | To play, no slam interest
-
-| 1♣ (1♠) 3♦ | PRE 7+♥ or FG 6+♥ |
-|------------|-------------------|
-| 3♥, 3NT    | P/C, 0--2♥
-| 3♠!        | F, NAT or ask for CTRL
-| 4♣♦!       | F, NAT or CTRL
-| 4♥         | To play, no slam interest
-| 5♥!        | Ask for ♠ CTRL
