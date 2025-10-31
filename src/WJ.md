@@ -4,6 +4,9 @@ Our Polish Club opening contains minimum clubs like *Polish Club 2020: Expert*.
 I adjust the 1♦ opening to contain 18--20 unbalanced diamonds with no 4-card
 major.  This method makes 1♣-1♦-3m limited enough (21--23) for their level.
 
+Additionally, for 5--6♠ 4=♥ around 16--17 total points, open [Ekren 2♣](WJ/2C.md).
+This adjunct limits 1♠-1NT-2♥.
+
 |  -   |   |
 |------|---|
 | 1♣!  | F, Polish Club:<br>12--14, 2--4♠, 2--4♥, 2--4♦, 2--4♣.<br>11--17, 5+♣ or 4414.<br>18+, BAL or unsuitable for 1♦.
