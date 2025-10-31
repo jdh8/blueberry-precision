@@ -32,7 +32,7 @@
   - [Maggie 2♣](WJ/1S/2C.md)
   - [Game-forcing 2♦♥](WJ/1S/2R.md)
   - [Strawberry Stenberg 2NT](WJ/1S/2NT.md)
-- [Ekren 2♣](WJ/2C.md)
+- [Strawberry Ekren 2♣](WJ/2C.md)
 
 # Blueberry Precision Club
 
