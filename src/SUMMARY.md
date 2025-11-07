@@ -11,6 +11,7 @@
   - [Negative 1♦](WJ/1C/1D.md)
   - [Positive 1M](WJ/1C/1M.md)
     - [BTU 3-way checkback](WJ/1C/1M/BTU_CB.md)
+    - [Inviting 2M](WJ/1C/1M/2M.md)
   - [Positive 1NT, 2NT](WJ/1C/1NT.md)
   - [Game-forcing 2♣♦](WJ/1C/2CD.md)
   - [Flannery 2♥](WJ/1C/2H.md)
