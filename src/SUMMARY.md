@@ -77,6 +77,7 @@
 # Slam bidding
 
 - [Overview](Slam.md)
+- [Kickback RKCB 1430](Slam/Kickback_1430.md)
 
 # Defensive bidding
 
