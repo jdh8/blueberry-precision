@@ -8,7 +8,18 @@ conflicts with an existing natural 4Y.  I propose the following algorithm to
 resolve where RKCB is.
 
 1. Try interpreting 4♥♠ as natural and non-forcing.
-2. Above 4X, the lowest remaining step becomes RKCB.
+2. Above 4X, the lowest remaining step 4Y becomes RKCB.
+3. If Y is a suit, 4NT **denies** controls in that suit.
+
+- **Keycards** are the 4 aces and the trump king.
+- The 10th trump equates to the trump queen.
+
+| 4Y- | RKCB |
+|-----|------|
+| +1  | 1 or 4 keycards
+| +2  | 0 or 3 keycards
+| +3  | 2 or 5 keycards without the trump queen
+| +4  | 2 or 5 keycards with the trump queen
 
 ## 1430 vs 0314
 
