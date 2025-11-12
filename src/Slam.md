@@ -12,6 +12,19 @@ controls in that suit.
 
 ## Kickback philosophy
 
+Traditionally, new suits above 3NT are reserved for control bidding by default.
+Consequently, conventional notrumps ask quantitative questions.  These
+conventions work perfectly for spades but sometimes impose problems on minor
+suits.
+
+Kickback originally applies to RKCB.  The lowest control bid above 4X **swaps**
+with 4NT.  This approach can be generalized to other conventional notrumps, such
+as (non-)serious 3NT and Turbo 4NT.
+
+When 4NT swaps with a control bid, I suggest inverting the resulting **4NT to deny
+controls** in the kickback suit.  This agreement helps playing 4NT when lacking
+controls.
+
 ## Agreements
 
 - Kickback RKCB 1430
