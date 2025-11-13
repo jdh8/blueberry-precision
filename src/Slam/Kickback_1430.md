@@ -43,9 +43,7 @@ resolve where RKCB is.
 
 I choose 1430 over 0314 right after reading the analysis above.
 
-- 4♦{RKCB in ♣} 4♥-4♠
 - 4♦{RKCB in ♣} 4♠-4NT
-- 4♥{RKCB in ♦} 4♠-5♣
 - 4♥{RKCB in ♦} 4NT-5♣
 
 The only case we need to use 4NT for the queen ask is 4♦{RKCB in ♣} 4♠-4NT.
