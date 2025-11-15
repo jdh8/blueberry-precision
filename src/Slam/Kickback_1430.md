@@ -43,6 +43,30 @@ Neil H. Timm.  [Using Spiral Scan Bids with Jacoby 2NT](https://www.bridgewebs.c
 
 ## Asking for the trump queen
 
+To ask for the trump queen after 4Y+1 and 4Y+2, bid the cheapest step other than
+5X.  The asking bid is usually below 5X so that there is enough space to query
+all side kings.
+
+| -                   | Asking bid below 5X |
+|---------------------|---------------------|
+| 6X                  | No trump Q
+| 6X&minus;1          | Trump Q but no side kings
+| \[5X+1..6X&minus;2] | Trump Q and *this* king
+| 5NT                 | Trump Q and the king of X&minus;1
+| 5X                  | Trump Q and 2+ side kings
+
+If the asking bid is above 5X, we can only locate side kings but not count them.
+The cheapest step catches otherwise unallocated side kings.  This agreement
+makes further asking easier.
+
+| 5Z                  | Asking bid above 5X |
+|---------------------|---------------------|
+| 6X                  | No trump Q
+| 6X&minus;1          | Trump Q but no side kings
+| \[5Z+2..6X&minus;2] | Trump Q and *this* king
+| 5NT                 | Trump Q and the king of X&minus;1
+| 5Z+1                | Trump Q and an unallocated side king
+
 ## Asking for side kings
 
 ## 1430 vs 0314
