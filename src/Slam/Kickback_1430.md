@@ -69,6 +69,17 @@ makes further asking easier.
 
 ## Asking for side kings
 
+After the queen ask is located (or not needed because the previous response
+shows 2 or 5 key cards), the next available step other than 5X asks only for
+side kings.
+
+| 5Z                  | Asking bid |
+|---------------------|------------|
+| 6X                  | No side kings
+| \[5Z+2..6X&minus;1] | *This* king
+| 5NT                 | The king of Z
+| 5Z+1                | An unallocated side king
+
 ## 1430 vs 0314
 
 > If the RKC call is 4T+1, there is no need for 1430 since the queen ask will be
