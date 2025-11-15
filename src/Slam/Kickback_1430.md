@@ -30,13 +30,16 @@ resolve where RKCB is.
 
 ## Anti-spiral scan
 
-Spiral scan is a relay scheme that maps lower steps to more important features.
+Spiral scan[^spiral] is a relay scheme that maps lower steps to more important features.
 Anti-spiral scan, on the other hand, signs off at a small slam to deny the most
 important feature.  In general, for the available steps up to 6X, the higher the
 step, the fewer features it indicates.  This treatment uses the fact that grand
 slam exploration is slam forcing.  The negative step is almost always followed
 by a signoff at a small slam.  Move the negative step up to 6X to sign off
 already.
+
+[^spiral]: Regina Bridge Club.  [Spiral scanning after RKCB](https://reginabridge.com/content/conventions/Spiral%20scanning%20after%20RKCB.txt).  
+Neil H. Timm.  [Using Spiral Scan Bids with Jacoby 2NT](https://www.bridgewebs.com/ocala/Spiral%20Scan%20Bids%20after%20Jacoby%202NT.pdf).
 
 ## Asking for the trump queen
 
