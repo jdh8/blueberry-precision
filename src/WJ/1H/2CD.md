@@ -6,22 +6,22 @@ reverses promise extra strength.
 | 1♥-2♣ | NAT FG |
 |-------|--------|
 | 2♦    | 4+♦
-| 2♥    | MIN
+| 2♥    | (R)
 | 2♠    | MAX, 4+♠
-| 2NT   | BAL MAX
+| 2NT   | MIN, 5=♥, likely stops in unbid suits
 | 3♣    | MAX, 4+♣
 | 3♦    | MAX, 5+♦
 | 3♥    | MAX, 6+♥
 | 3♠!   | MIN SPL, 0--1♠, 4+♣
-| 3NT   | MIN, 3532
+| 3NT   | MAX, 3532
 
 | 1♥-2♦ | NAT FG |
 |-------|--------|
-| 2♥    | MIN
+| 2♥    | (R)
 | 2♠    | MAX, 4+♠
-| 2NT   | BAL MAX
+| 2NT   | MIN, 5=♥, likely stops in unbid suits
 | 3♣    | MAX, 4+♣
 | 3♦    | MAX, 4+♦
 | 3♥    | MAX, 6+♥
 | 3♠!   | MIN SPL, 0--1♠, 4+♦
-| 3NT   | MIN, 3523
+| 3NT   | MAX, 3523
