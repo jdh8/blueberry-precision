@@ -21,7 +21,7 @@ IMPs.
 | 2♥    | S/T, 15+, 4+♥
 | 2♠    | S/T, 15+, 4+♠
 | 2NT   | Nearly BAL, 12--14 or 18+
-| 3♣    | NAT, 12--14 or 18+, 4+♣
+| 3♣    | NAT, 11--14 or 18+, 4+♣
 | 3♦    | S/T, 18+, 6+♦
 | 3♥    | S/T, 18+, 6+♥
 | 3♠    | S/T, 18+, 6+♠
@@ -32,14 +32,14 @@ IMPs.
 | 2♥    | S/T, 15+, 4+♥
 | 2♠    | S/T, 15+, 4+♠
 | 2NT   | Nearly BAL, 12--14 or 18+
-| 3♣    | NAT, 12--14 or 18+, 5+♣
+| 3♣    | NAT, 11--14 or 18+, 5+♣
 | 3♦    | S/T, 15+, 4+♦
 | 3♥    | S/T, 18+, 6+♥
 | 3♠    | S/T, 18+, 6+♠
 | 3NT!  | S/T, 15--17, 5+♣
 
 I make 1♣-2♦-3NT so because otherwise it would be hard to show these hands.
-Grouping 12--14 and 18+ together is usually OK because 18+ can explore slams
+Grouping 11--14 and 18+ together is usually OK because 18+ can explore slams
 unilaterally.
 
 ## By passed hand
