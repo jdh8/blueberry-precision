@@ -21,22 +21,12 @@ resolve where RKCB is.
 | +3  | 2 or 5 key cards without the trump queen
 | +4  | 2 or 5 key cards with the trump queen
 
-| Combined key cards | Action |
-|--------------------|--------|
-| 0--1               | Break up with your partner
-| 2--3               | S/O at 5X or 4NT
-| 4                  | S/O at 6X or 6NT
-| 5                  | Explore for grand slam
-
 ## Anti-spiral scan
 
-Spiral scan[^spiral] is a relay scheme that maps lower steps to more important features.
-Anti-spiral scan, on the other hand, signs off at a small slam to deny the most
-important feature.  In general, for the available steps up to 6X, the higher the
-step, the fewer features it indicates.  This treatment uses the fact that grand
-slam exploration is slam forcing.  The negative step is almost always followed
-by a signoff at a small slam.  Move the negative step up to 6X to sign off
-already.
+Spiral scan[^spiral] is a relay scheme that maps lower steps to more important
+features. Anti-spiral scan, on the other hand, attempts signing off at 5X or 6X
+to deny the most important feature.  In general, for the steps between 5X and
+6X, the higher the step, the fewer features it indicates.
 
 [^spiral]: Regina Bridge Club.  [Spiral scanning after RKCB](https://reginabridge.com/content/conventions/Spiral%20scanning%20after%20RKCB.txt).  
 Neil H. Timm.  [Using Spiral Scan Bids with Jacoby 2NT](https://www.bridgewebs.com/ocala/Spiral%20Scan%20Bids%20after%20Jacoby%202NT.pdf).
@@ -49,15 +39,14 @@ all side kings.
 
 | -                   | Asking bid below 5X |
 |---------------------|---------------------|
-| 6X                  | No trump Q
-| 6X&minus;1          | Trump Q but no side kings
-| \[5X+1..6X&minus;2] | Trump Q and *this* king
-| 5NT                 | Trump Q and the king of X&minus;1
-| 5X                  | Trump Q and 2+ side kings
+| 5X                  | No trump Q
+| 6X                  | No trump Q but a useful void
+| \[5X+1..6X&minus;1] | Trump Q and *this* king
+| 5NT                 | Trump Q but no side kings
 
-If the asking bid is above 5X, we can only locate side kings but not count them.
-The cheapest step catches otherwise unallocated side kings.  This agreement
-makes further asking easier.
+If the asking bid is above 5X, the anti-spiral scan comes into play.  The
+cheapest step catches otherwise unallocated side kings.  This agreement makes
+further asking easier.
 
 | 5Z                  | Asking bid above 5X |
 |---------------------|---------------------|
