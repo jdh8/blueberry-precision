@@ -24,9 +24,9 @@ resolve where RKCB is.
 ## Anti-spiral scan
 
 Spiral scan[^spiral] is a relay scheme that maps lower steps to more important
-features. Anti-spiral scan, on the other hand, attempts signing off at 5X or 6X
-to deny the most important feature.  In general, for the steps between 5X and
-6X, the higher the step, the fewer features it indicates.
+features.  Anti-spiral scan, to a slam-forcing asking bid, attempts signing off
+at 6X to deny the most important feature.  In general, the higher the step, the
+fewer features it indicates.
 
 [^spiral]: Regina Bridge Club.  [Spiral scanning after RKCB](https://reginabridge.com/content/conventions/Spiral%20scanning%20after%20RKCB.txt).  
 Neil H. Timm.  [Using Spiral Scan Bids with Jacoby 2NT](https://www.bridgewebs.com/ocala/Spiral%20Scan%20Bids%20after%20Jacoby%202NT.pdf).
@@ -34,8 +34,8 @@ Neil H. Timm.  [Using Spiral Scan Bids with Jacoby 2NT](https://www.bridgewebs.c
 ## Asking for the trump queen
 
 To ask for the trump queen after 4Y+1 and 4Y+2, bid the cheapest step other than
-5X.  The asking bid is usually below 5X so that there is enough space to query
-all side kings.
+5X.  If the asking bid is below 5X, we can stop at 5X with neither the trump
+queen nor any useful void.
 
 | -                   | Asking bid below 5X |
 |---------------------|---------------------|
@@ -44,9 +44,9 @@ all side kings.
 | \[5X+1..6X&minus;1] | Trump Q and *this* king
 | 5NT                 | Trump Q but no side kings
 
-If the asking bid is above 5X, the anti-spiral scan comes into play.  The
-cheapest step catches otherwise unallocated side kings.  This agreement makes
-further asking easier.
+If the asking bid is above 5X, it is slam-forcing and the anti-spiral scan comes
+into play.  The cheapest step catches all unallocated side kings.  This
+agreement helps further asking.
 
 | 5Z                  | Asking bid above 5X |
 |---------------------|---------------------|
