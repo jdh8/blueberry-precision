@@ -1,7 +1,6 @@
 [book]
 authors = ["Chen-Pang He"]
 language = "en"
-multilingual = false
 src = "src"
 title = "Taipei Forcing Club System Notes"
 
