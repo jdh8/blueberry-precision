@@ -18,7 +18,14 @@ smart-punctuation = true
 "legacy/defense.html" = "https://jdh8.github.io/bridge-systems-1.0/defense.htm"
 "legacy/wj.html" = "https://jdh8.github.io/bridge-systems-1.0/wj.htm"
 
-[preprocessor.yapp]
+[preprocessor.replace]
+
+[preprocessor.replace.list]
+"♠" = "<span class='♠'>♠</span>"
+"♥" = "<span class='♥'>♥</span>"
+"♦" = "<span class='♦'>♦</span>"
+"♣" = "<span class='♣'>♣</span>"
+"(R)" = "<abbr title='relay'>(R)</abbr>"
 
 [preprocessor.abbr]
 

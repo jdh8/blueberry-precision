@@ -1,6 +1,6 @@
 # Introduction
 
-![&spades; &hearts; &diams; &clubs;](favicon.svg)
+![&spades; &hearts; &diams; &clubs;](favicon-2169f870.svg)
 
 This book is a collection of my bidding systems.  I have been studying forcing
 club systems since reading *Good, Better, Best* by Jan Eric Larsson, whose
