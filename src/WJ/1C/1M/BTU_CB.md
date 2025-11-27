@@ -93,7 +93,7 @@ minimum long clubs.  Otherwise, BTU checkback is forcing.
 | 3♣               | INV, 6+♣
 | 3♦               | INV, 6+♦
 | 3♥               | INV, S-SOL 6+♥
-| 3NT              | Choice of games, 5♥(332)
+| 3NT              | COG, 5♥(332)
 
 ## 1♣-1♠-1NT { #1C-1S-1NT }
 
@@ -125,4 +125,4 @@ minimum long clubs.  Otherwise, BTU checkback is forcing.
 | 3♦               | INV, 6+♦
 | 3♥               | INV, 4+♥, 6+♠
 | 3♠               | INV, S-SOL 6+♠
-| 3NT              | Choice of games, 5♠(332)
+| 3NT              | COG, 5♠(332)

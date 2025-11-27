@@ -14,7 +14,7 @@ of invitation with 5+ spades.
 | 3♣!  | INV, 6+♣, KQxxxx or better, usually 6--7 HCP
 | 3♦!  | FG FRAG, (31)(54)
 | 3♥!  | INV, 5+♠, 5+♥
-| 3♠!  | Choice of games, 5+♠, 5+♥
+| 3♠!  | COG, 5+♠, 5+♥
 | 3NT  | S/O
 | 4♣!  | Gerber BW
 | 4♦!  | Texas TRF, 6+♥

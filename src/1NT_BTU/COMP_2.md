@@ -68,4 +68,4 @@ Ignore the (2♣) overcall.  X replaces the Stayman 2♣ as usual.
 | 3♦!       | INV+, 5+♥
 | 3♥♠       | NF, 5+#
 | 3NT       | S/O
-| 4♣!       | Choice of games, 4+♠, 5+♥
+| 4♣!       | COG, 4+♠, 5+♥
