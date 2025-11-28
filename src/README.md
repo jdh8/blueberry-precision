@@ -56,7 +56,7 @@ usually self-explanatory in a bidding table.
 [abbr]: http://www.worldbridge.org/wp-content/uploads/2017/04/Guidetocompletion.pdf
 
 - **The comma (,)** works as **AND**.
-- **The period (.)** works as **OR**.
+- **The semicolon (;)** works as **OR**.
 - **The colon (:)** follows general description of the call.
 
 A notable example is the 1♣ opening in [Strawberry Polish Club](WJ.md).

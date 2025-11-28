@@ -6,10 +6,10 @@ of invitation with 5+ spades.
 
 | 1NT- | BAL 15--17 |
 |------|------------|
-| 2♣!  | STAY. Garbage STAY. INV 5=♠
+| 2♣!  | (Garbage) STAY; INV 5=♠
 | 2♦!  | TRF, 5+♥
 | 2♥!  | TRF, 5+♠
-| 2♠!  | INV or 6+♣.  S/T, 5+♣, 5+♦.
+| 2♠!  | INV; any 6+♣; S/T, 5+♣, 5+♦
 | 2NT! | 5+♦, 4+♣ or 6+♦
 | 3♣!  | INV, 6+♣, KQxxxx or better, usually 6--7 HCP
 | 3♦!  | FG FRAG, (31)(54)
@@ -25,7 +25,7 @@ of invitation with 5+ spades.
 
 ## Minor suit transfers
 
-| 1NT-2♠ | INV or 6+♣.  S/T, 5+♣, 5+♦. |
+| 1NT-2♠ | INV; any 6+♣; S/T, 5+♣, 5+♦ |
 |--------|-----------------------------|
 | 2NT    | MIN
 | 3♣!    | MAX, 1--3♣

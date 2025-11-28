@@ -93,7 +93,7 @@ default.  Rebidding the suit shows a natural suit.
 
 | 1♣ (1♥) X | 7+, 4+♠ |
 |-----------|---------|
-| 2♥!       | INV+, ask for stopper.  FG, 5+♥
+| 2♥!       | INV+, ask for stopper; FG, 5+♥
 | 3♥!       | FG, 5+♦, 5+♣
 
 ## Direct and transfer to 1NT
@@ -128,7 +128,7 @@ stopper.  It can also be a natural bid like 4SF.
 
 | 1♣ (1M) 1♠NT | Direct and TRF to 1NT |
 |--------------|-----------------------|
-| 2M!          | INV+, ask for stopper.  FG, 5+#
+| 2M!          | INV+, ask for stopper; FG, 5+#
 
 ## Responder passes
 
@@ -142,7 +142,7 @@ there are some quirks about cuebids:
 | 1♣ (1Y) P | - |
 |-----------|---|
 | P         | 12--17
-| X!        | 12--20, T/O.  21+, PEN
+| X!        | 12--20, T/O; 21+, PEN
 | 1Z        | 15--20, 4+#
 | 1NT       | 18--20, usually likely stop
 | 2♣        | 12--20, 5+♣
