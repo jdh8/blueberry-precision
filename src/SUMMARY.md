@@ -22,7 +22,6 @@
     - [BTU 3-way checkback](WJ/1D/1M/BTU_CB.md)
   - [Game-forcing 2♣](WJ/1D/2C.md)
   - [Flannery 2♥](WJ/1D/2H.md)
-  - [Unbalanced 2♠](WJ/1D/2S.md)
   - [Competing at the 1-level](WJ/1D/COMP_1.md)
   - [Competing at the 2-level](WJ/1D/COMP_2.md)
 - [Natural 1♥](WJ/1H.md)
