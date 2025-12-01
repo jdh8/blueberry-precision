@@ -12,7 +12,7 @@ relays in the 3-way checkback:
 
 As a corollary, natural 2X are wide-range invitations and 3X become slam tries.
 
-## 1♣-1♥-1♠ { #1C-1H-1S }
+## 1♣-1♥-1♠ {#1C-1H-1S}
 
 In this particular case of BTU checkback, opener can pass 1♣-1♥ 1♠-2♣ with
 minimum long clubs.  Otherwise, BTU checkback is forcing.
@@ -66,7 +66,7 @@ minimum long clubs.  Otherwise, BTU checkback is forcing.
 | 3♥              | INV, S-SOL 6+♥
 | 3♠              | INV, 4+♠, 5+♥
 
-## 1♣-1♥-1NT { #1C-1H-1NT }
+## 1♣-1♥-1NT {#1C-1H-1NT}
 
 | 1♣-1♥ 1NT- | BAL 12--14 |
 |------------|------------|
@@ -95,7 +95,7 @@ minimum long clubs.  Otherwise, BTU checkback is forcing.
 | 3♥               | INV, S-SOL 6+♥
 | 3NT              | COG, 5♥(332)
 
-## 1♣-1♠-1NT { #1C-1S-1NT }
+## 1♣-1♠-1NT {#1C-1S-1NT}
 
 | 1♣-1♠ 1NT- | BAL 12--14 |
 |------------|------------|

@@ -24,7 +24,7 @@ Opener often runs with clubs because it is hard for responder to do so.
 | XX        | 5+ suit
 | 2♣!       | 4+♣, 4+ another suit
 
-## 1NT (2♣) { #1NT(2C) }
+## 1NT (2♣) {#1NT(2C)}
 
 *Systems on* is a decent approach over 1NT (2♣︎).  The overcall is somewhat
 ignored, and X replaces the stolen bid of 2♣.  Since continuations to 1NT is

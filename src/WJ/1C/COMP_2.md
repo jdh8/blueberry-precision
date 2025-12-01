@@ -30,7 +30,7 @@ allows bidding a 5-card major regardless of strength.
 
 Deem this situation as [1NT (2♣)](../../1NT_BTU/COMP_2.md#1NT(2C)).
 
-## 1♣ (2♦♥♠) { #strawberry-adjunct }
+## 1♣ (2♦♥♠) {#strawberry-adjunct}
 
 [Rubinsohl](../../Rubinsohl.md) covers these auctions.  FunBridge also inspires
 the **Strawberry adjunct** over 1m (2M):

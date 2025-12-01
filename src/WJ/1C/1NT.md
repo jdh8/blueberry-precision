@@ -11,7 +11,7 @@ reference because it takes precedence over 1♣-2NT.
 | 2NT | 12+      | 2--3♠, 2--3♥, 3--4♦, 3--4♣
 | 3NT | 12--15   | 33(43)
 
-## 1♣-1NT { #1C-1NT }
+## 1♣-1NT {#1C-1NT}
 
 I took the artificial 2♦ relay from [FunBridge](https://funbridge.com).  I found
 it better than most Polish Club literature.
@@ -39,7 +39,7 @@ it better than most Polish Club literature.
 | 3♠!        | MAX, 6=♦
 | 3NT        | MAX, 2--4♦, 2--4♣
 
-## 1♣-2NT { #1C-2NT }
+## 1♣-2NT {#1C-2NT}
 
 | 1♣-2NT | INV 10--11 |
 |--------|------------|

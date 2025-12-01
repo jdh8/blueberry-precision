@@ -12,7 +12,7 @@ relays in the 3-way checkback:
 
 As a corollary, natural 2X are wide-range invitations and 3X become slam tries.
 
-## 1♦-1♥-1♠ { #1D-1H-1S }
+## 1♦-1♥-1♠ {#1D-1H-1S}
 
 | 1♦-1♥ 1♠- | 12--17, 4+♠ |
 |-----------|-------------|
@@ -57,7 +57,7 @@ As a corollary, natural 2X are wide-range invitations and 3X become slam tries.
 | 3♥              | INV, S-SOL 6+♥
 | 3♠              | INV, 4+♠, 5+♥
 
-## 1♦-1♥-1NT { #1D-1H-1NT }
+## 1♦-1♥-1NT {#1D-1H-1NT}
 
 | 1♦-1♥ 1NT- | BAL MIN |
 |------------|---------|
@@ -84,7 +84,7 @@ As a corollary, natural 2X are wide-range invitations and 3X become slam tries.
 | 3♦               | INV, 4+♦
 | 3♥               | INV, S-SOL 6+♥
 
-## 1♦-1♠-1NT { #1D-1S-1NT }
+## 1♦-1♠-1NT {#1D-1S-1NT}
 
 | 1♦-1♠ 1NT- | BAL MIN |
 |------------|---------|
