@@ -6,8 +6,9 @@ title = "Taipei Forcing Club System Notes"
 
 [output.html]
 additional-css = ["style.css"]
-git-repository-url = "https://github.com/jdh8/bridge-systems"
 site-url = "https://jdh8.github.io/bridge-systems/"
+git-repository-url = "https://github.com/jdh8/bridge-systems"
+edit-url-template = "https://github.com/jdh8/bridge-systems/edit/main/{path}"
 smart-punctuation = true
 
 [output.html.redirect]
