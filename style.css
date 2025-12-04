@@ -11,14 +11,19 @@ html {
 	hyphens: auto;
 }
 
+.♥,
+.♦ {
+	color: #d33;
+}
+
 .♠,
 .♣ {
 	color: var(--fg);
 }
 
-.♥,
-.♦ {
-	color: #d33;
+.chapter .♠,
+.chapter .♣ {
+	color: var(--sidebar-fg);
 }
 
 .table-wrapper {
