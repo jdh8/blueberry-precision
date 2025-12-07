@@ -8,32 +8,9 @@ Opener may rebid a 3-card minor due to protection from the impossible 2♠.
 | 2♦      | 5+♥, UNBAL 3+♦
 | 2♥      | MIN, 6+♥
 | 2♠      | MAX, 4+♠, 5+♥
-| 2NT     | MAX, 6=♥, ≤ ♥AJ9
+| 2NT     | MAX, non-SOL 6=♥
 | 3♣      | MAX, 5+♣, 4+♥
 | 3♦      | MAX, 5+♦, 5+♥
-| 3♥      | MAX, 6+♥, AJT+ or 7+♥
-| 3NT!    | MAX P/C, 6+♦♣, 4=♥
+| 3♥      | MAX, 6+♥, S-SOL or 7+♥
+| 3NT!    | MAX P/C, 6+♣, 4=♥
 | 3♠, 4♣♦ | MAX, 5+#, 6+♥
-
-The threshold of suit quality is based on [Binky Points][binky]:
-
-> ```
-> Holding     NT   Suit
->  KQJxxx   0.20   0.14
->  AT9xxx   0.13   0.14
->  KQJ9xx   0.21   0.19
->  AJxxxx   0.32   0.23
->  KQJTxx   0.29   0.26
->  KQJT9x   0.29   0.29
->  AJ9xxx   0.44   0.29
->  AJTxxx   0.57   0.40
->  AJT9xx   0.63   0.45
->  AQxxxx   0.76   0.52
->  AQ9xxx   0.86   0.57
->  AQTxxx   0.99   0.65
-> ```
->
-> ---[`holdings.new.txt`](https://bridge.thomasoandrews.com/valuations/data/holdings.new.txt),
-> Binky Points computed by Thomas Andrews in 2008
-
-[binky]: https://bridge.thomasoandrews.com/valuations/additive.html
