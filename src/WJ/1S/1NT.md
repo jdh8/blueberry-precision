@@ -11,7 +11,7 @@ which is one step away from 4♥.
 | 2♠     | 11--14, 6+♠
 | 2NT!   | 15--17, non-SOL 6=♠
 | 3♣♦♥   | 15--17, 5+#
-| 3♠     | 15--17, 7+♠ or S-SOL 6=♠
+| 3♠     | 15--17, 6+♠, S-SOL or 7+♠
 | 3NT!   | Gambling, 7+♠ AKQ, no outside A/K
 
 If you wish to invite with 4=♥, you are on the wrong path.  You should have

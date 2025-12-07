@@ -11,7 +11,7 @@ Opener is free to pass 1♥-1NT with a balanced minimum.  The best major fit at
 | 2♠     | 15--17, 4+♠
 | 2NT!   | 15--17, non-SOL 6=♥
 | 3♣♦    | 15--17, 5+#
-| 3♥     | 15--17, 7+♥ or S-SOL 6=♥
+| 3♥     | 15--17, 6+♥, S-SOL or 7+♥
 | 3♠     | 15--17, 4+♠, 6+♥
 | 3NT!   | Gambling, 7+♥ AKQ, no outside A/K
 
