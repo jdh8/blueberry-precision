@@ -39,3 +39,21 @@ The threshold of suit quality is based on [Binky Points][binky]:
 > Binky Points computed by Thomas Andrews in 2008
 
 [binky]: https://bridge.thomasoandrews.com/valuations/additive.html
+
+## Precision 2NT
+
+The invitational 2NT from Precision shows 6 cards in the bid major.  However, I
+had a hard time finding its continuations.  Therefore, I came up with the following
+responses to find better games, especially 4♥.
+
+| 1♠-1NT 2NT- | 15--17, 6=♠ |
+|-------------|-------------|
+| 3♣!         | PUP
+| 3♦!         | FG, 6+♦ or 5--6♥
+| 3♥          | FG, 6+♥
+
+| 1♠-1NT 2NT-3♣ | PUP |
+|---------------|-----|
+| 3♦-P          | S/O, 6+♦
+| 3♦-3♥         | S/O, 6+♥
+| 3♦-3♠+        | FG, 6+♣
