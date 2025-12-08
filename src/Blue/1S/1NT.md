@@ -14,7 +14,7 @@ Opener passes with balanced minimum.
 | 3NT!   | MAX P/C, 6+♣, 4=♠
 | 4X     | MAX, 5+#, 6+♠
 
-Just like [1♥-1NT](../1H/1NT.md), the threshold of suit quality is based on
-[Binky Points][binky].
+Just like [Strawberry 1♠-1NT](../../WJ/1S/1NT.md), the threshold of suit
+quality is based on [Binky Points][binky].
 
 [binky]: https://bridge.thomasoandrews.com/valuations/additive.html

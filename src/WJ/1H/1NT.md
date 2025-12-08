@@ -15,6 +15,11 @@ Opener is free to pass 1♥-1NT with a balanced minimum.  The best major fit at
 | 3♠     | 15--17, 4+♠, 6+♥
 | 3NT!   | Gambling, 7+♥ AKQ, no outside A/K
 
+Just like [1♠-1NT](../1S/1NT.md), the threshold of suit quality is based on
+[Binky Points][binky].
+
+[binky]: https://bridge.thomasoandrews.com/valuations/additive.html
+
 ## Impossible spades
 
 As 1NT denies 4+♠, the 2♠ rebid must be artificial.  The **impossible 2♠** is a
