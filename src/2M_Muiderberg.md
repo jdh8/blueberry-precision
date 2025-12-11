@@ -14,5 +14,7 @@ Muiderberg shows exactly 5 cards in the bid major and a side minor suit.
 |--------|----------|
 | 3♣     | MIN, 4+♣ |
 | 3♦     | MIN, 4+♦ |
-| 3♥!    | MAX, 4+♣ |
-| 3♠!    | MAX, 4+♦ |
+| 3♥!    | MAX, 4=♣ |
+| 3♠!    | MAX, 4=♦ |
+| 3NT!   | MAX, 5+♦ |
+| 4♣     | MAX, 5+♣ |
