@@ -5,9 +5,8 @@ Opener's reverses promise extra strength.
 
 | 1♥-2♣  | NAT FG |
 |--------|--------|
-| 2♦!    | MIN, 5=♥
-| 2♦-3NT | COG, ♥xx
-| 2♥     | MIN, 6+♥
+| 2♦!    | 4+♦ or BAL MIN
+| 2♥     | MIN, not BAL
 | 2♠     | MAX, 4+♠
 | 2NT    | BAL MAX
 | 3♣     | MAX, 4+♣
