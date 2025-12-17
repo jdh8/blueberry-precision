@@ -9,7 +9,7 @@ of invitation with 5+ spades.
 | 2♣!  | (Garbage) STAY; INV 5=♠
 | 2♦!  | TRF, 5+♥
 | 2♥!  | TRF, 5+♠
-| 2♠!  | INV; any 6+♣; S/T, 5+♣, 5+♦
+| 2♠!  | 6+♣; QUANT INV to 3NT; S/T, 5+♣, 4+♦
 | 2NT! | 5+♦, 4+♣ or 6+♦
 | 3♣!  | INV, 6+♣, KQxxxx or better, usually 6--7 HCP
 | 3♦!  | INV+, 5+♠, 5+♥
@@ -25,13 +25,13 @@ of invitation with 5+ spades.
 
 ## Minor suit transfers
 
-| 1NT-2♠ | INV; any 6+♣; S/T, 5+♣, 5+♦ |
-|--------|-----------------------------|
+| 1NT-2♠ | 6+♣; QUANT INV to 3NT; S/T, 5+♣, 4+♦ |
+|--------|--------------------------------------|
 | 2NT    | MIN
 | 3♣!    | MAX, 1--3♣
 | 3♦♥♠!  | MAX, 4--6♣, good stopper
 
-| 1NT-2NT | 5+♦, 5+♣ or 6+♦ |
+| 1NT-2NT | 5+♦, 4+♣ or 6+♦ |
 |---------|-----------------|
 | 3♣!     | 1--2♦
 | 3♦      | 3--4♦
