@@ -62,21 +62,8 @@ Standard QUANT usually invites the upper 1/2 to 2/3 of the opening range.  This
 
 ## Discussion on bidding 5-5 majors
 
-There are 3 ways to bid 5-5 majors in BTU 1NT: 3♥♠ and via transfers.  There is
-more than one version in BTU.  I am demonstrating my recommendation here step by
-step.
-
-There are 4 levels of 5-5 majors: weak, invitational, choice of games, and slam
-try.
-
-- **Weak:** transfer to the better major and pass.  Give up on the other one.
-- **Invitational:** anything goes except 3♠.
-- **FG+:** anything goes.
-
-Hands around the game level are prone to interference.  On the other hand,
-leaking opener's shape can be helpful in slam bidding.  As a result, I
-recommend the following bidding structure:
-
-- **Invitational:** 3♥
-- **Choice of games:** 3♠
-- **Slam try:** 2♥ and then 3♥
+- **Weak:**  Transfer to the better major suit.  Give up on the other one.
+- **Invitational:**  Bid 3♦.
+- **Choice of games:**  Bid 3♦ most of the time.  Transfer to spades and then
+  bid 4♥ if you prefer 4♠ > 4♥ > 3NT.
+- **Slam try:**  Transfer to spades and then bid 3♥.
