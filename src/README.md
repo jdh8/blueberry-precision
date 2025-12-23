@@ -1,6 +1,4 @@
-# Introduction
-
-![&spades; &hearts; &diams; &clubs;](favicon-6e871d7a.svg)
+# ![Blueberry Precision Club](favicon-6e871d7a.svg)
 
 I have been studying forcing club systems since reading *Good, Better, Best* by
 Jan Eric Larsson, whose simulations show that forcing club systems tend to
