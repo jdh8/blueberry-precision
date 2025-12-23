@@ -1,4 +1,4 @@
-# Blueberry Precision Club
+# Openings
 
 This bidding system is a modernized mix of Blue Club and Precision Club.
 Blueberry Precision Club also gets idea from:
