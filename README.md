@@ -1,4 +1,4 @@
-# [Blueberry Precision Club](https://jdh8.github.io/bridge-systems/)
+# [Blueberry Precision Club](https://jdh8.github.io/blueberry-precision/)
 
 ![♠ ♥ ♦ ♣](theme/favicon.svg)
 

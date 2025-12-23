@@ -6,18 +6,10 @@ title = "Blueberry Precision Club"
 
 [output.html]
 additional-css = ["style.css"]
-site-url = "https://jdh8.github.io/bridge-systems/"
-git-repository-url = "https://github.com/jdh8/bridge-systems"
-edit-url-template = "https://github.com/jdh8/bridge-systems/edit/main/{path}"
+site-url = "https://jdh8.github.io/blueberry-precision/"
+git-repository-url = "https://github.com/jdh8/blueberry-precision"
+edit-url-template = "https://github.com/jdh8/blueberry-precision/edit/main/{path}"
 smart-punctuation = true
-
-[output.html.redirect]
-"blue.htm" = "https://jdh8.github.io/bridge-systems-1.0/blue.htm"
-"defense.htm" = "https://jdh8.github.io/bridge-systems-1.0/defense.htm"
-"wj.htm" = "https://jdh8.github.io/bridge-systems-1.0/wj.htm"
-"legacy/blue.html" = "https://jdh8.github.io/bridge-systems-1.0/blue.htm"
-"legacy/defense.html" = "https://jdh8.github.io/bridge-systems-1.0/defense.htm"
-"legacy/wj.html" = "https://jdh8.github.io/bridge-systems-1.0/wj.htm"
 
 [preprocessor.replace]
 
