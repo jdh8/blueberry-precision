@@ -25,6 +25,6 @@
   - [Competing at the 2-level](2C/COMP_2.md)
 - [Multi 2♦](2D.md)
 - [Lyric 2♥](2H.md)
-- [Muiderberg 2M](2M.md)
+- [Muiderberg 2♠](2S.md)
 - [Unusual 2NT opening](2NT.md)
 - [BTU Namyats](4X.md)
