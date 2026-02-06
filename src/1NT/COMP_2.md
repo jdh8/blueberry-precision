@@ -55,7 +55,7 @@ Ignore the (2♣) overcall.  X replaces the Stayman 2♣ as usual.
 
 ## 1NT (2♦♥♠)
 
-Rubinsohl covers these auctions.  Similar to Rubens advances, the transfer
+**Rubinsohl** covers these auctions.  Similar to Rubens advances, the transfer
 structure helps saving bidding space. Showing the suit faster also helps
 competition.
 
