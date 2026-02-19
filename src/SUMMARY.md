@@ -5,9 +5,7 @@
 
 - [Openings](Openings.md)
 - [Strong 1♣](1C.md)
-  - [Waiting 1♦](1C/1D.md)
-  - [Negative 1♥](1C/1H.md)
-  - [Positive 1♠, 1NT](1C/1SN.md)
+  - [Negative 1♦](1C/1D.md)
   - [Positive 2♣♦](1C/2CD.md)
 - [Natural 1♦](1D.md)
   - [Natural 1M](1D/1M.md)
