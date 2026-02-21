@@ -6,6 +6,7 @@
 - [Openings](Openings.md)
 - [Strong 1♣](1C.md)
   - [Negative 1♦](1C/1D.md)
+  - [Kokish 1♥](1C/1H.md)
   - [Positive 2♣♦](1C/2CD.md)
 - [Natural 1♦](1D.md)
   - [Natural 1M](1D/1M.md)
