@@ -16,7 +16,7 @@
 - [Natural 1♠](1S.md)
   - [Non-forcing 1NT](1S/1NT.md)
   - [Blueberry Jacoby 2NT](1S/2NT.md)
-- [BTU 1NT](1NT.md)
+- [Weak 1NT](1NT.md)
   - [BTU Stayman 2♣](1NT/2C.md)
   - [BTU transfers 2♦♥](1NT/2R.md)
   - [Competitive bidding](1NT/COMP_2.md)

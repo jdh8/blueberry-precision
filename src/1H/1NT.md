@@ -4,8 +4,7 @@ Opener may rebid a 3-card minor due to protection from the impossible 2♠.
 
 | 1♥-1NT  | CONST--INV, 0--3♠, 0--3♥ |
 |---------|--------------------------|
-| 2♣      | 5+♥, 3+♣ or BAL 13--15
-| 2♦      | 5+♥, UNBAL 3+♦
+| 2♣♦     | UNBAL 3+#, 5+♥
 | 2♥      | MIN, 6+♥
 | 2♠      | MAX, 4+♠, 5+♥
 | 2NT     | MAX, 6=♥, ≤ ♥AJ9

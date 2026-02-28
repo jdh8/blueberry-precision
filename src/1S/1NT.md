@@ -4,8 +4,7 @@ Opener passes with balanced minimum.
 
 | 1♠-1NT | CONST--INV, 0--3♠ |
 |--------|-------------------|
-| 2♣     | 5+♠, 4+♣ or BAL 13--15
-| 2♦♥    | 5+♠, 4+#
+| 2♣♦♥   | 5+♠, 4+#
 | 2♠     | MIN, 6+♠
 | 2NT!   | MAX, 6=♠, ≤ ♠AJ9
 | 3♣     | MAX, 5+♣, 4+♠
