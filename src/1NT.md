@@ -22,10 +22,9 @@ invitational 5= spades.  Puppet Stayman 3♣ forces to game and queries 5 and
 | 3♥!  | SPL, 0--1♥, 0--3♠, 4--6♦, 4--6♣
 | 3♠!  | SPL, 0--1♠, 0--3♥, 4--6♦, 4--6♣
 | 3NT  | S/O
-| 4♣!  | S/T, 5+♣, 5+♦
-| 4♦!  | Texas TRF, 6+♥
-| 4♥!  | Texas TRF, 6+♠
-| 4♠!  | F QUANT
+| 4♣!  | TRF, 6+♥, South African Texas
+| 4♦!  | TRF, 6+♠, South African Texas
+| 4♥♠  | S/O
 | 4NT  | QUANT INV to 6NT, NF
 | 5NT  | QUANT INV to 7NT, F
 
@@ -75,25 +74,3 @@ Both Staymans come into range when responder has game-forcing values.
 | 3♦-4♦!  | COG, 44(xx)
 | 3♥♠     | 5=#
 | 3NT     | 2--3♠, 2--3♥
-
-## BTU QUANT scheme
-
-BTU reuses 4♠ for QUANT.  This fills the blank Texas leaves.  Standard QUANT
-usually invites the upper 1/2 to 2/3 of the opening range.  This 4♠ serves as a
-narrower QUANT than 4NT or 5NT by only inviting the top 1/3.
-
-| 1NT-4NT- | QUANT INV to 6NT |
-|----------|------------------|
-| 6NT      | S/O, 14--15 HCP  |
-
-| 1NT-5NT- | QUANT INV to 7NT |
-|----------|------------------|
-| 6NT      | S/O, 13 HCP      |
-| 7NT      | S/O, 14--15 HCP  |
-
-| 1NT-4♠-  | F QUANT |
-|----------|---------|
-| 4NT      | 13--14 HCP
-| 4NT-5NT! | F to a 5-card suit or 6NT
-| 4NT-7♣!  | P/C to a 5-card suit or 7NT
-| 6NT      | 15 HCP
