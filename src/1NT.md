@@ -15,7 +15,7 @@ invitational 5= spades.  Puppet Stayman 3♣ forces to game and queries 5 and
 | 2♣!  | (Garbage) STAY or INV 5=♠
 | 2♦!  | TRF, 5+♥
 | 2♥!  | TRF, 5+♠
-| 2♠!  | 6+♣ or BAL INV
+| 2♠!  | 6+♣ or QUANT INV
 | 2NT! | 5+♦, 4+♣ or 6+♦
 | 3♣!  | PUP STAY
 | 3♦!  | INV+, 5+♠, 5+♥
@@ -47,8 +47,8 @@ Both Staymans come into range when responder has game-forcing values.
 
 ## Minor suit transfers
 
-| 1NT-2♠- | 6+♣ or BAL INV |
-|---------|----------------|
+| 1NT-2♠- | 6+♣ or QUANT INV |
+|---------|------------------|
 | 2NT     | MIN
 | 3♣!     | MAX, 1--3♣
 | 3♣-3♦!  | FG PUP STAY
