@@ -17,7 +17,7 @@ invitational 5= spades.  Puppet Stayman 3♣ forces to game and queries 5 and
 | 2♥!  | TRF, 5+♠
 | 2♠!  | 6+♣ or BAL INV
 | 2NT! | 5+♦, 4+♣ or 6+♦
-| 3♣!  | FG PUP STAY
+| 3♣!  | PUP STAY
 | 3♦!  | INV+, 5+♠, 5+♥
 | 3♥!  | SPL, 0--1♥, 0--3♠, 4--6♦, 4--6♣
 | 3♠!  | SPL, 0--1♠, 0--3♥, 4--6♦, 4--6♣
@@ -51,7 +51,7 @@ Both Staymans come into range when responder has game-forcing values.
 |---------|----------------|
 | 2NT     | MIN
 | 3♣!     | MAX, 1--3♣
-| 3♣-3♦!  | Ask for 5-card major
+| 3♣-3♦!  | FG PUP STAY
 | 3♣-3♥♠! | SPL, 0--1#
 | 3♦♥♠!   | MAX, 4--6♣, good stopper
 
@@ -64,13 +64,12 @@ Both Staymans come into range when responder has game-forcing values.
 
 ## Puppet Stayman at 3♣
 
-| 1NT-3♣- | FG PUP STAY |
-|---------|-------------|
-| 3♦!     | 4=♠ or 4=♥
+| 1NT-3♣- | PUP STAY |
+|---------|----------|
+| 3♦!     | 2--4♠, 2--4♥
 | 3♦-3♥!  | Smolen TRF, 4=♠
 | 3♦-3♠!  | Smolen TRF, 4=♥
 | 3♦-3NT  | S/O
 | 3♦-4♣!  | S/T, 44(xx)
 | 3♦-4♦!  | COG, 44(xx)
 | 3♥♠     | 5=#
-| 3NT     | 2--3♠, 2--3♥
