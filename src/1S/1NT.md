@@ -16,4 +16,4 @@ Opener passes with balanced minimum.
 Just like [Strawberry 1♠-1NT](https://polish.club/1S/1NT.html), the threshold of
 suit quality is based on [Binky Points][binky].
 
-[binky]: https://bridge.thomasoandrews.com/valuations/additive.html
+[binky]: https://bridge.thomasoandrews.com/bridge/valuations/additive.html

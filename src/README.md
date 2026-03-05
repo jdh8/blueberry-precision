@@ -16,7 +16,7 @@ system.  It is highly experimental and subject to change without notice.
   = 1, subtract 1 for each short suit with HCP)
 - **Zar:** 6-4-2-1 + Zar distribution points (a + b + a - d, where the
   letters are the number of cards from the longest to the shortest suit)
-- [**Fifths**](https://bridge.thomasoandrews.com/valuations/cardvaluesfor3nt.html):
+- [**Fifths**](https://bridge.thomasoandrews.com/bridge/valuations/cardvaluesfor3nt.html):
   4.0--2.8--1.8--1.0--0.4, adjusted HCP for notrump contracts especially 3NT
 - **BUM-RAP:** 4.5--3--1.5--0.75--0.25, adjusted HCP for suit contracts
 - **NLTC:** Count 1.5--1.0--0.5 losers for each missing AKQ
@@ -59,7 +59,7 @@ A notable example is the 1♣ opening in [Strawberry Polish Club](WJ.md).
 
 - Jan Eric Larsson.  *Good, Better, Best: A comparison of bridge bidding
   systems and conventions by computer simulation*.  ISBN 978-1771402415
-- Thomas Andrews.  [Thomas's Bridge Fantasia](https://bridge.thomasoandrews.com/valuations/)
+- Thomas Andrews.  [Thomas's Bridge Fantasia](https://bridge.thomasoandrews.com/bridge/valuations/)
 - Bridge Base.  [GIB Bid Descriptions][GIB]
 
 ### Precision Club

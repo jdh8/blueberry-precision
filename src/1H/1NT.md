@@ -17,4 +17,4 @@ Opener may rebid a 3-card minor due to protection from the impossible 2♠.
 Just like [Strawberry 1♠-1NT](https://polish.club/1S/1NT.html), the threshold of
 suit quality is based on [Binky Points][binky].
 
-[binky]: https://bridge.thomasoandrews.com/valuations/additive.html
+[binky]: https://bridge.thomasoandrews.com/bridge/valuations/additive.html
