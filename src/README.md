@@ -14,8 +14,6 @@ subject to change without notice.
 - **HCP:** the well-known Milton Work's 4321 count
 - **Total points:** HCP + distribution points (void = 3, singleton = 2, doubleton
   = 1, subtract 1 for each short suit with HCP)
-- **Zar:** 6-4-2-1 + Zar distribution points (a + b + a - d, where the
-  letters are the number of cards from the longest to the shortest suit)
 - [**Fifths**](https://bridge.thomasoandrews.com/bridge/valuations/cardvaluesfor3nt.html):
   4.0--2.8--1.8--1.0--0.4, adjusted HCP for notrump contracts especially 3NT
 - **BUM-RAP:** 4.5--3--1.5--0.75--0.25, adjusted HCP for suit contracts
