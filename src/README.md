@@ -14,8 +14,8 @@ subject to change without notice.
 - **BUM-RAP:** 4.5--3--1.5--0.75--0.25, adjusted HCP for suit contracts
 - **NLTC:** Count 1.5--1.0--0.5 losers for each missing AKQ
 
-NLTC is a good single hand evaluator but not very additive.  It suits preemptive
-initial actions but not for showing supports.  I wrote a [blog article][nltc] on
+NLTC is a good single-hand evaluator but not very additive.  It suits preemptive
+initial actions but not for showing support.  I wrote a [blog article][nltc] on
 that topic.
 
 [nltc]: https://jdh8.org/nltc-a-good-single-hand-evaluator/
@@ -31,18 +31,18 @@ I evaluate stopper quality as [GIB] does.
 
 [GIB]: https://www.bridgebase.com/doc/gib_descriptions.php
 
-## Punctuations
+## Punctuation
 
 Descriptions in bidding tables are dense in information.  To make them concise,
 I use [abbreviations suggested by WBF][abbr].  Besides, for natural reading
-flow, I use usual punctuation marks to connect conditions.  Their meanings are
+flow, I use common punctuation marks to connect conditions.  Their meanings are
 usually self-explanatory in a bidding table.
 
 [abbr]: http://www.worldbridge.org/wp-content/uploads/2017/04/Guidetocompletion.pdf
 
 - **The comma (,)** works as **AND**.
 - **The semicolon (;)** works as **OR**.
-- **The colon (:)** follows general description of the call.
+- **The colon (:)** follows the general description of the call.
 
 A notable example is the [1♣ opening in *Strawberry Polish Club*](https://polish.club/Openings.html).
 
