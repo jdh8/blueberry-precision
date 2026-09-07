@@ -9,7 +9,7 @@ I advise not opening 2NT for (30)55 in the first two seats.
 |---------|---------------|
 | 3♣♦     | S/O
 | 3♥!     | (R) FG
-| 3♠!     | PUP, S/T or UNBAL INV
+| 3♠!     | PUP, (S/T or UNBAL INV)
 | 3NT, 4X | S/O
 | 4NT!    | Equal preference between 5♣♦
 

@@ -12,11 +12,11 @@ invitational 5= spades.  Puppet Stayman 3♣ forces to game and queries 5 and
 
 | 1NT- | BAL 13--15 |
 |------|------------|
-| 2♣!  | (Garbage) STAY or INV 5=♠
+| 2♣!  | STAY or Garbage STAY or INV 5=♠
 | 2♦!  | TRF, 5+♥
 | 2♥!  | TRF, 5+♠
 | 2♠!  | 6+♣ or QUANT INV
-| 2NT! | 5+♦, 4+♣ or 6+♦
+| 2NT! | (5+♦, 4+♣) or 6+♦
 | 3♣!  | PUP STAY
 | 3♦!  | INV+, 5+♠, 5+♥
 | 3♥!  | SPL, 0--1♥, 0--3♠, 4--6♦, 4--6♣
@@ -55,8 +55,8 @@ Both Staymans come into range when responder has game-forcing values.
 | 3♣-3♥♠! | SPL, 0--1#
 | 3♦♥♠!   | MAX, 4--6♣, good stopper
 
-| 1NT-2NT- | 5+♦, 4+♣ or 6+♦ |
-|----------|-----------------|
+| 1NT-2NT- | (5+♦, 4+♣) or 6+♦ |
+|----------|-------------------|
 | 3♣!      | 1--2♦
 | 3♦       | 3--4♦
 | 3♥♠!     | 5--6♦, good stopper
