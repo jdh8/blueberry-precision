@@ -20,28 +20,14 @@ Looking for a chapter that is missing here?  These methods are covered in
 
 See [Openings](Openings.md) for Blueberry's opening meanings and ranges.
 
-## Punctuation
+## Notation
 
-Descriptions in bidding tables are dense in information.  To make them concise,
-I use [abbreviations suggested by WBF][abbr] in tables and words in paragraphs.
-Familiar convention names such as RKCB stay abbreviated in paragraphs too.
-Strength ranges and suit lengths keep their compact notation.
+This book follows *Strawberry Polish Club* for [hand evaluation][eval],
+[bidding notation][notation], and [punctuation][punct] in tables and prose.
 
-[abbr]: http://www.worldbridge.org/wp-content/uploads/2017/04/Guidetocompletion.pdf
-
-- **All conditions:** write `A and B` or `A, B`; for longer lists, write
-  `A, B, and C` or `A, B, C`.  For example, `INV, 9--11, 6+♣`.
-- **Alternatives:** write every `or` explicitly: `A or B or C`.
-- **Grouping:** use parentheses when mixing conditions and alternatives.
-  `FG, (5+♥ or BAL 13+)` is game-forcing with either hearts or a strong balanced
-  hand.  `(5+♦, 4+♣) or 6+♦` describes two cases.
-- **Long alternatives:** keep separate lines, with an explicit `or` between
-  alternatives.  Colons and semicolons have their ordinary punctuation meanings.
-
-Parentheses within shapes such as `33(43)` still identify suits whose lengths
-may swap order.  Compact suit notation and the `(R)` relay tag are unchanged.
-
-A notable example is the [1♣ opening in *Strawberry Polish Club*](https://polish.club/Openings.html).
+[eval]: https://polish.club/#hand-evaluation
+[notation]: https://polish.club/#bidding-notation
+[punct]: https://polish.club/#punctuation
 
 ## References
 
