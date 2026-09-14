@@ -4,32 +4,21 @@ Blueberry Precision Club is a modernized Precision Club mixing new ideas from
 BTU.  It is a 5-card major strong club system.  It is highly experimental and
 subject to change without notice.
 
-## Hand evaluation
+## Shared methods
 
-- **HCP:** the well-known Milton Work's 4321 count
-- **Total points:** HCP + distribution points (void = 3, singleton = 2, doubleton
-  = 1, subtract 1 for each short suit with HCP)
-- [**Fifths**](https://bridge.thomasoandrews.com/bridge/valuations/cardvaluesfor3nt.html):
-  4.0--2.8--1.8--1.0--0.4, adjusted HCP for notrump contracts especially 3NT
-- **BUM-RAP:** 4.5--3--1.5--0.75--0.25, adjusted HCP for suit contracts
-- **NLTC:** Count 1.5--1.0--0.5 losers for each missing AKQ
+Looking for a chapter that is missing here?  These methods are covered in
+[Strawberry Polish Club](https://polish.club/):
 
-NLTC is a good single-hand evaluator but not very additive.  It suits preemptive
-initial actions but not for showing support.  I wrote a [blog article][nltc] on
-that topic.
+- [1♥](https://polish.club/1H.html) and [1♠](https://polish.club/1S.html):
+  Polish 11--16 variants are just one point higher than our **11--15**.
+- [1NT and its continuations](https://polish.club/1NT.html): adjust strength
+  requirements from 15--17 to our **13--15**.
+- [Multi 2♦](https://polish.club/2D.html)
+- [Muiderberg 2♠](https://polish.club/2M.html)
+- [Unusual 2NT](https://polish.club/2NT.html)
+- [BTU Namyats](https://polish.club/4X.html)
 
-[nltc]: https://jdh8.org/nltc-a-good-single-hand-evaluator/
-
-### Stopper
-
-I evaluate stopper quality as [GIB] does.
-
-- **Partial stop:** length + HCP = 4
-- **Likely stop:** length + HCP = 5
-- **Stop:** A or QJx or length + HCP at least 7
-- **Two stops:** length + HCP at least 8
-
-[GIB]: https://www.bridgebase.com/doc/gib_descriptions.php
+See [Openings](Openings.md) for Blueberry's opening meanings and ranges.
 
 ## Punctuation
 
@@ -61,7 +50,7 @@ A notable example is the [1♣ opening in *Strawberry Polish Club*](https://poli
 - Jan Eric Larsson.  *Good, Better, Best: A comparison of bridge bidding
   systems and conventions by computer simulation*.  ISBN 978-1771402415
 - Thomas Andrews.  [Thomas's Bridge Fantasia](https://bridge.thomasoandrews.com/bridge/valuations/)
-- Bridge Base.  [GIB Bid Descriptions][GIB]
+- Bridge Base.  [GIB Bid Descriptions](https://www.bridgebase.com/doc/gib_descriptions.php)
 
 ### Precision Club
 
