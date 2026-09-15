@@ -11,6 +11,10 @@ html {
 	hyphens: auto;
 }
 
+th {
+	text-align: left;
+}
+
 .♥,
 .♦ {
 	color: #d33;
@@ -19,11 +23,6 @@ html {
 .♠,
 .♣ {
 	color: var(--fg);
-}
-
-.chapter .♠,
-.chapter .♣ {
-	color: var(--sidebar-fg);
 }
 
 .table-wrapper {
