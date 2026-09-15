@@ -1,7 +1,5 @@
 [book]
 authors = ["Chen-Pang He"]
-language = "en"
-src = "src"
 title = "Blueberry Precision Club"
 
 [output.html]
