@@ -10,7 +10,7 @@ Looking for a chapter that is missing here?  These methods are covered in
 [Strawberry Polish Club](https://polish.club/):
 
 - [1♥](https://polish.club/1H.html) and [1♠](https://polish.club/1S.html):
-  Polish 11--16 variants are just one point higher than our **11--15**.
+  Polish 11--16 variants are just one point higher than our **10--15**.
 - [1NT and its continuations](https://polish.club/1NT.html): adjust strength
   requirements from 15--17 to our **13--15**.
 - [Multi 2♦](https://polish.club/2D.html)
