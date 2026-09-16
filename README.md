@@ -1,5 +1,6 @@
 # Blueberry Precision Club
 
-Blueberry Precision Club is a modernized Precision Club mixing new ideas from
-BTU.  It is a 5-card major strong club system.  It is highly experimental and
-subject to change without notice.
+A modernized Precision Club mixing new ideas from BTU.
+Read it at <https://jdh8.github.io/blueberry-precision/>.
+
+Build locally with `mdbook serve`.
