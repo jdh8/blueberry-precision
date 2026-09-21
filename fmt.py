@@ -4,7 +4,7 @@
 Column width is the widest body cell.  Header cells are exempt and overhang,
 keeping the first column narrow under long auction headers.  A last column
 that no body row supplies (body rows ending without a pipe) gets a fixed
-`---`, having nothing to align to.  Alignment colons in the separator are
+`---`, having nothing to align to, or `-` under an empty header cell.  Alignment colons in the separator are
 preserved and applied to the body.
 
 Whitespace only, and idempotent.  Run it by hand after editing tables.
@@ -52,9 +52,11 @@ def fmt(path):
             for c, closed in body:
                 if k < len(c) - (0 if closed else 1) and '<br>' not in c[k]:
                     w[k] = max(w[k], len(c[k].strip()) + 2)
-        # a last column no body row supplies has nothing to align to
+        # a last column no body row supplies has nothing to align to;
+        # an empty header cell above it collapses to a single dash
         if not any(closed for _, closed in body) and body:
-            w[n - 1] = 3
+            hdr, _ = cells(out[-1])
+            w[n - 1] = 1 if n - 1 < len(hdr) and not hdr[n - 1].strip() else 3
 
         out.append('|' + '|'.join(sep_cell(sep[k], w[k]) for k in range(n)) + '|')
         for c, closed in body:

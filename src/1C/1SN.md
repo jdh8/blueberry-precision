@@ -3,8 +3,8 @@
 Opener can always rebid naturally below 2NT.  Rebids of 2NT and above show both
 extra strength and more specific distribution.
 
-| 1♣ - 1♠ - | FG, 5+♠ |
-|------|---|
+| 1♣ - 1♠ - | |
+|------|-|
 | 1NT  | (R)
 | 2♣♦♥ | 5+#
 | 2♠   | 3+♠, not 3444
@@ -12,8 +12,8 @@ extra strength and more specific distribution.
 | 3♣!  | 16--18, 5+♣, 5+♥
 | 3♦!  | 16--18, 5+♦, 5+♥
 
-| 1♣ - 1NT - | FG, 5+♥ |
-|------|---|
+| 1♣ - 1NT - | |
+|------|-|
 | 2♣!  | (R)
 | 2♦   | 5+♦
 | 2♥   | 3+♥, not 4344
