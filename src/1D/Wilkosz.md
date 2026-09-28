@@ -26,8 +26,30 @@ minor suit openings, but it calls for the legal precautions above.
 | (1♦) 2♦ - | |
 |-----------|-|
 | 2♥♠!, 3♣! | P/C
-| 2NT!      | FG, ask for the lower suit
+| 2NT!      | (R) FG
 | 3♦!       | INV+, 2+♠, 2+♥
-| 3♥♠!, 4♣! | PRE P/C
+| 3♥♠!      | PRE P/C
 | 3NT, 4♥♠  | NAT
-| 4♦!       | FG, 3+♠, 3+♥
+| 4♣!       | STR COG
+| 4♦!       | PRE COG
+
+| (1♦) 2♦ - 2NT - | |
+|---------|-|
+| 3♣      | 5+♣, 5+♠♥
+| 3♣ - 3♦ | Ask for the major suit
+| 3♦      | 5+♦, 5+♥
+| 3♥      | 5+♥, 5+♠
+| 3♠      | 5+♠, 5+♦
+
+There are two kinds of choice of games:
+
+- **4♣** by strength
+- **4♦** by distribution
+
+Such distinction helps judging how to react to interference.  Besides, 4♣ lets
+the strong hand declare.  On the other hand, 4♦ closes the auction ASAP.
+
+| (1♦) 2♦ - 4♣ - | |
+|-----|-|
+| 4♦! | TRF, 5+♥
+| 4♥! | TRF, 5+♠
