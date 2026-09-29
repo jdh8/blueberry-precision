@@ -9,16 +9,15 @@ subject to change without notice.
 Looking for a chapter that is missing here?  These methods are covered in
 [Strawberry Polish Club](https://polish.club/):
 
-- [1♥](https://polish.club/1H.html) and [1♠](https://polish.club/1S.html):
-  Polish 11--16 variants are just one point higher than our **10--15**.
-- [1NT and its continuations](https://polish.club/1NT.html): adjust strength
-  requirements from 15--17 to our **14--16**.
+- [1♥](https://polish.club/1H.html), [1♠](https://polish.club/1S.html),
+  [1NT](https://polish.club/1NT.html)
 - [Multi 2♦](https://polish.club/2D.html)
 - [Muiderberg 2♠](https://polish.club/2M.html)
 - [Unusual 2NT](https://polish.club/2NT.html)
 - [BTU Namyats](https://polish.club/4X.html)
 
-See [Openings](Openings.md) for Blueberry's opening meanings and ranges.
+Polish 1♥, 1♠, and 1NT ranges are 1 point higher than our **10--15** majors and
+**14--16** 1NT.  See [opening meanings and ranges](Openings.md) in this system.
 
 ## Notation
 
