@@ -12,7 +12,7 @@ Looking for a chapter that is missing here?  These methods are covered in
 - [1♥](https://polish.club/1H.html) and [1♠](https://polish.club/1S.html):
   Polish 11--16 variants are just one point higher than our **10--15**.
 - [1NT and its continuations](https://polish.club/1NT.html): adjust strength
-  requirements from 15--17 to our **13--15**.
+  requirements from 15--17 to our **14--16**.
 - [Multi 2♦](https://polish.club/2D.html)
 - [Muiderberg 2♠](https://polish.club/2M.html)
 - [Unusual 2NT](https://polish.club/2NT.html)
