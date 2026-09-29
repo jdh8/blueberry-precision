@@ -26,3 +26,12 @@
 - **17--19:** 1♣ - 1♦ - 1NT
 - **20--23:** 1♣ - 1♦ - 1♥ - 1♠ - 1NT
 - **24+:** 1♣ - 1♦ - 1♥ - 1♠ - 2NT
+
+## Opening floors
+
+The 1♦ opening is picky about 10-counts.  Pass an ordinary balanced 10-count
+even with a five-card minor.  An unbalanced 10-count opens only with extra
+playing strength, such as useful shortness or a strong long suit.
+
+The range says what we may open, not what we must.  A hand worth neither an
+opening nor a preempt simply passes.
