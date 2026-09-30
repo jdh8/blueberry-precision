@@ -16,8 +16,9 @@ Looking for a chapter that is missing here?  These methods are covered in
 - [Unusual 2NT](https://polish.club/2NT.html)
 - [BTU Namyats](https://polish.club/4X.html)
 
-Polish 1♥, 1♠, and 1NT ranges are 1 point higher than our **10--15** majors and
-**14--16** 1NT.  See [opening meanings and ranges](Openings.md) in this system.
+Polish 1♥ and 1♠ are 1 point higher than our **10--15**, and 1NT is 2 points
+higher than our **13--15**.  See [opening meanings and ranges](Openings.md) in
+this system.
 
 ## Notation
 
