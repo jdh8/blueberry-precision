@@ -38,8 +38,8 @@ agreement.
 
 With the user's stated preference to retain 1♦ on 4=4=1=4, the relevant candidate is:
 
-- **1♦: 10–15 HCP, 1+♦**, otherwise retaining its existing catch-all role.
-- **2♣: 10–15 HCP, 6+♣ or precisely 4=4=0=5.**
+- **1♦: 11–15 HCP, 1+♦**, otherwise retaining its existing catch-all role.
+- **2♣: 11–15 HCP, 6+♣ or precisely 4=4=0=5.**
 
 This is a proposed adaptation, not an implemented change. Its shape logic is independent of the historical system: when neither major has five cards and clubs have at most five, a diamond void forces 4+4+5 in the other suits. Therefore 4=4=0=5 is the only additional shape that needs to leave 1♦ to remove the diamond-void possibility. Six-card club hands already have 2♣ available. The singleton shapes 4=4=1=4, 4=3=1=5 and 3=4=1=5 can remain in 1♦.
 
