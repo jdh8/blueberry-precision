@@ -39,6 +39,8 @@ This book follows *Strawberry Polish Club* for [hand evaluation][eval],
 
 ### Precision Club
 
+- Adam Meyerson and Samuel Ieong.
+  [*IMprecision*](http://www.infobridge.it/Sistemi_IMprecision.pdf)
 - Daniel Neill.  *Standard Modern Precision: Getting from Here to There*.  ISBN
   978-1771401791
 - Edward Piwowar.
