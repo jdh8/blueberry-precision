@@ -1,12 +1,12 @@
-# Positive 2♠, 2NT
+# Three-suited 2♠, 2NT
 
 I group these 4441 responses together for simplicity.  Opener relays at the
 cheapest step to ask for the singleton.
 
 | 1♣ - | |
 |------|-|
-| 2♠!  | FG, 8--12, (4441)
-| 2NT! | S/T, 13+, (4441)
+| 2♠!  | FG, 8--11, (4441)
+| 2NT! | S/T, 12+, (4441)
 
 ## 1♣ - 2♠
 
