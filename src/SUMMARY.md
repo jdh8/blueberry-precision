@@ -8,7 +8,7 @@
   - [Negative 1♦](1C/1D.md)
   - [Kokish 1♥](1C/1H.md)
   - [Positive 2♣♦](1C/2CD.md)
-  - [Positive 2♥](1C/2H.md)
+  - [Minors 2♥](1C/2H.md)
   - [Three-suited 2♠, 2NT](1C/2SN.md)
 - [Catchall 1♦](1D.md)
   - [Wilkosz defense](1D/Wilkosz.md) 
