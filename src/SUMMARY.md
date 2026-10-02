@@ -8,6 +8,7 @@
   - [Negative 1♦](1C/1D.md)
   - [Kokish 1♥](1C/1H.md)
   - [Positive 2♣♦](1C/2CD.md)
+  - [Competitive bidding](1C/COMP.md)
 - [Catchall 1♦](1D.md)
   - [Wilkosz defense](1D/Wilkosz.md) 
 - [Precision 2♣](2C.md)
