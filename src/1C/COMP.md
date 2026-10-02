@@ -11,20 +11,6 @@ their hand in layers, something a limited 1NT opener never needs.
 Responder doubles with nothing and passes with middling values or a trap.
 Opener usually reopens with a relay double.
 
-## Over (X) or (1♦)
-
-Ignore the double.  Systems are on.
-
-Over (1♦), pass and double split the negative 1♦.  Other responses keep their
-meanings.  After either, opener rebids as after [1♣ - 1♦](1D.md).
-
-| 1♣ (1♦) | |
-|----|-|
-| P! | F, 5--7
-| X! | NEG, 0--4
-
-## Over (1♥) to (2♠)
-
 - **Pass:** forcing, 5--7 or a trap pass
 - **Double:** negative, 0--4
 - **Notrump at the lowest level:** forcing to game with a stopper
@@ -34,25 +20,53 @@ meanings.  After either, opener rebids as after [1♣ - 1♦](1D.md).
 
 These tables ignore what the overcall shows.  The suit it names is the cuebid.
 
+Viking keeps its system on over (X) and (1♦).  I don't.  These principles work
+at every level, and decent opponents put their strong hands into (X) and (1♦),
+which is where the uncontested system is least effective.
+
+(X) P is no longer forcing since opener may sit for 1♣x.  If responder cannot
+stand this, they should have bid the SOS XX before.
+
+| 1♣ (X) | |
+|----------|-|
+| P        | NF: 5--7 or to play
+| XX!      | NEG SOS, 0--4
+| 1♦♥♠     | INV, 5+#
+| 1NT      | FG, 8+
+| 2♣       | INV, 5+♣
+| 2♦♥♠, 3♣ | S/T, 6+#
+| 2NT!     | FG, 5+♦, 5+M
+
+| 1♣ (1♦) | |
+|---------|-|
+| P!      | F: 5--7 or PEN
+| X!      | NEG, 0--4
+| 1♥♠     | INV, 5+#
+| 1NT     | FG, with stopper
+| 2♣      | INV, 5+♣
+| 2♦!     | FG, no stopper
+| 2♥♠, 3♣ | S/T, 6+#
+| 2NT!    | FG, 5+♥, 5+♠
+
 | 1♣ (1♥) | |
 |---------|-|
 | P!      | F: 5--7 or PEN
 | X!      | NEG, 0--4
 | 1♠      | INV, 5+♠
-| 1NT     | FG, 8+, with stopper
+| 1NT     | FG, with stopper
 | 2♣♦     | INV, 5+#
-| 2♥!     | FG, 8+, no stopper
+| 2♥!     | FG, no stopper
 | 2♠, 3♣♦ | S/T, 6+#
-| 2NT!    | FG, 5--7, 5+♠, 5+♦
+| 2NT!    | FG, 5+♠, 5+♦
 
 | 1♣ (1♠) | |
 |------|-|
 | P!   | F: 5--7 or PEN
 | X!   | NEG, 0--4
-| 1NT  | FG, 8+, with stopper
+| 1NT  | FG, with stopper
 | 2♣♦♥ | INV, 5+#
-| 2♠!  | FG, 8+, no stopper
-| 2NT! | FG, 5--7, 5+♥, 5+♦
+| 2♠!  | FG, no stopper
+| 2NT! | FG, 5+♥, 5+♦
 | 3♣♦♥ | S/T, 6+#
 
 With no suit to cuebid, 1♣ (1NT) has no artificial game force.  Responder
@@ -63,7 +77,7 @@ passes the balanced ones and bids the long suit with the rest.
 | P!    | F: 5--7 or PEN
 | X!    | NEG, 0--4
 | 2♣♦♥♠ | INV, 5+#
-| 2NT!  | FG, 5--7, 5+♦, 5+ major
+| 2NT!  | FG, 5+♦, 5+M
 | 3♣♦♥♠ | S/T, 6+#
 
 | 1♣ (2♣) | |
@@ -71,8 +85,8 @@ passes the balanced ones and bids the long suit with the rest.
 | P!   | F: 5--7 or PEN
 | X!   | NEG, 0--4
 | 2♦♥♠ | INV, 5+#
-| 2NT  | FG, 8+, with stopper
-| 3♣!  | FG, 8+, no stopper
+| 2NT  | FG, with stopper
+| 3♣!  | FG, no stopper
 | 3♦♥♠ | S/T, 6+#
 
 | 1♣ (2♦) | |
@@ -80,9 +94,9 @@ passes the balanced ones and bids the long suit with the rest.
 | P!      | F: 5--7 or PEN
 | X!      | NEG, 0--4
 | 2♥♠     | INV, 5+#
-| 2NT     | FG, 8+, with stopper
+| 2NT     | FG, with stopper
 | 3♣      | INV, 5+♣
-| 3♦!     | FG, 8+, no stopper
+| 3♦!     | FG, no stopper
 | 3♥♠, 4♣ | S/T, 6+#
 
 | 1♣ (2♥) | |
@@ -90,24 +104,22 @@ passes the balanced ones and bids the long suit with the rest.
 | P!      | F: 5--7 or PEN
 | X!      | NEG, 0--4
 | 2♠      | INV, 5+♠
-| 2NT     | FG, 8+, with stopper
+| 2NT     | FG, with stopper
 | 3♣♦     | INV, 5+#
-| 3♥!     | FG, 8+, no stopper
+| 3♥!     | FG, no stopper
 | 3♠, 4♣♦ | S/T, 6+#
 
 | 1♣ (2♠) | |
 |------|-|
 | P!   | F: 5--7 or PEN
 | X!   | NEG, 0--4
-| 2NT  | FG, 8+, with stopper
+| 2NT  | FG, with stopper
 | 3♣♦♥ | INV, 5+#
-| 3♠!  | FG, 8+, no stopper
+| 3♠!  | FG, no stopper
 | 4♣♦♥ | S/T, 6+#
 
-## Over (2NT)
-
-No room is left for notrump or cuebids.  The 4-level transfers let the strong
-hand declare the major.
+No room is left for notrump or cuebids over (2NT).  The 4-level transfers let
+the strong hand declare the major.
 
 | 1♣ (2NT) | |
 |-----|-|
