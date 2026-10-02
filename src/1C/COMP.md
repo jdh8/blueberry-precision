@@ -9,6 +9,8 @@ I used to frown at forcing passes, but not anymore.  Unlike 1NT, 1♣ is
 unbounded in strength and shape, so opener never wants to sell out to an
 overcall at the 1- or 2-level.  Responder passes with middling values or a trap
 and doubles with nothing.  Opener reopens with an optional takeout double.
+We force to game whenever we see a combined 24, so 8+ facing 16+ is
+enough.
 
 ## Over (X) or (1♦)
 
@@ -19,13 +21,13 @@ meanings.  After either, opener rebids as after [1♣ - 1♦](1D.md).
 
 | 1♣ (1♦) | |
 |----|-|
-| P! | F, 6--8
-| X! | NEG, 0--5
+| P! | F, 5--7
+| X! | NEG, 0--4
 
 ## Over (1♥) to (2♠)
 
-- **Pass:** forcing, 6--8 or a trap pass
-- **Double:** negative, 0--5
+- **Pass:** forcing, 5--7 or a trap pass
+- **Double:** negative, 0--4
 - **Notrump at the lowest level:** forcing to game with a stopper
 - **Cuebid:** forcing to game without a stopper
 - **New suit:** invitational, 5+ cards
@@ -35,22 +37,22 @@ These tables ignore what the overcall shows.  The suit it names is the cuebid.
 
 | 1♣ (1♥) | |
 |---------|-|
-| P!      | F: 6--8 or PEN
-| X!      | NEG, 0--5
+| P!      | F: 5--7 or PEN
+| X!      | NEG, 0--4
 | 1♠      | INV, 5+♠
-| 1NT     | FG, 9+, with stopper
+| 1NT     | FG, 8+, with stopper
 | 2♣♦     | INV, 5+#
-| 2♥!     | FG, 9+, no stopper
+| 2♥!     | FG, 8+, no stopper
 | 2♠, 3♣♦ | S/T, 6+#
 | 2NT!    | FG, 5--7, 5+♠, 5+♦
 
 | 1♣ (1♠) | |
 |------|-|
-| P!   | F: 6--8 or PEN
-| X!   | NEG, 0--5
-| 1NT  | FG, 9+, with stopper
+| P!   | F: 5--7 or PEN
+| X!   | NEG, 0--4
+| 1NT  | FG, 8+, with stopper
 | 2♣♦♥ | INV, 5+#
-| 2♠!  | FG, 9+, no stopper
+| 2♠!  | FG, 8+, no stopper
 | 2NT! | FG, 5--7, 5+♥, 5+♦
 | 3♣♦♥ | S/T, 6+#
 
@@ -59,48 +61,48 @@ passes the balanced ones and bids the long suit with the rest.
 
 | 1♣ (1NT) | |
 |-------|-|
-| P!    | F: 6--8 or PEN
-| X!    | NEG, 0--5
+| P!    | F: 5--7 or PEN
+| X!    | NEG, 0--4
 | 2♣♦♥♠ | INV, 5+#
 | 2NT!  | FG, 5--7, 5+♦, 5+ major
 | 3♣♦♥♠ | S/T, 6+#
 
 | 1♣ (2♣) | |
 |------|-|
-| P!   | F: 6--8 or PEN
-| X!   | NEG, 0--5
+| P!   | F: 5--7 or PEN
+| X!   | NEG, 0--4
 | 2♦♥♠ | INV, 5+#
-| 2NT  | FG, 9+, with stopper
-| 3♣!  | FG, 9+, no stopper
+| 2NT  | FG, 8+, with stopper
+| 3♣!  | FG, 8+, no stopper
 | 3♦♥♠ | S/T, 6+#
 
 | 1♣ (2♦) | |
 |---------|-|
-| P!      | F: 6--8 or PEN
-| X!      | NEG, 0--5
+| P!      | F: 5--7 or PEN
+| X!      | NEG, 0--4
 | 2♥♠     | INV, 5+#
-| 2NT     | FG, 9+, with stopper
+| 2NT     | FG, 8+, with stopper
 | 3♣      | INV, 5+♣
-| 3♦!     | FG, 9+, no stopper
+| 3♦!     | FG, 8+, no stopper
 | 3♥♠, 4♣ | S/T, 6+#
 
 | 1♣ (2♥) | |
 |---------|-|
-| P!      | F: 6--8 or PEN
-| X!      | NEG, 0--5
+| P!      | F: 5--7 or PEN
+| X!      | NEG, 0--4
 | 2♠      | INV, 5+♠
-| 2NT     | FG, 9+, with stopper
+| 2NT     | FG, 8+, with stopper
 | 3♣♦     | INV, 5+#
-| 3♥!     | FG, 9+, no stopper
+| 3♥!     | FG, 8+, no stopper
 | 3♠, 4♣♦ | S/T, 6+#
 
 | 1♣ (2♠) | |
 |------|-|
-| P!   | F: 6--8 or PEN
-| X!   | NEG, 0--5
-| 2NT  | FG, 9+, with stopper
+| P!   | F: 5--7 or PEN
+| X!   | NEG, 0--4
+| 2NT  | FG, 8+, with stopper
 | 3♣♦♥ | INV, 5+#
-| 3♠!  | FG, 9+, no stopper
+| 3♠!  | FG, 8+, no stopper
 | 4♣♦♥ | S/T, 6+#
 
 ## Over (2NT)
@@ -110,8 +112,8 @@ hand declare the major.
 
 | 1♣ (2NT) | |
 |-----|-|
-| P!  | F: 6--8 or PEN
-| X!  | NEG, 0--5
+| P!  | F: 5--7 or PEN
+| X!  | NEG, 0--4
 | 3♣♦ | FG, 6+#
 | 3♥♠ | INV, 5+#
 | 4♣! | S/T, 6+♥
