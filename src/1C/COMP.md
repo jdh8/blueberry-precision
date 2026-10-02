@@ -5,12 +5,10 @@ natural the same way as the [natural positives](../1C.md#natural-positives).
 
 [vp]: https://bridge.downagain.be/FD/main.php?vul=9&dealer=9&system=smp7cltvhrh
 
-I used to frown at forcing passes, but not anymore.  Unlike 1NT, 1♣ is
-unbounded in strength and shape, so opener never wants to sell out to an
-overcall at the 1- or 2-level.  Responder passes with middling values or a trap
-and doubles with nothing.  Opener reopens with an optional takeout double.
-We force to game whenever we see a combined 24, so 8+ facing 16+ is
-enough.
+I used to frown at forcing passes, but not anymore.  Unlike 1NT, 1♣ is unbounded
+in strength and shape, so opener seldom wants to sell out to an overcall.
+Responder doubles with nothing and passes with middling values or a trap.
+Opener usually reopens with a relay double.
 
 ## Over (X) or (1♦)
 
@@ -119,13 +117,3 @@ hand declare the major.
 | 4♣! | S/T, 6+♥
 | 4♦! | S/T, 6+♠
 | 4♥♠ | S/O, 6+#
-
-## Opener's reopening double
-
-After a forcing pass, opener's double is optional takeout.  Responder passes
-it with the trap and bids otherwise.  Opener bids naturally instead with a long
-suit or a strong hand.
-
-| 1♣ (y) - - | 1♥ to 2NT |
-|----|---|
-| X! | OPT T/O
