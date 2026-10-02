@@ -5,8 +5,9 @@ natural the same way as the [natural positives](../1C.md#natural-positives).
 
 [vp]: https://bridge.downagain.be/FD/main.php?vul=9&dealer=9&system=smp7cltvhrh
 
-I used to frown at forcing passes, but not anymore.  Unlike 1NT, 1♣ is unbounded
-in strength and shape, so opener seldom wants to sell out to an overcall.
+I used to frown at forcing passes, but not anymore.  The strong 1♣ is unbounded
+in strength and shape.  Using the double as a brake lets the 1♣ opener describe
+their hand in layers, something a limited 1NT opener never needs.
 Responder doubles with nothing and passes with middling values or a trap.
 Opener usually reopens with a relay double.
 
