@@ -10,7 +10,7 @@
   - [Positive 2♣♦](1C/2CD.md)
   - [Competitive bidding](1C/COMP.md)
 - [Catchall 1♦](1D.md)
-  - [Wilkosz defense](1D/Wilkosz.md) 
+  - [Wilkosz defense](1D/Wilkosz.md)
 - [Precision 2♣](2C.md)
   - [Competing at the 2-level](2C/COMP_2.md)
 - [Lyric 2♥](2H.md)
