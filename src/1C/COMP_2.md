@@ -12,9 +12,9 @@ two-suiters.  A Wilkosz-like 2NT must be game-forcing for enough space.
 |----------|---------|
 | P!       | F: 5--7 or PEN
 | X!       | NEG, 0--4
-| 2♣♦♥♠    | INV, 5+#
+| 2♣♦♥♠    | NF, 5+#
 | 2NT!     | FG, 5+♦♣, 5+ another suit
-| 3♣♦♥♠    | S/T, 6+#
+| 3♣♦♥♠    | FG, 6+#
 | 3NT!     | FG, 5+♠, 5+♥
 
 Opener tries to declare suit contracts after a notrump cuebid.
@@ -33,18 +33,18 @@ Opener tries to declare suit contracts after a notrump cuebid.
 |---------|---------|
 | P!      | F: 5--7 or PEN
 | X!      | NEG, 0--4
-| 2♦♥♠    | INV, 5+#
+| 2♦♥♠    | NF, 5+#
 | 2NT     | FG, with stopper
 | 3♣!     | FG, no stopper
-| 3♦♥♠    | S/T, 6+#
+| 3♦♥♠    | FG, 6+#
 | 3NT!    | FG, 5+♦, 5+♠♥
 | 4♣!     | FG, 5+♠, 5+♥
 
 ## 1♣ (2♦♥♠)
 
-**Rubinsohl** replaces everything but the pass and the double.  A transfer shows the suit at once and
-leaves its strength for later, so one bid replaces both the invitational new
-suit and the slam-try jump.  The strong hand also declares.
+**Rubinsohl** replaces everything but the pass and the double.  A transfer shows
+the suit at once and leaves its strength for later, so one bid replaces both the
+invitational new suit and the slam-try jump.  The strong hand also declares.
 
 Suits still available at the 2-level stay natural and non-forcing, which makes
 transfers to them forcing to game.  Opener completes an invitational+ transfer
