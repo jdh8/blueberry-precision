@@ -1,4 +1,4 @@
-# Competitive bidding
+# Competing at the 1-level
 
 Interference over 1♣ follows [Viking Precision 2007][vp], with suits made
 natural the same way as the [natural positives](../1C.md#natural-positives).
@@ -20,13 +20,6 @@ Opener usually reopens with a relay double.
 - **Jump cuebid:** usually the highest two-suiter
 - **Jump in notrump:** some other two-suiters
 
-Viking keeps its system on over (X) and (1♦).  I don't.  These principles work
-at every level, and decent opponents put their strong hands into (X) and (1♦),
-which is where the uncontested system is least effective.
-
-The only non-forcing pass is (X) P.  Opener may sit for 1♣x, which may produce
-200+ points in reasonable circumstances.
-
 ## Over non-transfer overcalls
 
 Overcalls with no anchor suit are treated as natural because advancer passes
@@ -34,6 +27,13 @@ with that suit.  The trap pass is still meaningful in holding strength and their
 suit.
 
 ### Over (X) and (1♦)
+
+Viking keeps its system on over (X) and (1♦).  I don't.  These principles work
+at every level, and decent opponents put their strong hands into (X) and (1♦),
+which is where the uncontested system is least effective.
+
+The only non-forcing pass is (X) P.  Opener may sit for 1♣x, which may produce
+200+ points in reasonable circumstances.
 
 We drop club two-suiters over a double because they can be rebranded as traps.
 Two-suiters are invitational+ here because
@@ -64,7 +64,7 @@ Two-suiters are invitational+ here because
 | 2NT!    | INV+, 5+♣, 5+♠♥
 | 3♦!     | INV+, 5+♠, 5+♥
 
-### Over (1♥♠) and (2♣)
+### Over (1♥♠)
 
 | 1♣ (1♥) | Not TRF |
 |---------|---------|
@@ -88,38 +88,3 @@ Two-suiters are invitational+ here because
 | 2NT!    | FG, 5+♣, 5+♥♦
 | 3♣♦♥    | S/T, 6+#
 | 3♠!     | FG, 5+♥, 5+♦
-
-| 1♣ (2♣) | Not TRF |
-|---------|---------|
-| P!      | F: 5--7 or PEN
-| X!      | NEG, 0--4
-| 2♦♥♠    | INV, 5+#
-| 2NT     | FG, with stopper
-| 3♣!     | FG, no stopper
-| 3♦♥♠    | S/T, 6+#
-| 3NT!    | FG, 5+♦, 5+♠♥
-| 4♣!     | FG, 5+♠, 5+♥
-
-### Over (1NT)
-
-The two cuebids here are 2NT and 3NT.  There is no longer a reason to drop club
-two-suiters.  A Wilkosz-like 2NT must be game-forcing for enough space.
-
-| 1♣ (1NT) | Not TRF |
-|----------|---------|
-| P!       | F: 5--7 or PEN
-| X!       | NEG, 0--4
-| 2♣♦♥♠    | INV, 5+#
-| 2NT!     | FG, 5+♦♣, 5+ another suit
-| 3♣♦♥♠    | S/T, 6+#
-| 3NT!     | FG, 5+♠, 5+♥
-
-Opener tries to declare suit contracts after a notrump cuebid.
-
-| 1♣ (1NT) 2NT | |
-|--------------|-|
-| 3♣           | Consider 5♣ when we lack stoppers
-| 3♦           | Consider 5♦ when we lack stoppers
-| 3♥           | COG between 4♥ and 3NT
-| 3♠           | COG between 4♠ and 3NT
-| 3NT!         | P/C COG, willing to play 4♥♠
