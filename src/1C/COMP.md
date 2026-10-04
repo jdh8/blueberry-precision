@@ -64,7 +64,7 @@ Two-suiters are invitational+ here because
 | 2NT!    | INV+, 5+♣, 5+♠♥
 | 3♦!     | INV+, 5+♠, 5+♥
 
-### Over (1♥--2♥) but not (1NT)
+### Over (1♥♠) and (2♣)
 
 | 1♣ (1♥) | Not TRF |
 |---------|---------|
@@ -100,30 +100,6 @@ Two-suiters are invitational+ here because
 | 3NT!    | FG, 5+♦, 5+♠♥
 | 4♣!     | FG, 5+♠, 5+♥
 
-| 1♣ (2♦) | Not TRF |
-|---------|---------|
-| P!      | F: 5--7 or PEN
-| X!      | NEG, 0--4
-| 2♥♠     | INV, 5+#
-| 2NT     | FG, with stopper
-| 3♣      | INV, 5+♣
-| 3♦!     | FG, no stopper
-| 3♥♠, 4♣ | S/T, 6+#
-| 3NT!    | FG, 5+♣, 5+♠♥
-| 4♦!     | FG, 5+♠, 5+♥
-
-| 1♣ (2♥) | Not TRF |
-|---------|---------|
-| P!      | F: 5--7 or PEN
-| X!      | NEG, 0--4
-| 2♠      | INV, 5+♠
-| 2NT     | FG, with stopper
-| 3♣♦     | INV, 5+#
-| 3♥!     | FG, no stopper
-| 3♠, 4♣♦ | S/T, 6+#
-| 3NT!    | FG, 5+♣, 5+♠♦
-| 4♥!     | FG, 5+♠, 5+♦
-
 ### Over (1NT)
 
 The two cuebids here are 2NT and 3NT.  There is no longer a reason to drop club
@@ -147,33 +123,3 @@ Opener tries to declare suit contracts after a notrump cuebid.
 | 3♥           | COG between 4♥ and 3NT
 | 3♠           | COG between 4♠ and 3NT
 | 3NT!         | P/C COG, willing to play 4♥♠
-
-### Over (2♠+)
-
-Over (2♠), 3NT takes the heart two-suiters so that we can still play 4♥.
-The jump cuebid is left with the minors.
-
-| 1♣ (2♠) | Not TRF |
-|---------|---------|
-| P!      | F: 5--7 or PEN
-| X!      | NEG, 0--4
-| 2NT     | FG, with stopper
-| 3♣♦♥    | INV, 5+#
-| 3♠!     | FG, no stopper
-| 3NT!    | FG, 5+♥, 5+♦♣
-| 4♣♦♥    | S/T, 6+#
-| 4♠!     | FG, 5+♦, 5+♣
-
-No room is left for notrump or cuebids over (2NT).  The South African transfers
-let the strong hand declare the major.
-
-| 1♣ (2NT) | Not TRF |
-|----------|---------|
-| P!       | F: 5--7 or PEN
-| X!       | NEG, 0--4
-| 3♣♦      | FG, 6+#
-| 3♥♠      | INV, 5+#
-| 3NT!     | FG, 5+♠, 5+♥
-| 4♣!      | FG, 6+♥
-| 4♦!      | FG, 6+♠
-| 4♥♠      | S/T, 6+#
