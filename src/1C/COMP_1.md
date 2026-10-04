@@ -13,20 +13,16 @@ Opener usually reopens with a relay double.
 
 - **Pass:** forcing, 5--7 or a trap pass
 - **Double:** negative, 0--4
-- **Lowest notrump:** forcing to game with a stopper
+- **1NT:** forcing to game with a stopper
 - **Cuebid:** forcing to game without a stopper
-- **New suit:** invitational, 5+ cards
-- **Jump in a new suit:** slam try, 6+ cards
 - **Jump cuebid:** usually the highest two-suiter
-- **Jump in notrump:** some other two-suiters
+- **2NT:** some other two-suiters
 
 ## Over non-transfer overcalls
 
 Overcalls with no anchor suit are treated as natural because advancer passes
 with that suit.  The trap pass is still meaningful in holding strength and their
 suit.
-
-### Over (X) and (1♦)
 
 Viking keeps its system on over (X) and (1♦).  I don't.  These principles work
 at every level, and decent opponents put their strong hands into (X) and (1♦),
@@ -36,55 +32,49 @@ The only non-forcing pass is (X) P.  Opener may sit for 1♣x, which may produce
 200+ points in reasonable circumstances.
 
 We drop club two-suiters over a double because they can be rebranded as traps.
-Two-suiters are invitational+ here because
-
-- We have enough space
-- Opponents are usually strong
 
 | 1♣ (X)   | Not TRF |
 |----------|---------|
 | P        | NF: 5--7 or to play
 | XX!      | NEG SOS, 0--4
-| 1♦♥♠     | INV, 5+#
+| 1♦♥♠     | NF, 5+#
 | 1NT      | FG, 8+
-| 2♣       | INV, 5+♣
-| 2♦♥♠, 3♣ | S/T, 6+#
-| 2NT!     | INV+, 5+♦, 5+♠♥
-| 3♦!      | INV+, 5+♠, 5+♥
+| 2♣       | NF, 5+♣
+| 2♦♥♠, 3♣ | FG, 6+#
+| 2NT!     | FG, 5+♦, 5+♠♥
+| 3♦!      | FG, 5+♠, 5+♥
 
 | 1♣ (1♦) | Not TRF |
 |---------|---------|
 | P!      | F: 5--7 or PEN
-| X!      | NEG, 0--4
-| 1♥♠     | INV, 5+#
+| X!      | NEG OPT T/O, 0--4
+| 1♥♠     | NF, 5+#
 | 1NT     | FG, with stopper
-| 2♣      | INV, 5+♣
+| 2♣      | NF, 5+♣
 | 2♦!     | FG, no stopper
-| 2♥♠, 3♣ | S/T, 6+#
-| 2NT!    | INV+, 5+♣, 5+♠♥
-| 3♦!     | INV+, 5+♠, 5+♥
-
-### Over (1♥♠)
+| 2♥♠, 3♣ | FG, 6+#
+| 2NT!    | FG, 5+♣, 5+♠♥
+| 3♦!     | FG, 5+♠, 5+♥
 
 | 1♣ (1♥) | Not TRF |
 |---------|---------|
 | P!      | F: 5--7 or PEN
-| X!      | NEG, 0--4
-| 1♠      | INV, 5+♠
+| X!      | NEG OPT T/O, 0--4
+| 1♠      | NF, 5+♠
 | 1NT     | FG, with stopper
-| 2♣♦     | INV, 5+#
+| 2♣♦     | NF, 5+#
 | 2♥!     | FG, no stopper
-| 2♠, 3♣♦ | S/T, 6+#
+| 2♠, 3♣♦ | FG, 6+#
 | 2NT!    | FG, 5+♣, 5+♠♦
 | 3♥!     | FG, 5+♠, 5+♦
 
 | 1♣ (1♠) | Not TRF |
 |---------|---------|
 | P!      | F: 5--7 or PEN
-| X!      | NEG, 0--4
+| X!      | NEG OPT T/O, 0--4
 | 1NT     | FG, with stopper
-| 2♣♦♥    | INV, 5+#
+| 2♣♦♥    | NF, 5+#
 | 2♠!     | FG, no stopper
 | 2NT!    | FG, 5+♣, 5+♥♦
-| 3♣♦♥    | S/T, 6+#
+| 3♣♦♥    | FG, 6+#
 | 3♠!     | FG, 5+♥, 5+♦
