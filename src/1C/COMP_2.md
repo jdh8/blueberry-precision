@@ -11,8 +11,8 @@ Suits still available at the 2-level stay natural and non-forcing, which makes
 transfers to them forcing to game.  Opener completes an invitational+ transfer
 only with a hand that would pass the invitation.
 
-| 1♣ (2♦) | Not TRF |
-|---------|---------|
+| 1♣ (2♦) | |
+|---------|-|
 | P!      | F: 5--7 or PEN
 | X!      | NEG, 0--4
 | 2♥♠     | NF, 5+#
@@ -22,8 +22,8 @@ only with a hand that would pass the invitation.
 | 3♥!     | FG TRF to 3♠
 | 3♠!     | FG TRF to 3NT or 4♣
 
-| 1♣ (2♥) | Not TRF |
-|---------|---------|
+| 1♣ (2♥) | |
+|---------|-|
 | P!      | F: 5--7 or PEN
 | X!      | NEG, 0--4
 | 2♠      | NF, 5+♠
@@ -38,8 +38,8 @@ declares hearts.
 
 [larryco]: https://www.larryco.com/bridge-articles/transfer-lebensohl
 
-| 1♣ (2♠) | Not TRF |
-|---------|---------|
+| 1♣ (2♠) | |
+|---------|-|
 | P!      | F: 5--7 or PEN
 | X!      | NEG, 0--4
 | 2NT!    | INV+ TRF to 3♣
@@ -47,3 +47,16 @@ declares hearts.
 | 3♦!     | INV+ TRF to 3♥
 | 3♥!     | FG TRF to 3NT or 4♣
 | 3♠!     | FG STAY
+
+## Over transfer overcalls
+
+Rubinsohl reads the suit they show, not the bid they make.  Every bid from 2NT
+through 3♥ transfers to the next suit, and 3♠ transfers to 3NT or 4♣.  The
+transfer into their suit is Stayman.  A transfer to a suit we could bid at the
+2-level is forcing to game, and any other is invitational or better.
+
+A transfer overcall therefore takes the table of the suit it shows.  (2♦)
+showing hearts follows the (2♥) table, and (2♥) showing spades follows the (2♠)
+table, swap included.  The only new bid is their suit at the 2-level.  As over
+the [lower transfer overcalls](COMP_1.md#over-transfer-overcalls), it is the
+cheapest cuebid, a game force without a stopper.
