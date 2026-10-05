@@ -1,4 +1,4 @@
-# Competing at the 1-level
+# Competing through (2♣)
 
 Interference over 1♣ follows [Viking Precision 2007][vp], with suits made
 natural the same way as the [natural positives](../1C.md#natural-positives).
@@ -17,6 +17,8 @@ Opener usually reopens with a relay double.
 - **Cuebid:** forcing to game without a stopper
 - **Jump cuebid:** usually the highest two-suiter
 - **2NT:** some other two-suiters
+
+The notrump bids shift up over (1NT) and (2♣), as their tables show.
 
 ## Over non-transfer overcalls
 
@@ -78,6 +80,42 @@ We drop club two-suiters over a double because they can be rebranded as traps.
 | 2NT!    | FG, 5+♣, 5+♥♦
 | 3♣♦♥    | FG, 6+#
 | 3♠!     | FG, 5+♥, 5+♦
+
+Over (1NT), the two cuebids are 2NT and 3NT.  There is no longer a reason to
+drop club two-suiters.  A Wilkosz-like 2NT must be game-forcing for enough
+space.
+
+| 1♣ (1NT) | Not TRF |
+|----------|---------|
+| P!       | F: 5--7 or PEN
+| X!       | NEG, 0--4
+| 2♣♦♥♠    | NF, 5+#
+| 2NT!     | FG, 5+♦♣, 5+ another suit
+| 3♣♦♥♠    | FG, 6+#
+| 3NT!     | FG, 5+♠, 5+♥
+
+Opener tries to declare suit contracts after a notrump cuebid.
+
+| 1♣ (1NT) 2NT | |
+|--------------|-|
+| 3♣           | Consider 5♣ when we lack stoppers
+| 3♦           | Consider 5♦ when we lack stoppers
+| 3♥           | COG between 4♥ and 3NT
+| 3♠           | COG between 4♠ and 3NT
+| 3NT!         | P/C COG, willing to play 4♥♠
+
+Over (2♣), 2NT shows the stopper, so 3NT takes over the two-suiters.
+
+| 1♣ (2♣) | Not TRF |
+|---------|---------|
+| P!      | F: 5--7 or PEN
+| X!      | NEG, 0--4
+| 2♦♥♠    | NF, 5+#
+| 2NT     | FG, with stopper
+| 3♣!     | FG, no stopper
+| 3♦♥♠    | FG, 6+#
+| 3NT!    | FG, 5+♦, 5+♠♥
+| 4♣!     | FG, 5+♠, 5+♥
 
 ## Over transfer overcalls
 
