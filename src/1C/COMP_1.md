@@ -78,3 +78,47 @@ We drop club two-suiters over a double because they can be rebranded as traps.
 | 2NT!    | FG, 5+♣, 5+♥♦
 | 3♣♦♥    | FG, 6+#
 | 3♠!     | FG, 5+♥, 5+♦
+
+## Over transfer overcalls
+
+Transfer overcalls are too many to enumerate, so two rules cover them all.
+
+- **The suit they show** is the cuebid.  Stoppers and trap passes refer to it.
+- **The suit they name** is natural for us, like any other new suit.
+
+The cuebid now comes a level lower, and its cheapest bid is the stopperless game
+force.  Wherever the jump cuebid falls below 2NT, the useful space principle
+swaps their roles:
+
+- **2NT:** unusual, the lowest two suits
+- **Jump cuebid:** some other two-suiters
+- The rest follows the [non-transfer overcalls](#over-non-transfer-overcalls).
+
+[TRAP] serves as the model, where (X) shows hearts and (1♦) shows spades.
+(X) P stays non-forcing, though advancer seldom leaves 1♣x in.
+
+[TRAP]: https://www.deck-of-cards.com/bridge/convention/TRAP.htm
+
+| 1♣ (X)  | TRF, 4+♥ |
+|---------|----------|
+| P       | NF: 5--7 or PEN
+| XX!     | NEG, 0--4
+| 1♦♠     | NF, 5+#
+| 1♥!     | FG, no stopper
+| 1NT     | FG, with stopper
+| 2♣      | NF, 5+♣
+| 2♦♠, 3♣ | FG, 6+#
+| 2♥!     | FG, 5+♠, 5+♦♣
+| 2NT!    | FG UNT, 5+♦, 5+♣
+
+| 1♣ (1♦) | TRF, 4+♠ |
+|---------|----------|
+| P!      | F: 5--7 or PEN
+| X!      | NEG, 0--4
+| 1♥      | NF, 5+♥
+| 1♠!     | FG, no stopper
+| 1NT     | FG, with stopper
+| 2♣♦     | NF, 5+#
+| 2♥, 3♣♦ | FG, 6+#
+| 2♠!     | FG, 5+♥, 5+♦♣
+| 2NT!    | FG UNT, 5+♦, 5+♣
