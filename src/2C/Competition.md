@@ -1,4 +1,4 @@
-# Competing at the 2-level
+# Competitive bidding
 
 | 2♣ (X) | |
 |------|-|

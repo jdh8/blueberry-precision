@@ -1,6 +1,6 @@
 # Competing over (2♦♥♠)
 
-Pass and double keep their meanings from the [lower overcalls](COMP_1.md).
+Pass and double keep their meanings from the [lower overcalls](Competition1.md).
 Responder still passes with middling values or a trap and doubles with nothing.
 
 **Rubinsohl** replaces everything but the pass and the double.  A transfer shows
@@ -58,5 +58,5 @@ transfer into their suit is Stayman.  A transfer to a suit we could bid at the
 A transfer overcall therefore takes the table of the suit it shows.  (2♦)
 showing hearts follows the (2♥) table, and (2♥) showing spades follows the (2♠)
 table, swap included.  The only new bid is their suit at the 2-level.  As over
-the [lower transfer overcalls](COMP_1.md#over-transfer-overcalls), it is the
+the [lower transfer overcalls](Competition1.md#over-transfer-overcalls), it is the
 cheapest cuebid, a game force without a stopper.
