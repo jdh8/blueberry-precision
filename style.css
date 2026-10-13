@@ -56,10 +56,17 @@ html {
 }
 
 /* Sidebar */
-.sidebar {
-	--fg: var(--sidebar-fg);
+.sidebar .♠,
+.sidebar .♣ {
+	color: inherit;
 }
 
 .rust .sidebar {
 	--red: #f77;
+}
+
+.chapter a:hover,
+.chapter a.active,
+.chapter a.current-header {
+	--red: var(--sidebar-active);
 }
