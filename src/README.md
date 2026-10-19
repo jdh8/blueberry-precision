@@ -1,4 +1,4 @@
-# ![Blueberry Precision Club](favicon-2f8f5d7c.svg)
+# ![Blueberry Precision Club](favicon-d9fb5a78.svg)
 
 Blueberry Precision Club is a modernized Precision Club mixing new ideas from
 BTU.  It is a 5-card major strong club system.  It is highly experimental and
