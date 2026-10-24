@@ -144,9 +144,11 @@ def patch(idx, cells):
     return w, h, svg
 
 def figure(mapping, idx):
-    """Pack one patch per length of suit idx into rows no wider than MAXW."""
-    patches = [patch(idx, {x: b for x, b in mapping.items() if x[idx] == v})
-               for v in sorted({x[idx] for x in mapping})]
+    """Pack one patch per length of suit idx into rows no wider than MAXW.
+    A lattice with a single bid says nothing the table does not, so it is left out."""
+    groups = [{x: b for x, b in mapping.items() if x[idx] == v}
+              for v in sorted({x[idx] for x in mapping})]
+    patches = [patch(idx, g) for g in groups if len(set(g.values())) > 1]
     body, x, y, rowh = [], 0, 0, 0
     for w, h, svg in patches:
         if x and x + w > MAXW:
