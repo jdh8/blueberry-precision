@@ -18,6 +18,8 @@ rebids 1NT over the 1♠ relay.  Both relay with 2♣ to the same answers.
 | 3♥!  | 3244
 | 3♠!  | 2344
 
+{{#include relay/1NT-2C.svg}}
+
 ## Spades 2♦
 
 | 1♣ - 1NT -<br>2♣ - 2♦ - | |

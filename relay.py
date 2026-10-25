@@ -167,7 +167,7 @@ NT = node('1NT-2C', DB, [
     ('3♦',  exact(3, 3, 4, 3)),
     ('3♥',  exact(3, 2, 4, 4)),
     ('3♠',  exact(2, 3, 4, 4)),
-])
+], 0)
 def listed(bids, shapes):
     return [(b, exact(*x)) for b, x in zip(bids, shapes)]
 node('1NT-2C-2D-2H', lambda *x: NT.get(x) == '2♦', listed(steps('2♠', 7), [
