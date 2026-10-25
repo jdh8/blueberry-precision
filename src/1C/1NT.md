@@ -46,7 +46,7 @@ rebids 1NT over the 1♠ relay.  Both relay with 2♣ to the same answers.
 
 {{#include relay/1NT-2C-2H-2S.svg}}
 
-## Minors 2♠, 2NT
+## Clubs 2♠
 
 | 1♣ - 1NT -<br>2♣ - 2♠ - | |
 |-----------|-|
@@ -56,6 +56,8 @@ rebids 1NT over the 1♠ relay.  Both relay with 2♣ to the same answers.
 | 2NT - 3♥! | 2335
 
 {{#include relay/1NT-2C-2S-2NT.svg}}
+
+## Diamonds 2NT
 
 | 1♣ - 1NT -<br>2♣ - 2NT - | |
 |----------|-|
