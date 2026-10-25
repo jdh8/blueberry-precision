@@ -20,6 +20,21 @@ rebids 1NT over the 1♠ relay.  Both relay with 2♣ to the same answers.
 
 From 3♣ up, responder bids the suit where 3344 is a card short.
 
+> [!NOTE]
+>
+> These answers are Blueberry's own.  Viking's are:
+>
+> | 1♣ - 1NT -<br>2♣ - | Viking |
+> |------|-|
+> | 2♦!  | 12--14, then the rest one step higher
+> | 2♥   | 4=♥, 2--4♠
+> | 2♠   | 4=♠, 2--3♥
+> | 2NT  | no 4-card major or 5-card minor
+> | 3♣♦  | 5=#, (5332)
+> | 3♥   | 2245
+> | 3♠   | 2254
+> | 3NT  | 3334
+
 {{#include relay/1NT-2C.svg}}
 
 ## Spades 2♦

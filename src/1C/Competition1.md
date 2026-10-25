@@ -1,7 +1,7 @@
 # Competing through (2♣)
 
-Interference over 1♣ follows [Viking Precision 2007][vp], with suits made
-natural the same way as the [natural positives](../1C.md#natural-positives).
+Interference over 1♣ starts from [Viking Precision 2007][vp] but keeps new
+suits natural.
 
 [vp]: https://bridge.downagain.be/FD/main.php?vul=9&dealer=9&system=smp7cltvhrh
 
@@ -19,6 +19,16 @@ Opener usually reopens with a relay double.
 - **2NT:** some other two-suiters
 
 The notrump bids shift up over (1NT) and (2♣), as their tables show.
+
+> [!NOTE]
+>
+> In Viking:
+>
+> - Pass is 6--8 with 4 cards in an unbid major, or a penalty pass.
+> - Double is 0--5.
+> - Over (1♥) through (2♣), new suits are transfers, invitational or slam tries.
+> - 2NT, or 3NT over (2♣), is 5-5 with 5--7.
+> - One 3-level bid shows 4441.
 
 ## Over non-transfer overcalls
 
@@ -57,6 +67,11 @@ We drop club two-suiters over a double because they can be rebranded as traps.
 | 2♥♠, 3♣ | FG, 6+#
 | 2NT!    | FG, 5+♣, 5+♠♥
 | 3♦!     | FG, 5+♠, 5+♥
+
+> [!NOTE]
+>
+> Viking keeps its transfer positives and relays here, and its pass is 6--8 of
+> any shape.
 
 | 1♣ (1♥) | Not TRF |
 |---------|---------|

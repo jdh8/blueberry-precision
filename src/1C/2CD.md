@@ -8,6 +8,11 @@ next step.
 With 13+, responder bids the shape at once.  With 8--12, responder bids the
 cheapest step and, after the next relay, the same shape one step higher.
 
+> [!NOTE]
+>
+> Viking's 2♣ and 2♦ allow a second 4+ minor, and its opener may bid naturally
+> instead of relaying.
+
 ## Diamonds 2♣
 
 | 1♣ - 2♣ - | |
@@ -24,6 +29,11 @@ cheapest step and, after the next relay, the same shape one step higher.
 | 3♥!  | 13+, (7321)
 | 3♠!  | 13+, (7330)
 | 3NT  | 13+, 7222
+
+> [!NOTE]
+>
+> Viking shows 6 or 7 cards before strength and resolves 6331 and 7330 to the
+> exact shape, here and over 2♦.
 
 | 1♣ - 2♣ -<br>2♦ - 2NT - | |
 |-----------|-|
@@ -45,6 +55,11 @@ cheapest step and, after the next relay, the same shape one step higher.
 | 2♠ - 3♥!  | 13+, 1453
 | 2♠ - 3♠!  | 13+, 3451
 | 2♠ - 3NT  | 13+, 4450
+
+> [!NOTE]
+>
+> Viking separates a 6-card minor with 4 in the major from one with 5, here and
+> in the other major branches.
 
 {{#include relay/2C-2D-2H-2S.svg}}
 
