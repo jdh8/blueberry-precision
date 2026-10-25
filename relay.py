@@ -112,29 +112,34 @@ DS = lambda s, h, d, c: s >= 5 and s >= h and s >= d and s >= c
 DH = lambda s, h, d, c: h >= 5 and h > s and h >= d and h >= c
 def major(m, bal):
     """Shape answers with 5+ in major m (0 or 1).  bal=False is the direct
-    8--12 table, where 2♦ peels (5332) off and 2♥ is the other major only;
-    bal=True is the 13+ table after the 2♣ - 2♦ relay, where 2♥ absorbs BAL."""
+    8--12 table, where 2♦ takes BAL or 4 in the other major and 2♥ is 5-5;
+    bal=True is the 13+ table after the 2♣ - 2♦ relay, where 2♥ takes BAL or
+    4 in the other major and 3NT takes 5-5."""
     o = 1 - m                       # the other major
-    L = lambda x, i: x[i]           # length of suit i
-    return ([] if bal else [('2♦', lambda *x: x[m] == 5 and BAL(*x))]) + [
-        ('2♥',  lambda *x: x[o] == 4 or bal and BAL(*x)),
+    return [('2♥' if bal else '2♦', lambda *x: x[o] == 4 or BAL(*x))] + (
+        [] if bal else [('2♥', lambda *x: x[m] == x[o] == 5)]) + [
         ('2♠',  lambda *x: x[m] >= 6 and max(x[o], x[2], x[3]) <= 3),
         ('2NT', lambda *x: x[m] >= 6 and x[o] <= 3 and max(x[2], x[3]) == 4),
         ('3♣',  lambda *x: x[m] == 5 and x[o] <= 3 and 4 <= x[3] <= 5 and x[3] >= x[2]),
         ('3♦',  lambda *x: x[m] == 5 and x[o] <= 3 and 4 <= x[2] <= 5 and x[2] > x[3]),
         ('3♥',  lambda *x: x[m] >= 6 and x[3] == 5),
         ('3♠',  lambda *x: x[m] >= 6 and x[2] == 5),
-        ('3NT', lambda *x: x[o] >= 5),
+        ('3NT', lambda *x: x[o] >= 5 and (bal or x[m] >= 6)),
         ('4♣',  lambda *x: x[m] >= 6 and x[3] == 6),
         ('4♦',  lambda *x: x[m] >= 6 and x[2] == 6),
     ]
-def fit(m, bids, bal):
-    """5+ major m with 4 in the other: BAL first if bal, then 6-4, 7-4, 5422, 5413, 5431, 5404, 5440."""
+def fit(m, bids, share):
+    """BAL or 5+ major m with 4 in the other: BAL, 6-4 and 7-4 (one bid if
+    share), then 5422, 5413, 5431, 5404, 5440."""
     o = 1 - m
     sh = lambda a, b: (lambda *x: x[m] == 5 and x[o] == 4 and x[2] == a and x[3] == b)
-    return ([(bids[0], lambda *x: BAL(*x))] if bal else []) + list(zip(bids[bal:], [
-        lambda *x: x[m] == 6 and x[o] == 4, lambda *x: x[m] == 7 and x[o] == 4,
+    long = ([lambda *x: x[m] >= 6] if share else
+            [lambda *x: x[m] == 6, lambda *x: x[m] == 7])
+    return list(zip(bids, [lambda *x: BAL(*x)] + long + [
         sh(2, 2), sh(1, 3), sh(3, 1), sh(0, 4), sh(4, 0)]))
+def minor4(bids):
+    """6+ major with a 4-card minor: clubs, then diamonds."""
+    return [(bids[0], lambda *x: x[3] == 4), (bids[1], lambda *x: x[2] == 4)]
 def doubleton(m, bids):
     """(5332) in major m: the doubleton, cheapest bid for the highest suit."""
     others = [i for i in range(4) if i != m]
@@ -142,18 +147,20 @@ def doubleton(m, bids):
 
 AS = node('1H-1S', DS, major(0, False))
 AS13 = node('1H-1S-2C-2D', DS, major(0, True))
-node('1H-1S-2D-2H', lambda *x: AS.get(x) == '2♦', doubleton(0, steps('2♠', 3)), 0)
-node('1H-1S-2H-2S', lambda *x: AS.get(x) == '2♥', fit(0, steps('2NT', 7), False), 0)
+node('1H-1S-2D-2H', lambda *x: AS.get(x) == '2♦', fit(0, steps('2♠', 8), False), 0)
+node('1H-1S-2D-2H-2S-2NT', lambda *x: AS.get(x) == '2♦' and BAL(*x), doubleton(0, steps('3♣', 3)))
+node('1H-1S-2NT-3C', lambda *x: AS.get(x) == '2NT', minor4(steps('3♦', 2)))
 node('1H-1S-2S-2NT', lambda *x: AS.get(x) == '2♠', ONE(0, steps('3♣', 7)), 0)
-node('1H-1S-2C-2D-2H-2S', lambda *x: AS13.get(x) == '2♥', fit(0, steps('2NT', 8), True), 0)
+node('1H-1S-2C-2D-2H-2S', lambda *x: AS13.get(x) == '2♥', fit(0, steps('2NT', 7), True), 0)
 node('1H-1S-2C-2D-2H-2S-2NT-3C', lambda *x: AS13.get(x) == '2♥' and BAL(*x), doubleton(0, steps('3♦', 3)))
 
 AH = node('1S-1NT', DH, major(1, False))
 AH13 = node('1S-1NT-2C-2D', DH, major(1, True))
-node('1S-1NT-2D-2H', lambda *x: AH.get(x) == '2♦', doubleton(1, steps('2♠', 3)), 1)
-node('1S-1NT-2H-2S', lambda *x: AH.get(x) == '2♥', fit(1, steps('2NT', 7), False), 1)
+node('1S-1NT-2D-2H', lambda *x: AH.get(x) == '2♦', fit(1, steps('2♠', 8), False), 1)
+node('1S-1NT-2D-2H-2S-2NT', lambda *x: AH.get(x) == '2♦' and BAL(*x), doubleton(1, steps('3♣', 3)))
+node('1S-1NT-2NT-3C', lambda *x: AH.get(x) == '2NT', minor4(steps('3♦', 2)))
 node('1S-1NT-2S-2NT', lambda *x: AH.get(x) == '2♠', ONE(1, steps('3♣', 7)), 1)
-node('1S-1NT-2C-2D-2H-2S', lambda *x: AH13.get(x) == '2♥', fit(1, steps('2NT', 8), True), 1)
+node('1S-1NT-2C-2D-2H-2S', lambda *x: AH13.get(x) == '2♥', fit(1, steps('2NT', 7), True), 1)
 node('1S-1NT-2C-2D-2H-2S-2NT-3C', lambda *x: AH13.get(x) == '2♥' and BAL(*x), doubleton(1, steps('3♦', 3)))
 
 # Balanced: 1♣-1NT (8--12) and 1♣-1♥-1♠-1NT (13+), both relayed with 2♣.
