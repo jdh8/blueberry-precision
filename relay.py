@@ -164,8 +164,8 @@ NT = node('1NT-2C', DB, [
     ('2♥',  lambda s, h, d, c: h == 4 and s <= 3),
     ('2♠',  lambda s, h, d, c: c == 5),
     ('2NT', lambda s, h, d, c: d == 5),
-    ('3♣',  exact(3, 3, 3, 4)),
-    ('3♦',  exact(3, 3, 4, 3)),
+    ('3♣',  exact(3, 3, 4, 3)),
+    ('3♦',  exact(3, 3, 3, 4)),
     ('3♥',  exact(3, 2, 4, 4)),
     ('3♠',  exact(2, 3, 4, 4)),
 ], 0)

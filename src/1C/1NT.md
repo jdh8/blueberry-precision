@@ -13,10 +13,12 @@ rebids 1NT over the 1♠ relay.  Both relay with 2♣ to the same answers.
 | 2♥!  | 4=♥, 2--3♠
 | 2♠!  | 5=♣
 | 2NT! | 5=♦
-| 3♣   | 3334
-| 3♦   | 3343
+| 3♣   | 3343
+| 3♦   | 3334
 | 3♥!  | 3244
 | 3♠!  | 2344
+
+From 3♣ up, responder bids the suit where 3344 is a card short.
 
 {{#include relay/1NT-2C.svg}}
 
