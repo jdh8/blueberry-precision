@@ -3,7 +3,7 @@
 1♣ - 2♣ shows 5+♦ and 1♣ - 2♦ shows 5+♣, longer than any other suit.  A
 4-card minor beside it responds 2♥ and (5332) responds 1NT, so these hands
 hold a 4+ major or a one-suiter with no 4-card suit.  Opener relays with the
-next step or completes the transfer at the 3-level.
+next step.
 
 With 13+, responder bids the shape at once.  With 8--12, responder bids the
 cheapest step and, after the next relay, the same shape one step higher.
@@ -13,7 +13,6 @@ cheapest step and, after the next relay, the same shape one step higher.
 | 1♣ - 2♣ - | |
 |-----|-|
 | 2♦! | (R)
-| 3♦! | 3+♦
 
 | 1♣ - 2♣ -<br>2♦ - | |
 |------|-|
@@ -82,7 +81,6 @@ cheapest step and, after the next relay, the same shape one step higher.
 | 1♣ - 2♦ - | |
 |-----|-|
 | 2♥! | (R)
-| 3♣! | 3+♣
 
 | 1♣ - 2♦ -<br>2♥ - | |
 |------|-|
