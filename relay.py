@@ -5,13 +5,14 @@ Each relay node maps the shapes still possible at that node to a bid.  This
 script states that map as ordered rules, checks that every shape gets exactly
 one bid, and draws the map as hexagonal lattices (one per length of an indexing suit;
 of the other three, the highest ranking points up, the next down-left and
-the lowest down-right) into src/1C/relay/*.svg, which the 1♣ chapters include.
+the lowest down-right; a lattice on one line is turned flat) into
+src/1C/relay/*.svg, which the 1♣ chapters include.
 Nodes are named by the auction after 1♣.
 Borders are drawn where the bid changes; a hatched cell is a hole or a clash.
 
 Run it by hand after editing the rules.  Exit code 1 on any hole or clash.
 """
-from math import sqrt
+from math import atan2, cos, degrees, radians, sin, sqrt
 import os, sys
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src/1C/relay')
@@ -228,7 +229,6 @@ def centre(up, left, right):
     return (2 * right + up) * STEP / 2, -up * STEP * sqrt(3) / 2
 
 def vertex(x, y, deg):
-    from math import cos, sin, radians
     return f'{x + R * cos(radians(deg)):.1f},{y - R * sin(radians(deg)):.1f}'
 
 def patch(idx, cells):
@@ -236,6 +236,14 @@ def patch(idx, cells):
     svg) with the origin at the top-left corner."""
     rest = [i for i in range(4) if i != idx]
     pos = {x: centre(*(x[i] for i in rest)) for x in cells}
+    # A lattice on one line is laid flat, its top end on the left.
+    a, b = min(pos.values(), key=lambda p: (p[1], p[0])), max(pos.values(), key=lambda p: (p[1], p[0]))
+    deg = round(degrees(atan2(a[1] - b[1], b[0] - a[0])))
+    flat = all(abs((p[0] - a[0]) * (b[1] - a[1]) - (p[1] - a[1]) * (b[0] - a[0])) < 1e-6
+               for p in pos.values())
+    rot = -deg % 360 if flat and deg % 60 == 0 else 0
+    c, s = cos(radians(rot)), sin(radians(rot))
+    pos = {x: (px * c + py * s, py * c - px * s) for x, (px, py) in pos.items()}
     xs = [p[0] for p in pos.values()]; ys = [p[1] for p in pos.values()]
     x0, y0 = min(xs) - R, min(ys) - R - HEAD
     w, h = max(xs) - min(xs) + 2 * R, max(ys) - min(ys) + 2 * R + HEAD
@@ -251,7 +259,7 @@ def patch(idx, cells):
             for i, o in zip(rest, off):
                 n[i] += o
             if cells.get(tuple(n)) != bid:
-                hard.append(f'M{vertex(cx, cy, deg - 30)}L{vertex(cx, cy, deg + 30)}')
+                hard.append(f'M{vertex(cx, cy, deg + rot - 30)}L{vertex(cx, cy, deg + rot + 30)}')
         labels.append(f'<text x="{cx:.1f}" y="{cy - 1:.1f}">{ent(bid)}</text>'
                       f'<text x="{cx:.1f}" y="{cy + 11:.1f}" font-size="8.5" opacity=".6">'
                       f'{"".join(map(str, x))}</text>')
