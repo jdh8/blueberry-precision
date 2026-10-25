@@ -211,7 +211,7 @@ node('2D-2H-3C-3D', lambda *x: AC.get(x) == '3♣', ONE(3, steps('3♥', 5)), 3)
 # ---------------------------------------------------------------------- drawing
 STEP = 46                      # lattice spacing = cell width
 R = STEP / sqrt(3)             # hexagon circumradius (pointy-top)
-GAP, MAXW = 28, 720
+GAP, MAXW, HEAD = 28, 720, 20   # HEAD: room above a lattice for its legend
 SUITS = '♠♥♦♣'
 # neighbour offsets in (up, left, right) and the angle each one lies at
 NEIGH = [((0, -1, 1), 0), ((1, -1, 0), 60), ((1, 0, -1), 120),
@@ -237,8 +237,8 @@ def patch(idx, cells):
     rest = [i for i in range(4) if i != idx]
     pos = {x: centre(*(x[i] for i in rest)) for x in cells}
     xs = [p[0] for p in pos.values()]; ys = [p[1] for p in pos.values()]
-    x0, y0 = min(xs) - R, min(ys) - R - 16
-    w, h = max(xs) - min(xs) + 2 * R, max(ys) - min(ys) + 2 * R + 16
+    x0, y0 = min(xs) - R, min(ys) - R - HEAD
+    w, h = max(xs) - min(xs) + 2 * R, max(ys) - min(ys) + 2 * R + HEAD
     faint, hard, hatch, labels = [], [], [], []
     for x, bid in cells.items():
         cx, cy = pos[x][0] - x0, pos[x][1] - y0
