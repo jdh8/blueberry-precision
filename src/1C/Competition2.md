@@ -11,10 +11,8 @@ Suits still available at the 2-level stay natural and non-forcing, which makes
 transfers to them forcing to game.  Opener completes an invitational+ transfer
 only with a hand that would pass the invitation.
 
-> [!NOTE]
->
-> Viking plays 2NT natural here and transfers at the 3-level that only invite.
-> It also defines responses over (2NT), which Blueberry does not.
+Viking plays 2NT natural here and transfers at the 3-level that only invite.
+It also defines responses over (2NT), which Blueberry does not.
 
 | 1♣ (2♦) | |
 |---------|-|
