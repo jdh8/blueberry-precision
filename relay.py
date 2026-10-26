@@ -115,9 +115,9 @@ def major(m, bal):
     other major.  bal=False is the direct 8--12 table, where 2♦ is 5 + a minor;
     bal=True is the 13+ table after the 2♣ - 2♦ relay.  Spades: 13+ with 5+♥
     jumps to 3♣, 3♦ is 5-5 in the majors at 8--12, and after the relay 3♣♦
-    are 5 + a minor.  Hearts follow Viking: 13+ with 5♦ jumps to 3♣,
-    3♠ is 6♥ + 5♦ at 8--12, and after the relay 3♣♦ are 5 + exactly 4 and
-    3♥♠ take 5♣."""
+    are 5 + a minor.  Hearts: 13+ 5-5 with a minor jumps to 3♣♦, 8--12 with
+    5♥ + 5♣ bids 2♦, 3♠ is 6♥ + 5♦ at 8--12, and after the relay 3♣♦ are
+    5 + exactly 4."""
     if m:
         return [
             ('2♥',  lambda s, h, d, c: s == 4 or BAL(s, h, d, c)),
@@ -129,14 +129,12 @@ def major(m, bal):
         ] + ([
             ('3♣',  lambda s, h, d, c: h == 5 and s <= 3 and c == 4 and d <= 4),
             ('3♦',  lambda s, h, d, c: h == 5 and s <= 3 and d == 4 and c <= 3),
-            ('3♥',  lambda s, h, d, c: h == 5 and c == 5),
-            ('3♠',  lambda s, h, d, c: h >= 6 and c == 5),
         ] if bal else [
-            ('2♦',  lambda s, h, d, c: h == 5 and s <= 3 and max(d, c) >= 4 and c != 5),
-            ('3♦',  lambda s, h, d, c: h == 5 and c == 5),
+            ('2♦',  lambda s, h, d, c: h == 5 and s <= 3 and max(d, c) >= 4),
+        ]) + [
             ('3♥',  lambda s, h, d, c: h >= 6 and c == 5),
             ('3♠',  lambda s, h, d, c: h >= 6 and d == 5),
-        ])
+        ]
     three = [('3♦', lambda s, h, d, c: s == h == 5)]
     return [
         ('2♥',  lambda s, h, d, c: h == 4 or BAL(s, h, d, c)),
@@ -170,9 +168,10 @@ def minor4(bids):
     return [(bids[0], lambda *x: x[3] == 4), (bids[1], lambda *x: x[2] == 4)]
 
 # 8--12 and 13+ bid 2♥ at the same level and share its relays.
-# 13+ with both majors or 5+♥ + 5♦ jumps to 3♣ instead of bidding 2♣.
+# 13+ with both majors or 5♥ + 5♦ jumps to 3♣ instead of bidding 2♣, and
+# 13+ with 5♥ + 5♣ jumps to 3♦.
 for m, top, D, D13 in ((0, '1H-1S', DS, lambda s, h, d, c: DS(s, h, d, c) and h <= 4),
-                       (1, '1S-1NT', DH, lambda s, h, d, c: DH(s, h, d, c) and d != 5)):
+                       (1, '1S-1NT', DH, lambda s, h, d, c: DH(s, h, d, c) and not (h == 5 and max(d, c) == 5))):
     A8 = node(top, D, major(m, False))
     A13 = node(top + '-2C-2D', D13, major(m, True))
     node(top + '-2D-2H', lambda *x, A=A8: A.get(x) == '2♦', minor2(steps('2♠', 6)), m)
