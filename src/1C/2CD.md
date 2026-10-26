@@ -1,6 +1,6 @@
 # Minors 2♣♦
 
-1♣ - 2♣ shows 5+♦ and 1♣ - 2♦ shows 5+♣, longer than any other suit.  A
+1♣ - 2♣ shows 5+♦ and 1♣ - 2♦ shows 5+♣, no 5-card major.  A
 4-card minor beside it responds 2♥ and (5332) responds 1NT, so these hands
 hold a 4+ major or a one-suiter with no 4-card suit.  Opener relays with the
 next step.
