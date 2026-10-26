@@ -253,17 +253,10 @@ def centre(up, left, right):
 def vertex(x, y, deg):
     return f'{x + R * cos(radians(deg)):.1f},{y - R * sin(radians(deg)):.1f}'
 
-def arrow(x, y, deg, suit, length=8):
-    """An arrow from (x, y) towards deg, where suit grows, labelled at its tip."""
-    dx, dy = cos(radians(deg)), -sin(radians(deg))
-    return (f'<path d="M{x:.1f},{y:.1f}l{length * dx:.1f},{length * dy:.1f}" '
-            f'stroke="currentColor" marker-end="url(#arrow)"/>'
-            f'<text x="{x + (length + 8) * dx:.1f}" y="{y + (length + 8) * dy:.1f}">{ent(SUITS[suit])}</text>')
-
 def patch(idx, cells):
     """One lattice for a fixed length of suit idx.  Returns (width, height,
-    svg) with the origin at the top-left corner.  A flat lattice marks
-    at each end the suit that grows that way."""
+    svg) with the origin at the top-left corner.  A flat lattice also fixes
+    one of the other suits, so its legend names that suit too."""
     rest = [i for i in range(4) if i != idx]
     pos = {x: centre(*(x[i] for i in rest)) for x in cells}
     # A lattice on one line is laid flat, its top end on the left.
@@ -275,9 +268,8 @@ def patch(idx, cells):
     c, s = cos(radians(rot)), sin(radians(rot))
     pos = {x: (px * c + py * s, py * c - px * s) for x, (px, py) in pos.items()}
     xs = [p[0] for p in pos.values()]; ys = [p[1] for p in pos.values()]
-    pad = 28 if flat and len(cells) > 1 else 0
-    x0, y0 = min(xs) - R - pad, min(ys) - R - HEAD
-    w, h = max(xs) - min(xs) + 2 * (R + pad), max(ys) - min(ys) + 2 * R + HEAD
+    x0, y0 = min(xs) - R, min(ys) - R - HEAD
+    w, h = max(xs) - min(xs) + 2 * R, max(ys) - min(ys) + 2 * R + HEAD
     faint, hard, hatch, labels = [], [], [], []
     for x, bid in cells.items():
         cx, cy = pos[x][0] - x0, pos[x][1] - y0
@@ -294,15 +286,9 @@ def patch(idx, cells):
         labels.append(f'<text x="{cx:.1f}" y="{cy - 1:.1f}">{ent(bid)}</text>'
                       f'<text x="{cx:.1f}" y="{cy + 11:.1f}" font-size="8.5" opacity=".6">'
                       f'{"".join(map(str, x))}</text>')
-    if pad:
-        lo, hi = sorted(cells, key=lambda x: pos[x][0])[::len(cells) - 1]
-        y = pos[lo][1] - y0
-        labels.append('<g opacity=".6">'
-            + arrow(pos[lo][0] - x0 - STEP / 2 - 2, y, 180, next(i for i in rest if lo[i] > hi[i]))
-            + arrow(pos[hi][0] - x0 + STEP / 2 + 2, y, 0, next(i for i in rest if hi[i] > lo[i]))
-            + '</g>')
+    fixed = [idx] + [i for i in rest if flat and len({x[i] for x in cells}) == 1]
     svg = (f'<text x="2" y="12" font-size="11" opacity=".6" text-anchor="start">'
-           f'{ent(f"{x[idx]}={SUITS[idx]}")}</text>'
+           f'{ent(", ".join(f"{x[i]}={SUITS[i]}" for i in fixed))}</text>'
            f'<path d="{"".join(faint)}" fill="none" stroke="currentColor" stroke-opacity=".15"/>'
            + (f'<path d="{"".join(hatch)}" fill="url(#hatch)"/>' if hatch else '')
            + f'<path d="{"".join(hard)}" fill="none" stroke="currentColor" stroke-width="1.5"/>'
@@ -323,15 +309,12 @@ def figure(mapping, idx):
         x, rowh = x + w + GAP, max(rowh, h)
     W, H = MAXW if y else x - GAP, y + rowh
     body = '\n'.join(body)
-    marker = ('<marker id="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" '
-              'markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6Z"/></marker>'
-              if 'url(#arrow)' in body else '')
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W:.0f} {H:.0f}" '
             f'style="display:block;margin:1em auto;width:100%;max-width:{W:.0f}px" fill="currentColor" '
             f'font-size="13" text-anchor="middle" dominant-baseline="middle">\n'
             '<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" '
             'patternTransform="rotate(45)"><path d="M0 0v6" stroke="currentColor" '
-            f'stroke-opacity=".35"/></pattern>{marker}</defs>\n{body}\n</svg>\n')
+            f'stroke-opacity=".35"/></pattern></defs>\n{body}\n</svg>\n')
 
 if __name__ == '__main__':
     bad = 0
