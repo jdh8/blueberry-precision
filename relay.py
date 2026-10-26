@@ -113,9 +113,9 @@ DH = lambda s, h, d, c: h >= 5 and h > s and h >= d and h >= c
 def major(m, bal):
     """Shape answers with 5+ in major m (0 or 1): 2♥ takes BAL or 4 in the
     other major.  bal=False is the direct 8--12 table, where 2♦ is 5 + a minor;
-    bal=True is the 13+ table after the 2♣ - 2♦ relay.  Spades: 13+ 5-5 with
-    clubs jumps to 3♣, 3♦ is 5-5 with hearts at 8--12; after the relay 3♣♦ are 5 + a
-    minor and 3NT takes 5-5.  Hearts follow Viking: 13+ with 5♦ jumps to 3♣,
+    bal=True is the 13+ table after the 2♣ - 2♦ relay.  Spades: 5-5 in the
+    majors jumps to 3♣ with 13+ and 3♦ with 8--12; after the relay 3♣♦ are 5 + a
+    minor.  Hearts follow Viking: 13+ with 5♦ jumps to 3♣,
     3♠ is 6♥ + 5♦ at 8--12, and after the relay 3♣♦ are 5 + exactly 4 and
     3♥♠ take 5♣."""
     if m:
@@ -144,7 +144,7 @@ def major(m, bal):
         ('2NT', lambda s, h, d, c: s >= 6 and h <= 3 and max(d, c) == 4),
         ('3♥',  lambda s, h, d, c: s >= 6 and c == 5),
         ('3♠',  lambda s, h, d, c: s >= 6 and d == 5),
-        ('3NT', lambda s, h, d, c: h >= 5 and (bal or s >= 6)),
+        ('3NT', lambda s, h, d, c: s >= 6 and h >= 5),
         ('4♣',  lambda s, h, d, c: s >= 6 and c == 6),
         ('4♦',  lambda s, h, d, c: s >= 6 and d == 6),
     ] + ([
@@ -170,8 +170,8 @@ def minor4(bids):
     return [(bids[0], lambda *x: x[3] == 4), (bids[1], lambda *x: x[2] == 4)]
 
 # 8--12 and 13+ bid 2♥ at the same level and share its relays.
-# 13+ with 5♠ + 5♣ or 5+♥ + 5♦ jumps to 3♣ instead of bidding 2♣.
-for m, top, D, D13 in ((0, '1H-1S', DS, lambda s, h, d, c: DS(s, h, d, c) and not s == c == 5),
+# 13+ with 5♠ + 5♥ or 5+♥ + 5♦ jumps to 3♣ instead of bidding 2♣.
+for m, top, D, D13 in ((0, '1H-1S', DS, lambda s, h, d, c: DS(s, h, d, c) and not s == h == 5),
                        (1, '1S-1NT', DH, lambda s, h, d, c: DH(s, h, d, c) and d != 5)):
     A8 = node(top, D, major(m, False))
     A13 = node(top + '-2C-2D', D13, major(m, True))
