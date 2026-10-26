@@ -115,14 +115,14 @@ def major(m, bal):
     other major.  bal=False is the direct 8--12 table, where 2♦ is 5 + a minor;
     bal=True is the 13+ table after the 2♣ - 2♦ relay.  Spades: 3♣ is 5-5
     with clubs and 3♦ with hearts at 8--12; after the relay 3♣♦ are 5 + a
-    minor and 3NT takes 5-5.  Hearts follow Viking: 13+ with 5♦ jumps to 3♣
-    (5-5) or 3♠ (6-5), 2NT also takes 6♥ + 5♦ at 8--12, and after the relay
-    3♣♦ are 5 + exactly 4 and 3♥♠ take 5♣."""
+    minor and 3NT takes 5-5.  Hearts follow Viking: 13+ with 5♦ jumps to 3♣,
+    3♠ is 6♥ + 5♦ at 8--12, and after the relay 3♣♦ are 5 + exactly 4 and
+    3♥♠ take 5♣."""
     if m:
         return [
             ('2♥',  lambda s, h, d, c: s == 4 or BAL(s, h, d, c)),
             ('2♠',  lambda s, h, d, c: h >= 6 and max(s, d, c) <= 3),
-            ('2NT', lambda s, h, d, c: h >= 6 and s <= 3 and (max(d, c) == 4 or d == 5)),
+            ('2NT', lambda s, h, d, c: h >= 6 and s <= 3 and max(d, c) == 4),
             ('3NT', lambda s, h, d, c: h >= 6 and s >= 5),
             ('4♣',  lambda s, h, d, c: h >= 6 and c == 6),
             ('4♦',  lambda s, h, d, c: h >= 6 and d == 6),
@@ -135,6 +135,7 @@ def major(m, bal):
             ('2♦',  lambda s, h, d, c: h == 5 and s <= 3 and max(d, c) >= 4 and c != 5),
             ('3♦',  lambda s, h, d, c: h == 5 and c == 5),
             ('3♥',  lambda s, h, d, c: h >= 6 and c == 5),
+            ('3♠',  lambda s, h, d, c: h >= 6 and d == 5),
         ])
     three = [('3♣', lambda s, h, d, c: s == 5 and c == 5),
              ('3♦', lambda s, h, d, c: s == h == 5)]
@@ -167,8 +168,8 @@ def fit(m, bids):
     return list(zip(bids, [lambda *x: BAL(*x), lambda *x: x[m] >= 6] + [
         sh(2, 2), sh(1, 3), sh(3, 1), sh(0, 4), sh(4, 0)]))
 def minor4(bids):
-    """6+ major with a minor: 4 clubs, then diamonds."""
-    return [(bids[0], lambda *x: x[3] == 4), (bids[1], lambda *x: x[2] >= 4)]
+    """6+ major with a 4-card minor: clubs, then diamonds."""
+    return [(bids[0], lambda *x: x[3] == 4), (bids[1], lambda *x: x[2] == 4)]
 def doubleton(m, bids):
     """(5332) in major m: the doubleton, cheapest bid for the highest suit."""
     others = [i for i in range(4) if i != m]
