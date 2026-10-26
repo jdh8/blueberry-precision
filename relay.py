@@ -145,14 +145,44 @@ def doubleton(m, bids):
     others = [i for i in range(4) if i != m]
     return [(b, lambda *x, i=i: x[m] == 5 and x[i] == 2 and BAL(*x)) for b, i in zip(bids, others)]
 
-AS = node('1H-1S', DS, major(0, False))
-AS13 = node('1H-1S-2C-2D', DS, major(0, True))
-node('1H-1S-2D-2H', lambda *x: AS.get(x) == '2♦', fit(0, steps('2♠', 8), False), 0)
-node('1H-1S-2D-2H-2S-2NT', lambda *x: AS.get(x) == '2♦' and BAL(*x), doubleton(0, steps('3♣', 3)))
+def spades(bal):
+    """Shape answers with 5+♠, following Viking: 2♥ takes BAL or 4♥.  bal=False
+    is the direct 8--12 table, where 2♦ is 5♠ + a minor, 3♣ 5♠ + 5♣ and 3♦
+    5-5 in the majors; bal=True is the 13+ table after the 2♣ - 2♦ relay,
+    where 3♣♦ are 5♠ + a minor and 3NT takes 5-5."""
+    return [
+        ('2♥',  lambda s, h, d, c: h == 4 or BAL(s, h, d, c)),
+        ('2♠',  lambda s, h, d, c: s >= 6 and max(h, d, c) <= 3),
+        ('2NT', lambda s, h, d, c: s >= 6 and h <= 3 and max(d, c) == 4),
+        ('3♥',  lambda s, h, d, c: s >= 6 and c == 5),
+        ('3♠',  lambda s, h, d, c: s >= 6 and d == 5),
+        ('3NT', lambda s, h, d, c: h >= 5 and (bal or s >= 6)),
+        ('4♣',  lambda s, h, d, c: s >= 6 and c == 6),
+        ('4♦',  lambda s, h, d, c: s >= 6 and d == 6),
+    ] + ([
+        ('3♣',  lambda s, h, d, c: s == 5 and h <= 3 and c >= 4 and c >= d),
+        ('3♦',  lambda s, h, d, c: s == 5 and h <= 3 and d >= 4 and d > c),
+    ] if bal else [
+        ('2♦',  lambda s, h, d, c: s == 5 and h <= 3 and max(d, c) >= 4 and c != 5),
+        ('3♣',  lambda s, h, d, c: s == 5 and c == 5),
+        ('3♦',  lambda s, h, d, c: s == h == 5),
+    ])
+
+AS = node('1H-1S', DS, spades(False))
+AS13 = node('1H-1S-2C-2D', DS, spades(True))
+node('1H-1S-2D-2H', lambda *x: AS.get(x) == '2♦', [
+    ('2♠',  lambda s, h, d, c: c == 4 and c >= d),
+    ('2NT', lambda s, h, d, c: d == 4 and d > c),
+    ('3♣',  lambda s, h, d, c: d == 5),
+    ('3♦',  lambda s, h, d, c: c == 6),
+    ('3♥',  lambda s, h, d, c: d == 6),
+], 0)
+# 8--12 and 13+ bid 2♥ at the same level and share its relays.
+node('1H-1S-2H-2S', lambda *x: AS.get(x) == '2♥', fit(0, steps('2NT', 7), True), 0)
+node('1H-1S-2H-2S-2NT-3C', lambda *x: AS.get(x) == '2♥' and BAL(*x), doubleton(0, steps('3♦', 3)))
+node('1H-1S-2C-2D-2H-2S', lambda *x: AS13.get(x) == '2♥', fit(0, steps('2NT', 7), True))
 node('1H-1S-2NT-3C', lambda *x: AS.get(x) == '2NT', minor4(steps('3♦', 2)))
 node('1H-1S-2S-2NT', lambda *x: AS.get(x) == '2♠', ONE(0, steps('3♣', 7)), 0)
-node('1H-1S-2C-2D-2H-2S', lambda *x: AS13.get(x) == '2♥', fit(0, steps('2NT', 7), True), 0)
-node('1H-1S-2C-2D-2H-2S-2NT-3C', lambda *x: AS13.get(x) == '2♥' and BAL(*x), doubleton(0, steps('3♦', 3)))
 
 AH = node('1S-1NT', DH, major(1, False))
 AH13 = node('1S-1NT-2C-2D', DH, major(1, True))
