@@ -170,7 +170,7 @@ def minor4(bids):
 for m, top, D in ((0, '1H-1S', DS), (1, '1S-1NT', DH)):
     A8 = node(top, D, major(m, False))
     A13 = node(top + '-2C-2D', lambda *x, D=D: D(*x) and not (x[m] == 5 and max(x[2:]) == 5), major(m, True))
-    node(top + '-2D-2H', lambda *x, A=A8: A.get(x) == '2♦', minor2(steps('2♠', 6)), m)
+    node(top + '-2D-2H', lambda *x, A=A8: A.get(x) == '2♦', minor2(steps('2♠', 6)))
     # Viking skips 3♦ over hearts.
     FIT = steps('2NT', 7) if m == 0 else ['2NT', '3♣', '3♥', '3♠', '3NT', '4♣', '4♦']
     node(top + '-2H-2S', lambda *x, A=A8: A.get(x) == '2♥', fit(m, FIT), m)
