@@ -111,31 +111,41 @@ E = node('1D-1H-1NT-2H', lambda *x: A.get(x) == '2♥', EH(steps('2NT', 8), True
 DS = lambda s, h, d, c: s >= 5 and s >= h and s >= d and s >= c
 DH = lambda s, h, d, c: h >= 5 and h > s and h >= d and h >= c
 def major(m, bal):
-    """Shape answers with 5+ in major m (0 or 1).  bal=False is the direct
-    8--12 table, where 2♦ takes BAL or 4 in the other major and 2♥ is 5-5;
-    bal=True is the 13+ table after the 2♣ - 2♦ relay, where 2♥ takes BAL or
-    4 in the other major and 3NT takes 5-5."""
+    """Shape answers with 5+ in major m (0 or 1), following Viking: 2♥ takes
+    BAL or 4 in the other major.  bal=False is the direct 8--12 table, where
+    2♦ is 5 + a minor and 3♣ 5-5 with clubs; 3♦ is 5-5 in the majors over
+    spades, 5-5 with diamonds over hearts.  bal=True is the 13+ table after
+    the 2♣ - 2♦ relay, where 3♣♦ are 5 + a minor and 3NT takes 5-5."""
     o = 1 - m                       # the other major
-    return [('2♥' if bal else '2♦', lambda *x: x[o] == 4 or BAL(*x))] + (
-        [] if bal else [('2♥', lambda *x: x[m] == x[o] == 5)]) + [
+    three = [('3♣', lambda *x: x[m] == 5 and x[3] == 5),
+             ('3♦', lambda *x: x[m] == 5 and x[2 if m else o] == 5)]
+    return [
+        ('2♥',  lambda *x: x[o] == 4 or BAL(*x)),
         ('2♠',  lambda *x: x[m] >= 6 and max(x[o], x[2], x[3]) <= 3),
         ('2NT', lambda *x: x[m] >= 6 and x[o] <= 3 and max(x[2], x[3]) == 4),
-        ('3♣',  lambda *x: x[m] == 5 and x[o] <= 3 and 4 <= x[3] <= 5 and x[3] >= x[2]),
-        ('3♦',  lambda *x: x[m] == 5 and x[o] <= 3 and 4 <= x[2] <= 5 and x[2] > x[3]),
         ('3♥',  lambda *x: x[m] >= 6 and x[3] == 5),
         ('3♠',  lambda *x: x[m] >= 6 and x[2] == 5),
         ('3NT', lambda *x: x[o] >= 5 and (bal or x[m] >= 6)),
         ('4♣',  lambda *x: x[m] >= 6 and x[3] == 6),
         ('4♦',  lambda *x: x[m] >= 6 and x[2] == 6),
-    ]
-def fit(m, bids, share):
-    """BAL or 5+ major m with 4 in the other: BAL, 6-4 and 7-4 (one bid if
-    share), then 5422, 5413, 5431, 5404, 5440."""
+    ] + ([
+        ('3♣',  lambda *x: x[m] == 5 and x[o] <= 3 and x[3] >= 4 and x[3] >= x[2]),
+        ('3♦',  lambda *x: x[m] == 5 and x[o] <= 3 and x[2] >= 4 and x[2] > x[3]),
+    ] if bal else three + [
+        ('2♦',  lambda *x: x[m] == 5 and x[o] <= 3 and max(x[2], x[3]) >= 4
+                           and not any(p(*x) for _, p in three)),
+    ])
+def minor2(m, bids):
+    """5 in major m + a minor, after 2♦ - 2♥: 4♣, 4♦, then the lengths 3♣ and
+    3♦ did not take (5♦ over spades), then 6♣ and 6♦."""
+    return list(zip(bids, [lambda *x: x[3] == 4 and x[3] >= x[2], lambda *x: x[2] == 4 and x[2] > x[3]]
+        + ([] if m else [lambda *x: x[2] == 5]) + [lambda *x: x[3] == 6, lambda *x: x[2] == 6]))
+def fit(m, bids):
+    """BAL or 5+ major m with 4 in the other: BAL, 6-4 and 7-4, then 5422,
+    5413, 5431, 5404, 5440."""
     o = 1 - m
     sh = lambda a, b: (lambda *x: x[m] == 5 and x[o] == 4 and x[2] == a and x[3] == b)
-    long = ([lambda *x: x[m] >= 6] if share else
-            [lambda *x: x[m] == 6, lambda *x: x[m] == 7])
-    return list(zip(bids, [lambda *x: BAL(*x)] + long + [
+    return list(zip(bids, [lambda *x: BAL(*x), lambda *x: x[m] >= 6] + [
         sh(2, 2), sh(1, 3), sh(3, 1), sh(0, 4), sh(4, 0)]))
 def minor4(bids):
     """6+ major with a 4-card minor: clubs, then diamonds."""
@@ -145,53 +155,16 @@ def doubleton(m, bids):
     others = [i for i in range(4) if i != m]
     return [(b, lambda *x, i=i: x[m] == 5 and x[i] == 2 and BAL(*x)) for b, i in zip(bids, others)]
 
-def spades(bal):
-    """Shape answers with 5+♠, following Viking: 2♥ takes BAL or 4♥.  bal=False
-    is the direct 8--12 table, where 2♦ is 5♠ + a minor, 3♣ 5♠ + 5♣ and 3♦
-    5-5 in the majors; bal=True is the 13+ table after the 2♣ - 2♦ relay,
-    where 3♣♦ are 5♠ + a minor and 3NT takes 5-5."""
-    return [
-        ('2♥',  lambda s, h, d, c: h == 4 or BAL(s, h, d, c)),
-        ('2♠',  lambda s, h, d, c: s >= 6 and max(h, d, c) <= 3),
-        ('2NT', lambda s, h, d, c: s >= 6 and h <= 3 and max(d, c) == 4),
-        ('3♥',  lambda s, h, d, c: s >= 6 and c == 5),
-        ('3♠',  lambda s, h, d, c: s >= 6 and d == 5),
-        ('3NT', lambda s, h, d, c: h >= 5 and (bal or s >= 6)),
-        ('4♣',  lambda s, h, d, c: s >= 6 and c == 6),
-        ('4♦',  lambda s, h, d, c: s >= 6 and d == 6),
-    ] + ([
-        ('3♣',  lambda s, h, d, c: s == 5 and h <= 3 and c >= 4 and c >= d),
-        ('3♦',  lambda s, h, d, c: s == 5 and h <= 3 and d >= 4 and d > c),
-    ] if bal else [
-        ('2♦',  lambda s, h, d, c: s == 5 and h <= 3 and max(d, c) >= 4 and c != 5),
-        ('3♣',  lambda s, h, d, c: s == 5 and c == 5),
-        ('3♦',  lambda s, h, d, c: s == h == 5),
-    ])
-
-AS = node('1H-1S', DS, spades(False))
-AS13 = node('1H-1S-2C-2D', DS, spades(True))
-node('1H-1S-2D-2H', lambda *x: AS.get(x) == '2♦', [
-    ('2♠',  lambda s, h, d, c: c == 4 and c >= d),
-    ('2NT', lambda s, h, d, c: d == 4 and d > c),
-    ('3♣',  lambda s, h, d, c: d == 5),
-    ('3♦',  lambda s, h, d, c: c == 6),
-    ('3♥',  lambda s, h, d, c: d == 6),
-], 0)
 # 8--12 and 13+ bid 2♥ at the same level and share its relays.
-node('1H-1S-2H-2S', lambda *x: AS.get(x) == '2♥', fit(0, steps('2NT', 7), True), 0)
-node('1H-1S-2H-2S-2NT-3C', lambda *x: AS.get(x) == '2♥' and BAL(*x), doubleton(0, steps('3♦', 3)))
-node('1H-1S-2C-2D-2H-2S', lambda *x: AS13.get(x) == '2♥', fit(0, steps('2NT', 7), True))
-node('1H-1S-2NT-3C', lambda *x: AS.get(x) == '2NT', minor4(steps('3♦', 2)))
-node('1H-1S-2S-2NT', lambda *x: AS.get(x) == '2♠', ONE(0, steps('3♣', 7)), 0)
-
-AH = node('1S-1NT', DH, major(1, False))
-AH13 = node('1S-1NT-2C-2D', DH, major(1, True))
-node('1S-1NT-2D-2H', lambda *x: AH.get(x) == '2♦', fit(1, steps('2♠', 8), False), 1)
-node('1S-1NT-2D-2H-2S-2NT', lambda *x: AH.get(x) == '2♦' and BAL(*x), doubleton(1, steps('3♣', 3)))
-node('1S-1NT-2NT-3C', lambda *x: AH.get(x) == '2NT', minor4(steps('3♦', 2)))
-node('1S-1NT-2S-2NT', lambda *x: AH.get(x) == '2♠', ONE(1, steps('3♣', 7)), 1)
-node('1S-1NT-2C-2D-2H-2S', lambda *x: AH13.get(x) == '2♥', fit(1, steps('2NT', 7), True), 1)
-node('1S-1NT-2C-2D-2H-2S-2NT-3C', lambda *x: AH13.get(x) == '2♥' and BAL(*x), doubleton(1, steps('3♦', 3)))
+for m, top, D in (0, '1H-1S', DS), (1, '1S-1NT', DH):
+    A8 = node(top, D, major(m, False))
+    A13 = node(top + '-2C-2D', D, major(m, True))
+    node(top + '-2D-2H', lambda *x, A=A8: A.get(x) == '2♦', minor2(m, steps('2♠', 5)), m)
+    node(top + '-2H-2S', lambda *x, A=A8: A.get(x) == '2♥', fit(m, steps('2NT', 7)), m)
+    node(top + '-2H-2S-2NT-3C', lambda *x, A=A8: A.get(x) == '2♥' and BAL(*x), doubleton(m, steps('3♦', 3)))
+    node(top + '-2C-2D-2H-2S', lambda *x, A=A13: A.get(x) == '2♥', fit(m, steps('2NT', 7)))
+    node(top + '-2NT-3C', lambda *x, A=A8: A.get(x) == '2NT', minor4(steps('3♦', 2)))
+    node(top + '-2S-2NT', lambda *x, A=A8: A.get(x) == '2♠', ONE(m, steps('3♣', 7)), m)
 
 # Balanced: 1♣-1NT (8--12) and 1♣-1♥-1♠-1NT (13+), both relayed with 2♣.
 # No 5-card major (those are positives in the major).
