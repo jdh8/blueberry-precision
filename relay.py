@@ -113,12 +113,13 @@ DH = lambda s, h, d, c: h >= 5 and h > s and h >= d and h >= c
 def major(m, bal):
     """Shape answers with 5+ in major m (0 or 1), following Viking: 2♥ takes
     BAL or 4 in the other major.  bal=False is the direct 8--12 table, where
-    2♦ is 5 + a minor and 3♣ 5-5 with clubs; 3♦ is 5-5 in the majors over
-    spades, 5-5 with diamonds over hearts.  bal=True is the 13+ table after
+    2♦ is 5 + a minor and 3♣♦ are 5-5: over spades 3♣ with clubs and 3♦
+    with hearts, over hearts 3♣ with diamonds and 3♦ with clubs, so the
+    strong hand bids the second suit first.  bal=True is the 13+ table after
     the 2♣ - 2♦ relay, where 3♣♦ are 5 + a minor and 3NT takes 5-5."""
     o = 1 - m                       # the other major
-    three = [('3♣', lambda *x: x[m] == 5 and x[3] == 5),
-             ('3♦', lambda *x: x[m] == 5 and x[2 if m else o] == 5)]
+    three = [('3♣', lambda *x: x[m] == 5 and x[2 if m else 3] == 5),
+             ('3♦', lambda *x: x[m] == 5 and x[3 if m else o] == 5)]
     return [
         ('2♥',  lambda *x: x[o] == 4 or BAL(*x)),
         ('2♠',  lambda *x: x[m] >= 6 and max(x[o], x[2], x[3]) <= 3),
