@@ -8,7 +8,7 @@ next step.
 With 13+, responder bids the shape at once.  With 8--12, responder bids the
 cheapest step and, after the next relay, the same shape one step higher.
 
-Viking's 2♣ and 2♦ allow a second 4+ minor, and its opener may bid naturally
+Viking 2♣♦ allow a second 4+ minor, and its opener may bid naturally
 instead of relaying.
 
 ## Diamonds 2♣
