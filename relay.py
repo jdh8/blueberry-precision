@@ -113,8 +113,8 @@ DH = lambda s, h, d, c: h >= 5 and h > s and h >= d and h >= c
 def major(m, bal):
     """Shape answers with 5+ in major m (0 or 1): 2♥ takes BAL or 4 in the
     other major.  bal=False is the direct 8--12 table, where 2♦ is 5 + a minor;
-    bal=True is the 13+ table after the 2♣ - 2♦ relay.  Spades: 3♣ is 5-5
-    with clubs and 3♦ with hearts at 8--12; after the relay 3♣♦ are 5 + a
+    bal=True is the 13+ table after the 2♣ - 2♦ relay.  Spades: 13+ 5-5 with
+    clubs jumps to 3♣, 3♦ is 5-5 with hearts at 8--12; after the relay 3♣♦ are 5 + a
     minor and 3NT takes 5-5.  Hearts follow Viking: 13+ with 5♦ jumps to 3♣,
     3♠ is 6♥ + 5♦ at 8--12, and after the relay 3♣♦ are 5 + exactly 4 and
     3♥♠ take 5♣."""
@@ -137,8 +137,7 @@ def major(m, bal):
             ('3♥',  lambda s, h, d, c: h >= 6 and c == 5),
             ('3♠',  lambda s, h, d, c: h >= 6 and d == 5),
         ])
-    three = [('3♣', lambda s, h, d, c: s == 5 and c == 5),
-             ('3♦', lambda s, h, d, c: s == h == 5)]
+    three = [('3♦', lambda s, h, d, c: s == h == 5)]
     return [
         ('2♥',  lambda s, h, d, c: h == 4 or BAL(s, h, d, c)),
         ('2♠',  lambda s, h, d, c: s >= 6 and max(h, d, c) <= 3),
@@ -155,11 +154,10 @@ def major(m, bal):
         ('2♦',  lambda *x: x[0] == 5 and x[1] <= 3 and max(x[2], x[3]) >= 4
                            and not any(p(*x) for _, p in three)),
     ])
-def minor2(m, bids):
-    """5 in major m + a minor, after 2♦ - 2♥: 4♣, 4♦, 5♣ (hearts only, which
-    the direct 3♦ takes first), 5♦, 6♣, 6♦."""
-    return list(zip(bids, [lambda *x: x[3] == 4 and x[3] >= x[2], lambda *x: x[2] == 4 and x[2] > x[3]]
-        + ([lambda *x: x[3] == 5] if m else []) + [lambda *x: x[2] == 5, lambda *x: x[3] == 6, lambda *x: x[2] == 6]))
+def minor2(bids):
+    """5-card major + a minor, after 2♦ - 2♥: 4♣, 4♦, 5♣, 5♦, 6♣, 6♦."""
+    return list(zip(bids, [lambda *x: x[3] == 4 and x[3] >= x[2], lambda *x: x[2] == 4 and x[2] > x[3],
+        lambda *x: x[3] == 5, lambda *x: x[2] == 5, lambda *x: x[3] == 6, lambda *x: x[2] == 6]))
 def fit(m, bids):
     """BAL or 5+ major m with 4 in the other: BAL, 6-4 and 7-4, then 5422,
     5413, 5431, 5404, 5440."""
@@ -170,23 +168,17 @@ def fit(m, bids):
 def minor4(bids):
     """6+ major with a 4-card minor: clubs, then diamonds."""
     return [(bids[0], lambda *x: x[3] == 4), (bids[1], lambda *x: x[2] == 4)]
-def doubleton(m, bids):
-    """(5332) in major m: the doubleton, cheapest bid for the highest suit."""
-    others = [i for i in range(4) if i != m]
-    return [(b, lambda *x, i=i: x[m] == 5 and x[i] == 2 and BAL(*x)) for b, i in zip(bids, others)]
 
 # 8--12 and 13+ bid 2♥ at the same level and share its relays.
-# Over hearts, 13+ with 5♦ jumps to 3♣ or 3♠ instead of bidding 2♣.
-for m, top, D, D13 in ((0, '1H-1S', DS, DS),
+# 13+ with 5♠ + 5♣ or 5+♥ + 5♦ jumps to 3♣ instead of bidding 2♣.
+for m, top, D, D13 in ((0, '1H-1S', DS, lambda s, h, d, c: DS(s, h, d, c) and not s == c == 5),
                        (1, '1S-1NT', DH, lambda s, h, d, c: DH(s, h, d, c) and d != 5)):
     A8 = node(top, D, major(m, False))
     A13 = node(top + '-2C-2D', D13, major(m, True))
-    node(top + '-2D-2H', lambda *x, A=A8: A.get(x) == '2♦', minor2(m, steps('2♠', 5 + m)), m)
+    node(top + '-2D-2H', lambda *x, A=A8: A.get(x) == '2♦', minor2(steps('2♠', 6)), m)
     # Viking skips 3♦ over hearts.
     FIT = steps('2NT', 7) if m == 0 else ['2NT', '3♣', '3♥', '3♠', '3NT', '4♣', '4♦']
     node(top + '-2H-2S', lambda *x, A=A8: A.get(x) == '2♥', fit(m, FIT), m)
-    if m == 0:
-        node(top + '-2H-2S-2NT-3C', lambda *x, A=A8: A.get(x) == '2♥' and BAL(*x), doubleton(m, steps('3♦', 3)))
     node(top + '-2C-2D-2H-2S', lambda *x, A=A13: A.get(x) == '2♥', fit(m, FIT))
     node(top + '-2NT-3C', lambda *x, A=A8: A.get(x) == '2NT', minor4(steps('3♦', 2)))
     node(top + '-2S-2NT', lambda *x, A=A8: A.get(x) == '2♠', ONE(m, steps('3♣', 7)), m)
