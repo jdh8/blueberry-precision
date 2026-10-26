@@ -45,7 +45,7 @@ We drop club two-suiters over a double because they can be rebranded as traps.
 
 | 1♣ (X)   | Not TRF |
 |----------|---------|
-| P        | NF: 5--7 or to play
+| P        | NF, 5--7 or to play
 | XX!      | NEG SOS, 0--4
 | 1♦♥♠     | NF, 5+#
 | 1NT      | FG, 8+
@@ -56,7 +56,7 @@ We drop club two-suiters over a double because they can be rebranded as traps.
 
 | 1♣ (1♦) | Not TRF |
 |---------|---------|
-| P!      | F: 5--7 or PEN
+| P!      | F, 5--7 or PEN
 | X!      | NEG OPT T/O, 0--4
 | 1♥♠     | NF, 5+#
 | 1NT     | FG, with stopper
@@ -71,7 +71,7 @@ any shape.
 
 | 1♣ (1♥) | Not TRF |
 |---------|---------|
-| P!      | F: 5--7 or PEN
+| P!      | F, 5--7 or PEN
 | X!      | NEG OPT T/O, 0--4
 | 1♠      | NF, 5+♠
 | 1NT     | FG, with stopper
@@ -83,7 +83,7 @@ any shape.
 
 | 1♣ (1♠) | Not TRF |
 |---------|---------|
-| P!      | F: 5--7 or PEN
+| P!      | F, 5--7 or PEN
 | X!      | NEG OPT T/O, 0--4
 | 1NT     | FG, with stopper
 | 2♣♦♥    | NF, 5+#
@@ -98,7 +98,7 @@ space.
 
 | 1♣ (1NT) | Not TRF |
 |----------|---------|
-| P!       | F: 5--7 or PEN
+| P!       | F, 5--7 or PEN
 | X!       | NEG, 0--4
 | 2♣♦♥♠    | NF, 5+#
 | 2NT!     | FG, 5+♦♣, 5+ another suit
@@ -119,7 +119,7 @@ Over (2♣), 2NT shows the stopper, so 3NT takes over the two-suiters.
 
 | 1♣ (2♣) | Not TRF |
 |---------|---------|
-| P!      | F: 5--7 or PEN
+| P!      | F, 5--7 or PEN
 | X!      | NEG, 0--4
 | 2♦♥♠    | NF, 5+#
 | 2NT     | FG, with stopper
@@ -150,7 +150,7 @@ swaps their roles:
 
 | 1♣ (X)  | TRF, 4+♥ |
 |---------|----------|
-| P       | NF: 5--7 or PEN
+| P       | NF, 5--7 or PEN
 | XX!     | NEG, 0--4
 | 1♦♠     | NF, 5+#
 | 1♥!     | FG, no stopper
@@ -162,7 +162,7 @@ swaps their roles:
 
 | 1♣ (1♦) | TRF, 4+♠ |
 |---------|----------|
-| P!      | F: 5--7 or PEN
+| P!      | F, 5--7 or PEN
 | X!      | NEG, 0--4
 | 1♥      | NF, 5+♥
 | 1♠!     | FG, no stopper

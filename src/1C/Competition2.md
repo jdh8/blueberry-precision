@@ -16,7 +16,7 @@ It also defines responses over (2NT), which Blueberry does not.
 
 | 1♣ (2♦) | |
 |---------|-|
-| P!      | F: 5--7 or PEN
+| P!      | F, 5--7 or PEN
 | X!      | NEG, 0--4
 | 2♥♠     | NF, 5+#
 | 2NT!    | INV+ TRF to 3♣
@@ -27,7 +27,7 @@ It also defines responses over (2NT), which Blueberry does not.
 
 | 1♣ (2♥) | |
 |---------|-|
-| P!      | F: 5--7 or PEN
+| P!      | F, 5--7 or PEN
 | X!      | NEG, 0--4
 | 2♠      | NF, 5+♠
 | 2NT!    | INV+ TRF to 3♣
@@ -43,7 +43,7 @@ declares hearts.
 
 | 1♣ (2♠) | |
 |---------|-|
-| P!      | F: 5--7 or PEN
+| P!      | F, 5--7 or PEN
 | X!      | NEG, 0--4
 | 2NT!    | INV+ TRF to 3♣
 | 3♣!     | INV+ TRF to 3♦
