@@ -19,6 +19,8 @@ relay.
 | 2♥  | 5+♥, 4=♣; then two-suited table
 | 2♠+ | One-suited 5+♥, on track
 
+{{#include relay/1NT-2C.svg}}
+
 | 1♣ - 1NT -<br>2♦ - | |
 |------|-|
 | 2♥   | NF, MIN, 0--1♠
@@ -45,3 +47,5 @@ Responder relays over 2♠ and opener describes.
 | 2NT! | (R) FG
 | 3♣♦♥ | NF, suggests a contract
 | 3♠!  | Asks for ♠ help for 3NT
+
+{{#include relay/1NT-2S-2NT.svg}}

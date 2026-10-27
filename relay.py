@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
-"""Relay phase diagrams.
+"""Relay phase diagrams for the IMprecision 1♣ structure.
 
 Each relay node maps the shapes still possible at that node to a bid.  This
 script states that map as ordered rules, checks that every shape gets exactly
-one bid, and draws the map as hexagonal lattices (one per length of an indexing suit;
-of the other three, the highest ranking points up, the next down-left and
+one bid, and draws the map as hexagonal lattices (one per length of an indexing
+suit; of the other three, the highest ranking points up, the next down-left and
 the lowest down-right; a lattice on one line is turned flat) into
 src/1C/relay/*.svg, which the 1♣ chapters include.
-Nodes are named by the auction after 1♣.
+Nodes are named by the auction after 1♣, ending with the relay the node answers.
 Borders are drawn where the bid changes; a hatched cell is a hole or a clash.
+
+The generic tables (one-suited, two-suited, 5-5, three-suited, balanced) are
+written once, relative to an entry step, and instantiated per node.  Where the
+source leaves an orientation unresolved (7321, 5-5 shapes with 7 cards), the
+shapes share a bid; that is not a clash.
 
 Run it by hand after editing the rules.  Exit code 1 on any hole or clash.
 """
@@ -19,7 +24,9 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src/1C/relay')
 # ponytail: 8+ card suits omitted; extend the range if a rule ever needs them
 SHAPES = [(s, h, d, c) for s in range(8) for h in range(8) for d in range(8)
           for c in [13 - s - h - d] if 0 <= c <= 7]
-BAL = lambda s, h, d, c: sorted((s, h, d, c)) in ([2, 3, 3, 5], [2, 3, 4, 4], [3, 3, 3, 4])
+STEPS = ['1NT', '2♣', '2♦', '2♥', '2♠', '2NT', '3♣', '3♦', '3♥', '3♠', '3NT',
+         '4♣', '4♦', '4♥', '4♠']
+S = STEPS.index
 
 def solve(domain, rules):
     """{shape: bid} for shapes in domain; bid is 'a/b' on clash, '?' on hole."""
@@ -34,202 +41,265 @@ CHECKED, FIGURES = {}, {}
 def node(name, domain, rules, idx=None):
     """Register a relay node; idx picks the suit whose length indexes the
     lattices, None for a node that is only checked, not drawn."""
+    assert name not in CHECKED, name
     CHECKED[name] = m = solve(domain, rules)
     if idx is not None:
         FIGURES[name] = (m, idx)
     return m
 
-def pattern(suit, length, rest):
-    """Shape with `length` cards in suit index `suit` and the other three
-    lengths `rest` in any order, e.g. (6322)."""
-    return lambda *x: x[suit] == length and sorted(x[:suit] + x[suit + 1:]) == sorted(rest)
+def after(name, bid):
+    """Domain of the node reached by answering `bid` at node `name`."""
+    return lambda *x: CHECKED[name].get(x) == bid
+
+def sub(name, bid):
+    """Name of the node after answer `bid` and the next-step relay."""
+    return f'{name}-{bid}-{STEPS[S(bid) + 1]}'.replace('♣', 'C').replace('♦', 'D') \
+        .replace('♥', 'H').replace('♠', 'S')
+
+def ladder(e, preds):
+    """Consecutive steps from STEPS[e], one per predicate."""
+    return list(zip(STEPS[e:], preds))
 
 def exact(*shape):
     return lambda *x: x == shape
 
-# ---------------------------------------------------------------- 1♣-1♦-1♥-1NT
-# The tables leave longest-suit precedence implicit; the rules spell it out.
-# Responder: FG, 5+ major, no longer minor.
-D0 = lambda s, h, d, c: max(s, h) >= 5 and max(s, h) >= max(d, c)
-A = node('1D-1H-1NT', D0, [
-    ('2♦',  lambda s, h, d, c: s >= 5 and s >= h),
-    ('2♥',  lambda s, h, d, c: h >= 5 and (s == 4 or BAL(s, h, d, c))),
-    ('2♠',  lambda s, h, d, c: h >= 6 and max(s, d, c) <= 3),
-    ('2NT', lambda s, h, d, c: h >= 6 and s <= 3 and max(d, c) == 4),
-    ('3♣',  lambda s, h, d, c: h == 5 and s <= 3 and 4 <= c <= 5 and c >= d),
-    ('3♦',  lambda s, h, d, c: h == 5 and s <= 3 and 4 <= d <= 5 and d > c),
-    ('3♥',  lambda s, h, d, c: h >= 6 and c == 5),
-    ('3♠',  lambda s, h, d, c: h >= 6 and d == 5),
-    ('3NT', lambda s, h, d, c: h >= 6 and 5 <= s < h),
-    ('4♣',  lambda s, h, d, c: h >= 6 and c == 6),
-    ('4♦',  lambda s, h, d, c: h >= 6 and d == 6),
+def listed(e, shapes):
+    return ladder(e, [exact(*x) for x in shapes])
+
+def others(*fixed):
+    return [i for i in range(4) if i not in fixed]
+
+# ------------------------------------------------------------------ hand types
+THREE = lambda *x: sum(v >= 4 for v in x) == 3
+BAL = lambda s, h, d, c: sorted((s, h, d, c)) in ([3, 3, 3, 4], [2, 3, 4, 4]) \
+    or sorted((s, h, d, c)) == [2, 3, 3, 5] and max(s, h) <= 4
+ONE = lambda m: lambda *x: x[m] >= 5 and max(x[:m] + x[m + 1:]) <= 3
+TWO = lambda a, b: lambda *x: x[a] >= 4 and x[b] >= 4 and x[a] + x[b] >= 9 and not THREE(*x)
+
+# ------------------------------------------------------------- generic tables
+def uneven(name, dom, p, q, e, extra=(), idx=None):
+    """5+ in suit p and exactly 4 in q; STEPS[e] is high shortage.  Also
+    registers the node after high shortage."""
+    hi, lo = others(p, q)
+    G = lambda f: (lambda *x: x[p] >= 5 and x[q] == 4 and not THREE(*x) and f(*x))
+    L = lambda n, a, b: G(lambda *x: x[p] == n and x[hi] == a and x[lo] == b)
+    node(name, dom, list(extra) + ladder(e, [
+        G(lambda *x: x[hi] < x[lo] or x[hi] == x[lo] == 1),
+        L(5, 2, 2), L(5, 3, 1), L(6, 2, 1), L(6, 3, 0), L(7, 2, 0)]), idx)
+    node(sub(name, STEPS[e]), after(name, STEPS[e]), ladder(e + 2, [
+        L(5, 1, 3), L(6, 1, 2), L(6, 0, 3), L(7, 1, 1), L(7, 0, 2)]))
+
+def fivefive(name, dom, a, b, e, extra=(), idx=None):
+    """5-5 or longer in suits a (higher) and b; STEPS[e] is high shortage.
+    7-5 and 6-6 are outside the table and excluded from the domain."""
+    hi, lo = others(a, b)
+    G = lambda f: (lambda *x: x[a] >= 5 and x[b] >= 5 and f(*x))
+    L = lambda n, m, u, v: (lambda *x: x == tuple(
+        {a: n, b: m, hi: u, lo: v}[i] for i in range(4)))
+    dom2 = lambda *x: dom(*x) and x[a] + x[b] <= 11
+    node(name, dom2, list(extra) + ladder(e, [
+        G(lambda *x: x[hi] < x[lo]), G(lambda *x: x[hi] == x[lo] == 1),
+        L(5, 5, 2, 1), L(5, 5, 3, 0), L(5, 6, 2, 0), L(6, 5, 2, 0)]), idx)
+    node(sub(name, STEPS[e]), after(name, STEPS[e]), ladder(e + 2, [
+        L(5, 5, 1, 2), L(5, 5, 0, 3), L(5, 6, 0, 2), L(6, 5, 0, 2)]))
+    node(sub(name, STEPS[e + 1]), after(name, STEPS[e + 1]), ladder(e + 3, [
+        L(5, 6, 1, 1), L(6, 5, 1, 1)]))
+
+def two(name, dom, a, b, e, extra=(), idx=None, reverser=True, long=True):
+    """Two-suited table in suits a (higher) and b, STEPS[e] the entry step:
+    reverser (4 in a, 5+ in b), 5-5, then the uneven table with 5+ in a."""
+    rules = list(extra)
+    if reverser:
+        rules.append((STEPS[e], lambda *x: x[a] == 4 and x[b] >= 5 and not THREE(*x))); e += 1
+    if long:
+        rules.append((STEPS[e], lambda *x: x[a] >= 5 and x[b] >= 5)); e += 1
+    uneven(name, dom, a, b, e, rules, idx)
+    if reverser:
+        uneven(sub(name, STEPS[e - 1 - long]), after(name, STEPS[e - 1 - long]), b, a, e + 1 - long)
+    if long:
+        fivefive(sub(name, STEPS[e - 1]), after(name, STEPS[e - 1]), a, b, e + 1)
+
+def one(name, dom, m, e, skip=False, extra=(), idx=None):
+    """One-suited table in suit m, STEPS[e] the entry step (high shortage).
+    skip drops 5332.  Low shortage runs straight on to the shape (Kerr);
+    IMprecision sends 6322 with a high doubleton to the first step and 7222
+    to the equal-shortage step."""
+    hi, mid, lo = others(m)
+    side = lambda x: (x[hi], x[mid], x[lo])
+    G = lambda f: (lambda *x: ONE(m)(*x) and (x[m] >= 6 or not skip) and f(*x))
+    P = lambda n, t: (lambda *x: x[m] == n and side(x) == t)
+    low = [P(5, (3, 3, 2)), P(6, (3, 3, 1)),
+           G(lambda *x: x[m] == 7 and x[lo] == 1 and x[hi] != x[mid]), P(7, (3, 3, 0))]
+    high = [G(lambda *x: x[m] == 6 and x[hi] == 2), P(5, (2, 3, 3)), P(6, (1, 3, 3)),
+            G(lambda *x: x[m] == 7 and x[hi] == 1 and x[mid] != x[lo]), P(7, (0, 3, 3))]
+    midl = [P(5, (3, 2, 3)), P(6, (3, 1, 3)),
+            G(lambda *x: x[m] == 7 and x[mid] == 1 and x[hi] != x[lo]), P(7, (3, 0, 3))]
+    if skip:
+        del low[0], high[1], midl[0]
+    node(name, dom, list(extra) + ladder(e, [
+        G(lambda *x: x[hi] == min(side(x)) and not x[hi] == x[mid] == x[lo] and not x[mid] == x[lo] < x[hi]),
+        G(lambda *x: x[mid] < x[hi] and x[mid] < x[lo]),
+        G(lambda *x: x[m] in (6, 7) and x[hi] >= x[mid] == x[lo])] + low), idx)
+    h = sub(name, STEPS[e])
+    node(h, after(name, STEPS[e]), ladder(e + 2, high))
+    node(sub(h, STEPS[e + 2]), after(h, STEPS[e + 2]), ladder(e + 4, [P(6, (2, 2, 3)), P(6, (2, 3, 2))]))
+    node(sub(name, STEPS[e + 1]), after(name, STEPS[e + 1]), ladder(e + 3, midl))
+    node(sub(name, STEPS[e + 2]), after(name, STEPS[e + 2]), ladder(e + 4, [P(6, (3, 2, 2)), P(7, (2, 2, 2))]))
+
+def three(name, dom, short, e, extra=()):
+    """Three-suited with shortness in suit `short`: 4441, then 5440 with the
+    5-card suit from the lowest to the highest."""
+    lo, mid, hi = reversed(others(short))
+    G = lambda f: (lambda *x: THREE(*x) and x[short] <= 1 and f(*x))
+    return node(name, dom, list(extra) + ladder(e, [
+        G(lambda *x: x[short] == 1), G(lambda *x: x[lo] == 5), G(lambda *x: x[mid] == 5), G(lambda *x: x[hi] == 5)]))
+
+def balanced4(name, dom, e, idx=None):
+    """BAL with 4♠, or three-suited short in a red suit; STEPS[e] shows 0--2♥."""
+    node(name, dom, ladder(e, [
+        lambda s, h, d, c: h <= 2, lambda s, h, d, c: THREE(s, h, d, c) and d <= 1,
+        lambda *x: x in ((4, 3, 2, 4), (4, 4, 2, 3)), exact(4, 3, 3, 3), exact(4, 3, 4, 2), exact(4, 4, 3, 2)]), idx)
+    h = sub(name, STEPS[e])
+    node(h, after(name, STEPS[e]), [(STEPS[e + 2], lambda s, h, d, c: h == 2)]
+         + listed(e + 3, [(4, 1, 4, 4), (4, 0, 4, 5), (4, 0, 5, 4), (5, 0, 4, 4)]))
+    node(sub(h, STEPS[e + 2]), after(h, STEPS[e + 2]), listed(e + 4, [(4, 2, 3, 4), (4, 2, 4, 3)]))
+    node(sub(name, STEPS[e + 1]), after(name, STEPS[e + 1]),
+         listed(e + 3, [(4, 4, 1, 4), (4, 4, 0, 5), (4, 5, 0, 4), (5, 4, 0, 4)]))
+    node(sub(name, STEPS[e + 2]), after(name, STEPS[e + 2]), listed(e + 4, [(4, 3, 2, 4), (4, 4, 2, 3)]))
+
+def balanced3(name, dom, e, idx=None):
+    """BAL without 4♠; STEPS[e] shows 2=♠, the rest 3=♠."""
+    node(name, dom, ladder(e, [
+        lambda s, h, d, c: s == 2, lambda *x: x in ((3, 4, 3, 3), (3, 3, 4, 3), (3, 3, 3, 4)),
+        lambda s, h, d, c: s == 3 and c == 5, lambda s, h, d, c: s == 3 and d == 5,
+        exact(3, 2, 4, 4), exact(3, 4, 2, 4), exact(3, 4, 4, 2)]), idx)
+    for k, shapes in enumerate([[(2, 3, 3, 5), (2, 3, 5, 3), (2, 3, 4, 4), (2, 4, 3, 4), (2, 4, 4, 3)],
+                                [(3, 3, 3, 4), (3, 3, 4, 3), (3, 4, 3, 3)],
+                                [(3, 2, 3, 5), (3, 3, 2, 5)], [(3, 2, 5, 3), (3, 3, 5, 2)]]):
+        node(sub(name, STEPS[e + k]), after(name, STEPS[e + k]), listed(e + k + 2, shapes))
+
+# ------------------------------------------------------------------ responses
+# Shape only; the jump responses (2NT+) and strength splits are not modelled.
+node('1C', lambda *x: True, [
+    ('1♥',  lambda s, h, d, c: s >= 4 and not (THREE(s, h, d, c) and c <= 1)),
+    ('1♠',  lambda s, h, d, c: s <= 3 and (d >= 5 and h <= 4 and c <= 4 and not THREE(s, h, d, c)
+                                           or BAL(s, h, d, c))),
+    ('1NT', lambda s, h, d, c: h >= 5 and s <= 3 and c <= 4 and not THREE(s, h, d, c)),
+    ('2♣',  lambda s, h, d, c: c >= 5 and s <= 3 and h <= 3 and not BAL(s, h, d, c)),
+    ('2♦',  lambda s, h, d, c: c >= 5 and h >= 4 and s <= 3 and d <= 3),
+    ('2♥',  lambda s, h, d, c: s <= 1 and THREE(s, h, d, c)),
+    ('2♠',  lambda s, h, d, c: c <= 1 and THREE(s, h, d, c)),
 ])
-B = node('1D-1H-1NT-2D', lambda *x: A.get(x) == '2♦', [
-    ('2♠',  lambda s, h, d, c: s >= 6 and max(h, d, c) <= 3),
-    ('2NT', lambda s, h, d, c: BAL(s, h, d, c) or max(d, c) <= 3 and (h == 4 or s == h == 5)),
-    ('3♣',  lambda s, h, d, c: c >= 4 and c >= d and not (s >= 6 and c >= 5)),
-    ('3♦',  lambda s, h, d, c: d >= 4 and d > c and not (s >= 6 and d >= 5)),
-    ('3♥',  lambda s, h, d, c: s >= 6 and c == 5),
-    ('3♠',  lambda s, h, d, c: s >= 6 and d == 5),
-    ('3NT', lambda s, h, d, c: s >= 6 and h >= 5),
-    ('4♣',  lambda s, h, d, c: s >= 6 and c == 6),
-    ('4♦',  lambda s, h, d, c: s >= 6 and d == 6),
+
+# 1♥: 4+♠.  The 1♠ relay; 2♥ reverser, 2♠ 5-5, 2NT+ 5+♠ 4=♥ on track.
+two('1H-1S', after('1C', '1♥'), 0, 1, S('2♥'), idx=0, extra=[
+    ('1NT', lambda *x: BAL(*x) or TWO(0, 2)(*x) or THREE(*x) and min(x[1], x[2]) <= 1),
+    ('2♣',  TWO(0, 3)),
+    ('2♦',  ONE(0)),
 ])
-# 6+ in suit m, no side suit: (6322), (6331), (7321), then 7330/7222/7303/7033
-# with the long suit at index m; a minor gets five bids, so (7330) stays grouped.
-def ONE(m, bids):
-    out = [(bids[0], pattern(m, 6, (2, 2, 3))), (bids[1], pattern(m, 6, (1, 3, 3))),
-           (bids[2], pattern(m, 7, (1, 2, 3)))]
-    if len(bids) == 5:
-        return out + [(bids[3], pattern(m, 7, (0, 3, 3))), (bids[4], pattern(m, 7, (2, 2, 2)))]
-    seven = [[3, 3, 0], [2, 2, 2], [3, 0, 3], [0, 3, 3]]
-    return out + [(b, exact(*r[:m], 7, *r[m:])) for b, r in zip(bids[3:], seven)]
-STEPS = ['1NT', '2♣', '2♦', '2♥', '2♠', '2NT', '3♣', '3♦', '3♥', '3♠', '3NT', '4♣', '4♦', '4♥']
-def steps(first, n):
-    i = STEPS.index(first)
-    return STEPS[i:i + n]
+two('1H-1S-1NT-2C', after('1H-1S', '1NT'), 0, 2, S('2♥'), idx=0,
+    extra=[('2♦', lambda *x: BAL(*x) or THREE(*x))])
+balanced4('1H-1S-1NT-2C-2D-2H', after('1H-1S-1NT-2C', '2♦'), S('2♠'), 0)
+two('1H-1S-2C-2D', after('1H-1S', '2♣'), 0, 3, S('2♥'), idx=0)
+one('1H-1S-2D-2H', after('1H-1S', '2♦'), 0, S('2♠'), idx=0)
+# Opener's natural rebids that responder relays over.
+one('1H-2H-2S', lambda *x: ONE(1)(*x) and x[1] >= 6, 1, S('2NT'), skip=True, idx=1)
+# ponytail: "both minors, any strength" is read as 5-5 like 1♣ - 1♦ - 2♠
+fivefive('1H-2S-2NT', lambda s, h, d, c: d >= 5 and c >= 5, 2, 3, S('3♣'), idx=2)
 
-C = node('1D-1H-1NT-2D-2S', lambda *x: B.get(x) == '2♠', ONE(0, steps('3♣', 7)), 0)
-D = node('1D-1H-1NT-2D-2NT', lambda *x: B.get(x) == '2NT', [
-    ('3♦',  lambda s, h, d, c: BAL(s, h, d, c) and h <= 3),
-    ('3♥',  lambda s, h, d, c: s >= 6 and h == 4),
-    ('3♠',  lambda s, h, d, c: s == h == 5),
-    ('3NT', exact(5, 4, 2, 2)),
-    ('4♣',  exact(5, 4, 1, 3)),
-    ('4♦',  exact(5, 4, 3, 1)),
-], 0)
-# 5+♥ with 4♠ or balanced: the same answers direct and after 1♣-1♦-1♥
-EH = lambda bids, bal: ([(bids[0], lambda s, h, d, c: BAL(s, h, d, c))] if bal else []) + [
-    (b, f) for b, f in zip(bids[bal:], [
-        lambda s, h, d, c: s == 4 and h == 6, lambda s, h, d, c: s == 4 and h == 7,
-        exact(4, 5, 2, 2), exact(4, 5, 1, 3), exact(4, 5, 3, 1), exact(4, 5, 0, 4), exact(4, 5, 4, 0)])]
-E = node('1D-1H-1NT-2H', lambda *x: A.get(x) == '2♥', EH(steps('2NT', 8), True), 0)
+# 1♠: 5+♦ or BAL without 4♠.  The 2♣ relay.
+one('1S-2C', after('1C', '1♠'), 2, S('2NT'), skip=True, idx=2, extra=[
+    ('2♦',  BAL),
+    ('2♥',  lambda s, h, d, c: h == 4 and d >= 5),
+    ('2♠',  lambda s, h, d, c: c == 4 and d >= 5),
+])
+balanced3('1S-2C-2D-2H', after('1S-2C', '2♦'), S('2♠'), 0)
+# ponytail: 4=♥ 5+♦ has no continuation in the source; taken as on track
+uneven('1S-2C-2H-2S', after('1S-2C', '2♥'), 2, 1, S('2NT'))
+uneven('1S-2C-2S-2NT', after('1S-2C', '2♠'), 2, 3, S('3♣'))
 
-# ------------------------------------------------------------ direct positives
-# 1♣-1♥ shows 5+♠ (or BAL 13+, relayed as over 1♣-1NT), 1♣-1♠ shows 5+♥.
-# Longest suit first; equal majors go to spades; a major beats an equal minor.
-DS = lambda s, h, d, c: s >= 5 and s >= h and s >= d and s >= c
-DH = lambda s, h, d, c: h >= 5 and h > s and h >= d and h >= c
-def major(m, bal):
-    """Shape answers with 5+ in major m (0 or 1): 2♥ takes BAL or 4 in the
-    other major.  bal=False is the direct 8--12 table, where 2♦ is 5 + a minor;
-    bal=True is the 13+ table after the 2♣ - 2♦ relay.  Either major: 13+
-    5-5 with a minor jumps to 3♣♦, and after the relay 3♣♦ are 5 + exactly 4.
-    Spades: 8--12 5-5 in the majors bids 2NT, and after the relay 3NT takes
-    5+♥.  Hearts: 8--12 with 5♥ + 5♣ bids 2♦, 3♠ is 6♥ + 5♦ at 8--12."""
-    if m:
-        return [
-            ('2♥',  lambda s, h, d, c: s == 4 or BAL(s, h, d, c)),
-            ('2♠',  lambda s, h, d, c: h >= 6 and max(s, d, c) <= 3),
-            ('2NT', lambda s, h, d, c: h >= 6 and s <= 3 and max(d, c) == 4),
-            ('3NT', lambda s, h, d, c: h >= 6 and s >= 5),
-            ('4♣',  lambda s, h, d, c: h >= 6 and c == 6),
-            ('4♦',  lambda s, h, d, c: h >= 6 and d == 6),
-        ] + ([
-            ('3♣',  lambda s, h, d, c: h == 5 and s <= 3 and c == 4 and d <= 4),
-            ('3♦',  lambda s, h, d, c: h == 5 and s <= 3 and d == 4 and c <= 3),
-        ] if bal else [
-            ('2♦',  lambda s, h, d, c: h == 5 and s <= 3 and max(d, c) >= 4),
-        ]) + [
-            ('3♥',  lambda s, h, d, c: h >= 6 and c == 5),
-            ('3♠',  lambda s, h, d, c: h >= 6 and d == 5),
-        ]
-    return [
-        ('2♥',  lambda s, h, d, c: h == 4 or BAL(s, h, d, c)),
-        ('2♠',  lambda s, h, d, c: s >= 6 and max(h, d, c) <= 3),
-        ('2NT', lambda s, h, d, c: s >= 6 and h <= 3 and max(d, c) == 4 or not bal and s == h == 5),
-        ('3♥',  lambda s, h, d, c: s >= 6 and c == 5),
-        ('3♠',  lambda s, h, d, c: s >= 6 and d == 5),
-        ('3NT', lambda s, h, d, c: h >= 5 and (bal or s >= 6)),
-        ('4♣',  lambda s, h, d, c: s >= 6 and c == 6),
-        ('4♦',  lambda s, h, d, c: s >= 6 and d == 6),
-    ] + ([
-        ('3♣',  lambda s, h, d, c: s == 5 and h <= 3 and c >= 4 and c >= d),
-        ('3♦',  lambda s, h, d, c: s == 5 and h <= 3 and d >= 4 and d > c),
-    ] if bal else [
-        ('2♦',  lambda s, h, d, c: s == 5 and h <= 3 and max(d, c) >= 4),
-    ])
-def minor2(bids):
-    """5-card major + a minor, after 2♦ - 2♥: 4♣, 4♦, 5♣, 5♦, 6♣, 6♦."""
-    return list(zip(bids, [lambda *x: x[3] == 4 and x[3] >= x[2], lambda *x: x[2] == 4 and x[2] > x[3],
-        lambda *x: x[3] == 5, lambda *x: x[2] == 5, lambda *x: x[3] == 6, lambda *x: x[2] == 6]))
-def fit(m, bids):
-    """BAL or 5+ major m with 4 in the other: BAL, 6-4 and 7-4, then 5422,
-    5413, 5431, 5404, 5440."""
-    o = 1 - m
-    sh = lambda a, b: (lambda *x: x[m] == 5 and x[o] == 4 and x[2] == a and x[3] == b)
-    return list(zip(bids, [lambda *x: BAL(*x), lambda *x: x[m] >= 6] + [
-        sh(2, 2), sh(1, 3), sh(3, 1), sh(0, 4), sh(4, 0)]))
-def minor4(bids):
-    """6+ major with a 4-card minor: clubs, then diamonds, then 5-5 in the majors."""
-    return [(bids[0], lambda *x: x[3] == 4), (bids[1], lambda *x: x[2] == 4),
-            (bids[2], lambda *x: x[0] == x[1] == 5)]
+# 1NT: 5+♥, no 4♠, no 5+♣.  The 2♣ relay.
+one('1NT-2C', after('1C', '1NT'), 1, S('2♠'), idx=1, extra=[
+    ('2♦',  lambda s, h, d, c: d >= 4),
+    ('2♥',  lambda s, h, d, c: c == 4),
+])
+two('1NT-2C-2D-2H', after('1NT-2C', '2♦'), 1, 2, S('2♠'), reverser=False)
+uneven('1NT-2C-2H-2S', after('1NT-2C', '2♥'), 1, 3, S('2NT'))
+fivefive('1NT-2S-2NT', lambda s, h, d, c: d >= 5 and c >= 5, 2, 3, S('3♣'), idx=2)
 
-# 8--12 and 13+ bid 2♥ at the same level and share its relays.
-# 13+ 5-5 with diamonds jumps to 3♣ instead of bidding 2♣, and with clubs to 3♦.
-for m, top, D in ((0, '1H-1S', DS), (1, '1S-1NT', DH)):
-    A8 = node(top, D, major(m, False))
-    A13 = node(top + '-2C-2D', lambda *x, D=D: D(*x) and not (x[m] == 5 and max(x[2:]) == 5), major(m, True))
-    node(top + '-2D-2H', lambda *x, A=A8: A.get(x) == '2♦', minor2(steps('2♠', 6)))
-    # Viking skips 3♦ over hearts.
-    FIT = steps('2NT', 7) if m == 0 else ['2NT', '3♣', '3♥', '3♠', '3NT', '4♣', '4♦']
-    node(top + '-2H-2S', lambda *x, A=A8: A.get(x) == '2♥', fit(m, FIT), m)
-    node(top + '-2C-2D-2H-2S', lambda *x, A=A13: A.get(x) == '2♥', fit(m, FIT))
-    node(top + '-2NT-3C', lambda *x, A=A8: A.get(x) == '2NT', minor4(steps('3♦', 3)))
-    node(top + '-2S-2NT', lambda *x, A=A8: A.get(x) == '2♠', ONE(m, steps('3♣', 7)), m)
+# 2♣: UNBAL 5+♣, no 4-card major.  2♦: 5+♣ and 4+♥.
+one('2C-2D', after('1C', '2♣'), 3, S('2NT'), skip=True, idx=3, extra=[
+    ('2♥',  lambda s, h, d, c: d == 4),
+    ('2♠',  lambda s, h, d, c: d >= 5),
+])
+uneven('2C-2D-2H-2S', after('2C-2D', '2♥'), 3, 2, S('2NT'))
+fivefive('2C-2D-2S-2NT', after('2C-2D', '2♠'), 2, 3, S('3♣'))
+# ponytail: "two-suited table" over the 2♥ relay is taken literally, a step up
+two('2D-2H', after('1C', '2♦'), 1, 3, S('2♠'), idx=3)
 
-# Balanced: 1♣-1NT (8--12) and 1♣-1♥-1♠-1NT (13+), both relayed with 2♣.
-# No 5-card major (those are positives in the major).
-DB = lambda s, h, d, c: BAL(s, h, d, c) and max(s, h) <= 4
-NT = node('1NT-2C', DB, [
-    ('2♦',  lambda s, h, d, c: s == 4),
-    ('2♥',  lambda s, h, d, c: h == 4 and s <= 3),
-    ('2♠',  lambda s, h, d, c: c == 5),
-    ('2NT', lambda s, h, d, c: d == 5),
-    ('3♣',  exact(3, 3, 4, 3)),
-    ('3♦',  exact(3, 3, 3, 4)),
-    ('3♥',  exact(3, 2, 4, 4)),
-    ('3♠',  exact(2, 3, 4, 4)),
-], 0)
-def listed(bids, shapes):
-    return [(b, exact(*x)) for b, x in zip(bids, shapes)]
-node('1NT-2C-2D-2H', lambda *x: NT.get(x) == '2♦', listed(steps('2♠', 7), [
-    (4, 3, 3, 3), (4, 4, 2, 3), (4, 4, 3, 2), (4, 3, 2, 4), (4, 3, 4, 2), (4, 2, 3, 4), (4, 2, 4, 3)]), 0)
-node('1NT-2C-2H-2S', lambda *x: NT.get(x) == '2♥', listed(steps('2NT', 5), [
-    (3, 4, 3, 3), (3, 4, 2, 4), (3, 4, 4, 2), (2, 4, 3, 4), (2, 4, 4, 3)]), 1)
-node('1NT-2C-2S-2NT', lambda *x: NT.get(x) == '2♠', listed(steps('3♣', 3), [
-    (3, 3, 2, 5), (3, 2, 3, 5), (2, 3, 3, 5)]), 3)
-node('1NT-2C-2NT-3C', lambda *x: NT.get(x) == '2NT', listed(steps('3♦', 3), [
-    (3, 3, 5, 2), (3, 2, 5, 3), (2, 3, 5, 3)]), 2)
+# Three-suited and the jump responses.
+three('2H-2S', after('1C', '2♥'), 0, S('2NT'))
+three('2S-3C', after('1C', '2♠'), 3, S('3♦'))
+node('2NT-3C', lambda *x: x[3] == 6 and sorted(x[:3]) == [2, 2, 3],
+     listed(S('3♦'), [(2, 2, 3, 6), (2, 3, 2, 6), (3, 2, 2, 6)]))   # 3♠ or 3NT by RP
+node('3C-3D', lambda *x: sorted(x) == [2, 2, 2, 7] and max(x[:2]) == 2,
+     listed(S('3♥'), [(2, 2, 2, 7), (2, 2, 7, 2)]))                 # 3♠ or 3NT by RP
 
-# Minors: 1♣-2♣ shows 5+♦, 1♣-2♦ shows 5+♣.  A 4-card minor on the side goes
-# to 2♥ and (5332) to 1NT, so the one-suiters here are 6+ with no 4-card suit.
-# 13+ bids the shape; 8--12 bids the cheapest step and, after the relay, the
-# same shape one step higher.
-def minor(m, bids):
-    """First relay answers over a 5+ minor m (2 or 3): the natural major bid
-    takes 4-4, the other major next, else one-suited."""
-    first, second = (1, 0) if m == 2 else (0, 1)
-    return [(bids[0], lambda *x: x[first] >= 4),
-            (bids[1], lambda *x: x[second] >= 4 and x[first] <= 3),
-            (bids[2], lambda *x: max(x[0], x[1]) <= 3)]
-def fitm(m, o, bids):
-    """5+ minor m with 4+ in major o: 6+ in the minor first, then 5-4 shapes
-    with the other major's length 2, 1, 3, 4 (and 0 only when the minor is clubs)."""
-    om = 1 - o                      # the other major
-    sh = lambda a, b: (lambda *x: x[m] == 5 and x[o] == 4 and x[om] == a and x[5 - m] == b)
-    return [(bids[0], lambda *x: x[m] >= 6)] + list(zip(bids[1:], [
-        sh(2, 2), sh(1, 3), sh(3, 1), sh(4, 0)]))
-DD = lambda s, h, d, c: d >= 5 and d > s and d > h and c <= 3 and not BAL(s, h, d, c)
-DC = lambda s, h, d, c: c >= 5 and c > s and c > h and c > d and d <= 3 and not BAL(s, h, d, c)
-AD = node('2C-2D', DD, minor(2, steps('2♥', 3)))
-node('2C-2D-2H-2S', lambda *x: AD.get(x) == '2♥', fitm(2, 1, steps('3♣', 5)), 2)
-node('2C-2D-2S-2NT', lambda *x: AD.get(x) == '2♠', fitm(2, 0, steps('3♦', 5)), 2)
-node('2C-2D-2NT-3C', lambda *x: AD.get(x) == '2NT', ONE(2, steps('3♦', 5)), 2)
-AC = node('2D-2H', DC, minor(3, steps('2♠', 3)))
-node('2D-2H-2S-2NT', lambda *x: AC.get(x) == '2♠', fitm(3, 0, steps('3♦', 5)), 3)
-node('2D-2H-2NT-3C', lambda *x: AC.get(x) == '2NT', fitm(3, 1, steps('3♥', 5)), 3)
-node('2D-2H-3C-3D', lambda *x: AC.get(x) == '3♣', ONE(3, steps('3♥', 5)), 3)
+# ------------------------------------------------------------- opener after 1♦
+# Shape only: BAL goes 1♥♠ as with 21+, and the strength-based alternatives
+# (1NT, 2♥, 2NT, 3♣♦♥♠) are not modelled.
+node('1D', lambda *x: True, [
+    ('1♥',  lambda s, h, d, c: THREE(s, h, d, c) and min(s, c) <= 1 or BAL(s, h, d, c) and s <= 3
+                               or not THREE(s, h, d, c) and not BAL(s, h, d, c)
+                               and (h >= 4 and s <= 3 and not (h == 4 and c >= 5) or s == 4 and h >= 5)),
+    ('1♠',  lambda s, h, d, c: THREE(s, h, d, c) and min(h, d) <= 1 or BAL(s, h, d, c) and s == 4
+                               or not THREE(s, h, d, c) and not BAL(s, h, d, c) and s >= 4 and not (s == 4 and h >= 5)),
+    ('2♣',  lambda s, h, d, c: s <= 3 and c >= 5 and h <= 4 and d <= 4 and not THREE(s, h, d, c)
+                               and not BAL(s, h, d, c) and (c >= 6 or d == 4 or h == 4)),
+    ('2♦',  lambda s, h, d, c: s <= 3 and h <= 3 and c <= 4 and (d >= 6 or d == 5 and c == 4)
+                               and not BAL(s, h, d, c)),
+    ('2♠',  lambda s, h, d, c: d >= 5 and c >= 5),
+])
+
+# 1♥ rebid, 1NT relay: one-suiters on track, everything else up a step.
+one('1D-1H-1NT', after('1D', '1♥'), 1, S('2♠'), idx=1, extra=[
+    ('2♣',  lambda *x: TWO(1, 2)(*x) or BAL(*x)),
+    ('2♦',  lambda s, h, d, c: h >= 5 and c >= 4 and not THREE(s, h, d, c) or THREE(s, h, d, c) and s <= 1),
+    ('2♥',  lambda s, h, d, c: h >= 5 and s == 4 and not THREE(s, h, d, c) or THREE(s, h, d, c) and c <= 1),
+])
+two('1D-1H-1NT-2C-2D', after('1D-1H-1NT', '2♣'), 1, 2, S('2♠'), extra=[('2♥', BAL)])
+balanced3('1D-1H-1NT-2C-2D-2H-2S', after('1D-1H-1NT-2C-2D', '2♥'), S('2NT'))
+two('1D-1H-1NT-2D-2H', after('1D-1H-1NT', '2♦'), 1, 3, S('2NT'), reverser=False,
+    extra=[('2♠', THREE)])
+three('1D-1H-1NT-2D-2H-2S-2NT', after('1D-1H-1NT-2D-2H', '2♠'), 0, S('3♣'))
+uneven('1D-1H-1NT-2H-2S', after('1D-1H-1NT', '2♥'), 1, 0, S('3♣'), extra=[('2NT', THREE)])
+three('1D-1H-1NT-2H-2S-2NT-3C', after('1D-1H-1NT-2H-2S', '2NT'), 3, S('3♦'))
+
+# 1♠ rebid, 1NT relay.
+one('1D-1S-1NT', after('1D', '1♠'), 0, S('2♠'), idx=0, extra=[
+    ('2♣',  lambda *x: TWO(0, 2)(*x) or BAL(*x) or THREE(*x) and min(x[1], x[2]) <= 1),
+    ('2♦',  TWO(0, 3)),
+    ('2♥',  lambda s, h, d, c: s >= 5 and h >= 4 and not THREE(s, h, d, c)),
+])
+two('1D-1S-1NT-2C-2D', after('1D-1S-1NT', '2♣'), 0, 2, S('2♠'),
+    extra=[('2♥', lambda *x: BAL(*x) or THREE(*x))])
+balanced4('1D-1S-1NT-2C-2D-2H-2S', after('1D-1S-1NT-2C-2D', '2♥'), S('2NT'))
+two('1D-1S-1NT-2D-2H', after('1D-1S-1NT', '2♦'), 0, 3, S('2NT'))
+two('1D-1S-1NT-2H-2S', after('1D-1S-1NT', '2♥'), 0, 1, S('2NT'), reverser=False)
+
+# Minor-suit rebids and the two-suited 2♥♠.
+one('1D-2C-2D', after('1D', '2♣'), 3, S('2NT'), skip=True, idx=3, extra=[
+    ('2♥',  lambda s, h, d, c: h == 4),
+    ('2♠',  lambda s, h, d, c: d == 4),
+])
+uneven('1D-2C-2D-2H-2S', after('1D-2C-2D', '2♥'), 3, 1, S('2NT'))
+uneven('1D-2C-2D-2S-2NT', after('1D-2C-2D', '2♠'), 3, 2, S('3♣'))
+one('1D-2D-2H', after('1D', '2♦'), 2, S('2NT'), skip=True, idx=2, extra=[
+    ('2♠',  lambda s, h, d, c: c == 4),
+])
+uneven('1D-2D-2H-2S-2NT', after('1D-2D-2H', '2♠'), 2, 3, S('3♣'))
+uneven('1D-2H-2S', lambda s, h, d, c: h == 4 and c >= 5 and s <= 3 and not THREE(s, h, d, c), 3, 1, S('2NT'), idx=3)
+fivefive('1D-2S-2NT', after('1D', '2♠'), 2, 3, S('3♣'), idx=2)
 
 # ---------------------------------------------------------------------- drawing
 STEP = 46                      # lattice spacing = cell width
@@ -323,6 +393,10 @@ if __name__ == '__main__':
         for x, bid in mapping.items():
             if '/' in bid or bid == '?':
                 print(f'{name}: {"".join(map(str, x))} -> {bid}', file=sys.stderr); bad += 1
+    for f in os.listdir(OUT):
+        os.remove(os.path.join(OUT, f))
     for name, (mapping, idx) in FIGURES.items():
-        open(os.path.join(OUT, name + '.svg'), 'w').write(figure(mapping, idx))
+        if len(set(mapping.values())) > 1:
+            open(os.path.join(OUT, name + '.svg'), 'w').write(figure(mapping, idx))
+    print(f'{len(CHECKED)} nodes checked, {len(os.listdir(OUT))} figures', file=sys.stderr)
     sys.exit(bool(bad))
