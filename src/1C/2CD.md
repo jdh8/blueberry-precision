@@ -16,8 +16,6 @@
 | 3♣        | NF, 3--4♣
 | 3♦♥♠      | NF but very INV, very good 6+#
 
-{{#include relay/2C-2D.svg}}
-
 | 1♣ - 2♣ -<br>2♥ - | |
 |-----|-|
 | P   | MIN, 2=♥
@@ -55,8 +53,6 @@
 | 3♣  | NF, 3--4♣
 | 3♦♠ | NF but very INV, very good 6+#
 | 3♥  | Very MIN, 4=♥, often slow cards in ♠ and ♦
-
-{{#include relay/2D-2H.svg}}
 
 | 1♣ - 2♦ -<br>2♠ - | |
 |-----|-|

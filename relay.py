@@ -192,23 +192,23 @@ node('1C', lambda *x: True, [
 ])
 
 # 1♥: 4+♠.  The 1♠ relay; 2♥ reverser, 2♠ 5-5, 2NT+ 5+♠ 4=♥ on track.
-two('1H-1S', after('1C', '1♥'), 0, 1, S('2♥'), idx=0, extra=[
+two('1H-1S', after('1C', '1♥'), 0, 1, S('2♥'), extra=[
     ('1NT', lambda *x: BAL(*x) or TWO(0, 2)(*x) or THREE(*x) and min(x[1], x[2]) <= 1),
     ('2♣',  TWO(0, 3)),
     ('2♦',  ONE(0)),
 ])
-two('1H-1S-1NT-2C', after('1H-1S', '1NT'), 0, 2, S('2♥'), idx=0,
+two('1H-1S-1NT-2C', after('1H-1S', '1NT'), 0, 2, S('2♥'),
     extra=[('2♦', lambda *x: BAL(*x) or THREE(*x))])
 balanced4('1H-1S-1NT-2C-2D-2H', after('1H-1S-1NT-2C', '2♦'), S('2♠'), 0)
-two('1H-1S-2C-2D', after('1H-1S', '2♣'), 0, 3, S('2♥'), idx=0)
+two('1H-1S-2C-2D', after('1H-1S', '2♣'), 0, 3, S('2♥'))
 one('1H-1S-2D-2H', after('1H-1S', '2♦'), 0, S('2♠'), idx=0)
 # Opener's natural rebids that responder relays over.
-one('1H-2H-2S', lambda *x: ONE(1)(*x) and x[1] >= 6, 1, S('2NT'), skip=True, idx=1)
+one('1H-2H-2S', lambda *x: ONE(1)(*x) and x[1] >= 6, 1, S('2NT'), skip=True)
 # ponytail: "both minors, any strength" is read as 5-5 like 1♣ - 1♦ - 2♠
-fivefive('1H-2S-2NT', lambda s, h, d, c: d >= 5 and c >= 5, 2, 3, S('3♣'), idx=2)
+fivefive('1H-2S-2NT', lambda s, h, d, c: d >= 5 and c >= 5, 2, 3, S('3♣'))
 
 # 1♠: 5+♦ or BAL without 4♠.  The 2♣ relay.
-one('1S-2C', after('1C', '1♠'), 2, S('2NT'), skip=True, idx=2, extra=[
+one('1S-2C', after('1C', '1♠'), 2, S('2NT'), skip=True, extra=[
     ('2♦',  BAL),
     ('2♥',  lambda s, h, d, c: h == 4 and d >= 5),
     ('2♠',  lambda s, h, d, c: c == 4 and d >= 5),
@@ -219,23 +219,23 @@ uneven('1S-2C-2H-2S', after('1S-2C', '2♥'), 2, 1, S('2NT'))
 uneven('1S-2C-2S-2NT', after('1S-2C', '2♠'), 2, 3, S('3♣'))
 
 # 1NT: 5+♥, no 4♠, no 5+♣.  The 2♣ relay.
-one('1NT-2C', after('1C', '1NT'), 1, S('2♠'), idx=1, extra=[
+one('1NT-2C', after('1C', '1NT'), 1, S('2♠'), extra=[
     ('2♦',  lambda s, h, d, c: d >= 4),
     ('2♥',  lambda s, h, d, c: c == 4),
 ])
 two('1NT-2C-2D-2H', after('1NT-2C', '2♦'), 1, 2, S('2♠'), reverser=False)
 uneven('1NT-2C-2H-2S', after('1NT-2C', '2♥'), 1, 3, S('2NT'))
-fivefive('1NT-2S-2NT', lambda s, h, d, c: d >= 5 and c >= 5, 2, 3, S('3♣'), idx=2)
+fivefive('1NT-2S-2NT', lambda s, h, d, c: d >= 5 and c >= 5, 2, 3, S('3♣'))
 
 # 2♣: UNBAL 5+♣, no 4-card major.  2♦: 5+♣ and 4+♥.
-one('2C-2D', after('1C', '2♣'), 3, S('2NT'), skip=True, idx=3, extra=[
+one('2C-2D', after('1C', '2♣'), 3, S('2NT'), skip=True, extra=[
     ('2♥',  lambda s, h, d, c: d == 4),
     ('2♠',  lambda s, h, d, c: d >= 5),
 ])
 uneven('2C-2D-2H-2S', after('2C-2D', '2♥'), 3, 2, S('2NT'))
 fivefive('2C-2D-2S-2NT', after('2C-2D', '2♠'), 2, 3, S('3♣'))
 # ponytail: "two-suited table" over the 2♥ relay is taken literally, a step up
-two('2D-2H', after('1C', '2♦'), 1, 3, S('2♠'), idx=3)
+two('2D-2H', after('1C', '2♦'), 1, 3, S('2♠'))
 
 # Three-suited and the jump responses.
 three('2H-2S', after('1C', '2♥'), 0, S('2NT'))
@@ -262,7 +262,7 @@ node('1D', lambda *x: True, [
 ])
 
 # 1♥ rebid, 1NT relay: one-suiters on track, everything else up a step.
-one('1D-1H-1NT', after('1D', '1♥'), 1, S('2♠'), idx=1, extra=[
+one('1D-1H-1NT', after('1D', '1♥'), 1, S('2♠'), extra=[
     ('2♣',  lambda *x: TWO(1, 2)(*x) or BAL(*x)),
     ('2♦',  lambda s, h, d, c: h >= 5 and c >= 4 and not THREE(s, h, d, c) or THREE(s, h, d, c) and s <= 1),
     ('2♥',  lambda s, h, d, c: h >= 5 and s == 4 and not THREE(s, h, d, c) or THREE(s, h, d, c) and c <= 1),
@@ -276,7 +276,7 @@ uneven('1D-1H-1NT-2H-2S', after('1D-1H-1NT', '2♥'), 1, 0, S('3♣'), extra=[('
 three('1D-1H-1NT-2H-2S-2NT-3C', after('1D-1H-1NT-2H-2S', '2NT'), 3, S('3♦'))
 
 # 1♠ rebid, 1NT relay.
-one('1D-1S-1NT', after('1D', '1♠'), 0, S('2♠'), idx=0, extra=[
+one('1D-1S-1NT', after('1D', '1♠'), 0, S('2♠'), extra=[
     ('2♣',  lambda *x: TWO(0, 2)(*x) or BAL(*x) or THREE(*x) and min(x[1], x[2]) <= 1),
     ('2♦',  TWO(0, 3)),
     ('2♥',  lambda s, h, d, c: s >= 5 and h >= 4 and not THREE(s, h, d, c)),
@@ -288,13 +288,13 @@ two('1D-1S-1NT-2D-2H', after('1D-1S-1NT', '2♦'), 0, 3, S('2NT'))
 two('1D-1S-1NT-2H-2S', after('1D-1S-1NT', '2♥'), 0, 1, S('2NT'), reverser=False)
 
 # Minor-suit rebids and the two-suited 2♥♠.
-one('1D-2C-2D', after('1D', '2♣'), 3, S('2NT'), skip=True, idx=3, extra=[
+one('1D-2C-2D', after('1D', '2♣'), 3, S('2NT'), skip=True, extra=[
     ('2♥',  lambda s, h, d, c: h == 4),
     ('2♠',  lambda s, h, d, c: d == 4),
 ])
 uneven('1D-2C-2D-2H-2S', after('1D-2C-2D', '2♥'), 3, 1, S('2NT'))
 uneven('1D-2C-2D-2S-2NT', after('1D-2C-2D', '2♠'), 3, 2, S('3♣'))
-one('1D-2D-2H', after('1D', '2♦'), 2, S('2NT'), skip=True, idx=2, extra=[
+one('1D-2D-2H', after('1D', '2♦'), 2, S('2NT'), skip=True, extra=[
     ('2♠',  lambda s, h, d, c: c == 4),
 ])
 uneven('1D-2D-2H-2S-2NT', after('1D-2D-2H', '2♠'), 2, 3, S('3♣'))

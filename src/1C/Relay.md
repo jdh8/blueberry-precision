@@ -31,6 +31,10 @@ The default entry point is 2♠.
 | 3NT | 7330, 2--3 RP
 | 4♣+ | 7330, 4 RP and so on
 
+For example, one-suited ♠ after [1♣ - 1♥ - 1♠ - 2♦ - 2♥](1H.md):
+
+{{#include relay/1H-1S-2D-2H.svg}}
+
 A one-suited minor rules out 5332, so 3♦ shows 6331 and so on.
 
 ## Two-suited hands
@@ -51,6 +55,10 @@ exactly 4 in the other.  The entry point for a 5-5 two-suiter is 2♠.
 | 3NT | 7420, 2--3 RP
 | 4♣+ | 7420, 4 RP and so on
 
+For example, 5+♣ and 4=♥ after [1♣ - 1♦ - 2♥ - 2♠](1D.md):
+
+{{#include relay/1D-2H-2S.svg}}
+
 To show 7411, show high shortage first and then bid 3NT.  This shifts 7420 up
 one step.
 
@@ -65,6 +73,10 @@ After 2♠ showing 5-5, 2NT is the next relay.
 | 3NT | 5620
 | 4♣  | 6520, 2--3 RP
 | 4♦+ | 6520, 4 RP and so on
+
+For example, both minors after [1♣ - 1♦ - 2♠ - 2NT](1D.md):
+
+{{#include relay/1D-2S-2NT.svg}}
 
 ## Three-suited hands
 
