@@ -1,154 +1,68 @@
-# Minors 2♣♦
+# Clubs 2♣♦
 
-1♣ - 2♣ shows 5+♦ and 1♣ - 2♦ shows 5+♣, no 5-card major.  A
-4-card minor beside it responds 2♥ and (5332) responds 1NT, so these hands
-hold a 4+ major or a one-suiter with no 4-card suit.  Opener relays with the
-next step.
+1♣ - 2♣ shows an unbalanced 5+♣ without a 4-card major, and 1♣ - 2♦ shows
+5+♣ with 4+♥.  Opener relays with the next step.
 
-With 13+, responder bids the shape at once.  With 8--12, responder bids the
-cheapest step and, after the next relay, the same shape one step higher.
-
-Viking 2♣♦ allow a second 4+ minor, and its opener may bid naturally
-instead of relaying.
-
-## Diamonds 2♣
+## Clubs 2♣
 
 | 1♣ - 2♣ - | |
+|-----------|-|
+| 2♦!       | (R) FG
+| 2♦ - 2♥   | Reverser, 4=♦
+| 2♦ - 2♠   | 5+♣, 5+♦
+| 2♦ - 2NT+ | One-suited 6+♣, losing a step but skipping 5332
+| 2♥♠       | 5+#, not eager to play there opposite shortness
+| 2NT       | NF, 0--4♠, 0--4♥, 1--2♣
+| 3♣        | NF, 3--4♣
+| 3♦♥♠      | NF but very INV, very good 6+#
+
+| 1♣ - 2♣ -<br>2♥ - | |
 |-----|-|
-| 2♦! | (R)
+| P   | MIN, 2=♥
+| 2♠! | MAX, 2=♥
+| 2NT | NF, MIN, both minors, short in ♥
+| 3♣  | NF, MIN, 6+♣, 0--1♥
+| 3♦! | FG, short or weak ♦, 6+♣, 0--1♥
+| 3♥  | NF, MIN, 3=♥
+| 3♠! | FG, short or weak ♠, 5+♣, 0--1♥
+| 3NT | Suggests a contract, 0--1♥
+| 4♣  | FG, 3=♥, very good ♣
+| 4♦! | FG, 3=♥, 0--1♦
+| 4♥  | MAX, 3=♥
 
-| 1♣ - 2♣ -<br>2♦ - | |
-|------|-|
-| 2♥   | 4+♥
-| 2♠   | 4+♠, 0--3♥
-| 2NT! | 8--12, 6+♦, no 4-card suit
-| 3♣!  | 13+, (6322)
-| 3♦!  | 13+, (6331)
-| 3♥!  | 13+, (7321)
-| 3♠!  | 13+, (7330)
-| 3NT  | 13+, 7222
+| 1♣ - 2♣ -<br>2♠ - | |
+|-----|-|
+| P   | MIN, 2=♠
+| 2NT | NF, MIN, both minors, short in ♠
+| 3♣  | MIN, 6+♣, usually 0--1♠
+| 3♦! | FG, short or weak ♦, 6+♣, 0--2♠
+| 3♥! | FG, short or weak ♥, 5+♣, 0--2♠
+| 3♠  | NF, MIN, 3=♠
+| 3NT | Suggests a contract, 0--2♠
+| 4♣  | FG, 3=♠, very good ♣
+| 4♦! | FG, 3=♠, short in ♦
+| 4♥! | FG, 3=♠, short in ♥
 
-Viking shows 6 or 7 cards before strength and resolves 6331 and 7330 to the
-exact shape, here and over 2♦.
-
-| 1♣ - 2♣ -<br>2♦ - 2NT - | |
-|-----------|-|
-| 3♣!       | (R)
-| 3♣ - 3♦!  | (6322)
-| 3♣ - 3♥!  | (6331)
-| 3♣ - 3♠!  | (7321)
-| 3♣ - 3NT! | (7330)
-| 3♣ - 4♣!  | 7222
-
-{{#include relay/2C-2D-2NT-3C.svg}}
-
-| 1♣ - 2♣ -<br>2♦ - 2♥ - | |
-|-----------|-|
-| 2♠!       | (R)
-| 2♠ - 2NT! | 8--12
-| 2♠ - 3♣!  | 13+, 6+♦
-| 2♠ - 3♦!  | 13+, 2452
-| 2♠ - 3♥!  | 13+, 1453
-| 2♠ - 3♠!  | 13+, 3451
-| 2♠ - 3NT  | 13+, 4450
-
-Viking separates a 6-card minor with 4 in the major from one with 5, here and
-in the other major branches.
-
-{{#include relay/2C-2D-2H-2S.svg}}
-
-| 1♣ - 2♣ - 2♦ - 2♥ -<br>2♠ - 2NT - | |
-|----------|-|
-| 3♣!      | (R)
-| 3♣ - 3♦! | 6+♦
-| 3♣ - 3♥! | 2452
-| 3♣ - 3♠! | 1453
-| 3♣ - 3NT | 3451
-| 3♣ - 4♣! | 4450
-
-| 1♣ - 2♣ -<br>2♦ - 2♠ - | |
-|-----------|-|
-| 2NT!      | (R)
-| 2NT - 3♣! | 8--12
-| 2NT - 3♦! | 13+, 6+♦
-| 2NT - 3♥! | 13+, 4252
-| 2NT - 3♠! | 13+, 4153
-| 2NT - 3NT | 13+, 4351
-
-{{#include relay/2C-2D-2S-2NT.svg}}
-
-| 1♣ - 2♣ - 2♦ - 2♠ -<br>2NT - 3♣ - | |
-|----------|-|
-| 3♦!      | (R)
-| 3♦ - 3♥! | 6+♦
-| 3♦ - 3♠! | 4252
-| 3♦ - 3NT | 4153
-| 3♦ - 4♣! | 4351
-
-## Clubs 2♦
+## Clubs and hearts 2♦
 
 | 1♣ - 2♦ - | |
 |-----|-|
-| 2♥! | (R)
+| 2♥! | (R) FG, two-suited table
+| 2♠  | 5+♠, not eager to play there opposite shortness
+| 2NT | NF, no major fit, 1--2♣
+| 3♣  | NF, 3--4♣
+| 3♦♠ | NF but very INV, very good 6+#
+| 3♥  | Very MIN, 4=♥, often slow cards in ♠ and ♦
 
-| 1♣ - 2♦ -<br>2♥ - | |
-|------|-|
-| 2♠   | 4+♠
-| 2NT! | 4+♥, 0--3♠
-| 3♣!  | 8--12, 6+♣, no 4-card suit
-| 3♦!  | 13+, (6322)
-| 3♥!  | 13+, (6331)
-| 3♠!  | 13+, (7321)
-| 3NT! | 13+, (7330)
-| 4♣!  | 13+, 7222
-
-| 1♣ - 2♦ -<br>2♥ - 3♣ - | |
-|-----------|-|
-| 3♦!       | (R)
-| 3♦ - 3♥!  | (6322)
-| 3♦ - 3♠!  | (6331)
-| 3♦ - 3NT! | (7321)
-| 3♦ - 4♣!  | (7330)
-| 3♦ - 4♦!  | 7222
-
-{{#include relay/2D-2H-3C-3D.svg}}
-
-| 1♣ - 2♦ -<br>2♥ - 2♠ - | |
-|-----------|-|
-| 2NT!      | (R)
-| 2NT - 3♣! | 8--12
-| 2NT - 3♦! | 13+, 6+♣
-| 2NT - 3♥! | 13+, 4225
-| 2NT - 3♠! | 13+, 4135
-| 2NT - 3NT | 13+, 4315
-| 2NT - 4♣! | 13+, 4405
-
-{{#include relay/2D-2H-2S-2NT.svg}}
-
-| 1♣ - 2♦ - 2♥ - 2♠ -<br>2NT - 3♣ - | |
-|----------|-|
-| 3♦!      | (R)
-| 3♦ - 3♥! | 6+♣
-| 3♦ - 3♠! | 4225
-| 3♦ - 3NT | 4135
-| 3♦ - 4♣! | 4315
-| 3♦ - 4♦! | 4405
-
-| 1♣ - 2♦ -<br>2♥ - 2NT - | |
-|----------|-|
-| 3♣!      | (R)
-| 3♣ - 3♦! | 8--12
-| 3♣ - 3♥! | 13+, 6+♣
-| 3♣ - 3♠! | 13+, 2425
-| 3♣ - 3NT | 13+, 1435
-| 3♣ - 4♣! | 13+, 3415
-
-{{#include relay/2D-2H-2NT-3C.svg}}
-
-| 1♣ - 2♦ - 2♥ - 2NT -<br>3♣ - 3♦ - | |
-|----------|-|
-| 3♥!      | (R)
-| 3♥ - 3♠! | 6+♣
-| 3♥ - 3NT | 2425
-| 3♥ - 4♣! | 1435
-| 3♥ - 4♦! | 3415
+| 1♣ - 2♦ -<br>2♠ - | |
+|-----|-|
+| P   | MIN, 2=♠
+| 2NT | MIN, typically 1435 or 1525
+| 3♣  | MIN, 6+♣, usually 0--1♠
+| 3♦! | FG, short or weak ♦, 0--2♠, 4=♥, 5+♣
+| 3♥  | FG, 0--2♠, 5+♥
+| 3♠  | NF, MIN, 3=♠
+| 3NT | Suggests a contract, 0--2♠, 4=♥
+| 4♣  | FG, 3=♠, very good ♣
+| 4♦! | FG, 3=♠, 0=♦
+| 4♥  | FG, 3=♠, very good ♥
